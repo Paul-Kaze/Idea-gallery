@@ -1,0 +1,35 @@
+{
+  "name": "web-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run --coverage",
+    "seed:supabase": "node scripts/seed-fixtures.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "prop-types": "^15.8.1",
+    "@aws-sdk/client-s3": "^3.676.0",
+    "@supabase/supabase-js": "^2.46.1",
+    "@vercel/postgres": "^0.10.0",
+    "lucide-react": "^0.487.0",
+    "next": "latest",
+    "next-auth": "^5.0.0-beta.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-responsive-masonry": "*"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
+    "@types/node": "^20.10.0",
+    "@types/react": "19.2.7",
+    "@vitest/coverage-v8": "^2.1.9",
+    "jsdom": "^24.0.0",
+    "typescript": "^5.6.2",
+    "vitest": "^2.0.5"
+  }
+}
