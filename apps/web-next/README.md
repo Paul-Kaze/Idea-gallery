@@ -4,12 +4,12 @@
 - Next.js（App Router，Route Handlers）
 - 保留 Tailwind v4 预编译样式与 `globals.css`
 - 数据：`@vercel/postgres`（可通过 `POSTGRES_URL`/`DATABASE_URL` 配置）
-- 存储：AWS S3（`AWS_REGION`、`AWS_S3_BUCKET`、`AWS_ACCESS_KEY_ID`、`AWS_SECRET_ACCESS_KEY`）
+- 存储：阿里云 OSS（`OSS_ENDPOINT`、`OSS_REGION`、`OSS_BUCKET`、`OSS_ACCESS_KEY_ID`、`OSS_ACCESS_KEY_SECRET`）
 - 认证：NextAuth Google（`GOOGLE_CLIENT_ID`、`GOOGLE_CLIENT_SECRET`）
 
 ## 启动
 - 在 `apps/web-next` 目录安装依赖并运行 `npm run dev`
-- 无环境变量时，接口回退到 Mock 数据
+- 未配置 OSS 时，接口回退到 Mock 数据；配置示例见根目录 `.env.*.example`
 
 ## 数据灌入（Supabase）
 - 将 `SUPABASE_URL` 与 `SUPABASE_SERVICE_ROLE_KEY` 写入 `apps/web-next/.env`

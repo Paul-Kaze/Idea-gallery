@@ -1,4 +1,5 @@
 import React from 'react'
+import { describe, it, expect, vi } from 'vitest'
 import { render, fireEvent } from '@testing-library/react'
 import { ImageDetailModal } from '../../components/ImageDetailModal'
 
@@ -27,5 +28,17 @@ describe('ImageDetailModal', () => {
     const backdrop = container.querySelector('.bg-black')!
     fireEvent.click(backdrop)
     expect(onClose).toHaveBeenCalled()
+  })
+
+  it('renders reference images when provided', () => {
+    const onClose = vi.fn()
+    const withRefs = {
+      ...item,
+      reference_image: ['https://example.com/ref1.jpg', 'https://example.com/ref2.jpg'],
+    }
+    const { getByText, getAllByAltText } = render(<ImageDetailModal item={withRefs} onClose={onClose} />)
+    getByText('Reference Images')
+    const imgs = getAllByAltText('reference image')
+    expect(imgs.length).toBe(2)
   })
 })

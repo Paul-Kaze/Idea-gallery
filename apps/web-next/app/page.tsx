@@ -1,14 +1,10 @@
 "use client"
 
-import { Sparkles } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { useSession, signIn, signOut } from 'next-auth/react'
 import type { MediaItem } from '../types/media'
 import dynamic from 'next/dynamic'
 const ImageGallery = dynamic(() => import('../components/ImageGallery').then(m => m.ImageGallery), { ssr: false })
-import { AuthButton } from '../components/AuthButton'
 import { ImageDetailModal } from '../components/ImageDetailModal'
-import './globals.css'
 
 const mockItems: MediaItem[] = [
   {
@@ -50,24 +46,15 @@ const mockItems: MediaItem[] = [
 ]
 
 export default function Page() {
-  //认证功能开关
-  const authEnabled = process.env.NEXT_PUBLIC_AUTH_ENABLED === 'true'
-  // 认证状态
-  const { status } = authEnabled ? useSession() : ({ status: 'unauthenticated' } as any)
-  const isAuthenticated = status === 'authenticated'
-  // State to manage the selected image item for modal display
   const [selectedItem, setSelectedItem] = useState<MediaItem | null>(null)
-  // State to manage the list of image items to display
   const [items, setItems] = useState<MediaItem[]>(mockItems)
 
   useEffect(() => {
     const fetchList = async () => {
       try {
-        // 调用API获取图片列表
         const res = await fetch('/api/images?page=1&size=20')
         if (!res.ok) return
         const data = await res.json()
-        // 映射数据为 MediaItem 类型
         const mapped: MediaItem[] = (data.items ?? []).map((it: any) => ({
           id: it.id,
           type: it.type,
@@ -78,7 +65,6 @@ export default function Page() {
           width: it.width,
           height: it.height,
         }))
-        // 只有当获取到有效数据时才更新状态
         if (mapped.length) setItems(mapped)
       } catch {
         // keep mockItems
@@ -87,28 +73,36 @@ export default function Page() {
     fetchList()
   }, [])
 
-  const handleLogin = () => (authEnabled ? signIn('google') : undefined)
-  const handleLogout = () => (authEnabled ? signOut() : undefined)
   const handleItemClick = (item: MediaItem) => setSelectedItem(item)
   const handleCloseModal = () => setSelectedItem(null)
 
   return (
-    <div className="min-h-screen bg-white">
-      <header className="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-40">
-        <div className="max-w-[1920px] mx-auto px-8 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-6 h-6 text-gray-900" />
-            <span className="text-lg text-gray-900">AI Image Gallery</span>
-          </div>
-          <AuthButton isAuthenticated={isAuthenticated} onLogin={handleLogin} onLogout={handleLogout} />
-        </div>
-      </header>
+    <div
+      style={{
+        minHeight: '100vh',
+        backgroundColor: '#fafafa',
+        padding: '32px 32px 32px 48px',
+      }}
+    >
+      <div style={{ maxWidth: '1920px', margin: '0 auto' }}>
+        {/* Discover Heading */}
+        <h1
+          style={{
+            fontSize: '24px',
+            fontWeight: 700,
+            color: '#101828',
+            letterSpacing: '0.07px',
+            lineHeight: '32px',
+            marginBottom: '32px',
+            marginTop: 0,
+          }}
+        >
+          Discover
+        </h1>
 
-      <main className="pt-16 px-4 pb-8">
-        <div className="max-w-[1920px] mx-auto">
-          <ImageGallery items={items} onItemClick={handleItemClick} />
-        </div>
-      </main>
+        {/* Gallery */}
+        <ImageGallery items={items} onItemClick={handleItemClick} />
+      </div>
 
       {selectedItem && <ImageDetailModal item={selectedItem} onClose={handleCloseModal} />}
     </div>

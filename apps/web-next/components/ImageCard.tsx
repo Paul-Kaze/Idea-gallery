@@ -107,7 +107,7 @@ export function ImageCard({ item, onClick }: ImageCardProps) {
               }}
             />
           ) : (
-            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-200 rounded-[8px] z-30" />
+            <div className="absolute inset-0 bg-transparent group-hover:bg-black/10 transition-all duration-200 rounded-[8px] z-30" />
           )}
         </>
       )}

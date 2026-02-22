@@ -22,6 +22,7 @@ export type DetailItem = {
   width: number
   height: number
   duration?: string | null
+  reference_image?: string[] | null
 }
 
 
@@ -77,10 +78,26 @@ export async function getImageDetail(id: string): Promise<DetailItem | null> {
   if (!__supabaseAdmin) return null
   const { data, error } = await __supabaseAdmin
     .from('images')
-    .select('id, type, full_url, model, prompt, width, height, duration')
+    .select(`
+      id, type, full_url, model, prompt, width, height, duration,
+      reference_images (
+        url
+      )
+    `)
     .eq('id', id)
     .limit(1)
     .maybeSingle()
   if (error) throw error
-  return (data as any) as DetailItem
+  if (!data) return null
+
+  // Transform the joined reference_images table data back to a flat array of URLs
+  const raw = data as any
+  const refs = Array.isArray(raw.reference_images)
+    ? raw.reference_images.map((r: any) => r.url)
+    : []
+
+  return {
+    ...raw,
+    reference_image: refs,
+  } as DetailItem
 }

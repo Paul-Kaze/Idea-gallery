@@ -7,7 +7,7 @@ type Detail = {
   width: number
   height: number
   duration?: string
-  references?: { id: string; thumbUrl: string; fullUrl: string }[]
+  reference_image?: string[]
 }
 
 const DETAILS: Record<string, Detail> = {
@@ -21,19 +21,17 @@ const DETAILS: Record<string, Detail> = {
       'A futuristic cityscape at night with towering skyscrapers, neon lights reflecting on wet streets, flying cars in the sky, cyberpunk aesthetic, highly detailed, 8k resolution',
     width: 1200,
     height: 1600,
-    references: [
-      {
-        id: 'r1',
-        thumbUrl: 'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=400',
-        fullUrl:
-          'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080&q=80',
-      },
+    reference_image: [
+      'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=400',
+      'https://images.unsplash.com/photo-1529625052599-b9ea0f6bde34?w=400'
     ],
   },
 }
 
-export async function GET(_req: Request, { params }: { params: { id: string } }) {
-  const db = await getImageDetail(params.id)
+import { NextRequest } from 'next/server'
+export async function GET(_req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const db = await getImageDetail(id)
   if (db) {
     return new Response(JSON.stringify({
       id: db.id,
@@ -44,7 +42,7 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
       width: db.width,
       height: db.height,
       duration: db.duration ?? undefined,
-      references: [],
+      reference_image: db.reference_image ?? [],
     }), {
       headers: {
         'Content-Type': 'application/json',
@@ -52,7 +50,7 @@ export async function GET(_req: Request, { params }: { params: { id: string } })
       },
     })
   }
-  const detail = DETAILS[params.id]
+  const detail = DETAILS[id]
   if (!detail) return new Response('Not Found', { status: 404 })
   return new Response(JSON.stringify(detail), {
     headers: {

@@ -21,6 +21,7 @@ const ERROR_IMG_SRC =
 export function NextImageWithFallback(props: Props) {
   const [didError, setDidError] = useState(false)
   const { src, alt, className, style, width, height, onLoad, onError, fill, sizes } = props
+  const unoptimized = src.startsWith('/api/download')
 
   if (didError) {
     return (
@@ -42,6 +43,7 @@ export function NextImageWithFallback(props: Props) {
       height={fill ? undefined : height}
       fill={fill}
       sizes={sizes}
+      unoptimized={unoptimized}
       onLoad={onLoad}
       onError={() => {
         setDidError(true)

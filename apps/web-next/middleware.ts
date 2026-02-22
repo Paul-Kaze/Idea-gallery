@@ -7,7 +7,7 @@ const buckets = new Map<string, { count: number; reset: number }>()
 
 export function middleware(req: NextRequest) {
   if (!req.nextUrl.pathname.startsWith('/api/')) return NextResponse.next()
-  const ip = req.ip || req.headers.get('x-forwarded-for') || 'unknown'
+  const ip = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown'
   const now = Date.now()
   const bucket = buckets.get(ip as string)
   if (!bucket || now > bucket.reset) {

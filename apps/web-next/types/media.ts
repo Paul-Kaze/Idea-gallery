@@ -8,4 +8,5 @@ export interface MediaItem {
   width: number
   height: number
   duration?: string
+  reference_image?: string[]
 }

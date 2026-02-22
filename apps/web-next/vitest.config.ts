@@ -12,10 +12,12 @@ export default defineConfig({
     setupFiles: ['./vitest.setup.ts'],
     coverage: {
       reporter: ['text', 'html'],
-      lines: 0.85,
-      functions: 0.85,
-      branches: 0.85,
-      statements: 0.85,
+      thresholds: {
+        lines: 0.85,
+        functions: 0.85,
+        branches: 0.85,
+        statements: 0.85,
+      },
       include: [
         'app/api/**/route.ts',
         'lib/db.ts'

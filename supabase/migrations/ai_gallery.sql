@@ -1,33 +1,19 @@
--- ============================================================================
--- AI 图片画廊数据库迁移脚本
--- 文件: ai_gallery.sql
--- 描述: 创建 AI 图片画廊应用所需的数据库表结构、索引和安全策略
--- 数据库: Supabase (PostgreSQL)
 
--- 用户表 (users)
--- 存储应用用户信息，主要用于 Google OAuth 认证
--- ----------------------------------------------------------------------------
 create table if not exists public.users (
   -- 主键：使用 UUID 作为唯一标识符，自动生成随机 UUID
   id uuid primary key default gen_random_uuid(),
   
-  -- 用户显示名称：必填字段，不能为空
   name text not null,
   
-  -- 用户头像 URL：可选字段，存储用户头像的链接
   avatar_url text,
   
-  -- 创建时间：记录用户账户创建的时间，默认为当前时间
   created_at timestamptz not null default now(),
   
   -- 过期时间：可选字段，可用于实现临时用户或会话管理
   expires_at timestamptz
 );
 
--- ----------------------------------------------------------------------------
--- 图片/视频表 (images)
--- 存储 AI 生成的图片和视频的元数据信息
--- ----------------------------------------------------------------------------
+
 create table if not exists public.images (
   -- 主键：使用 UUID 作为唯一标识符，自动生成随机 UUID
   id uuid primary key default gen_random_uuid(),
