@@ -1,5 +1,5 @@
 import { type NextRequest, NextResponse } from 'next/server'
-import { getToken } from 'next-auth/jwt'
+import { auth } from '../../../auth'
 
 // Credit packages config - productId must be set from Creem dashboard
 const CREDIT_PACKAGES: Record<string, { credits: number; productId: string }> = {
@@ -10,8 +10,8 @@ const CREDIT_PACKAGES: Record<string, { credits: number; productId: string }> = 
 
 export async function POST(request: NextRequest) {
     try {
-        const token = await getToken({ req: request, secret: process.env.AUTH_SECRET })
-        if (!token?.email) {
+        const session = await auth()
+        if (!session?.user?.email) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
         }
 
@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
                 success_url: successUrl,
                 metadata: {
                     // Pass user email so webhook can identify which user to credit
-                    referenceId: token.email,
+                    referenceId: session.user.email,
                     packageKey,
                     credits: pkg.credits,
                 },
