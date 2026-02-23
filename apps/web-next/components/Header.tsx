@@ -18,7 +18,7 @@ export function Header() {
   const fetchCredits = useCallback(async () => {
     if (!session?.user?.email) return
     try {
-      const res = await fetch('/api/user/credits')
+      const res = await fetch('/api/user/credits', { cache: 'no-store' })
       if (res.ok) {
         const data = await res.json()
         setCredits(data.credits ?? 0)
