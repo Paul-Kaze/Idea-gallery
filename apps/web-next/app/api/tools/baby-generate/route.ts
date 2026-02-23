@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getToken } from 'next-auth/jwt'
+import { auth } from '../../../../auth'
 import { supabaseAdmin } from '../../../../lib/supabase'
 import { uploadBufferToOSS } from '../../../../lib/storage'
 
@@ -55,7 +55,8 @@ async function uploadToStorage(
 
 export async function POST(req: NextRequest) {
     try {
-        const token = await getToken({ req, secret: process.env.AUTH_SECRET })
+        const session = await auth()
+        const token = session?.user
         const apiKey = process.env.OPENROUTER_API_KEY
         if (!apiKey) {
             return NextResponse.json(
@@ -81,6 +82,43 @@ export async function POST(req: NextRequest) {
             return NextResponse.json(
                 { error: 'gender must be "girl" or "boy".' },
                 { status: 400 }
+            )
+        }
+
+        if (!token?.email) {
+            return NextResponse.json(
+                { error: 'Unauthorized. Please log in.' },
+                { status: 401 }
+            )
+        }
+
+        const CREDITS_COST = 4
+
+        if (!supabaseAdmin) {
+            return NextResponse.json(
+                { error: 'Database connection error.' },
+                { status: 500 }
+            )
+        }
+
+        const { data: user } = await supabaseAdmin
+            .from('users')
+            .select('id, credits')
+            .eq('email', token.email)
+            .maybeSingle()
+
+        if (!user) {
+            return NextResponse.json(
+                { error: 'User not found in database.' },
+                { status: 404 }
+            )
+        }
+
+        // Must handle cases where user.credits is nullish
+        if ((user.credits ?? 0) < CREDITS_COST) {
+            return NextResponse.json(
+                { error: 'Insufficient credits. Please recharge your account.' },
+                { status: 403 }
             )
         }
 
@@ -145,36 +183,24 @@ export async function POST(req: NextRequest) {
         const imageUrl = await uploadToStorage(imageBase64Url, gender)
         const generatedAt = new Date().toISOString()
 
-        // Save history to database if user is logged in
-        if (token?.email && supabaseAdmin) {
-            const CREDITS_COST = 1
+        // Save history to database and deduct credits
+        const newCredits = Math.max(0, (user.credits ?? 0) - CREDITS_COST)
+        await supabaseAdmin
+            .from('users')
+            .update({ credits: newCredits })
+            .eq('id', user.id)
 
-            // Retrieve current user to deduct credits
-            const { data: user } = await supabaseAdmin
-                .from('users')
-                .select('id, credits')
-                .eq('email', token.email)
-                .maybeSingle()
+        const { error: dbError } = await supabaseAdmin.from('tool_generations').insert({
+            user_email: token.email,
+            tool_name: 'ai_baby',
+            result_url: imageUrl,
+            metadata: { gender }, // Save specific fields in JSONB
+            credits_cost: CREDITS_COST,
+            created_at: generatedAt
+        })
 
-            if (user) {
-                const newCredits = Math.max(0, (user.credits || 0) - CREDITS_COST)
-                await supabaseAdmin
-                    .from('users')
-                    .update({ credits: newCredits })
-                    .eq('id', user.id)
-
-                const { error: dbError } = await supabaseAdmin.from('tool_generations').insert({
-                    user_email: token.email,
-                    tool_name: 'ai_baby',
-                    result_url: imageUrl,
-                    metadata: { gender }, // Save specific fields in JSONB
-                    credits_cost: CREDITS_COST,
-                    created_at: generatedAt
-                })
-                if (dbError) {
-                    console.error('[baby-generate] Failed to save history to DB:', dbError)
-                }
-            }
+        if (dbError) {
+            console.error('[baby-generate] Failed to save history to DB:', dbError)
         }
 
         return NextResponse.json({

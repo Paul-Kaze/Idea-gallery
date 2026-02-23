@@ -1,11 +1,11 @@
-import { type NextRequest, NextResponse } from 'next/server'
-import { getToken } from 'next-auth/jwt'
+import { NextResponse } from 'next/server'
+import { auth } from '../../../../auth'
 import { supabaseAdmin } from '../../../../lib/supabase'
 
-export async function GET(request: NextRequest) {
+export async function GET() {
     try {
-        const token = await getToken({ req: request, secret: process.env.AUTH_SECRET })
-        if (!token?.email) {
+        const session = await auth()
+        if (!session?.user?.email) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
         }
 
@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
         const { data: user, error } = await supabaseAdmin
             .from('users')
             .select('credits')
-            .eq('email', token.email as string)
+            .eq('email', session.user.email)
             .maybeSingle()
 
         if (error) {

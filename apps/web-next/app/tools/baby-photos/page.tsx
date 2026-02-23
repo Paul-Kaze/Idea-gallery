@@ -42,6 +42,7 @@ export default function BabyPhotosPage() {
         setTimeout(() => {
             setIsGenerating(false)
             setResultVideo('sample')
+            window.dispatchEvent(new Event('update-credits'))
         }, 2000)
     }
 

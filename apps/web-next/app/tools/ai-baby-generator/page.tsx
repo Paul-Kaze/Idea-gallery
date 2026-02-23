@@ -241,6 +241,9 @@ export default function AIBabyGeneratorPage() {
             }
             // Prepend so latest is first
             setGeneratedImages(prev => [newImage, ...prev])
+
+            // Trigger credit update since generation consumes credits
+            window.dispatchEvent(new Event('update-credits'))
         } catch (err) {
             setErrorMsg('Network error. Please check your connection and retry.')
             console.error('[baby-generate] fetch error:', err)
@@ -563,7 +566,7 @@ export default function AIBabyGeneratorPage() {
                                 ) : (
                                     <>
                                         <Sparkles size={20} />
-                                        Generate ( -5 Credit )
+                                        Generate ( -4 Credit )
                                     </>
                                 )}
                             </button>

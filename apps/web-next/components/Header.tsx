@@ -30,6 +30,15 @@ export function Header() {
 
   useEffect(() => {
     fetchCredits()
+
+    const handleCreditsUpdate = () => {
+      fetchCredits()
+    }
+
+    window.addEventListener('update-credits', handleCreditsUpdate)
+    return () => {
+      window.removeEventListener('update-credits', handleCreditsUpdate)
+    }
   }, [fetchCredits])
 
   useEffect(() => {
