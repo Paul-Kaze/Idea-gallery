@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
         console.log('[Creem Webhook] Raw Payload:', JSON.stringify(event))
 
         // Handle possible differences in webhook payload structure
-        const eventType = event.type || event.event || (event.data && event.data.type)
+        const eventType = event.eventType || event.type || event.event || (event.data && event.data.type)
         console.log('[Creem Webhook] Detected Event Type:', eventType)
 
         if (eventType !== 'checkout.completed') {
@@ -45,8 +45,9 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ received: true })
         }
 
-        const checkoutId: string = event.data?.id
-        const metadata = event.data?.metadata || {}
+        const checkoutObj = event.object || event.data
+        const checkoutId: string = checkoutObj?.id || event.id
+        const metadata = checkoutObj?.metadata || {}
         const userEmail: string = metadata.referenceId
         const packageKey: string = metadata.packageKey
         const creditsToAward: number = Number(metadata.credits) || CREDITS_MAP[packageKey] || 0
