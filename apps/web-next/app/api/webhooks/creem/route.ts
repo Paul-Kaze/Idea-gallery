@@ -33,11 +33,15 @@ export async function POST(request: NextRequest) {
         // ── 2. Parse event ───────────────────────────────────────────────
         console.log('[Creem Webhook] Signature verified, processing body...')
         const event = JSON.parse(body)
-        console.log('[Creem Webhook] Received Event Type:', event.type)
+        console.log('[Creem Webhook] Raw Payload:', JSON.stringify(event))
 
-        if (event.type !== 'checkout.completed') {
+        // Handle possible differences in webhook payload structure
+        const eventType = event.type || event.event || (event.data && event.data.type)
+        console.log('[Creem Webhook] Detected Event Type:', eventType)
+
+        if (eventType !== 'checkout.completed') {
             // Acknowledge other events without processing
-            console.log('[Creem Webhook] Ignored event type:', event.type)
+            console.log('[Creem Webhook] Ignored event type:', eventType)
             return NextResponse.json({ received: true })
         }
 
