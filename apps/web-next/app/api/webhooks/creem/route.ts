@@ -31,10 +31,13 @@ export async function POST(request: NextRequest) {
         }
 
         // ── 2. Parse event ───────────────────────────────────────────────
+        console.log('[Creem Webhook] Signature verified, processing body...')
         const event = JSON.parse(body)
+        console.log('[Creem Webhook] Received Event Type:', event.type)
 
         if (event.type !== 'checkout.completed') {
             // Acknowledge other events without processing
+            console.log('[Creem Webhook] Ignored event type:', event.type)
             return NextResponse.json({ received: true })
         }
 
@@ -43,6 +46,8 @@ export async function POST(request: NextRequest) {
         const userEmail: string = metadata.referenceId
         const packageKey: string = metadata.packageKey
         const creditsToAward: number = Number(metadata.credits) || CREDITS_MAP[packageKey] || 0
+
+        console.log('[Creem Webhook] Parsed Metadata:', { checkoutId, userEmail, packageKey, creditsToAward, metadata })
 
         if (!userEmail || !creditsToAward) {
             console.error('[Creem Webhook] Missing referenceId or credits in metadata', metadata)
