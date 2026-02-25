@@ -3,9 +3,9 @@ import { auth } from '../../../auth'
 
 // Credit packages config - productId must be set from Creem dashboard
 const CREDIT_PACKAGES: Record<string, { credits: number; productId: string }> = {
-    starter: { credits: 80, productId: process.env.CREEM_PRODUCT_ID_80 || 'prod_starter_80' },
-    growth: { credits: 200, productId: process.env.CREEM_PRODUCT_ID_200 || 'prod_growth_200' },
-    pro: { credits: 450, productId: process.env.CREEM_PRODUCT_ID_450 || 'prod_pro_450' },
+    starter: { credits: 80, productId: process.env.CREEM_PRODUCT_ID_80 || 'prod_1Y81AeNom1Iy1mC8TI42S9' },
+    growth: { credits: 200, productId: process.env.CREEM_PRODUCT_ID_200 || 'prod_3fv5ltUWpk1ZmOiTMJqlFc' },
+    pro: { credits: 450, productId: process.env.CREEM_PRODUCT_ID_450 || 'prod_63Xx8G8IvlSQlW6mo1s5Zu' },
 }
 
 export async function POST(request: NextRequest) {

@@ -32,7 +32,7 @@ const PACKAGES: CreditPackage[] = [
         key: 'pro',
         name: 'Pro',
         credits: 450,
-        price: '$14.99',
+        price: '$14.88',
         unitPrice: '$0.033/credit',
     },
 ]
