@@ -2,11 +2,11 @@ import { type NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { supabaseAdmin } from '../../../../lib/supabase'
 
-// Map packageKey -> credits to award
+// Map packageKey -> credits to award (fallback if metadata is missing)
 const CREDITS_MAP: Record<string, number> = {
-    starter: 100,
-    popular: 500,
-    pro: 1200,
+    starter: 80,
+    growth: 200,
+    pro: 450,
 }
 
 export async function POST(request: NextRequest) {
