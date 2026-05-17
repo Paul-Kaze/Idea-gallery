@@ -1,15 +1,18 @@
-import NextAuth from 'next-auth'
+import NextAuth, { customFetch } from 'next-auth'
 import Google from 'next-auth/providers/google'
-import { ProxyAgent, setGlobalDispatcher } from 'undici'
+import { ProxyAgent, fetch as undiciFetch } from 'undici'
 import { supabaseAdmin } from './lib/supabase'
 
-if (process.env.https_proxy || process.env.http_proxy) {
-    const proxyUrl = process.env.https_proxy || process.env.http_proxy
-    if (proxyUrl) {
+// Build a proxy-aware fetch only for OAuth (Google) requests,
+// without polluting the global dispatcher that Supabase also uses.
+const proxyUrl = process.env.AUTH_PROXY_URL || process.env.https_proxy || process.env.http_proxy
+
+const proxySymbol = proxyUrl
+    ? (...args: Parameters<typeof fetch>) => {
         const dispatcher = new ProxyAgent({ uri: proxyUrl })
-        setGlobalDispatcher(dispatcher)
+        return undiciFetch(args[0] as any, { ...(args[1] as any), dispatcher }) as unknown as ReturnType<typeof fetch>
     }
-}
+    : undefined
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
     providers: [
@@ -18,6 +21,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
         }),
     ],
+    ...(proxySymbol ? { [customFetch]: proxySymbol } : {}),
     session: { strategy: 'jwt' },
     trustHost: true,
     callbacks: {

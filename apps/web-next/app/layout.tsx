@@ -2,6 +2,7 @@ import './globals.css'
 import { SessionProvider } from '../components/providers/SessionProvider'
 import { Sidebar } from '../components/Sidebar'
 import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const authEnabled = process.env.NEXT_PUBLIC_AUTH_ENABLED === 'true'
@@ -20,9 +21,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 position: 'relative',
                 paddingTop: '64px', // account for fixed Header
                 paddingLeft: '80px', // account for fixed Sidebar
+                display: 'flex',
+                flexDirection: 'column',
               }}
             >
-              {children}
+              <div style={{ flex: 1 }}>
+                {children}
+              </div>
+              <Footer />
             </main>
           </SessionProvider>
         ) : (
@@ -36,9 +42,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 position: 'relative',
                 paddingTop: '64px', // account for fixed Header
                 paddingLeft: '80px', // account for fixed Sidebar
+                display: 'flex',
+                flexDirection: 'column',
               }}
             >
-              {children}
+              <div style={{ flex: 1 }}>
+                {children}
+              </div>
+              <Footer />
             </main>
           </>
         )}

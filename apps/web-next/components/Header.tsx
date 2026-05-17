@@ -136,7 +136,7 @@ export function Header() {
                 onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#f9fafb')}
                 onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#ffffff')}
               >
-                Charge
+                Pricing
               </button>
             </div>
           )}
