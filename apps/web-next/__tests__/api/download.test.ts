@@ -6,10 +6,8 @@ describe('GET /api/download', () => {
     expect(res.status).toBe(400)
   })
 
-  it('302 redirect for mocked id', async () => {
+  it('404 for id when OSS prefix is not configured', async () => {
     const res = await GET(new Request('http://localhost/api/download?id=1&type=original'))
-    expect(res.status).toBe(302)
-    const loc = res.headers.get('Location')
-    expect(loc).toContain('images.unsplash.com')
+    expect(res.status).toBe(404)
   })
 })

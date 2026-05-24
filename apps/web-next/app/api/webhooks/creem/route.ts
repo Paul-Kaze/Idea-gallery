@@ -1,6 +1,8 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { supabaseAdmin } from '../../../../lib/supabase'
+import { trackServerEvent } from '../../../../lib/server-analytics'
+import { captureServerError } from '../../../../lib/monitoring'
 
 // Map packageKey -> credits to award (fallback if metadata is missing)
 const CREDITS_MAP: Record<string, number> = {
@@ -17,6 +19,7 @@ export async function POST(request: NextRequest) {
         // ── 1. Verify webhook signature ──────────────────────────────────
         if (!signature || !process.env.CREEM_WEBHOOK_SECRET) {
             console.error('[Creem Webhook] Missing signature or secret')
+            await captureServerError('webhook.creem_missing_signature_or_secret', new Error('Missing webhook signature or secret'))
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
         }
 
@@ -56,11 +59,19 @@ export async function POST(request: NextRequest) {
 
         if (!userEmail || !creditsToAward) {
             console.error('[Creem Webhook] Missing referenceId or credits in metadata', metadata)
+            await captureServerError('webhook.creem_missing_metadata', new Error('Missing referenceId or credits'), {
+                checkoutId,
+                packageKey,
+            })
             return NextResponse.json({ received: true })
         }
 
         if (!supabaseAdmin) {
             console.error('[Creem Webhook] Supabase not configured')
+            await captureServerError('webhook.creem_supabase_not_configured', new Error('Supabase not configured'), {
+                checkoutId,
+                packageKey,
+            })
             return NextResponse.json({ received: true })
         }
 
@@ -85,6 +96,10 @@ export async function POST(request: NextRequest) {
 
         if (!user) {
             console.error('[Creem Webhook] User not found for email:', userEmail)
+            await captureServerError('webhook.creem_user_not_found', new Error('User not found'), {
+                checkoutId,
+                packageKey,
+            })
             return NextResponse.json({ received: true })
         }
 
@@ -98,6 +113,10 @@ export async function POST(request: NextRequest) {
 
         if (updateError) {
             console.error('[Creem Webhook] Failed to update credits:', updateError)
+            await captureServerError('webhook.creem_credit_update_failed', updateError, {
+                checkoutId,
+                packageKey,
+            })
             return NextResponse.json({ error: 'DB update failed' }, { status: 500 })
         }
 
@@ -112,9 +131,16 @@ export async function POST(request: NextRequest) {
         })
 
         console.log(`[Creem Webhook] Awarded ${creditsToAward} credits to user ${userEmail}`)
+        await trackServerEvent('payment_success', {
+            checkout_id: checkoutId,
+            package_key: packageKey,
+            credits_awarded: creditsToAward,
+            product_id: productId,
+        }, userEmail)
         return NextResponse.json({ received: true })
     } catch (error) {
         console.error('[Creem Webhook] Unexpected error:', error)
+        await captureServerError('webhook.creem_unexpected_error', error)
         return NextResponse.json({ error: 'Internal error' }, { status: 500 })
     }
 }

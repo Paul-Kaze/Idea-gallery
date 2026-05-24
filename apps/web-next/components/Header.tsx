@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { Sparkles, LogOut, Zap } from 'lucide-react'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import { CreditsModal } from './CreditsModal'
+import { trackEvent } from '../lib/analytics'
 
 export function Header() {
   const { data: session } = useSession()
@@ -55,6 +56,12 @@ export function Header() {
 
   const handleLoginRequired = () => {
     setIsModalOpen(false)
+    trackEvent('login_started', { method: 'google', location: 'credits_modal' })
+    signIn('google')
+  }
+
+  const handleSignIn = () => {
+    trackEvent('login_started', { method: 'google', location: 'header' })
     signIn('google')
   }
 
@@ -237,7 +244,7 @@ export function Header() {
               </div>
             ) : (
               <button
-                onClick={() => signIn('google')}
+                onClick={handleSignIn}
                 style={{
                   height: '36px',
                   padding: '0 16px',

@@ -6,13 +6,8 @@ describe('GET /api/images/:id', () => {
     expect(res.status).toBe(404)
   })
 
-  it('returns detail for mocked id', async () => {
+  it('returns 404 when production data is not configured for id', async () => {
     const res = await GET(new Request('http://localhost'), { params: { id: '1' } })
-    expect(res.status).toBe(200)
-    const data = await res.json()
-    expect(data.id).toBe('1')
-    expect(data.fullUrl).toBeTruthy()
-    expect(data.model).toBeTruthy()
-    expect(data.prompt).toBeTruthy()
+    expect(res.status).toBe(404)
   })
 })

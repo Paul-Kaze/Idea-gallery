@@ -1,0 +1,508 @@
+{
+  "slug": "gpt-image-2",
+  "category": "image",
+  "vendor": "OpenAI",
+  "meta": {
+    "title": "GPT Image 2 AI Image Generator | Dommi",
+    "description": "Use GPT Image 2 in Dommi to turn detailed creative briefs into polished images with stronger text rendering, layout control, and illustration quality. Compare GPT Image 2 when you need text and layout precision; use Nano Banana for fast edits, and Seedream when photoreal detail or reference handling matters more.",
+    "keywords": [
+      "GPT Image 2",
+      "GPT Image 2 AI image generator",
+      "GPT Image 2 Dommi",
+      "OpenAI image models",
+      "AI image generator"
+    ]
+  },
+  "hero": {
+    "h1": "GPT Image 2 AI Image Generator",
+    "description": "Use GPT Image 2 in Dommi to turn detailed creative briefs into polished images with stronger text rendering, layout control, and illustration quality."
+  },
+  "generator_panel": {
+    "agent_label": "Create with GPT Image 2 in Dommi",
+    "pill_label": "AI Image",
+    "quick_motion_options": [],
+    "quick_style_options": [],
+    "tool_modes": [
+      {
+        "label": "Text to Image",
+        "value": "text"
+      },
+      {
+        "label": "Image to Image",
+        "value": "image"
+      }
+    ],
+    "fields": [
+      {
+        "name": "model",
+        "label": "Model",
+        "default": "GPT Image 2",
+        "options": [
+          "GPT Image 2",
+          "Nano Banana 2",
+          "Seedream 4.5",
+          "Seedream 4.0"
+        ]
+      },
+      {
+        "name": "aspectRatio",
+        "label": "Aspect ratio",
+        "default": "1:1",
+        "options": [
+          "1:1",
+          "16:9",
+          "9:16",
+          "4:3",
+          "3:4",
+          "3:2",
+          "2:3"
+        ]
+      },
+      {
+        "name": "resolution",
+        "label": "Resolution",
+        "default": "2K",
+        "options": [
+          "1K",
+          "2K",
+          "4K"
+        ]
+      }
+    ],
+    "upload": {
+      "show": true,
+      "placeholder": "Click to upload a reference image",
+      "hint": "JPG, PNG, WEBP",
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "prompt_placeholders": {
+      "text": "Describe the GPT Image 2 image: subject, style, lighting, composition, and any required text.",
+      "image": "Describe how GPT Image 2 should transform or extend the reference image."
+    },
+    "toggles": [],
+    "generator_links": {
+      "text": "/ai-image-generation?model=gpt-image-2",
+      "image": "/ai-image-generation?model=gpt-image-2"
+    },
+    "submit_labels": {
+      "text": "Generate Image",
+      "image": "Generate Image"
+    }
+  },
+  "related_section": {
+    "h2": "GPT Image 2 alternatives and related models",
+    "intro": "Compare GPT Image 2 with adjacent OpenAI image models and nearby Dommi models before choosing the right generator for the job.",
+    "related_models": [
+      "Nano Banana 2",
+      "Nano Banana Pro",
+      "Seedream 4.5",
+      "Seedream 4.0"
+    ]
+  },
+  "highlights_section": {
+    "h2": "Why use GPT Image 2 in Dommi",
+    "intro": "Focus on the search intent that matters: what GPT Image 2 can create, when to choose it, and how to prompt it effectively.",
+    "items": [
+      {
+        "title": "Legible text inside images",
+        "text": "best for text-heavy graphics, product concepts, editorial illustrations, and prompt experiments where the written brief matters as much as the style."
+      },
+      {
+        "title": "Complex prompt interpretation",
+        "text": "Compare GPT Image 2 when you need text and layout precision; use Nano Banana for fast edits, and Seedream when photoreal detail or reference handling matters more."
+      },
+      {
+        "title": "Illustration and layout control",
+        "text": "Name the subject, exact text, layout hierarchy, style, lighting, and where every important element should sit in the frame."
+      }
+    ]
+  },
+  "examples_section": {
+    "h2": "GPT Image 2 prompt examples",
+    "intro": "Use these prompts to test text rendering, illustration style, and multi-part composition before you commit to a larger creative direction.",
+    "effect_badge": "G2",
+    "items": [
+      {
+        "title": "Poster with legible text",
+        "prompt": "A vintage-style travel poster for Kyoto in spring, hand-drawn cherry blossoms framing the composition, soft pastel sunset palette, the text 'KYOTO — SPRING 2026' rendered in a clean serif at the top in cream, 'Visit before the season ends' in smaller script at the bottom.",
+        "result": "Output: a poster-style illustration with cleanly readable text in both headline and subhead positions, balanced composition between cherry blossoms and negative space.",
+        "result_image": "https://i.redd.it/l4p2dneegxxg1.png",
+        "result_alt": "Nobody Try This — GetNoted"
+      },
+      {
+        "title": "Watercolor illustration",
+        "prompt": "Watercolor illustration of a fox sitting in a forest clearing at dawn, mist rising from the moss, soft golden light filtering through pines, hand-drawn linework with wet-on-wet washes, storybook editorial style, gentle pastel palette.",
+        "result": "Output: a hand-illustrated forest scene with visible brush texture, atmospheric mist, and storybook color story — usable as editorial header art or a children's book interior.",
+        "result_image": "https://i.redd.it/kmusjdszbxwg1.png",
+        "result_alt": "New gpt image 2 is crazy — adressme"
+      },
+      {
+        "title": "Multi-element campaign concept",
+        "prompt": "Product hero for a minimalist Scandinavian coffee brand: a matte ceramic mug on a light oak table, steam rising in soft light, an open book and a folded linen napkin to the right, north-window lighting, muted earth-tone palette, 'Brewed slowly' rendered as small embossed text on the mug, brand-appropriate composition.",
+        "result": "Output: a polished brand still with the embossed text legible on the mug, all secondary props placed cleanly, light direction consistent across the scene — usable as a homepage hero or paid social creative.",
+        "result_image": "https://preview.redd.it/ipxl7vdr9iyg1.jpg?width=1072&format=pjpg&auto=webp&s=36195e285bc9d5d788ea3af20729e57d97d3b00f",
+        "result_alt": "GPT Image 2 prompt that is viral right now: \"Redraw the attached image in the most clumsy, scribbly, and utterly patheti — ChatGPT"
+      }
+    ]
+  },
+  "how_to_section": {
+    "h2": "How to use GPT Image 2 in Dommi",
+    "intro": "A simple workflow for turning search intent into a usable image result with GPT Image 2.",
+    "steps": [
+      {
+        "title": "Choose GPT Image 2",
+        "description": "Start from Dommi's generator surface and select GPT Image 2 when your goal matches its strengths: legible text inside images, complex prompt interpretation, illustration and layout control."
+      },
+      {
+        "title": "Write a focused prompt",
+        "description": "Name the subject, exact text, layout hierarchy, style, lighting, and where every important element should sit in the frame."
+      },
+      {
+        "title": "Generate, compare, refine",
+        "description": "Run the prompt, compare it with related Dommi models, then adjust one variable at a time so you can see what GPT Image 2 changes."
+      }
+    ]
+  },
+  "youtube_section": {
+    "h2": "GPT Image 2 tutorials on YouTube",
+    "intro": "Watch creator tutorials and walkthroughs that show how people prompt, compare, and evaluate GPT Image 2 in real workflows."
+  },
+  "reddit_section": {
+    "h2": "GPT Image 2 discussions on Reddit",
+    "intro": "Read community threads about GPT Image 2 results, strengths, limitations, and how it compares with other AI image models."
+  },
+  "x_section": {
+    "h2": "GPT Image 2 posts on X",
+    "intro": "Browse curated X posts for GPT Image 2: launches, creator tests, benchmark notes, and prompt examples from the original discussions."
+  },
+  "social": {
+    "youtube_videos": [
+      {
+        "id": "blOlUnC75O4",
+        "title": "GPT Image 2 Is Here — Everything You NEED to Know",
+        "description": "OpenAI just released GPT Image 2 and it's one of the biggest image model jumps we've seen all year. Try GPT Image 2 →…",
+        "uploadDate": "2026-04-23T10:24:48-07:00"
+      },
+      {
+        "id": "-7JSa_luc6k",
+        "title": "This is ChatGPT Images 2.0",
+        "description": "A new era of image generation. Video made with ChatGPT Images.",
+        "uploadDate": "2026-04-21T12:01:59-07:00"
+      },
+      {
+        "id": "GY-kAiZGLOw",
+        "title": "OpenAI Image 2 is Nuts. Here are 10 Ways to Use it.",
+        "description": "Full courses + unlimited support: https://www.skool.com/ai-automation-society-plus/about?el=gpt-image-2 All my FREE resources: https://www.skool.com/ai-automation-society/about?el=el=gpt-image-2 Apply for my YT podcast:…",
+        "uploadDate": "2026-04-21T21:01:54-07:00"
+      },
+      {
+        "id": "6H-Y-aOqVns",
+        "title": "GPT Image 1.5 Full Beginner Tutorial – Interface, Editor & Tricks",
+        "description": "GPT Image 1.5 – Pure Creative Joy. OpenAI has integrated GPT Image 1.5 into ChatGPT 5.2, aiming to challenge the current visual heavyweight Nano Banana Pro. This analysis goes beyond the surface, testing both models against complex…",
+        "uploadDate": "2025-12-20T08:34:37-08:00"
+      },
+      {
+        "id": "EcP7bzNAEn0",
+        "title": "Instruction Following with ChatGPT Images 2.0",
+        "description": "OpenAI researcher Jianfeng Wang explains how ChatGPT Images 2.0 can now follow highly detailed instruction in prompts, especially when it comes to spatial layouts and text rendering.",
+        "uploadDate": "2026-04-21T12:24:07-07:00"
+      },
+      {
+        "id": "twIW3pzBUCc",
+        "title": "Nano Banana Finally Dethroned. GPT-Image 2.0 FULLY tested",
+        "description": "*Get the ChatGPT guide:* https://clickhubspot.com/r3p9 Summary: ChatGPT Images 2.0 just launched, making it a powerful new contender in the world of ai image generator and ai image editing tools. This video explores its capabilities,…",
+        "uploadDate": "2026-04-22T01:29:28-07:00"
+      },
+      {
+        "id": "B-73tuAHBo8",
+        "title": "Slides & Infographics with ChatGPT Images 2.0",
+        "description": "OpenAI researcher Yuguang Yang shows how, with Thinking selected, ChatGPT Images 2.0 can now follow long and complex prompts of over 1,000 words to create detailed, educational infographics. ChatGPT can now also transform uploaded PDFs…",
+        "uploadDate": "2026-04-21T12:24:03-07:00"
+      },
+      {
+        "id": "uvdRGC4cFhY",
+        "title": "ChatGPT Image 2 just dropped... (WOAH)",
+        "description": "OpenAI just dropped ChatGPT Image 2 and my jaw has not returned from the floor yet... Download The 25 OpenClaw Use Cases eBook 👇🏼 https://bit.ly/4aBQwo1 Download The Subtle Art of Not Being Replaced 👇🏼 http://bit.ly/3WLNzdV Download…",
+        "uploadDate": "2026-04-21T17:54:02-07:00"
+      },
+      {
+        "id": "TLFPbMUtErM",
+        "title": "New AI image generator BEATS EVERYTHING",
+        "description": "ChatGPT Images 2.0 review. GPT Image 2.0 vs Nano Banana. #ai #aiart #aitools #imagegenerator #agi Thanks to our sponsor Higgsfield. Try their new Marketing Studio https://higgsfield.ai/s/marketing-studio-theaisearch-lCPKXL #aivideo ChatGPT…",
+        "uploadDate": "2026-04-21T20:36:16-07:00"
+      },
+      {
+        "id": "L-RVyipLHQQ",
+        "title": "Aspect Ratios & Resolution with ChatGPT Images 2.0",
+        "description": "OpenAI researcher Dibya Bhattacharjee shows the variety of aspect ratios you can prompt with ChatGPT Images 2.0, plus the jump in maximum resolution – from 1k in to now 2k resolution, or even higher when using our API.",
+        "uploadDate": "2026-04-21T12:23:53-07:00"
+      },
+      {
+        "id": "XdQq90Ug8eY",
+        "title": "OpenAI just destroyed all AI image tools… GPT Images 2.0",
+        "description": "Try GPT Image 2: https://higgsfield.ai/s/gpt-image-2-seedance-2-0-davidondrej-MuFyHN Wanna learn how to code with AI? Go here: https://www.skool.com/new-society Follow me on Instagram - https://www.instagram.com/davidondrej1/ Follow me on…",
+        "uploadDate": "2026-04-24T03:02:49-07:00"
+      },
+      {
+        "id": "QT1nMo-QMDQ",
+        "title": "ULTIMATE GPT IMAGE 1.5 TUTORIAL: 15 PROMPT TECHNIQUES",
+        "description": "#sponsored Get 50% off the Coursera Plus Annual subscription! https://imp.i384100.net/c/4992991/3738564/14726 Coursera Prompting essentials - https://imp.i384100.net/55W5Jo Coursera AI essentials - https://imp.i384100.net/e13176 🚀 Become…",
+        "uploadDate": "2025-12-30T08:00:44-08:00"
+      }
+    ],
+    "reddit_posts": [
+      {
+        "title": "ChatGPT Images 2.0 output for the prompt \"create an image of a Philippine public school Christmas party in the early 2010s\"",
+        "url": "https://www.reddit.com/r/Tech_Philippines/comments/1stf0vc/chatgpt_images_20_output_for_the_prompt_create_an/",
+        "height": 280,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/sf5zx8wz4xwg1.png",
+          "preview_url": "https://preview.redd.it/sf5zx8wz4xwg1.png?auto=webp&s=6290ccaf33dd80c062b93621043229762c26b2a7",
+          "width": 1448,
+          "height": 1086
+        },
+        "meta": {
+          "author": "Itchy_Tangerine1897",
+          "created_utc": 1776940698,
+          "ups": 3939,
+          "num_comments": 446,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_59cejs/styles/communityIcon_0wrtoemg546c1.png"
+        },
+        "subreddit": "Tech_Philippines",
+        "excerpt": "Deym, im pretty sure 99% sa atin hindi ito ma fa-flag as AI slop. Grabe ang inimprove ng image generation tools ngayon."
+      },
+      {
+        "title": "MSPaint is literally free...",
+        "url": "https://www.reddit.com/r/antiai/comments/1t0umt1/mspaint_is_literally_free/",
+        "height": 280,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/erv2hjwjajyg1.png",
+          "preview_url": null,
+          "width": null,
+          "height": null
+        },
+        "meta": {
+          "author": "Halleyalex",
+          "created_utc": 1777644853,
+          "ups": 3612,
+          "num_comments": 309,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_37shj/styles/communityIcon_nbhsa4k7291f1.png"
+        },
+        "subreddit": "antiai",
+        "excerpt": "They're not even trying to hide it anymore. Why generate something that you think is \"utterly pathetic and clumsy\" that literally takes &lt;2 minutes to create????"
+      },
+      {
+        "title": "AI slop turning yellow is the funniest thing",
+        "url": "https://www.reddit.com/r/antiai/comments/1t3uje6/ai_slop_turning_yellow_is_the_funniest_thing/",
+        "height": 280,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/oobdrh5rp6zg1.jpeg",
+          "preview_url": null,
+          "width": null,
+          "height": null
+        },
+        "meta": {
+          "author": "DifferenceAgile2733",
+          "created_utc": 1777928341,
+          "ups": 3255,
+          "num_comments": 49,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_37shj/styles/communityIcon_nbhsa4k7291f1.png"
+        },
+        "subreddit": "antiai"
+      },
+      {
+        "title": "All the researchers and scientists who helped create this tool deserve to be tried and punished",
+        "url": "https://www.reddit.com/r/antiai/comments/1su4uqo/all_the_researchers_and_scientists_who_helped/",
+        "height": 280,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/oi31jkrsa2xg1.jpeg",
+          "preview_url": null,
+          "width": null,
+          "height": null
+        },
+        "meta": {
+          "author": "Mother-Quality3767",
+          "created_utc": 1777003205,
+          "ups": 2413,
+          "num_comments": 295,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_37shj/styles/communityIcon_nbhsa4k7291f1.png"
+        },
+        "subreddit": "antiai"
+      },
+      {
+        "title": "geoguessr time travel clone with gpt-image-2",
+        "url": "https://www.reddit.com/r/singularity/comments/1swci1d/geoguessr_time_travel_clone_with_gptimage2/",
+        "height": 280,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/ymojxj38ckxg1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/MTB2aGRlejdja3hnMfHf5rmRz-p-O1fbF3PeQzllfDlTjr_O84K0oeQocVw1.png?format=pjpg&auto=webp&s=6fe4700ff7aa1dfb2508ea29d0cf23afd7b06b2d",
+          "width": 1876,
+          "height": 1080,
+          "duration": 102,
+          "has_audio": false
+        },
+        "meta": {
+          "author": "Proof-Square7528",
+          "created_utc": 1777221628,
+          "ups": 2239,
+          "num_comments": 116,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_2qh8m/styles/communityIcon_hmujz61wdga81.jpg"
+        },
+        "subreddit": "singularity",
+        "excerpt": "Basically the title, gpt-image-2 can create 360 degree near perfect panoramas. One can then batch generate them with the api to effectively time travel."
+      },
+      {
+        "title": "ChatGPT image 2 is crazyy",
+        "url": "https://www.reddit.com/r/ChatGPT/comments/1sxvt6y/chatgpt_image_2_is_crazyy/",
+        "height": 280,
+        "media": {
+          "type": "gallery",
+          "image_url": "https://preview.redd.it/3drrpt08bwxg1.png?width=1448&format=png&auto=webp&s=8f5b712561e4e16d55ea102b817f64481ac400c8",
+          "gallery_count": 2,
+          "width": 1448,
+          "height": 1086
+        },
+        "meta": {
+          "author": "Main-Reflection-1370",
+          "created_utc": 1777366531,
+          "ups": 1833,
+          "num_comments": 159,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_7hqomg/styles/communityIcon_bzj6d1z1oizc1.png"
+        },
+        "subreddit": "ChatGPT"
+      },
+      {
+        "title": "Frutiger Aero Steam Profile",
+        "url": "https://www.reddit.com/r/FrutigerAIro/comments/1t4lgt5/frutiger_aero_steam_profile/",
+        "height": 280,
+        "media": {
+          "type": "gallery",
+          "image_url": "https://preview.redd.it/os4ufbk0nczg1.png?width=1518&format=png&auto=webp&s=b81670b9d00d2d1fb5bc103e92dd5de66229dabb",
+          "gallery_count": 2,
+          "width": 1518,
+          "height": 887
+        },
+        "meta": {
+          "author": "Expensive-Can7148",
+          "created_utc": 1778000487,
+          "ups": 1782,
+          "num_comments": 46,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_atpzcs/styles/communityIcon_u3q9wpjez9jc1.png"
+        },
+        "subreddit": "FrutigerAIro",
+        "excerpt": "My original post was removed in another subreddit for using AI to create this profile, so I think it would be appropriate to show it here. What I used to make this: 1. Steam profile items: Background: Theme IV (Mirror's Edge) Avatar Frame: Win7 Game Profile: DYING LIGHT 2 2. Parts of the ba"
+      }
+    ],
+    "x_posts": [
+      {
+        "id": "2047055195474145334",
+        "text": "OpenRouter: GPT Image 2 live as openai/gpt-5.4-image-2",
+        "author": "OpenRouter",
+        "handle": "OpenRouterAI",
+        "date": "Apr 23, 2026",
+        "url": "https://twitter.com/i/status/2047055195474145334"
+      },
+      {
+        "id": "2046595840710430735",
+        "text": "VGTimes: GPT Image 2 rolling out — labels, logos, infographics, product cards",
+        "author": "VGTimes",
+        "handle": "VGTimes",
+        "date": "Apr 21, 2026",
+        "url": "https://twitter.com/i/status/2046595840710430735"
+      },
+      {
+        "id": "2040397753876951101",
+        "text": "IVAN: GPT Image 2 leaked, potentially above Nano Banana 2 on Arena",
+        "author": "IVAN",
+        "handle": "IVAN",
+        "date": "Apr 4, 2026",
+        "url": "https://twitter.com/i/status/2040397753876951101"
+      },
+      {
+        "id": "2048117106693058953",
+        "text": "Mark Kretschmann: OpenAI engineer addresses GPT-Image-2 noise artifact fix",
+        "author": "Mark Kretschmann",
+        "handle": "MarkKretschmann",
+        "date": "Apr 26, 2026",
+        "url": "https://twitter.com/i/status/2048117106693058953"
+      },
+      {
+        "id": "2040338311873515597",
+        "text": "can: GPT Image 2 leaked outputs — best image model yet",
+        "author": "can",
+        "handle": "can",
+        "date": "Apr 4, 2026",
+        "url": "https://twitter.com/i/status/2040338311873515597"
+      },
+      {
+        "id": "2048514914499932226",
+        "text": "Riley Coyote: GPT Image 2 and 5.5 — most pleasant OpenAI releases since 4o",
+        "author": "Riley Coyote",
+        "handle": "RileyCoyote",
+        "date": "Apr 27, 2026",
+        "url": "https://twitter.com/i/status/2048514914499932226"
+      },
+      {
+        "id": "2047007936443289600",
+        "text": "Floatboat.ai: GPT Image 2 one-click install — text-to-image, local + remote editing",
+        "author": "Floatboat.ai",
+        "handle": "floatboat_ai",
+        "date": "Apr 23, 2026",
+        "url": "https://twitter.com/i/status/2047007936443289600"
+      },
+      {
+        "id": "2046722061872283814",
+        "text": "Orange AI: GPT Image 2 API pricing — cheaper than banana",
+        "author": "Orange AI",
+        "handle": "orangeai_app",
+        "date": "Apr 22, 2026",
+        "url": "https://twitter.com/i/status/2046722061872283814"
+      }
+    ]
+  },
+  "faq_section": {
+    "h2": "GPT Image 2 FAQ",
+    "intro": "Direct answers for people searching how GPT Image 2 works, what it is good at, and when to use it in Dommi.",
+    "items": [
+      {
+        "q": "What is GPT Image 2?",
+        "a": "GPT Image 2 is an AI image model from OpenAI. In Dommi, this page explains where it fits, shows prompt examples, and connects it with related image models so creators can choose the right workflow."
+      },
+      {
+        "q": "What is GPT Image 2 best for?",
+        "a": "GPT Image 2 is best for text-heavy graphics, product concepts, editorial illustrations, and prompt experiments where the written brief matters as much as the style. Its main strengths are legible text inside images, complex prompt interpretation, illustration and layout control."
+      },
+      {
+        "q": "How do I prompt GPT Image 2?",
+        "a": "Name the subject, exact text, layout hierarchy, style, lighting, and where every important element should sit in the frame."
+      },
+      {
+        "q": "How is GPT Image 2 different from related models?",
+        "a": "Compare GPT Image 2 when you need text and layout precision; use Nano Banana for fast edits, and Seedream when photoreal detail or reference handling matters more."
+      },
+      {
+        "q": "Can I use a reference image with GPT Image 2?",
+        "a": "Yes. Use a reference image when you want GPT Image 2 to preserve identity, layout, product details, or visual style while generating a new variation."
+      },
+      {
+        "q": "Can I compare GPT Image 2 with other Dommi models?",
+        "a": "Yes. Use the related model links on this page to compare GPT Image 2 with nearby options, then reuse the same prompt so the difference between models is easier to judge."
+      }
+    ]
+  },
+  "final_cta": {
+    "logo": "/logo.png",
+    "h2": "Create with GPT Image 2 in Dommi",
+    "body": "Open Dommi with GPT Image 2 in mind and test a text-heavy prompt, product card, or illustration brief in minutes.",
+    "btn_label": "Open Dommi Tools",
+    "btn_href": "/tools",
+    "btn_link": "/tools"
+  },
+  "brand": "Dommi",
+  "source_slug": "gpt-image-2"
+}

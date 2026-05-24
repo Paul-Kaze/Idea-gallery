@@ -28,37 +28,7 @@ export type DetailItem = {
 
 export async function listImages(page = 1, size = 20): Promise<{ items: ListItem[]; total: number; hasNext: boolean }> {
   if (!__supabaseAdmin) {
-    // Fallback to mock if no DB configured
-    const MOCK: ListItem[] = [
-      {
-        id: '1',
-        type: 'image',
-        thumbnail_url: 'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?w=800',
-        model: 'Gemini 3 Pro',
-        width: 1200,
-        height: 1600,
-      },
-      {
-        id: '2',
-        type: 'image',
-        thumbnail_url: 'https://images.unsplash.com/photo-1705254613735-1abb457f8a60?w=800',
-        model: 'DALL-E 4',
-        width: 1200,
-        height: 800,
-      },
-      {
-        id: 'v1',
-        type: 'video',
-        thumbnail_url: 'https://images.unsplash.com/photo-1535016120720-40c6874c3b13?w=800',
-        model: 'Sora v1',
-        width: 1920,
-        height: 1080,
-      },
-    ]
-    const start = (page - 1) * size//起始索引
-    const end = start + size
-    const items = MOCK.slice(start, end)
-    return { items, total: MOCK.length, hasNext: end < MOCK.length }
+    return { items: [], total: 0, hasNext: false }
   }
 
   const start = (page - 1) * size

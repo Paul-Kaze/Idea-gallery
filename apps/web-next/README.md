@@ -9,7 +9,7 @@
 
 ## 启动
 - 在 `apps/web-next` 目录安装依赖并运行 `npm run dev`
-- 未配置 OSS 时，接口回退到 Mock 数据；配置示例见根目录 `.env.*.example`
+- 未配置 OSS 或 Supabase 时，生产接口返回空数据或明确错误；配置示例见根目录 `.env.*.example`
 
 ## 数据灌入（Supabase）
 - 将 `SUPABASE_URL` 与 `SUPABASE_SERVICE_ROLE_KEY` 写入 `apps/web-next/.env`
@@ -21,7 +21,7 @@
 - `GET /api/images?page&size&viewport`：返回 `{ items, total, hasNext }`
 - `GET /api/images/:id`：返回详情 `{ id, type, fullUrl, model, prompt, width, height, duration?, references[] }`
 - `GET /api/download?id&type=original|thumb`：返回文件流或重定向到公开地址
-- `POST /api/auth/google`：Mock 登录（真实登录：`/api/auth/[...nextauth]`）
+- `GET/POST /api/auth/[...nextauth]`：NextAuth Google 登录
 
 ## 性能与安全
 - 接口设置 `Cache-Control` 与 `revalidate`
@@ -34,7 +34,7 @@
 
 ## 回滚与切流
 - 旧版保留于根目录（Vite SPA）；新版位于 `apps/web-next`
-- 通过环境变量切换真实数据源与 Mock，快速回滚不影响 UI
+- 通过环境变量切换真实数据源；正式环境不再提供公开 Mock 数据回退
 ## 已修复的运行时问题
 - CSS 导入跨目录报错：Next.js 不允许从 `app/` 目录外直接 `@import` 根目录 `src/` 的样式。修复方式：将 `src/index.css` 与 `src/styles/globals.css` 完整拷贝至 `apps/web-next/styles/`，并在 `app/globals.css` 以相对路径导入（`@import '../styles/index.css'; @import '../styles/globals.css';`）。
 - `react-responsive-masonry` 依赖缺失：运行时报 `Module not found: Can't resolve 'prop-types'`。修复方式：在 `apps/web-next/package.json` 增加依赖 `prop-types` 并安装。

@@ -82,12 +82,16 @@ export function ImageDetailModal({ item, onClose }: ImageDetailModalProps) {
   const shouldShowToggle = promptText.length > 100
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4" onClick={handleBackdropClick}>
-      <div className="bg-white w-[1024px] h-[768px] overflow-hidden flex flex-col md:flex-row relative rounded-[12px]">
-        <button onClick={onClose} className="absolute top-4 right-4 w-9 h-9 bg-white rounded-full shadow flex items-center justify-center hover:bg-gray-50 transition-colors z-10">
-          <X className="w-5 h-5 text-gray-700" />
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+      data-testid="image-detail-backdrop"
+      onClick={handleBackdropClick}
+    >
+      <div className="image-detail-shell bg-white overflow-hidden flex flex-col md:flex-row relative rounded-[12px]">
+        <button onClick={onClose} className="image-detail-close absolute bg-white rounded-full shadow flex items-center justify-center hover:bg-gray-50 transition-colors z-10">
+          <X className="w-4 h-4 text-gray-700" />
         </button>
-        <div className="flex-1 bg-gray-50 flex items-center justify-center p-12">
+        <div className="image-detail-media flex-1 bg-gray-50 flex items-center justify-center">
           <div className="relative w-full h-full flex items-center justify-center">
             {!isLoaded && (
               <div className="absolute inset-0 flex items-center justify-center">
@@ -117,9 +121,9 @@ export function ImageDetailModal({ item, onClose }: ImageDetailModalProps) {
             )}
           </div>
         </div>
-        <div className="w-full md:w-96 bg-white flex flex-col">
-          <div className="flex-1 p-8 overflow-y-auto">
-            <div className="space-y-6">
+        <div className="image-detail-panel bg-white flex flex-col">
+          <div className="image-detail-content flex-1 overflow-y-auto">
+            <div className="image-detail-stack">
               <div>
                 <div className="text-xs text-gray-500 mb-2">Model</div>
                 <div className="text-sm text-gray-900">{detail?.model ?? item.model}</div>
@@ -172,7 +176,7 @@ export function ImageDetailModal({ item, onClose }: ImageDetailModalProps) {
               )}
             </div>
           </div>
-          <div className="border-t border-gray-200 p-8">
+          <div className="image-detail-footer border-t border-gray-200">
             <button onClick={handleDownload} className="w-full flex items-center justify-center gap-2 px-6 py-2.5 bg-gray-900 text-white hover:bg-gray-700 transition-colors text-sm">
               <Download className="w-4 h-4" />
               Download {item.type === 'video' ? 'Video' : 'Image'}

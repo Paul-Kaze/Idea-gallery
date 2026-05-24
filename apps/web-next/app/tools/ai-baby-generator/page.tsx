@@ -4,6 +4,7 @@ import React, { useState, useRef } from 'react'
 import { ArrowLeft, Upload, Sparkles, ChevronDown, ChevronUp, Download, AlertCircle } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { trackEvent } from '../../../lib/analytics'
 
 // ─── Types ──────────────────────────────────────────────────────────────────
 
@@ -182,24 +183,11 @@ export default function AIBabyGeneratorPage() {
         fetchHistory()
     }, [])
 
-    // Using Unsplash placeholders for presets
-    const momPresets = [
-        'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop',
-        'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&h=100&fit=crop',
-        'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop'
-    ]
-
-    const dadPresets = [
-        'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop',
-        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop',
-        'https://images.unsplash.com/photo-1504257432389-523431e11105?w=100&h=100&fit=crop'
-    ]
-
     const faqs = [
-        { q: "Is the baby face prediction realistic?", a: "Yes, our AI uses advanced biometric algorithms trained on millions of data points to create highly realistic predictive portraits." },
+        { q: "Is the baby face prediction realistic?", a: "Dommi creates a realistic-looking creative preview from the photos you upload. It is for fun and sharing, not a genetic or medical prediction." },
         { q: "Is the tool free to use?", a: "We offer both free credits for new users and premium, high-resolution generation options." },
-        { q: "Is my privacy protected when using AI Baby Generator?", a: "Absolutely. All images are processed with bank-level encryption and are deleted from our servers within 24 hours." },
-        { q: "How does the AI Baby Generator work?", a: "We analyze over 800 facial anchors from both parents and apply genetic inheritance algorithms to fuse the features naturally." },
+        { q: "Is my privacy protected when using AI Baby Generator?", a: "Your photos are used to generate the result and may be stored in your account history so you can view or download it later. Only upload photos you have permission to use, and review the privacy policy for storage and account details." },
+        { q: "How does the AI Baby Generator work?", a: "Upload two clear portraits, choose a baby style, and Dommi blends visible facial traits into a playful baby portrait preview." },
         { q: "Can I choose the gender of the ai baby?", a: "Yes, you can explicitly toggle between generating a boy or a girl portrait." },
         { q: "What can I do using this ai baby portrait?", a: "You can share it with family, use it for fun family planning discussions, or keep it as a charming keepsake." },
         { q: "How long does it take to generate the ai baby?", a: "The process usually takes 10–30 seconds after uploading your photos." }
@@ -212,12 +200,21 @@ export default function AIBabyGeneratorPage() {
         const dadB64 = dadBase64Ref.current
 
         if (!momPreviewUrl || !dadPreviewUrl || !momB64 || !dadB64) {
+            trackEvent('generation_failed', {
+                tool_name: 'ai_baby',
+                reason: 'missing_uploads',
+            })
             alert('Please upload both parents\' photos first')
             return
         }
 
         setIsGenerating(true)
         setErrorMsg(null)
+        trackEvent('generation_started', {
+            tool_name: 'ai_baby',
+            gender,
+            credits_cost: 4,
+        })
 
         try {
             const res = await fetch('/api/tools/baby-generate', {
@@ -230,6 +227,12 @@ export default function AIBabyGeneratorPage() {
 
             if (!res.ok) {
                 setErrorMsg(data.error ?? 'Generation failed. Please try again.')
+                trackEvent(res.status === 403 ? 'insufficient_credits' : 'generation_failed', {
+                    tool_name: 'ai_baby',
+                    gender,
+                    status: res.status,
+                    reason: res.status === 403 ? 'insufficient_credits' : 'api_error',
+                })
                 return
             }
 
@@ -241,11 +244,21 @@ export default function AIBabyGeneratorPage() {
             }
             // Prepend so latest is first
             setGeneratedImages(prev => [newImage, ...prev])
+            trackEvent('generation_succeeded', {
+                tool_name: 'ai_baby',
+                gender: data.gender,
+                credits_cost: 4,
+            })
 
             // Trigger credit update since generation consumes credits
             window.dispatchEvent(new Event('update-credits'))
         } catch (err) {
             setErrorMsg('Network error. Please check your connection and retry.')
+            trackEvent('generation_failed', {
+                tool_name: 'ai_baby',
+                gender,
+                reason: 'network_error',
+            })
             console.error('[baby-generate] fetch error:', err)
         } finally {
             setIsGenerating(false)
@@ -255,7 +268,8 @@ export default function AIBabyGeneratorPage() {
     const handleFileChange = async (
         e: React.ChangeEvent<HTMLInputElement>,
         setPreview: React.Dispatch<React.SetStateAction<string | null>>,
-        base64Ref: React.MutableRefObject<string | null>
+        base64Ref: React.MutableRefObject<string | null>,
+        uploadRole: 'parent_1' | 'parent_2'
     ) => {
         const file = e.target.files?.[0]
         if (!file) return
@@ -265,12 +279,12 @@ export default function AIBabyGeneratorPage() {
         // Compress and store base64 for API
         const compressed = await compressImage(file)
         base64Ref.current = compressed
-    }
-
-    const handlePresetSelect = (presetUrl: string, setPreview: React.Dispatch<React.SetStateAction<string | null>>, base64Ref: React.MutableRefObject<string | null>) => {
-        setPreview(presetUrl)
-        // For preset URLs, use the URL directly (the API accepts both data: and https:)
-        base64Ref.current = presetUrl
+        trackEvent('upload_completed', {
+            tool_name: 'ai_baby',
+            upload_role: uploadRole,
+            file_type: file.type,
+            file_size_kb: Math.round(file.size / 1024),
+        })
     }
 
     const handleDownload = async (item: GeneratedImage) => {
@@ -324,9 +338,9 @@ export default function AIBabyGeneratorPage() {
             <div style={{ padding: '32px 32px 96px 48px' }}>
                 <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
                     {/* Header */}
-                    <div style={{ marginBottom: '40px' }}>
-                        <Link
-                            href="/tools"
+	                    <div style={{ marginBottom: '40px' }}>
+	                        <Link
+	                            href="/tools"
                             style={{
                                 display: 'inline-flex',
                                 alignItems: 'center',
@@ -339,10 +353,23 @@ export default function AIBabyGeneratorPage() {
                                 letterSpacing: '-0.4px'
                             }}
                         >
-                            <ArrowLeft size={20} />
-                            Baby Photos
-                        </Link>
-                    </div>
+	                            <ArrowLeft size={20} />
+	                            Baby Photos
+	                        </Link>
+	                        <p style={{ margin: '0 0 0 28px', color: '#6b7280', fontSize: '14px', lineHeight: 1.6 }}>
+	                            Need the overview first? Read the{' '}
+	                            <Link
+	                                href="/ai-baby-generator"
+	                                data-analytics-event="internal_link_clicked"
+	                                data-analytics-location="ai_baby_tool_header"
+	                                data-analytics-label="AI Baby Generator landing page"
+	                                style={{ color: '#155dfc', fontWeight: 700 }}
+	                            >
+	                                AI Baby Generator landing page
+	                            </Link>
+	                            .
+	                        </p>
+	                    </div>
 
                     <div
                         style={{
@@ -367,7 +394,7 @@ export default function AIBabyGeneratorPage() {
                                             id="mom-upload"
                                             hidden
                                             accept="image/*"
-                                            onChange={(e) => handleFileChange(e, setMomPreviewUrl, momBase64Ref)}
+                                            onChange={(e) => handleFileChange(e, setMomPreviewUrl, momBase64Ref, 'parent_1')}
                                         />
                                         <div
                                             onClick={() => triggerFileInput('mom-upload')}
@@ -391,20 +418,9 @@ export default function AIBabyGeneratorPage() {
                                                 </div>
                                             )}
                                         </div>
-                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                            <span style={{ fontSize: '10px', fontWeight: 700, color: '#99a1af', textTransform: 'uppercase' }}>TRY:</span>
-                                            <div style={{ display: 'flex', gap: '6px' }}>
-                                                {momPresets.map((preset, i) => (
-                                                    <div
-                                                        key={i}
-                                                        onClick={() => handlePresetSelect(preset, setMomPreviewUrl, momBase64Ref)}
-                                                        style={{ width: '28px', height: '28px', borderRadius: '50%', overflow: 'hidden', cursor: 'pointer', border: '1px solid #f3f4f6', position: 'relative' }}
-                                                    >
-                                                        <Image src={preset} alt="preset" fill style={{ objectFit: 'cover' }} sizes="28px" />
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
+                                        <p style={{ fontSize: '11px', color: '#6b7280', lineHeight: 1.5, margin: 0 }}>
+                                            Upload a clear, permitted portrait. Demo faces are not provided for privacy reasons.
+                                        </p>
                                     </div>
 
                                     {/* Dad Upload */}
@@ -414,7 +430,7 @@ export default function AIBabyGeneratorPage() {
                                             id="dad-upload"
                                             hidden
                                             accept="image/*"
-                                            onChange={(e) => handleFileChange(e, setDadPreviewUrl, dadBase64Ref)}
+                                            onChange={(e) => handleFileChange(e, setDadPreviewUrl, dadBase64Ref, 'parent_2')}
                                         />
                                         <div
                                             onClick={() => triggerFileInput('dad-upload')}
@@ -438,20 +454,9 @@ export default function AIBabyGeneratorPage() {
                                                 </div>
                                             )}
                                         </div>
-                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                            <span style={{ fontSize: '10px', fontWeight: 700, color: '#99a1af', textTransform: 'uppercase' }}>TRY:</span>
-                                            <div style={{ display: 'flex', gap: '6px' }}>
-                                                {dadPresets.map((preset, i) => (
-                                                    <div
-                                                        key={i}
-                                                        onClick={() => handlePresetSelect(preset, setDadPreviewUrl, dadBase64Ref)}
-                                                        style={{ width: '28px', height: '28px', borderRadius: '50%', overflow: 'hidden', cursor: 'pointer', border: '1px solid #f3f4f6', position: 'relative' }}
-                                                    >
-                                                        <Image src={preset} alt="preset" fill style={{ objectFit: 'cover' }} sizes="28px" />
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
+                                        <p style={{ fontSize: '11px', color: '#6b7280', lineHeight: 1.5, margin: 0 }}>
+                                            Use a clear, front-facing photo from the same age range and lighting when possible.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -681,12 +686,12 @@ export default function AIBabyGeneratorPage() {
                 {/* Precise Analysis Section */}
                 <div style={{ marginBottom: '128px' }}>
                     <div style={{ marginBottom: '64px' }}>
-                        <h2 style={{ fontSize: '56px', fontWeight: 900, color: '#101828', letterSpacing: '-1.5px', marginBottom: '16px', lineHeight: 1.1 }}>
-                            Precise Analysis of Genetic Factors
-                        </h2>
-                        <p style={{ fontSize: '20px', color: '#6a7282', maxWidth: '800px', lineHeight: 1.5 }}>
-                            Trained on real genetic data from 1.28 million families, utilizing 800+ key facial anchors to achieve precise facial feature fusion across age groups.
-                        </p>
+	                        <h2 style={{ fontSize: '56px', fontWeight: 900, color: '#101828', letterSpacing: '-1.5px', marginBottom: '16px', lineHeight: 1.1 }}>
+	                            Clear AI Photo Blending
+	                        </h2>
+	                        <p style={{ fontSize: '20px', color: '#6a7282', maxWidth: '800px', lineHeight: 1.5 }}>
+	                            Dommi turns two clear portraits into a playful baby preview by using visible photo features, style guidance, and a realistic portrait workflow.
+	                        </p>
                     </div>
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}>
@@ -703,24 +708,24 @@ export default function AIBabyGeneratorPage() {
                                 position: 'relative',
                                 marginBottom: '24px'
                             }}>
-                                <Image src="https://images.unsplash.com/photo-1519689680058-324335c77eba?w=400" alt="Golden Ratio" fill style={{ objectFit: 'cover' }} />
+	                                <Image src="/ai-baby-generator/baby-soft-portrait.jpg" alt="AI baby portrait example" fill style={{ objectFit: 'cover' }} />
                                 <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', display: 'flex', gap: '8px', alignItems: 'center' }}>
                                     <div style={{ width: '64px', height: '64px', borderRadius: '50%', border: '2px solid rgba(255,255,255,0.8)', overflow: 'hidden', position: 'relative' }}>
-                                        <Image src={momPresets[0]} alt="Mom" fill style={{ objectFit: 'cover' }} />
+	                                        <Image src="/ai-baby-generator/family-preview.jpg" alt="Parent photo preview" fill style={{ objectFit: 'cover' }} />
                                     </div>
                                     <div style={{ padding: '4px', backgroundColor: 'rgba(255,255,255,0.3)', borderRadius: '50%' }}>
                                         <Sparkles size={16} color="#fff" />
                                     </div>
                                     <div style={{ width: '64px', height: '64px', borderRadius: '50%', border: '2px solid rgba(255,255,255,0.8)', overflow: 'hidden', position: 'relative' }}>
-                                        <Image src={dadPresets[0]} alt="Dad" fill style={{ objectFit: 'cover' }} />
+	                                        <Image src="/ai-baby-generator/baby-family-keepsake.jpg" alt="Family preview" fill style={{ objectFit: 'cover' }} />
                                     </div>
                                 </div>
                                 <div style={{ position: 'absolute', bottom: '24px', left: '50%', transform: 'translateX(-50%)', backgroundColor: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(8px)', padding: '6px 16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.3)' }}>
-                                    <span style={{ color: '#fff', fontSize: '12px', fontWeight: 600 }}>Heritage Match 98%</span>
+	                                    <span style={{ color: '#fff', fontSize: '12px', fontWeight: 600 }}>Creative Preview</span>
                                 </div>
                             </div>
-                            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#101828', marginBottom: '8px' }}>Golden Ratio Fusion</h3>
-                            <p style={{ fontSize: '14px', color: '#6a7282', textAlign: 'center' }}>Precise matching of parental facial golden ratio</p>
+	                            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#101828', marginBottom: '8px' }}>Two-photo blend</h3>
+	                            <p style={{ fontSize: '14px', color: '#6a7282', textAlign: 'center' }}>Combines visible cues from clear portraits into one playful result.</p>
                         </div>
 
                         {/* Feature Column 2 */}
@@ -736,24 +741,24 @@ export default function AIBabyGeneratorPage() {
                                 position: 'relative',
                                 marginBottom: '24px'
                             }}>
-                                <Image src="https://images.unsplash.com/photo-1544126592-807ade215a0b?w=400" alt="Heritage" fill style={{ objectFit: 'cover' }} />
+	                                <Image src="/ai-baby-generator/baby-family-keepsake.jpg" alt="Family keepsake example" fill style={{ objectFit: 'cover' }} />
                                 <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', display: 'flex', gap: '8px', alignItems: 'center' }}>
                                     <div style={{ width: '64px', height: '64px', borderRadius: '50%', border: '2px solid rgba(255,255,255,0.8)', overflow: 'hidden', position: 'relative' }}>
-                                        <Image src={momPresets[1]} alt="Mom" fill style={{ objectFit: 'cover' }} />
+	                                        <Image src="/ai-baby-generator/family-preview.jpg" alt="Parent photo preview" fill style={{ objectFit: 'cover' }} />
                                     </div>
                                     <div style={{ padding: '4px', backgroundColor: 'rgba(255,255,255,0.3)', borderRadius: '50%' }}>
                                         <Sparkles size={16} color="#fff" />
                                     </div>
                                     <div style={{ width: '64px', height: '64px', borderRadius: '50%', border: '2px solid rgba(255,255,255,0.8)', overflow: 'hidden', position: 'relative' }}>
-                                        <Image src={dadPresets[1]} alt="Dad" fill style={{ objectFit: 'cover' }} />
+	                                        <Image src="/ai-baby-generator/baby-soft-portrait.jpg" alt="AI baby portrait preview" fill style={{ objectFit: 'cover' }} />
                                     </div>
                                 </div>
                                 <div style={{ position: 'absolute', bottom: '24px', left: '50%', transform: 'translateX(-50%)', backgroundColor: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(8px)', padding: '6px 16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.3)' }}>
-                                    <span style={{ color: '#fff', fontSize: '12px', fontWeight: 600 }}>Heritage Match 98%</span>
+	                                    <span style={{ color: '#fff', fontSize: '12px', fontWeight: 600 }}>Saved to History</span>
                                 </div>
                             </div>
-                            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#101828', marginBottom: '8px' }}>Deep Heritage Analysis</h3>
-                            <p style={{ fontSize: '14px', color: '#6a7282', textAlign: 'center' }}>Deep analysis of skeletal structure and skin texture</p>
+	                            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#101828', marginBottom: '8px' }}>Account history</h3>
+	                            <p style={{ fontSize: '14px', color: '#6a7282', textAlign: 'center' }}>Generated previews can be reviewed later from your Assets page.</p>
                         </div>
 
                         {/* Feature Column 3 */}
@@ -769,24 +774,24 @@ export default function AIBabyGeneratorPage() {
                                 position: 'relative',
                                 marginBottom: '24px'
                             }}>
-                                <Image src="https://images.unsplash.com/photo-1595159837380-4592a2a096c4?w=400" alt="Ethereal Features" fill style={{ objectFit: 'cover' }} />
+	                                <Image src="/ai-baby-generator/baby-future-preview.jpg" alt="Future baby preview example" fill style={{ objectFit: 'cover' }} />
                                 <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', display: 'flex', gap: '8px', alignItems: 'center' }}>
                                     <div style={{ width: '64px', height: '64px', borderRadius: '50%', border: '2px solid rgba(255,255,255,0.8)', overflow: 'hidden', position: 'relative' }}>
-                                        <Image src={momPresets[2]} alt="Mom" fill style={{ objectFit: 'cover' }} />
+	                                        <Image src="/ai-baby-generator/family-preview.jpg" alt="Parent photo preview" fill style={{ objectFit: 'cover' }} />
                                     </div>
                                     <div style={{ padding: '4px', backgroundColor: 'rgba(255,255,255,0.3)', borderRadius: '50%' }}>
                                         <Sparkles size={16} color="#fff" />
                                     </div>
                                     <div style={{ width: '64px', height: '64px', borderRadius: '50%', border: '2px solid rgba(255,255,255,0.8)', overflow: 'hidden', position: 'relative' }}>
-                                        <Image src={dadPresets[2]} alt="Dad" fill style={{ objectFit: 'cover' }} />
+	                                        <Image src="/ai-baby-generator/baby-future-preview.jpg" alt="AI baby preview" fill style={{ objectFit: 'cover' }} />
                                     </div>
                                 </div>
                                 <div style={{ position: 'absolute', bottom: '24px', left: '50%', transform: 'translateX(-50%)', backgroundColor: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(8px)', padding: '6px 16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.3)' }}>
-                                    <span style={{ color: '#fff', fontSize: '12px', fontWeight: 600 }}>Heritage Match 98%</span>
+	                                    <span style={{ color: '#fff', fontSize: '12px', fontWeight: 600 }}>Fun Result</span>
                                 </div>
                             </div>
-                            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#101828', marginBottom: '8px' }}>Ethereal Features</h3>
-                            <p style={{ fontSize: '14px', color: '#6a7282', textAlign: 'center' }}>Capturing the essence of parental charm and dynamic expressions</p>
+	                            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#101828', marginBottom: '8px' }}>Soft portrait style</h3>
+	                            <p style={{ fontSize: '14px', color: '#6a7282', textAlign: 'center' }}>Produces a shareable portrait-style image for curiosity and fun.</p>
                         </div>
                     </div>
                 </div>
@@ -800,14 +805,14 @@ export default function AIBabyGeneratorPage() {
                     {/* Block 1 */}
                     <div style={{ display: 'flex', gap: '64px', alignItems: 'center', marginBottom: '128px' }}>
                         <div style={{ width: '450px', height: '540px', borderRadius: '40px', overflow: 'hidden', position: 'relative', boxShadow: '0 25px 50px -12px rgba(229,231,235,0.5)' }}>
-                            <Image src="https://images.unsplash.com/photo-1544126592-807ade215a0b?w=500" alt="Personalized Accuracy" fill style={{ objectFit: 'cover' }} />
+	                            <Image src="/ai-baby-generator/baby-soft-portrait.jpg" alt="AI baby portrait example" fill style={{ objectFit: 'cover' }} />
                         </div>
                         <div style={{ flex: 1 }}>
                             <h3 style={{ fontSize: '48px', fontWeight: 900, color: '#101828', marginBottom: '24px', lineHeight: 1.1, letterSpacing: '-1px' }}>
-                                Your Personalized & Accurate Baby Prediction
+	                                A personalized creative preview
                             </h3>
                             <p style={{ fontSize: '18px', color: '#6a7282', lineHeight: 1.6, marginBottom: '48px' }}>
-                                Our AI baby generator analyzes facial features from portrait photos of one or both parents, accurately blending the physical characteristics of both parents to create a lifelike image of your future baby. This prediction gives you a glimpse into your child's face.
+	                                Dommi uses the portraits you upload as visual references for a playful baby image. The result is designed for sharing and curiosity, not as a real prediction.
                             </p>
                             <button onClick={scrollToGenerator} style={{ padding: '16px 32px', backgroundColor: '#8bc34a', color: '#fff', border: 'none', borderRadius: '16px', fontSize: '18px', fontWeight: 900, cursor: 'pointer', boxShadow: '0 20px 25px 0 rgba(0,201,80,0.2)' }}>
                                 Make Your Baby Now
@@ -821,13 +826,13 @@ export default function AIBabyGeneratorPage() {
                             <div style={{ display: 'flex', gap: '16px', height: '100%' }}>
                                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '16px' }}>
                                     <div style={{ flex: 1, borderRadius: '24px', overflow: 'hidden', position: 'relative', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)' }}>
-                                        <Image src="https://images.unsplash.com/photo-1595159837380-4592a2a096c4?w=500" alt="Boy" fill style={{ objectFit: 'cover' }} />
+	                                        <Image src="/ai-baby-generator/baby-future-preview.jpg" alt="Boy style preview" fill style={{ objectFit: 'cover' }} />
                                     </div>
                                     <div style={{ padding: '12px 0', backgroundColor: '#f9fafb', borderRadius: '14px', textAlign: 'center', fontWeight: 900, fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>Boy</div>
                                 </div>
                                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '16px' }}>
                                     <div style={{ flex: 1, borderRadius: '24px', overflow: 'hidden', position: 'relative', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)' }}>
-                                        <Image src="https://images.unsplash.com/photo-1519689680058-324335c77eba?w=500" alt="Girl" fill style={{ objectFit: 'cover' }} />
+	                                        <Image src="/ai-baby-generator/baby-family-keepsake.jpg" alt="Girl style preview" fill style={{ objectFit: 'cover' }} />
                                     </div>
                                     <div style={{ padding: '12px 0', backgroundColor: '#f9fafb', borderRadius: '14px', textAlign: 'center', fontWeight: 900, fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>Girl</div>
                                 </div>
@@ -844,7 +849,7 @@ export default function AIBabyGeneratorPage() {
                                 </li>
                                 <li style={{ fontSize: '18px', color: '#6a7282', lineHeight: 1.6, display: 'flex', gap: '12px' }}>
                                     <div style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#8bc34a', marginTop: '12px', flexShrink: 0 }} />
-                                    Select the gender of your future baby for a more personalized experience. The AI Baby Generator will tailor the baby's look according to the chosen gender, giving you an accurate and fun portrait to work with.
+	                                    Select a boy or girl style for a more personalized creative result. The AI Baby Generator adapts the portrait style while keeping the output framed as a fun preview.
                                 </li>
                             </ul>
                             <button onClick={scrollToGenerator} style={{ padding: '16px 32px', backgroundColor: '#8bc34a', color: '#fff', border: 'none', borderRadius: '16px', fontSize: '18px', fontWeight: 900, cursor: 'pointer', boxShadow: '0 20px 25px 0 rgba(0,201,80,0.2)' }}>
@@ -856,20 +861,20 @@ export default function AIBabyGeneratorPage() {
                     {/* Block 3 */}
                     <div style={{ display: 'flex', gap: '64px', alignItems: 'center' }}>
                         <div style={{ width: '450px', height: '400px', borderRadius: '40px', overflow: 'hidden', position: 'relative', boxShadow: '0 25px 50px -12px rgba(229,231,235,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <Image src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500" alt="Security" fill style={{ objectFit: 'cover' }} />
+	                            <Image src="/ai-baby-generator/family-preview.jpg" alt="Photo handling preview" fill style={{ objectFit: 'cover' }} />
                             <div style={{ position: 'relative', zIndex: 1, backgroundColor: 'rgba(255,255,255,0.3)', backdropFilter: 'blur(8px)', padding: '24px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.5)' }}>
                                 <Sparkles size={40} color="#fff" />
                             </div>
                         </div>
                         <div style={{ flex: 1 }}>
                             <h3 style={{ fontSize: '48px', fontWeight: 900, color: '#101828', marginBottom: '24px', lineHeight: 1.1, letterSpacing: '-1px' }}>
-                                Encrypted & Private Process
+                                Clear Photo Handling
                             </h3>
                             <p style={{ fontSize: '18px', color: '#6a7282', lineHeight: 1.6, marginBottom: '48px' }}>
-                                We value your privacy as much as you do. Our AI uses bank-level encryption to process your facial data. All uploaded photos and generated results are permanently deleted from our servers within 24 hours. Your future family secrets stay safe with us.
+                                Dommi uses your uploaded photos to create the baby preview and may keep generated results in your account history for later access. Only upload images you have permission to use, and review the privacy policy for current storage and deletion details.
                             </p>
                             <button onClick={scrollToGenerator} style={{ padding: '16px 32px', backgroundColor: '#8bc34a', color: '#fff', border: 'none', borderRadius: '16px', fontSize: '18px', fontWeight: 900, cursor: 'pointer', boxShadow: '0 20px 25px 0 rgba(0,201,80,0.2)' }}>
-                                Start Secure Prediction
+                                Start Baby Preview
                             </button>
                         </div>
                     </div>

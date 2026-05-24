@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { X, Zap, Star } from 'lucide-react'
+import { trackEvent } from '../lib/analytics'
 
 interface CreditPackage {
     key: string
@@ -52,12 +53,21 @@ export function CreditsModal({ isOpen, onClose, isLoggedIn, onLoginRequired }: C
 
     const handleBuy = async (pkg: CreditPackage) => {
         if (!isLoggedIn) {
+            trackEvent('checkout_login_required', {
+                package_key: pkg.key,
+                credits: pkg.credits,
+            })
             onLoginRequired()
             return
         }
 
         setError(null)
         setLoadingKey(pkg.key)
+        trackEvent('checkout_started', {
+            package_key: pkg.key,
+            credits: pkg.credits,
+            price: pkg.price,
+        })
 
         try {
             const response = await fetch('/api/checkout', {
@@ -69,15 +79,27 @@ export function CreditsModal({ isOpen, onClose, isLoggedIn, onLoginRequired }: C
             const data = await response.json()
 
             if (!response.ok || !data.checkoutUrl) {
+                trackEvent('checkout_failed', {
+                    package_key: pkg.key,
+                    status: response.status,
+                })
                 throw new Error(data.error || 'Failed to create checkout')
             }
 
+            trackEvent('checkout_redirected', {
+                package_key: pkg.key,
+                credits: pkg.credits,
+            })
             // Redirect to Creem payment page
             window.location.href = data.checkoutUrl
         } catch (err: unknown) {
             const message = err instanceof Error ? err.message : 'Something went wrong. Please try again.'
             setError(message)
             setLoadingKey(null)
+            trackEvent('checkout_failed', {
+                package_key: pkg.key,
+                reason: 'client_error',
+            })
         }
     }
 

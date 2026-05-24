@@ -1,0 +1,379 @@
+{
+  "slug": "nano-banana-pro",
+  "category": "image",
+  "vendor": "Google",
+  "meta": {
+    "title": "Nano Banana Pro AI Image Generator | Dommi",
+    "description": "Use Nano Banana Pro in Dommi for high-fidelity image generation, detailed reference edits, multilingual text rendering, and more production-ready visual concepts. Choose Nano Banana Pro when quality matters most; use Nano Banana 2 for faster exploration and GPT Image 2 when typography and layout are the main challenge.",
+    "keywords": [
+      "Nano Banana Pro",
+      "Nano Banana Pro AI image generator",
+      "Nano Banana Pro Dommi",
+      "Nano Banana image models",
+      "AI image generator"
+    ]
+  },
+  "hero": {
+    "h1": "Nano Banana Pro AI Image Generator",
+    "description": "Use Nano Banana Pro in Dommi for high-fidelity image generation, detailed reference edits, multilingual text rendering, and more production-ready visual concepts."
+  },
+  "generator_panel": {
+    "agent_label": "Create with Nano Banana Pro in Dommi",
+    "pill_label": "AI Image",
+    "quick_motion_options": [],
+    "quick_style_options": [],
+    "tool_modes": [
+      {
+        "label": "Text to Image",
+        "value": "text"
+      },
+      {
+        "label": "Image to Image",
+        "value": "image"
+      }
+    ],
+    "fields": [
+      {
+        "name": "model",
+        "label": "Model",
+        "default": "Nano Banana Pro",
+        "options": [
+          "Nano Banana Pro",
+          "Nano Banana 2",
+          "Nano Banana",
+          "GPT Image 2"
+        ]
+      },
+      {
+        "name": "aspectRatio",
+        "label": "Aspect ratio",
+        "default": "1:1",
+        "options": [
+          "1:1",
+          "16:9",
+          "9:16",
+          "4:3",
+          "3:4",
+          "3:2",
+          "2:3"
+        ]
+      },
+      {
+        "name": "resolution",
+        "label": "Resolution",
+        "default": "2K",
+        "options": [
+          "1K",
+          "2K",
+          "4K"
+        ]
+      }
+    ],
+    "upload": {
+      "show": true,
+      "placeholder": "Click to upload a reference image",
+      "hint": "JPG, PNG, WEBP",
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "prompt_placeholders": {
+      "text": "Describe the Nano Banana Pro image: subject, style, lighting, composition, and any required text.",
+      "image": "Describe how Nano Banana Pro should transform or extend the reference image."
+    },
+    "toggles": [],
+    "generator_links": {
+      "text": "/ai-image-generation?model=nano-banana-pro",
+      "image": "/ai-image-generation?model=nano-banana-pro"
+    },
+    "submit_labels": {
+      "text": "Generate Image",
+      "image": "Generate Image"
+    }
+  },
+  "related_section": {
+    "h2": "Nano Banana Pro alternatives and related models",
+    "intro": "Compare Nano Banana Pro with adjacent Nano Banana image models and nearby Dommi models before choosing the right generator for the job.",
+    "related_models": [
+      "Nano Banana 2",
+      "Nano Banana",
+      "GPT Image 2",
+      "Seedream 4.5"
+    ]
+  },
+  "highlights_section": {
+    "h2": "Why use Nano Banana Pro in Dommi",
+    "intro": "Focus on the search intent that matters: what Nano Banana Pro can create, when to choose it, and how to prompt it effectively.",
+    "items": [
+      {
+        "title": "High-fidelity output",
+        "text": "best for users who need higher quality than the base Nano Banana model for ads, posters, product visuals, and reference-driven edits."
+      },
+      {
+        "title": "Reference consistency",
+        "text": "Choose Nano Banana Pro when quality matters most; use Nano Banana 2 for faster exploration and GPT Image 2 when typography and layout are the main challenge."
+      },
+      {
+        "title": "Multilingual text handling",
+        "text": "Give it precise text, brand-like constraints, reference rules, visual style, and composition details. Remove anything that does not affect the final image."
+      }
+    ]
+  },
+  "examples_section": {
+    "h2": "Nano Banana Pro prompt examples",
+    "intro": "These examples stress-test Nano Banana Pro on text, product detail, visual consistency, and complex creative briefs.",
+    "effect_badge": "NBP",
+    "items": [
+      {
+        "title": "4K architectural hero with text",
+        "prompt": "A modernist museum entrance at dusk, glass and concrete facade, warm interior light glowing through the windows, a stainless-steel plaque on the wall reading 'MUSEUM OF MODERN ART — open until 9pm thursdays', clean architectural photography, 4K output, ultrawide framing.",
+        "result": "Output: a high-resolution architectural still with the plaque text fully legible, accurate material rendering on the steel and glass, controlled warm-cool color contrast — usable at full 4K for print or large digital displays.",
+        "result_image": "https://i.redd.it/ti6cw0g2c03g1.png",
+        "result_alt": "Scammers are going to love this — ChatGPT"
+      },
+      {
+        "title": "Multi-language packaging mockup",
+        "prompt": "A premium chocolate bar wrapper laid flat on a marble surface, the brand 'KOKORO' rendered in clean sans-serif, with secondary text reading '70% cacao — Madagascar single origin' in english, '70%カカオ — マダガスカル産' in japanese, '70% 可可 — 马达加斯加单一产区' in chinese, all crisply legible, soft north-window lighting, packaging photography aesthetic.",
+        "result": "Output: a packaging still where all three language strings are crisp and legible, balanced typographic hierarchy, accurate marble texture and natural lighting — usable as a packaging concept reference for international launch.",
+        "result_image": "https://i.redd.it/4e00h0e7a53g1.png",
+        "result_alt": "Look back at 2025 WDC contenders performance — formula1"
+      },
+      {
+        "title": "Complex editorial scene",
+        "prompt": "A bustling Tokyo ramen counter at midnight, a chef plating bowls under warm pendant lights, three customers seated at the bar in winter coats, steam rising from broth, a small chalkboard menu visible behind reading 'TONKOTSU SHIO MISO' in chalk, atmospheric depth, 35mm cinematic still, 4K, color graded warm highlights and deep shadows.",
+        "result": "Output: a cinematic editorial still with sharp focus on the chef and bowls, the chalkboard text readable, multiple atmospheric layers (steam, lighting, customers in soft focus) — usable as editorial cover or short-film still reference.",
+        "result_image": "https://preview.redd.it/co2l8q682j4g1.png?width=2048&format=png&auto=webp&s=018b93dfddfb5b450be3882f4357aba6b358708d",
+        "result_alt": "Maintaining Character Consistency in Nano Banana Pro Using Reference Images — Bard"
+      }
+    ]
+  },
+  "how_to_section": {
+    "h2": "How to use Nano Banana Pro in Dommi",
+    "intro": "A simple workflow for turning search intent into a usable image result with Nano Banana Pro.",
+    "steps": [
+      {
+        "title": "Choose Nano Banana Pro",
+        "description": "Start from Dommi's generator surface and select Nano Banana Pro when your goal matches its strengths: high-fidelity output, reference consistency, multilingual text handling."
+      },
+      {
+        "title": "Write a focused prompt",
+        "description": "Give it precise text, brand-like constraints, reference rules, visual style, and composition details. Remove anything that does not affect the final image."
+      },
+      {
+        "title": "Generate, compare, refine",
+        "description": "Run the prompt, compare it with related Dommi models, then adjust one variable at a time so you can see what Nano Banana Pro changes."
+      }
+    ]
+  },
+  "youtube_section": {
+    "h2": "Nano Banana Pro tutorials on YouTube",
+    "intro": "Watch creator tutorials and walkthroughs that show how people prompt, compare, and evaluate Nano Banana Pro in real workflows."
+  },
+  "reddit_section": {
+    "h2": "Nano Banana Pro discussions on Reddit",
+    "intro": "Read community threads about Nano Banana Pro results, strengths, limitations, and how it compares with other AI image models."
+  },
+  "x_section": {
+    "h2": "Nano Banana Pro posts on X",
+    "intro": "Browse curated X posts for Nano Banana Pro: launches, creator tests, benchmark notes, and prompt examples from the original discussions."
+  },
+  "social": {
+    "youtube_videos": [
+      {
+        "id": "tW_egdExA3M",
+        "title": "See Yourself With New Hairstyles Using Nano Banana Pro (Gemini 3)",
+        "description": "Thinking about getting a major haircut? The biggest problem is the fear of commitment, because once the hair is cut, you can't go back. Now, Nano Banana Pro (Gemini 3's new image reasoning model) can solve that problem by letting you…",
+        "uploadDate": "2025-12-13T08:26:00-08:00"
+      },
+      {
+        "id": "13AovEj4oDM",
+        "title": "Nano Banana PRO (Gemini-3.0-Pro-Image): I GOT EARLY ACCESS to GEMINI-3 PRO IMAGE & IT'S MIND BLOWING",
+        "description": "In this video, I'll be sharing my early hands-on results with Google's upcoming Nano Banana Pro / Gemini 3 Pro Image Gen model, showing real-world examples of its realism, text handling, UI screenshots, and more. -- Key Takeaways: 🚀 Early…",
+        "uploadDate": "2025-11-16T01:15:00-08:00"
+      },
+      {
+        "id": "nnlgMpyq-j0",
+        "title": "ULTIMATE NANO BANANA TUTORIAL: 15 PROMPT TECHNIQUES",
+        "description": "#sponsored The first 50 people get 30% off on VEED with my code AIMASTER30 off https://bit.ly/aimasterxveed 🧠 Master Nano Banana prompts with 10,000+ AI builders → https://aimaster.me/yt/banana_prompting 🎬 This video was made inside AI…",
+        "uploadDate": "2025-09-19T10:53:23-07:00"
+      },
+      {
+        "id": "CPCAVSmDSbI",
+        "title": "How to Create Professional Infographics with Gemini 3 (Nano Banana Pro Tutorial)",
+        "description": "Is Google's new Gemini 3 model (codenamed \"Nano Banana Pro\") the ultimate tool for professional infographics? In this video, I test the new image generation engine to see if it can finally replace traditional design tools. Unlike previous…",
+        "uploadDate": "2025-12-21T16:00:14-08:00"
+      },
+      {
+        "id": "U_L7Bz28gyA",
+        "title": "[7 Ways] How to Use Nano Banana 2 Pro for Free | Gemini 3 Pro Image Free Tutorial",
+        "description": "Generate Your 3D AI Image with one click here👉 https://bit.ly/3KhVSvr Best Nano Banana Pro Prompt Example Here 👉 https://bit.ly/48eNfKc Welcome to this tutorial! In this video I’ll walk you through 7 ways to use Nano Banana 2 Pro…",
+        "uploadDate": "2025-11-21T00:47:43-08:00"
+      },
+      {
+        "id": "ZCw325FiS78",
+        "title": "Ultimate Nano Banana Pro Guide 2026: How to Use Gemini 3 Image AI",
+        "description": "#sponsored PAIO by PureVPN — a clean way to experiment with AI tools without running them directly on your own device 👉 Check it out here https://www.paio.bot/ 🧠 Create production-ready visuals with Nano Banana Pro →…",
+        "uploadDate": "2026-01-17T11:12:33-08:00"
+      },
+      {
+        "id": "hmb2ggarw2M",
+        "title": "Nano Banana Tutorial 🍌 Generate And Refine Images With Google Gemini",
+        "description": "Create AI images for free with Nano Banana! 🚀 In this tutorial, I’ll show you how to generate stunning images from prompts, adjust details, add or change objects, swap clothes, merge multiple images, and even keep character consistency…",
+        "uploadDate": "2025-09-29T08:27:08-07:00"
+      },
+      {
+        "id": "5tt0ZEGRK58",
+        "title": "Nano Banana 2 in Google Flow: Full Tutorial for Beginners",
+        "description": "Learn how to use Nano Banana 2 in Google Flow to generate and edit AI images quickly and efficiently. This beginner-friendly tutorial shows how to create projects, upload reference images, guide the model with prompts, and refine results…",
+        "uploadDate": "2026-03-12T09:00:17-07:00"
+      },
+      {
+        "id": "yLtgwE0_S-Q",
+        "title": "Google Nano Banana Pro Tutorial: Master 5 Hidden Features (Gemini 3)",
+        "description": "Google just dropped Nano Banana Pro, and it’s absolutely INSANE. Powered by Gemini 3, this update is packed with next-level features that are about to change everything for creators and designers. In this full guide, I’ll walk you through:…",
+        "uploadDate": "2025-11-26T08:45:15-08:00"
+      },
+      {
+        "id": "tJs-hRUqtUs",
+        "title": "How to Switch to NANO BANANA PRO in Gemini AI When Creating Images",
+        "description": "👉 In this video, I will show you how to switch to Nano Banana Pro in Gemini AI for enhanced image generation, with a quick overview of the main differences between Nano Banana and Nano Banana Pro so you can choose the right model for…",
+        "uploadDate": "2025-11-25T04:30:19-08:00"
+      },
+      {
+        "id": "AeBOzler4nE",
+        "title": "Meet Nano Banana Pro: Next-Level AI Image Generation & Editing",
+        "description": "Fresh off the launch of Gemini 3, we are thrilled to roll out Nano Banana Pro—an all-new, state-of-the-art image generation and editing model. #NanoBanana #GoogleGemini With Nano Banana Pro, now you can: - Generate more accurate,…",
+        "uploadDate": "2025-11-20T12:55:11-08:00"
+      },
+      {
+        "id": "-Yq1Yi0MpDQ",
+        "title": "How to Make & Edit Images with Nano Banana for Beginners",
+        "description": "Subscribe to the channel for more AI tutorial videos just like this one! Google's Nano Banana AI is incredible at generating and editing images, and you can use both Nano Banana and Nano Banana Pro for FREE right now in Gemini! Watch this…",
+        "uploadDate": "2025-12-10T10:09:47-08:00"
+      }
+    ],
+    "reddit_posts": [
+      {
+        "title": "Yall the leaks arent real, i faked em with gemini",
+        "url": "https://www.reddit.com/r/TheBoys/comments/1p31mss/yall_the_leaks_arent_real_i_faked_em_with_gemini/",
+        "height": 280,
+        "media": {
+          "type": "gallery",
+          "image_url": "https://preview.redd.it/25ypl33spm2g1.png?width=1080&format=png&auto=webp&s=f3739ba55481cd1ac94b800935a826b103c08094",
+          "gallery_count": 2,
+          "width": 1080,
+          "height": 1435
+        },
+        "meta": {
+          "author": "Monchfr",
+          "created_utc": 1763739068,
+          "ups": 2844,
+          "num_comments": 135,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_2t2xg/styles/communityIcon_4qb5w779o45b1.jpg"
+        },
+        "subreddit": "TheBoys",
+        "excerpt": "Didnt expect ppl to believe it all, or even the post to get any traction, but it was kinda funny and i js rolled with it, but yeh they arent real sorry"
+      },
+      {
+        "title": "Feels like bad timing to me",
+        "url": "https://www.reddit.com/r/OpenAI/comments/1pa0fgi/feels_like_bad_timing_to_me/",
+        "height": 280,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/aqdrn4vgh94g1.jpeg",
+          "preview_url": "https://preview.redd.it/aqdrn4vgh94g1.jpeg?auto=webp&s=e0a94a0fd9d9f199c2feb5e07d7778a0c970ecab",
+          "width": 1024,
+          "height": 559
+        },
+        "meta": {
+          "author": "Veluzy",
+          "created_utc": 1764451986,
+          "ups": 2487,
+          "num_comments": 139,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_3b9u5/styles/communityIcon_sls3rtre3qxg1.png"
+        },
+        "subreddit": "OpenAI"
+      }
+    ],
+    "x_posts": [
+      {
+        "id": "1991522595129139486",
+        "text": "Google DeepMind: Nano Banana Pro launch — built on Gemini 3, studio-quality controls",
+        "author": "Google DeepMind",
+        "handle": "GoogleDeepMind",
+        "date": "Nov 20, 2025",
+        "url": "https://twitter.com/i/status/1991522595129139486"
+      },
+      {
+        "id": "1991539339357216917",
+        "text": "Logan Kilpatrick: Introducing Nano Banana Pro aka Gemini 3 Pro Image",
+        "author": "Logan Kilpatrick",
+        "handle": "OfficialLoganK",
+        "date": "Nov 21, 2025",
+        "url": "https://twitter.com/i/status/1991539339357216917"
+      },
+      {
+        "id": "1991537543989588445",
+        "text": "Google AI Studio: SOTA text rendering, granular physics, 4K studio output, character consistency",
+        "author": "Google AI Studio",
+        "handle": "googleaistudio",
+        "date": "Nov 21, 2025",
+        "url": "https://twitter.com/i/status/1991537543989588445"
+      },
+      {
+        "id": "1991541234020782265",
+        "text": "AshutoshShrivastava: Nano Banana Pro turns blueprint into realistic 3D image with every detail",
+        "author": "AshutoshShrivastava",
+        "handle": "AshutoshShrivastava",
+        "date": "Nov 21, 2025",
+        "url": "https://twitter.com/i/status/1991541234020782265"
+      },
+      {
+        "id": "1991652781879620088",
+        "text": "lmarena.ai: Nano Banana vs Nano Banana Pro head-to-head comparison",
+        "author": "lmarena.ai",
+        "handle": "lmarena_ai",
+        "date": "Nov 21, 2025",
+        "url": "https://twitter.com/i/status/1991652781879620088"
+      }
+    ]
+  },
+  "faq_section": {
+    "h2": "Nano Banana Pro FAQ",
+    "intro": "Direct answers for people searching how Nano Banana Pro works, what it is good at, and when to use it in Dommi.",
+    "items": [
+      {
+        "q": "What is Nano Banana Pro?",
+        "a": "Nano Banana Pro is an AI image model from Google. In Dommi, this page explains where it fits, shows prompt examples, and connects it with related image models so creators can choose the right workflow."
+      },
+      {
+        "q": "What is Nano Banana Pro best for?",
+        "a": "Nano Banana Pro is best for users who need higher quality than the base Nano Banana model for ads, posters, product visuals, and reference-driven edits. Its main strengths are high-fidelity output, reference consistency, multilingual text handling."
+      },
+      {
+        "q": "How do I prompt Nano Banana Pro?",
+        "a": "Give it precise text, brand-like constraints, reference rules, visual style, and composition details. Remove anything that does not affect the final image."
+      },
+      {
+        "q": "How is Nano Banana Pro different from related models?",
+        "a": "Choose Nano Banana Pro when quality matters most; use Nano Banana 2 for faster exploration and GPT Image 2 when typography and layout are the main challenge."
+      },
+      {
+        "q": "Can I use a reference image with Nano Banana Pro?",
+        "a": "Yes. Use a reference image when you want Nano Banana Pro to preserve identity, layout, product details, or visual style while generating a new variation."
+      },
+      {
+        "q": "Can I compare Nano Banana Pro with other Dommi models?",
+        "a": "Yes. Use the related model links on this page to compare Nano Banana Pro with nearby options, then reuse the same prompt so the difference between models is easier to judge."
+      }
+    ]
+  },
+  "final_cta": {
+    "logo": "/logo.png",
+    "h2": "Create with Nano Banana Pro in Dommi",
+    "body": "Open Dommi and test Nano Banana Pro on a production-style image brief.",
+    "btn_label": "Open Dommi Tools",
+    "btn_href": "/tools",
+    "btn_link": "/tools"
+  },
+  "brand": "Dommi",
+  "source_slug": "nano-banana-pro"
+}

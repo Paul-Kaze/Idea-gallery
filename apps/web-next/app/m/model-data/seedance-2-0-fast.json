@@ -1,0 +1,528 @@
+{
+  "slug": "seedance-2-0-fast",
+  "category": "video",
+  "vendor": "ByteDance",
+  "meta": {
+    "title": "Seedance 2.0 Fast AI Video Generator | Dommi",
+    "description": "Use Seedance 2.0 Fast in Dommi when you want the Seedance 2.0 prompt style with faster drafts for testing scenes, camera moves, and variants. Use Seedance 2.0 Fast for exploration; switch to Seedance 2.0 standard when the prompt is ready for a more polished output.",
+    "keywords": [
+      "Seedance 2.0 Fast",
+      "Seedance 2.0 Fast AI video generator",
+      "Seedance 2.0 Fast Dommi",
+      "Seedance video models",
+      "AI video generator"
+    ]
+  },
+  "hero": {
+    "h1": "Seedance 2.0 Fast AI Video Generator",
+    "description": "Use Seedance 2.0 Fast in Dommi when you want the Seedance 2.0 prompt style with faster drafts for testing scenes, camera moves, and variants."
+  },
+  "generator_panel": {
+    "agent_label": "Create with Seedance 2.0 Fast in Dommi",
+    "pill_label": "AI Video",
+    "quick_motion": "Auto",
+    "quick_style": "Style",
+    "quick_motion_options": [
+      "Auto",
+      "Camera Motion",
+      "Character Motion",
+      "Product Motion"
+    ],
+    "quick_style_options": [
+      "Style",
+      "Cinematic",
+      "Realistic",
+      "Anime",
+      "Commercial"
+    ],
+    "tool_modes": [
+      {
+        "label": "Image to Video",
+        "value": "image"
+      },
+      {
+        "label": "Text to Video",
+        "value": "text"
+      }
+    ],
+    "fields": [
+      {
+        "name": "model",
+        "label": "Model",
+        "default": "Seedance 2.0 Fast",
+        "options": [
+          "Seedance 2.0",
+          "Seedance 2.0 Fast",
+          "Seedance 1.5 Pro",
+          "Seedance 1.0 Pro",
+          "Seedance 1.0 Pro Fast",
+          "Seedance 1.0 Lite"
+        ]
+      },
+      {
+        "name": "aspectRatio",
+        "label": "Aspect ratio",
+        "default": "16:9",
+        "options": [
+          "16:9",
+          "9:16",
+          "1:1",
+          "4:3",
+          "3:4"
+        ]
+      },
+      {
+        "name": "duration",
+        "label": "Duration",
+        "default": "5s",
+        "options": [
+          "5s",
+          "10s",
+          "15s"
+        ]
+      },
+      {
+        "name": "resolution",
+        "label": "Resolution",
+        "default": "720p",
+        "options": [
+          "720p"
+        ]
+      }
+    ],
+    "upload": {
+      "show": true,
+      "placeholder": "Click to upload an image",
+      "hint": "JPG, PNG, WEBP",
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "prompt_placeholders": {
+      "text": "Describe the Seedance 2.0 Fast video: subject, action, camera movement, scene, and pacing.",
+      "image": "Describe how Seedance 2.0 Fast should animate the reference image, including motion and camera direction."
+    },
+    "toggles": [
+      {
+        "name": "cameraFixed",
+        "label": "Camera fixed",
+        "default": false
+      }
+    ],
+    "generator_links": {
+      "image": "/image-to-video?model=seedance-2-0-fast",
+      "text": "/text-to-video?model=seedance-2-0-fast"
+    },
+    "submit_labels": {
+      "image": "Generate Video",
+      "text": "Generate Video"
+    }
+  },
+  "related_section": {
+    "h2": "Seedance 2.0 Fast alternatives and related models",
+    "intro": "Compare Seedance 2.0 Fast with adjacent Seedance video models and nearby Dommi models before choosing the right generator for the job.",
+    "related_models": [
+      "Seedance 2.0",
+      "Seedance 1.5 Pro",
+      "Seedance 1.0 Pro",
+      "Seedance 1.0 Pro Fast"
+    ]
+  },
+  "highlights_section": {
+    "h2": "Why use Seedance 2.0 Fast in Dommi",
+    "intro": "Focus on the search intent that matters: what Seedance 2.0 Fast can create, when to choose it, and how to prompt it effectively.",
+    "items": [
+      {
+        "title": "Fast Seedance 2.0 drafts",
+        "text": "best for creators who want to explore Seedance 2.0 ideas quickly before producing a final clip."
+      },
+      {
+        "title": "Camera and subject motion tests",
+        "text": "Use Seedance 2.0 Fast for exploration; switch to Seedance 2.0 standard when the prompt is ready for a more polished output."
+      },
+      {
+        "title": "Variant exploration",
+        "text": "Write a clear scene brief, then change one variable at a time: camera, motion, lighting, or pacing."
+      }
+    ]
+  },
+  "examples_section": {
+    "h2": "Seedance 2.0 Fast prompt examples",
+    "intro": "Use these prompts to draft several versions of a scene before choosing the strongest direction for final rendering.",
+    "effect_badge": "S2F",
+    "items": [
+      {
+        "title": "Quick social product motion",
+        "prompt": "A pair of premium leather sneakers on a turntable, slow 360° rotation, soft studio lighting, clean white background, 720p output for paid social.",
+        "result": "Output: a 5-second product rotation suitable for Instagram Reels / TikTok ad creative iteration.",
+        "result_video": "https://v.redd.it/t4wc7etmcalg1/CMAF_1080.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/aXRzeDFwdG1jYWxnMYizC18Msisr5pioMyUb5E50cvIKZqr4oEWar5s71vNz.png?format=pjpg&auto=webp&s=dd1cfbc6fb29e77c25331938e1d88f1090ee234b",
+        "result_alt": "Seedance 2.0 Fast vs Pro — seedance"
+      },
+      {
+        "title": "Character draft for storyboarding",
+        "prompt": "A young runner crossing a foggy bridge at dawn, low handheld camera, light fog drift, golden-hour color, draft quality for storyboard concept.",
+        "result": "Output: a 5-10 second draft clip useful for storyboard exploration before promoting the prompt to Seedance 2.0 for the final.",
+        "result_video": "https://v.redd.it/05q2d9cfc9wg1/CMAF_1080.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/M3U1ZzljZWZjOXdnMeAFP6QwDf_cXpT81NoEQidLf8V3rMzpQ6TJd5OYoW1t.png?format=pjpg&auto=webp&s=fa78939ed6c6bb96ee3405eaf4c59eef30d90251",
+        "result_alt": "Seedance 2.0 Fast vs Pro？ — AtlasCloudAI"
+      },
+      {
+        "title": "Rapid scene variant testing",
+        "prompt": "A coffee cup on a wooden table, steam rising. Variant: same scene at sunrise / sunset / overcast — generate the 3 lighting variants quickly.",
+        "result": "Output: 3 rapid variant drafts enabling quick A/B comparison of lighting choices.",
+        "result_video": "https://v.redd.it/9i4b8fnf50vg1/CMAF_720.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/dzh1ajQ2b2Y1MHZnMbcNicH4czbEup9WwTR25lF4AoZisTe1_UW5kktnvps3.png?format=pjpg&auto=webp&s=e7bfb7a08f4cb9f4b983dce929239f82bfc4aad7",
+        "result_alt": "My honest experience with Higgsfield in 2026 - here's what changed — HiggsfieldAI"
+      }
+    ]
+  },
+  "how_to_section": {
+    "h2": "How to use Seedance 2.0 Fast in Dommi",
+    "intro": "A simple workflow for turning search intent into a usable video result with Seedance 2.0 Fast.",
+    "steps": [
+      {
+        "title": "Choose Seedance 2.0 Fast",
+        "description": "Start from Dommi's generator surface and select Seedance 2.0 Fast when your goal matches its strengths: fast seedance 2.0 drafts, camera and subject motion tests, variant exploration."
+      },
+      {
+        "title": "Write a focused prompt",
+        "description": "Write a clear scene brief, then change one variable at a time: camera, motion, lighting, or pacing."
+      },
+      {
+        "title": "Generate, compare, refine",
+        "description": "Run the prompt, compare it with related Dommi models, then adjust one variable at a time so you can see what Seedance 2.0 Fast changes."
+      }
+    ]
+  },
+  "youtube_section": {
+    "h2": "Seedance 2.0 Fast tutorials on YouTube",
+    "intro": "Watch creator tutorials and walkthroughs that show how people prompt, compare, and evaluate Seedance 2.0 Fast in real workflows."
+  },
+  "reddit_section": {
+    "h2": "Seedance 2.0 Fast discussions on Reddit",
+    "intro": "Read community threads about Seedance 2.0 Fast results, strengths, limitations, and how it compares with other AI video models."
+  },
+  "x_section": {
+    "h2": "Seedance 2.0 Fast posts on X",
+    "intro": "Browse curated X posts for Seedance 2.0 Fast: launches, creator tests, benchmark notes, and prompt examples from the original discussions."
+  },
+  "social": {
+    "youtube_videos": [
+      {
+        "id": "pDLgaVQs_lE",
+        "title": "Seedance 2.0 Is Now on BytePlus: The Most Controllable AI Video Model Yet?",
+        "uploadDate": "2026-04-27T14:26:54-07:00"
+      },
+      {
+        "id": "nTOjyxlOlps",
+        "title": "Seedance 2.0 is Actually Insane",
+        "uploadDate": "2026-02-08T17:57:56-08:00"
+      },
+      {
+        "id": "W78QDZiVpIg",
+        "title": "This Is How I Use Seedance 2.0 — And It Works for me",
+        "uploadDate": "2026-04-08T07:31:41-07:00"
+      },
+      {
+        "id": "Pvx4XsqbZHU",
+        "title": "Seedance 2.0 Is Here — Everything You NEED to Know",
+        "uploadDate": "2026-04-02T12:06:03-07:00"
+      },
+      {
+        "id": "Q7AShky_2Do",
+        "title": "Master Seedance 2.0 in Minutes!",
+        "uploadDate": "2026-04-15T13:48:02-07:00"
+      },
+      {
+        "id": "5s2l68SrJP4",
+        "title": "100+ Seedance 2.0 AI Videos – The New King?",
+        "uploadDate": "2026-02-11T05:46:55-08:00"
+      },
+      {
+        "id": "yLQClFqzHOU",
+        "title": "How Seedance 2.0 is SO GOOD (And Why Hollywood is Shook)",
+        "uploadDate": "2026-02-16T14:58:52-08:00"
+      },
+      {
+        "id": "csjGCIhIKzs",
+        "title": "Seedance 2.0 BROKE HOLLYWOOD IN 24 HOURS — Here's What Happened",
+        "uploadDate": "2026-02-15T13:42:49-08:00"
+      },
+      {
+        "id": "qZX8mJgY5wI",
+        "title": "Seedance 2.0: AI Action So Real It Feels Like Transformers!",
+        "uploadDate": "2026-02-18T06:20:43-08:00"
+      },
+      {
+        "id": "RBnq_7GC1As",
+        "title": "Seedance 2.0 is INSANE - Full Guide (New Best AI Video Generator)",
+        "uploadDate": "2026-04-14T06:00:59-07:00"
+      },
+      {
+        "id": "syMx-0YUkjw",
+        "title": "Seedance 2.0 Generates Hyper-Real AI Videos in China",
+        "uploadDate": "2026-02-10T06:01:35-08:00"
+      },
+      {
+        "id": "zP_axT1zt8c",
+        "title": "I Get Why Seedance 2.0 Broke The Internet....I'm Floored!",
+        "uploadDate": "2026-04-04T20:33:44-07:00"
+      },
+      {
+        "id": "ZghLm9MXVIY",
+        "title": "Seedance 2.0 is CRAZY for AI Filmmaking - Full Course",
+        "uploadDate": "2026-04-24T11:41:14-07:00"
+      },
+      {
+        "id": "N42QhRFwvG8",
+        "title": "Seedance 2.0 AI Video Generator – Step-by-Step Tutorial",
+        "uploadDate": "2026-03-09T05:05:50-07:00"
+      }
+    ],
+    "reddit_posts": [
+      {
+        "title": "I used Seedance 2.0 API to auto-generate product videos for an e-commerce store",
+        "url": "https://www.reddit.com/r/AtlasCloudAI/comments/1srbgnt/i_used_seedance_20_api_to_autogenerate_product/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/3twrnspwkgwg1/CMAF_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/dHRkeWE5cXdrZ3dnMYCDHuQB7tK7uZoQ0ueQ_U3dVSlMJsb7FBcftGkV6CXQ.png?format=pjpg&auto=webp&s=7e4a0205bd49e32f6bf2d174612fa3002648830f",
+          "width": 720,
+          "height": 960,
+          "duration": 5,
+          "has_audio": false
+        },
+        "meta": {
+          "author": "Independent-Date393",
+          "created_utc": 1776740265,
+          "ups": 7,
+          "num_comments": 2,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_gm5z0y/styles/communityIcon_4ghefvr7jvqg1.jpg"
+        },
+        "subreddit": "AtlasCloudAI",
+        "excerpt": "running a small e-commerce store and product video production was eating into the margins. hired a freelancer for a few months, cost and turnaround time didn't work at scale. built a pipeline instead. here's how it runs and what it actually costs. the workflow: * a form node takes product name, pr"
+      },
+      {
+        "title": "I got Seedance 2.0 running via API — here's how (no waitlist)",
+        "url": "https://www.reddit.com/r/AtlasCloudAI/comments/1smqp6s/i_got_seedance_20_running_via_api_heres_how_no/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/g4h0mguyqgvg1/CMAF_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/ZDQydWtwMXpxZ3ZnMafLwAVIEwVVYUi-OOxrWMpB3phdoFWoPaRJudPncytl.png?format=pjpg&auto=webp&s=7238c2bc0f9144fb2d0c1cba0bd7ac8bdc69d057",
+          "width": 1280,
+          "height": 720,
+          "duration": 8,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Fun_Walk_4965",
+          "created_utc": 1776306451,
+          "ups": 6,
+          "num_comments": 6,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_gm5z0y/styles/communityIcon_4ghefvr7jvqg1.jpg"
+        },
+        "subreddit": "AtlasCloudAI",
+        "excerpt": "Just got access to the seedance2.0 model and it's wild. Im calling seedance2.0 API via [AtlasCloud.ai](https://www.atlascloud.ai/?utm_source=reddit), it's available for users, here's a working curl request to test it yourself (just swap in your own account setup): curl: # Parameters: # prompt"
+      },
+      {
+        "title": "Probando la versión de Seedance 2.0 Fast",
+        "url": "https://www.reddit.com/r/SoraAi/comments/1ta7bb4/probando_la_versión_de_seedance_20_fast/",
+        "height": 320
+      },
+      {
+        "title": "Seedance 2.0 Fast vs Seedance 2.0 Pro — which one feels more cinematic?",
+        "url": "https://www.reddit.com/r/seedance2pro/comments/1rcf9ww/seedance_20_fast_vs_seedance_20_pro_which_one/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/nj8m2site8lg1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/YzdqNHR6aXRlOGxnMRIq5RWHE14mJdgin6leh-4GEY_2G4IAmkNoaf9WInzc.png?format=pjpg&auto=webp&s=5b4d377d8f262771e7efd273e3ae03b4c993a5a4",
+          "width": 1080,
+          "height": 1364,
+          "duration": 14,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "DataGirlTraining",
+          "created_utc": 1771847059,
+          "ups": 8,
+          "num_comments": 2,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_gn2l07/styles/communityIcon_f3mdexdqxzjg1.jpg"
+        },
+        "subreddit": "seedance2pro",
+        "excerpt": "I tested Seedance 2.0 Fast and Seedance 2.0 Pro back to back, and the difference isn’t about “better vs worse” — it’s about workflow. Seedance 2.0 Fast is clearly optimized for speed. Generation time is extremely short, which makes it perfect for quick concepts, rapid iteration, and testing ideas."
+      },
+      {
+        "title": "I made this using seedance 2.0 fast",
+        "url": "https://www.reddit.com/r/HiggsfieldAI/comments/1t9xex6/i_made_this_using_seedance_20_fast/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/0x0i30bb1h0h1/CMAF_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/YTVlOTdxNWIxaDBoMW4AYuicbeG5hH_A5yMWGWlA1PJXtaCYSMRX_yA_TDI_.png?format=pjpg&auto=webp&s=ad4d1db83c8c2a70e230fdcce6dc9dcf289fb344",
+          "width": 1280,
+          "height": 720,
+          "duration": 8,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Eas369",
+          "created_utc": 1778489140,
+          "ups": 5,
+          "num_comments": 1,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_e6ipt5/styles/communityIcon_trrjzigg7yeg1.jpg"
+        },
+        "subreddit": "HiggsfieldAI"
+      },
+      {
+        "title": "Seedance 2.0 fast 😴😴",
+        "url": "https://www.reddit.com/r/SoraAi/comments/1t7eirq/seedance_20_fast/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/l0bvtcnz6yzg1/CMAF_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/ejNud3p2ano2eXpnMVfsVXRp1atyNjoWfwhjxmwCWp2Zpk1DtyfVvwu4ne4k.png?format=pjpg&auto=webp&s=dbf4f01f39d1415662d86f4b6bf690f43cb8b2d6",
+          "width": 720,
+          "height": 1280,
+          "duration": 10,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "LocalSilver3380",
+          "created_utc": 1778261018,
+          "ups": 4,
+          "num_comments": 3,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_at3dog/styles/communityIcon_us7qly2dpwsf1.png"
+        },
+        "subreddit": "SoraAi",
+        "excerpt": "La verdad es que está versión de Seedance no me termina de convencer nada, la estoy utilizando en Dubao de manera gratis. Pero el fluido en las peleas en generaciones que he hecho probando me parecen muy malas"
+      },
+      {
+        "title": "Official Seedance 2.0 is finally here!!",
+        "url": "https://www.reddit.com/r/seedance/comments/1s1afgt/official_seedance_20_is_finally_here/",
+        "height": 320,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/ktptrmdz0rqg1.jpeg",
+          "preview_url": "https://preview.redd.it/ktptrmdz0rqg1.jpeg?auto=webp&s=61533aceed460973f7418bb38e4ddd2dc59c2158",
+          "width": 1280,
+          "height": 374
+        },
+        "meta": {
+          "author": "Leather_Row_5952",
+          "created_utc": 1774251617,
+          "ups": 140,
+          "num_comments": 101,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_eoir71/styles/communityIcon_484e567y6cqf1.png"
+        },
+        "subreddit": "seedance",
+        "excerpt": "Link: [https://dreamina.capcut.com/](https://dreamina.capcut.com/) Plan Subcription: 1 month standard $33 = 67,360 creds Price/Credits per 10s video Seedance 2.0 = 930 creds = $0.48 per video Seedance 2.0 Fast = 750 creds = $0.39 per video Total clips in $33 plan (10s) Seedance 2.0 = 72 video"
+      },
+      {
+        "title": "I spent way too long figuring out Seedance 2.0. Here's everything I wish someone told me on day one",
+        "url": "https://www.reddit.com/r/Seedance_AI/comments/1rjq6cc/i_spent_way_too_long_figuring_out_seedance_20/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "Accomplished-Tax1050",
+          "created_utc": 1772546683,
+          "ups": 71,
+          "num_comments": 29,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_gkdhjc/styles/communityIcon_3phsi5h3q2ig1.png"
+        },
+        "subreddit": "Seedance_AI",
+        "excerpt": "Been messing with Seedance 2.0 for the past few weeks. The first couple days were rough — burned through a bunch of credits getting garbage outputs because I was treating it like every other text-to-video tool. Turns out it's not. Once it clicked, the results got way better. Writing this up so"
+      },
+      {
+        "title": "Sora is gone from OpenAI, but we’re keeping it usable on Cliprise while the API window is still open",
+        "url": "https://www.reddit.com/r/SoraAi/comments/1t55cih/sora_is_gone_from_openai_but_were_keeping_it/",
+        "height": 320,
+        "media": {
+          "type": "gallery",
+          "image_url": "https://preview.redd.it/rlotmsdytgzg1.jpg?width=1440&format=pjpg&auto=webp&s=a05bad61bff29103349ae14f79018ee0e7dc19b7",
+          "gallery_count": 2,
+          "width": 1440,
+          "height": 3120
+        },
+        "meta": {
+          "author": "srch4aheartofgold",
+          "created_utc": 1778050818,
+          "ups": 13,
+          "num_comments": 22,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_at3dog/styles/communityIcon_us7qly2dpwsf1.png"
+        },
+        "subreddit": "SoraAi",
+        "excerpt": "Sora being discontinued as a normal OpenAI product is honestly a weird moment for AI video. A lot of people finally started building workflows around it, learning its strengths, figuring out what types of prompts worked, and then suddenly the official app/web experience is gone. From what OpenAI h"
+      }
+    ],
+    "x_posts": [
+      {
+        "id": "2020911900968767976",
+        "text": "ByteDance Seedance 2.0: native audio gen (lipsynced speech + music), drastic step up from Veo 3.1 / Sora 2, multimodal input, 2k resolution.",
+        "author": "ByteDance Seed",
+        "handle": "ByteDanceSeed",
+        "date": "Feb 10, 2026",
+        "url": "https://twitter.com/i/status/2020911900968767976"
+      },
+      {
+        "id": "2021837180382085169",
+        "text": "ByteDance officially launched Seedance 2.0 after beta test, fully integrating into Doubao and Dreamina product lines.",
+        "author": "ByteDance Seed",
+        "handle": "ByteDanceSeed",
+        "date": "Feb 12, 2026",
+        "url": "https://twitter.com/i/status/2021837180382085169"
+      },
+      {
+        "id": "2020849567298642410",
+        "text": "ByteDance Seedance 2.0 cinematic multi-scene videos with native audio in under 60 seconds. Potential turning point for AI video.",
+        "author": "AI video creator",
+        "handle": "aivideocreator",
+        "date": "Feb 9, 2026",
+        "url": "https://twitter.com/i/status/2020849567298642410"
+      }
+    ]
+  },
+  "faq_section": {
+    "h2": "Seedance 2.0 Fast FAQ",
+    "intro": "Direct answers for people searching how Seedance 2.0 Fast works, what it is good at, and when to use it in Dommi.",
+    "items": [
+      {
+        "q": "What is Seedance 2.0 Fast?",
+        "a": "Seedance 2.0 Fast is an AI video model from ByteDance. In Dommi, this page explains where it fits, shows prompt examples, and connects it with related video models so creators can choose the right workflow."
+      },
+      {
+        "q": "What is Seedance 2.0 Fast best for?",
+        "a": "Seedance 2.0 Fast is best for creators who want to explore Seedance 2.0 ideas quickly before producing a final clip. Its main strengths are fast seedance 2.0 drafts, camera and subject motion tests, variant exploration."
+      },
+      {
+        "q": "How do I prompt Seedance 2.0 Fast?",
+        "a": "Write a clear scene brief, then change one variable at a time: camera, motion, lighting, or pacing."
+      },
+      {
+        "q": "How is Seedance 2.0 Fast different from related models?",
+        "a": "Use Seedance 2.0 Fast for exploration; switch to Seedance 2.0 standard when the prompt is ready for a more polished output."
+      },
+      {
+        "q": "Can I use a reference image with Seedance 2.0 Fast?",
+        "a": "Yes. Use image-to-video when you already have a frame, product shot, character, or scene and want Seedance 2.0 Fast to animate it with controlled camera and subject motion."
+      },
+      {
+        "q": "Can I compare Seedance 2.0 Fast with other Dommi models?",
+        "a": "Yes. Use the related model links on this page to compare Seedance 2.0 Fast with nearby options, then reuse the same prompt so the difference between models is easier to judge."
+      }
+    ]
+  },
+  "final_cta": {
+    "logo": "/logo.png",
+    "h2": "Create with Seedance 2.0 Fast in Dommi",
+    "body": "Open Dommi and draft faster with Seedance 2.0 Fast.",
+    "btn_label": "Open Dommi Tools",
+    "btn_href": "/tools",
+    "btn_link": "/tools"
+  },
+  "brand": "Dommi",
+  "source_slug": "seedance-2-0-fast"
+}

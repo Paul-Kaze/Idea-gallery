@@ -24,8 +24,8 @@ describe('ImageDetailModal', () => {
 
   it('closes on backdrop click', () => {
     const onClose = vi.fn()
-    const { container } = render(<ImageDetailModal item={item} onClose={onClose} />)
-    const backdrop = container.querySelector('.bg-black')!
+    const { getByTestId } = render(<ImageDetailModal item={item} onClose={onClose} />)
+    const backdrop = getByTestId('image-detail-backdrop')
     fireEvent.click(backdrop)
     expect(onClose).toHaveBeenCalled()
   })

@@ -1,0 +1,543 @@
+{
+  "slug": "ltx-2-3",
+  "category": "video",
+  "vendor": "Lightricks",
+  "meta": {
+    "title": "LTX 2.3 AI Video Generator | Dommi",
+    "description": "Use LTX 2.3 in Dommi to plan open-model AI video workflows with fast iteration, detailed prompts, and reference-driven scene direction. Choose LTX 2.3 when openness and iteration matter; compare Seedance for polished cinematic behavior and Happy Horse for audio-aware motion tests.",
+    "keywords": [
+      "LTX 2.3",
+      "LTX 2.3 AI video generator",
+      "LTX 2.3 Dommi",
+      "open AI video models",
+      "AI video generator"
+    ]
+  },
+  "hero": {
+    "h1": "LTX 2.3 AI Video Generator",
+    "description": "Use LTX 2.3 in Dommi to plan open-model AI video workflows with fast iteration, detailed prompts, and reference-driven scene direction."
+  },
+  "generator_panel": {
+    "agent_label": "Create with LTX 2.3 in Dommi",
+    "pill_label": "AI Video",
+    "quick_motion": "Auto",
+    "quick_style": "Style",
+    "quick_motion_options": [
+      "Auto",
+      "Camera Motion",
+      "Character Motion",
+      "Product Motion"
+    ],
+    "quick_style_options": [
+      "Style",
+      "Cinematic",
+      "Realistic",
+      "Anime",
+      "Commercial"
+    ],
+    "tool_modes": [
+      {
+        "label": "Image to Video",
+        "value": "image"
+      },
+      {
+        "label": "Text to Video",
+        "value": "text"
+      }
+    ],
+    "fields": [
+      {
+        "name": "model",
+        "label": "Model",
+        "default": "Ltx 2.3",
+        "options": [
+          "Seedance 2.0",
+          "Seedance 2.0 Fast",
+          "Seedance 1.5 Pro",
+          "Seedance 1.0 Pro",
+          "Seedance 1.0 Pro Fast",
+          "Seedance 1.0 Lite",
+          "Ltx 2.3",
+          "Happy Horse 1.0"
+        ]
+      },
+      {
+        "name": "aspectRatio",
+        "label": "Aspect ratio",
+        "default": "16:9",
+        "options": [
+          "16:9",
+          "9:16",
+          "1:1",
+          "4:3",
+          "3:4",
+          "21:9"
+        ]
+      },
+      {
+        "name": "duration",
+        "label": "Duration",
+        "default": "5s",
+        "options": [
+          "5s",
+          "10s",
+          "15s",
+          "20s"
+        ]
+      },
+      {
+        "name": "resolution",
+        "label": "Resolution",
+        "default": "1080p",
+        "options": [
+          "720p",
+          "1080p"
+        ]
+      }
+    ],
+    "upload": {
+      "show": true,
+      "placeholder": "Click to upload an image",
+      "hint": "JPG, PNG, WEBP",
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "prompt_placeholders": {
+      "text": "Describe the LTX 2.3 video: subject, action, camera movement, scene, and pacing.",
+      "image": "Describe how LTX 2.3 should animate the reference image, including motion and camera direction."
+    },
+    "toggles": [
+      {
+        "name": "cameraFixed",
+        "label": "Camera fixed",
+        "default": false
+      }
+    ],
+    "generator_links": {
+      "image": "/image-to-video?model=ltx-2-3",
+      "text": "/text-to-video?model=ltx-2-3"
+    },
+    "submit_labels": {
+      "image": "Generate Video",
+      "text": "Generate Video"
+    }
+  },
+  "related_section": {
+    "h2": "LTX 2.3 alternatives and related models",
+    "intro": "Compare LTX 2.3 with adjacent open AI video models and nearby Dommi models before choosing the right generator for the job.",
+    "related_models": [
+      "Happy Horse 1.0",
+      "Seedance 2.0",
+      "Seedance 1.5 Pro",
+      "Seedance 2.0 Fast"
+    ]
+  },
+  "highlights_section": {
+    "h2": "Why use LTX 2.3 in Dommi",
+    "intro": "Focus on the search intent that matters: what LTX 2.3 can create, when to choose it, and how to prompt it effectively.",
+    "items": [
+      {
+        "title": "Open video workflow fit",
+        "text": "best for creators comparing open video models, local-friendly workflows, and controllable text-to-video or image-to-video experiments."
+      },
+      {
+        "title": "Fast iteration loops",
+        "text": "Choose LTX 2.3 when openness and iteration matter; compare Seedance for polished cinematic behavior and Happy Horse for audio-aware motion tests."
+      },
+      {
+        "title": "Reference-driven scene control",
+        "text": "Keep the prompt specific: subject, action, lens feel, camera direction, frame ratio, and one visual style instead of a long list of competing effects."
+      }
+    ]
+  },
+  "examples_section": {
+    "h2": "LTX 2.3 prompt examples",
+    "intro": "These prompts show how to test LTX-style scene description, camera movement, and subject continuity across short video clips.",
+    "effect_badge": "LTX",
+    "items": [
+      {
+        "title": "4K hero clip with synchronized ambient audio",
+        "prompt": "A polished electric sports car on a coastal highway at sunset, slow dolly tracking from the rear quarter, golden hour reflections on the body, synchronized ambient road and wind audio, native 4K at 50fps, 10-second hero clip.",
+        "result": "Output: a 10-second 4K@50fps hero clip with sharp panel detail, accurate road audio, and consistent reflection physics — suitable as a brand campaign primary asset.",
+        "result_video": "https://v.redd.it/13iybm3gikcg1/CMAF_1080.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/dG8wbnljNGdpa2NnMaKVFjWR1odPE_QtYBpha_q0F7rKqcZXBCvDRlI7P2ZF.png?format=pjpg&auto=webp&s=3b6dad73aec23443529dfbcbf14dc193102ec8ae",
+        "result_alt": "LTX-2 I2V: Quality is much better at higher resolutions (RTX6000 Pro) — StableDiffusion"
+      },
+      {
+        "title": "Multi-language lip-synced dialogue",
+        "prompt": "A barista in a Tokyo cafe slides a cup across the counter and says 'いただきます'. Camera holds at counter level, soft warm lighting, dialogue lip-synced to the spoken Japanese, 1080p output.",
+        "result": "Output: a clip with accurate lip-sync to the Japanese dialogue, natural ambient cafe audio, suitable for international brand content.",
+        "result_video": "https://v.redd.it/binw18p9qedg1/CMAF_1080.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/cWVsN2ttcDlxZWRnMbLmH2D4rQLnuWyBbmkye-l9gx2_Umhtz3v30hBBG0Ia.png?format=pjpg&auto=webp&s=2415d826a5d3f9d1a13125e34d50ec2e330dd345",
+        "result_alt": "LTX-2 I2V synced to an MP3: Distill Lora Quality STR 1 vs.6 - New Workflow Version 2. — StableDiffusion"
+      },
+      {
+        "title": "Long-form narrative arc",
+        "prompt": "A 20-second narrative: a hand opens an old leather journal, wind ruffles pages outdoors, golden light reveals a hand-drawn map, transitions to camera pull back showing a foggy coastline. Continuous color grade, ambient wind and paper sounds.",
+        "result": "Output: a 20-second narrative clip with continuous tone and synchronized audio — usable as a short-film opening or branded mini-story.",
+        "result_video": "https://v.redd.it/itm7c81ntnrg1/CMAF_720.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/c3N3ODhmMW50bnJnMexoCkQPrOnRzUM5I4MnJBflg2O1IWlJFq1iRUCDqIMQ.png?format=pjpg&auto=webp&s=3fcc67f5b4c28123a6e8fd8d419a7d58d4a1bca6",
+        "result_alt": "I got LTX-2.3 Running in Real-Time on a 4090 — StableDiffusion"
+      }
+    ]
+  },
+  "how_to_section": {
+    "h2": "How to use LTX 2.3 in Dommi",
+    "intro": "A simple workflow for turning search intent into a usable video result with LTX 2.3.",
+    "steps": [
+      {
+        "title": "Choose LTX 2.3",
+        "description": "Start from Dommi's generator surface and select LTX 2.3 when your goal matches its strengths: open video workflow fit, fast iteration loops, reference-driven scene control."
+      },
+      {
+        "title": "Write a focused prompt",
+        "description": "Keep the prompt specific: subject, action, lens feel, camera direction, frame ratio, and one visual style instead of a long list of competing effects."
+      },
+      {
+        "title": "Generate, compare, refine",
+        "description": "Run the prompt, compare it with related Dommi models, then adjust one variable at a time so you can see what LTX 2.3 changes."
+      }
+    ]
+  },
+  "youtube_section": {
+    "h2": "LTX 2.3 tutorials on YouTube",
+    "intro": "Watch creator tutorials and walkthroughs that show how people prompt, compare, and evaluate LTX 2.3 in real workflows."
+  },
+  "reddit_section": {
+    "h2": "LTX 2.3 discussions on Reddit",
+    "intro": "Read community threads about LTX 2.3 results, strengths, limitations, and how it compares with other AI video models."
+  },
+  "x_section": {
+    "h2": "LTX 2.3 posts on X",
+    "intro": "Browse curated X posts for LTX 2.3: launches, creator tests, benchmark notes, and prompt examples from the original discussions."
+  },
+  "social": {
+    "youtube_videos": [
+      {
+        "id": "u_IiFNs2mIo",
+        "title": "LTX 2.3 Just Got Scary Good | Best Local AI Video Generator with Audio? ComfyUI Guide + Workflow",
+        "uploadDate": "2026-03-08T08:01:25-07:00"
+      },
+      {
+        "id": "U2phujqtZ2o",
+        "title": "Stop Paying For AI Videos! LTX Video 2.3 is 100% FREE (Better Than Higgsfield)",
+        "uploadDate": "2026-03-15T08:00:59-07:00"
+      },
+      {
+        "id": "Gr4q7rw9Xys",
+        "title": "The Fastest AI Video Generator on Your PC (Free, No Limits, No Subscriptions)",
+        "uploadDate": "2026-04-17T06:08:18-07:00"
+      },
+      {
+        "id": "3HXCeSGnoq0",
+        "title": "How To Use LTX2.3 All-In-One Workflow in ComfyUI",
+        "uploadDate": "2026-04-05T10:29:19-07:00"
+      },
+      {
+        "id": "nKeCnvsYN3c",
+        "title": "LTX-2 Video Models Explained",
+        "uploadDate": "2025-10-31T11:47:57-07:00"
+      },
+      {
+        "id": "SqraXuR3_J0",
+        "title": "Introducing LTX-2.3 | What's New",
+        "uploadDate": "2026-03-05T08:28:15-08:00"
+      },
+      {
+        "id": "nL3Efak3FnI",
+        "title": "Introducing LTX Desktop: An Open Source Video Editor Powered by LTX-2.3",
+        "uploadDate": "2026-03-05T10:33:37-08:00"
+      },
+      {
+        "id": "BQrjsvzMteU",
+        "title": "Getting Started with LTX Video 13B in LTX Studio",
+        "uploadDate": "2025-05-07T18:16:38-07:00"
+      },
+      {
+        "id": "W4i9xJ8dr5M",
+        "title": "Introducing LTX-2.3",
+        "uploadDate": "2026-03-05T12:21:36-08:00"
+      },
+      {
+        "id": "NfPY-IR92m4",
+        "title": "Generate AI Videos FAST & FREE with LTX-2 (Step-by-Step Tutorial)",
+        "uploadDate": "2026-01-26T21:13:32-08:00"
+      },
+      {
+        "id": "JQIl8DFTL1M",
+        "title": "How to Train a LTX-2.3 Character LoRA with AI Toolkit",
+        "uploadDate": "2026-04-04T15:35:54-07:00"
+      },
+      {
+        "id": "ss2NOgtDgy4",
+        "title": "Complete LTX Desktop AI Video Editor Setup Guide (FREE LTX 2.3 Open Source)",
+        "uploadDate": "2026-03-06T07:01:44-08:00"
+      },
+      {
+        "id": "N0XpMe94ENU",
+        "title": "Open Source AI Video BOMBSHELL From LTX & Minimax 2.3 Preview!",
+        "uploadDate": "2025-10-23T14:52:25-07:00"
+      }
+    ],
+    "reddit_posts": [
+      {
+        "title": "LTX-Video 13B Control LoRAs - The LTX speed with cinematic controls by loading a LoRA",
+        "url": "https://www.reddit.com/r/StableDiffusion/comments/1lurcs5/ltxvideo_13b_control_loras_the_ltx_speed_with/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/7tobmzi20obf1/DASH_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/Y3NyMzBmajIwb2JmMd6IShTeExvoVyMHc_DtR-5uLat1uI8WPF741BWaffRU.png?format=pjpg&auto=webp&s=c8953dc746670d639ae211bd3dd8c34ca24b01d3",
+          "width": 720,
+          "height": 1226,
+          "duration": 7,
+          "has_audio": false
+        },
+        "meta": {
+          "author": "ofirbibi",
+          "created_utc": 1751988022,
+          "ups": 647,
+          "num_comments": 14,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_6r4pfl/styles/communityIcon_kihji9n3ydmd1.png"
+        },
+        "subreddit": "StableDiffusion",
+        "excerpt": "We’re releasing 3 LoRAs for you to gain precise control of LTX-Video 13B (both Full and Distilled). **The 3 controls are the classics - Pose, Depth and Canny.** Controlling human motion, structure and object boundaries, this time in video. You can merge them with style or camera motion LoRAs, as we"
+      },
+      {
+        "title": "LTX-2 Audio Synced to added MP3 i2v - 6 examples 3 realistic 3 animated - Non Distilled - 20s clips stitched together (Music: Dido's \"Thank You\")",
+        "url": "https://www.reddit.com/r/StableDiffusion/comments/1qcc81m/ltx2_audio_synced_to_added_mp3_i2v_6_examples_3/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/gq55j8iue8dg1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/NjhpaHNxaXVlOGRnMauESQ-WyK-GLy_UvaIBlpB3nfOmz5OhZYhgYPyJwMRQ.png?format=pjpg&auto=webp&s=aea663723f96ee9821c051ac8535e9e4df1afc75",
+          "width": 1440,
+          "height": 1080,
+          "duration": 61,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Dohwar42",
+          "created_utc": 1768360458,
+          "ups": 518,
+          "num_comments": 51,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_6r4pfl/styles/communityIcon_kihji9n3ydmd1.png"
+        },
+        "subreddit": "StableDiffusion",
+        "excerpt": "Heavily modified LTX-2 Official i2v workflow with Kijai's Mel-Band RoFormer Audio model for using an external MP3 to add audio. This post shows how well (or not so well) LTX-2 handles realistic and non-realistic i2v lip sync for music vocals. Link to workflow on my github: [https://github.com/Rag"
+      },
+      {
+        "title": "LTXV Just Unlocked Native 60-Second AI Videos",
+        "url": "https://www.reddit.com/r/StableDiffusion/comments/1m1ka0n/ltxv_just_unlocked_native_60second_ai_videos/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/tq7aozwa3adf1/DASH_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/d2NjcjR6d2EzYWRmMeAIpVboqTPOXM_w5hGkYKHijG84b2Gv-1jRYLGBVjJ7.png?format=pjpg&auto=webp&s=f7c73bed8a58b211b0027fcf87cbcb98bead822b",
+          "width": 1080,
+          "height": 720,
+          "duration": 60,
+          "has_audio": false
+        },
+        "meta": {
+          "author": "ofirbibi",
+          "created_utc": 1752690109,
+          "ups": 508,
+          "num_comments": 100,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_6r4pfl/styles/communityIcon_kihji9n3ydmd1.png"
+        },
+        "subreddit": "StableDiffusion",
+        "excerpt": "LTXV is the first model to generate native long-form video, with controllability that beats every open source model. 🎉 * 30s, 60s and even longer, so much longer than anything else.\n* Direct your story with multiple prompts ([workflow](https://github.com/Lightricks/ComfyUI-LTXVideo/blob/master/exam"
+      },
+      {
+        "title": "Deni Avdija in Space Jam with LTX-2 I2V + iCloRA. Flow included",
+        "url": "https://www.reddit.com/r/StableDiffusion/comments/1qxojjm/deni_avdija_in_space_jam_with_ltx2_i2v_iclora/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/knugh8gcwwhg1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/aHlydjVwaGN3d2hnMRQqVNbbmggNk6GhOsnzNGVV2KfpWvSNGrtMJ2WWhSdl.png?format=pjpg&auto=webp&s=54bd7ea5a01516127e16d0b6d2b10a70f90a3f31",
+          "width": 1080,
+          "height": 1200,
+          "duration": 37,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Totem_House_30",
+          "created_utc": 1770400131,
+          "ups": 501,
+          "num_comments": 46,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_6r4pfl/styles/communityIcon_kihji9n3ydmd1.png"
+        },
+        "subreddit": "StableDiffusion",
+        "excerpt": "made a short video with LTX-2 using an iCloRA Flow to recreate a Space Jam scene, but swap Michael Jordan with Deni Avdija.\nFlow (GitHub):\nhttps://github.com/Lightricks/ComfyUI-LTXVideo/blob/master/example_workflows/LTX-2_ICLoRA_All_Distilled.json\nMy process:\nI generated an image of each shot that m"
+      },
+      {
+        "title": "Fix to make LTXV2 work with 24GB or less of VRAM, thanks to Kijai",
+        "url": "https://www.reddit.com/r/StableDiffusion/comments/1q5k6al/fix_to_make_ltxv2_work_with_24gb_or_less_of_vram/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/bl4p8vpynqbg1/CMAF_480.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/ajM0dzlkcXlucWJnMaQEswqM3wBvnodWjl2Dd1LZi6FBKD2LUPRZn-eJ5vnW.png?format=pjpg&auto=webp&s=80b96317c6671f7812ebf60f5845a138fdbd8387",
+          "width": 854,
+          "height": 470,
+          "duration": 6,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Different_Fix_2217",
+          "created_utc": 1767709966,
+          "ups": 363,
+          "num_comments": 222,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_6r4pfl/styles/communityIcon_kihji9n3ydmd1.png"
+        },
+        "subreddit": "StableDiffusion",
+        "excerpt": "In ComfyUI\\\\comfy\\\\ldm\\\\lightricks\\\\embeddings\\_connector.py replace hidden\\_states = torch.cat((hidden\\_states, learnable\\_registers\\[hidden\\_states.shape\\[1\\]:\\].unsqueeze(0).repeat(hidden\\_states.shape\\[0\\], 1, 1)), dim=1) with hidden\\_states = torch.cat((hidden\\_states, learnable\\_registers"
+      },
+      {
+        "title": "LTX-2 Image-to-Video Adapter LoRA",
+        "url": "https://www.reddit.com/r/StableDiffusion/comments/1qnvyvu/ltx2_imagetovideo_adapter_lora/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/wms945haxrfg1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/bmV6bXRoaGF4cmZnMTer8L1hNHZSytHzvHaSChj6DG21NnQ3NBO3hJatz4Xt.png?format=pjpg&auto=webp&s=04fb10a398d928d546892a65a916547e9da84ade",
+          "width": 1080,
+          "height": 1164,
+          "duration": 19,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Lividmusic1",
+          "created_utc": 1769468163,
+          "ups": 310,
+          "num_comments": 44,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_6r4pfl/styles/communityIcon_kihji9n3ydmd1.png"
+        },
+        "subreddit": "StableDiffusion",
+        "excerpt": "[https://huggingface.co/MachineDelusions/LTX-2\\_Image2Video\\_Adapter\\_LoRa](https://huggingface.co/MachineDelusions/LTX-2_Image2Video_Adapter_LoRa) A high-rank LoRA adapter for [LTX-Video 2](https://github.com/Lightricks/LTX-Video) that substantially improves image-to-video generation quality. No"
+      },
+      {
+        "title": "It is still possible to achieve more natural cinematic realism for videos with open source models vs proprietary models with even basic workflows | Z-Image-Turbo and LTX 2.3",
+        "url": "https://www.reddit.com/r/StableDiffusion/comments/1sdc1f1/it_is_still_possible_to_achieve_more_natural/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/p108rmts0ftg1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/ajZ1MG11dHMwZnRnMQZyMMjVpLhjvytYkpiMxuTH9O2XSssk_uqu7Q3N5Gv6.png?format=pjpg&auto=webp&s=d1b020d29cd786479a2a51772a02a565dd5d77b0",
+          "width": 1920,
+          "height": 1080,
+          "duration": 42,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "KudzuEye",
+          "created_utc": 1775415874,
+          "ups": 272,
+          "num_comments": 43,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_6r4pfl/styles/communityIcon_kihji9n3ydmd1.png"
+        },
+        "subreddit": "StableDiffusion",
+        "excerpt": "# Overview Z-Image Turbo and LTX 2.3 img2vid combo (also with Flux 2 Klein 9B for additional controls) are actually really strong together for maintaining natural looking styles that feel far more alive than even some shots I would get with Seedance 2.0. # Initial Frames Z-Image Turbo after all"
+      }
+    ],
+    "x_posts": [
+      {
+        "id": "1860007536847421610",
+        "text": "Lightricks just announced LTXV, the unicorn new AI video model. First AI video model that can generate high-quality real-time video, and it open source.",
+        "author": "LTX 2.3 creator",
+        "handle": "LTX23",
+        "date": "Nov 23, 2024",
+        "url": "https://twitter.com/i/status/1860007536847421610"
+      },
+      {
+        "id": "2008544267502072194",
+        "text": "AI video shouldn be locked behind closed systems. Releasing LTX-2 as a truly open-source AI video model. CEO Zeev Farbman on why openness matters.",
+        "author": "LTX 2.3 creator",
+        "handle": "LTX23",
+        "date": "Jan 6, 2026",
+        "url": "https://twitter.com/i/status/2008544267502072194"
+      },
+      {
+        "id": "1859967841866563984",
+        "text": "Introducing LTXV — our groundbreaking open-source AI video generation model that creates stunning videos faster than you can watch them.",
+        "author": "LTX 2.3 creator",
+        "handle": "LTX23",
+        "date": "Nov 22, 2024",
+        "url": "https://twitter.com/i/status/1859967841866563984"
+      },
+      {
+        "id": "1919980516859904381",
+        "text": "Meet Israel AI video model Sora: Lightricks unveils its answer to OpenAI and Google. Launches LTX Video-13B with 13B parameters and breakthrough compression.",
+        "author": "Meet Israel AI video model Sora",
+        "handle": "MeetIsraelAIvideomodelSora",
+        "date": "May 7, 2025",
+        "url": "https://twitter.com/i/status/1919980516859904381"
+      },
+      {
+        "id": "1859964100203430280",
+        "text": "Introducing LTX Video, Lightricks new open-source community-driven model for video generation. Create breathtaking videos in moments.",
+        "author": "LTX 2.3 creator",
+        "handle": "LTX23",
+        "date": "Nov 22, 2024",
+        "url": "https://twitter.com/i/status/1859964100203430280"
+      },
+      {
+        "id": "1860044909081673852",
+        "text": "LTVX the first Real-time AI video generation open source model. Jupyter Notebook, tost.ai, runpod and ComfyUI. Thanks to Lightricks Team.",
+        "author": "LTX 2.3 creator",
+        "handle": "LTX23",
+        "date": "Nov 23, 2024",
+        "url": "https://twitter.com/i/status/1860044909081673852"
+      },
+      {
+        "id": "1860076424146878667",
+        "text": "LTX Studio just dropped LTX Video. On par with current generation AI video models with a major difference — open-source and runs on consumer GPUs.",
+        "author": "LTX 2.3 creator",
+        "handle": "LTX23",
+        "date": "Nov 23, 2024",
+        "url": "https://twitter.com/i/status/1860076424146878667"
+      }
+    ]
+  },
+  "faq_section": {
+    "h2": "LTX 2.3 FAQ",
+    "intro": "Direct answers for people searching how LTX 2.3 works, what it is good at, and when to use it in Dommi.",
+    "items": [
+      {
+        "q": "What is LTX 2.3?",
+        "a": "LTX 2.3 is an AI video model from Lightricks. In Dommi, this page explains where it fits, shows prompt examples, and connects it with related video models so creators can choose the right workflow."
+      },
+      {
+        "q": "What is LTX 2.3 best for?",
+        "a": "LTX 2.3 is best for creators comparing open video models, local-friendly workflows, and controllable text-to-video or image-to-video experiments. Its main strengths are open video workflow fit, fast iteration loops, reference-driven scene control."
+      },
+      {
+        "q": "How do I prompt LTX 2.3?",
+        "a": "Keep the prompt specific: subject, action, lens feel, camera direction, frame ratio, and one visual style instead of a long list of competing effects."
+      },
+      {
+        "q": "How is LTX 2.3 different from related models?",
+        "a": "Choose LTX 2.3 when openness and iteration matter; compare Seedance for polished cinematic behavior and Happy Horse for audio-aware motion tests."
+      },
+      {
+        "q": "Can I use a reference image with LTX 2.3?",
+        "a": "Yes. Use image-to-video when you already have a frame, product shot, character, or scene and want LTX 2.3 to animate it with controlled camera and subject motion."
+      },
+      {
+        "q": "Can I compare LTX 2.3 with other Dommi models?",
+        "a": "Yes. Use the related model links on this page to compare LTX 2.3 with nearby options, then reuse the same prompt so the difference between models is easier to judge."
+      }
+    ]
+  },
+  "final_cta": {
+    "logo": "/logo.png",
+    "h2": "Create with LTX 2.3 in Dommi",
+    "body": "Open Dommi and benchmark LTX 2.3 against a practical video prompt.",
+    "btn_label": "Open Dommi Tools",
+    "btn_href": "/tools",
+    "btn_link": "/tools"
+  },
+  "brand": "Dommi",
+  "source_slug": "ltx-2-3"
+}

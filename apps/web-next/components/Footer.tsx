@@ -23,7 +23,7 @@ export function Footer() {
             </div>
             <div style={{ width: '1px', height: '14px', backgroundColor: '#d1d5db' }} />
             <Link href="/legal" style={{ color: '#6b7280', textDecoration: 'none' }} onMouseEnter={(e) => e.currentTarget.style.color = '#111827'} onMouseLeave={(e) => e.currentTarget.style.color = '#6b7280'}>
-                Privacy Policy & Terms of Service
+                Legal Center
             </Link>
         </footer>
     )

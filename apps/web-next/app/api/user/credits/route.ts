@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '../../../../auth'
 import { supabaseAdmin } from '../../../../lib/supabase'
+import { captureServerError } from '../../../../lib/monitoring'
 
 export const dynamic = 'force-dynamic'
 
@@ -24,12 +25,14 @@ export async function GET() {
 
         if (error) {
             console.error('[Credits API] DB error:', error)
+            await captureServerError('api.user_credits_db_error', error)
             return NextResponse.json({ error: 'DB error' }, { status: 500 })
         }
 
         return NextResponse.json({ credits: user?.credits ?? 0 })
     } catch (error) {
         console.error('[Credits API] Unexpected error:', error)
+        await captureServerError('api.user_credits_unexpected_error', error)
         return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
     }
 }

@@ -1,0 +1,478 @@
+{
+  "slug": "seedance-1-0-lite",
+  "category": "video",
+  "vendor": "ByteDance",
+  "meta": {
+    "title": "Seedance 1.0 Lite AI Video Generator | Dommi",
+    "description": "Use Seedance 1.0 Lite in Dommi for quick AI video drafts, lower-friction prompt testing, and early image-to-video experiments before moving to Pro models. Choose Lite for draft speed; use Seedance 1.0 Pro, 1.5 Pro, or 2.0 when you need stronger motion, resolution, and cinematic polish.",
+    "keywords": [
+      "Seedance 1.0 Lite",
+      "Seedance 1.0 Lite AI video generator",
+      "Seedance 1.0 Lite Dommi",
+      "Seedance video models",
+      "AI video generator"
+    ]
+  },
+  "hero": {
+    "h1": "Seedance 1.0 Lite AI Video Generator",
+    "description": "Use Seedance 1.0 Lite in Dommi for quick AI video drafts, lower-friction prompt testing, and early image-to-video experiments before moving to Pro models."
+  },
+  "generator_panel": {
+    "agent_label": "Create with Seedance 1.0 Lite in Dommi",
+    "pill_label": "AI Video",
+    "quick_motion": "Auto",
+    "quick_style": "Style",
+    "quick_motion_options": [
+      "Auto",
+      "Camera Motion",
+      "Character Motion",
+      "Product Motion"
+    ],
+    "quick_style_options": [
+      "Style",
+      "Cinematic",
+      "Realistic",
+      "Anime",
+      "Commercial"
+    ],
+    "tool_modes": [
+      {
+        "label": "Image to Video",
+        "value": "image"
+      },
+      {
+        "label": "Text to Video",
+        "value": "text"
+      }
+    ],
+    "fields": [
+      {
+        "name": "model",
+        "label": "Model",
+        "default": "Seedance 1.0 Lite",
+        "options": [
+          "Seedance 2.0",
+          "Seedance 2.0 Fast",
+          "Seedance 1.5 Pro",
+          "Seedance 1.0 Pro",
+          "Seedance 1.0 Pro Fast",
+          "Seedance 1.0 Lite"
+        ]
+      },
+      {
+        "name": "aspectRatio",
+        "label": "Aspect ratio",
+        "default": "16:9",
+        "options": [
+          "16:9",
+          "9:16",
+          "1:1",
+          "4:3",
+          "3:4"
+        ]
+      },
+      {
+        "name": "duration",
+        "label": "Duration",
+        "default": "5s",
+        "options": [
+          "5s",
+          "10s",
+          "15s"
+        ]
+      },
+      {
+        "name": "resolution",
+        "label": "Resolution",
+        "default": "720p",
+        "options": [
+          "720p"
+        ]
+      }
+    ],
+    "upload": {
+      "show": true,
+      "placeholder": "Click to upload an image",
+      "hint": "JPG, PNG, WEBP",
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "prompt_placeholders": {
+      "text": "Describe the Seedance 1.0 Lite video: subject, action, camera movement, scene, and pacing.",
+      "image": "Describe how Seedance 1.0 Lite should animate the reference image, including motion and camera direction."
+    },
+    "toggles": [
+      {
+        "name": "cameraFixed",
+        "label": "Camera fixed",
+        "default": false
+      }
+    ],
+    "generator_links": {
+      "image": "/image-to-video?model=seedance-1-0-lite",
+      "text": "/text-to-video?model=seedance-1-0-lite"
+    },
+    "submit_labels": {
+      "image": "Generate Video",
+      "text": "Generate Video"
+    }
+  },
+  "related_section": {
+    "h2": "Seedance 1.0 Lite alternatives and related models",
+    "intro": "Compare Seedance 1.0 Lite with adjacent Seedance video models and nearby Dommi models before choosing the right generator for the job.",
+    "related_models": [
+      "Seedance 1.0 Pro",
+      "Seedance 1.0 Pro Fast",
+      "Seedance 1.5 Pro",
+      "Seedance 2.0"
+    ]
+  },
+  "highlights_section": {
+    "h2": "Why use Seedance 1.0 Lite in Dommi",
+    "intro": "Focus on the search intent that matters: what Seedance 1.0 Lite can create, when to choose it, and how to prompt it effectively.",
+    "items": [
+      {
+        "title": "Fast prompt testing",
+        "text": "best for first-pass video ideas, prompt validation, and creators who want a lightweight entry into the Seedance family."
+      },
+      {
+        "title": "Lower-friction drafts",
+        "text": "Choose Lite for draft speed; use Seedance 1.0 Pro, 1.5 Pro, or 2.0 when you need stronger motion, resolution, and cinematic polish."
+      },
+      {
+        "title": "Seedance prompt grammar",
+        "text": "Keep the action simple and direct. One subject, one motion, one camera move, and one clear environment usually works best."
+      }
+    ]
+  },
+  "examples_section": {
+    "h2": "Seedance 1.0 Lite prompt examples",
+    "intro": "Use these examples to test basic camera movement, subject motion, and composition before upgrading a prompt to a Pro or newer Seedance model.",
+    "effect_badge": "S1L",
+    "items": [
+      {
+        "title": "Casual social clip",
+        "prompt": "A friendly golden retriever wagging its tail in a sunny garden, soft natural light, handheld feel, 5 seconds, 720p suitable for Instagram Reels.",
+        "result": "Output: a warm, casual social-format clip ready for Reels / Shorts.",
+        "result_video": "https://v.redd.it/7lbs0aohg7kf1/DASH_1080.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/Nm8xbjhhb2hnN2tmMdpxbibIFC7P-YQRKoXacu2PWecdUTvbSbHqyjEvFv_T.png?format=pjpg&auto=webp&s=1aa4f82e7e8ee98945eb0f1bc44b3d842f9423d4",
+        "result_alt": "AI Animation Comparison WAN vs Seedance — aivideo"
+      },
+      {
+        "title": "Concept exploration draft",
+        "prompt": "A coffee shop interior in autumn, warm tungsten lighting, customers in soft focus, slow camera drift. Used as concept exploration before committing to a Pro render.",
+        "result": "Output: a 5-second mood clip enabling fast art-direction decisions.",
+        "result_video": "https://v.redd.it/8bn9thd46rlf1/DASH_1080.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/eXFkdjdpZDQ2cmxmMSvpjqxHBrNdkx_hLGyRjSXDSPX7TWTE65gy8M0PhNrY.png?format=pjpg&auto=webp&s=39ed6c35aae212048468406d55d9dcfe8194ddd2",
+        "result_alt": "flux-krea-dev + seedance — StableDiffusion"
+      },
+      {
+        "title": "Idea-to-storyboard rapid test",
+        "prompt": "Three quick concept variants of a forest path: 1) misty dawn, 2) golden noon, 3) twilight blue hour. Pick the winning mood before scaling.",
+        "result": "Output: three short clips supporting fast pre-production decisions.",
+        "result_video": "https://v.redd.it/zpor5599tezf1/DASH_1080.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/NXJmZXg1OTl0ZXpmMdkp551DrhDzD53hId1My9a93h_qV1IYaL5xVtBSCvzs.png?format=pjpg&auto=webp&s=a568a9f2c40a52eadad7ff5da6b426f315d0a9eb",
+        "result_alt": "AI Growing Up Filter Tutorial – Make Your Own Viral AI Video on Fotor — Fotor_AI"
+      }
+    ]
+  },
+  "how_to_section": {
+    "h2": "How to use Seedance 1.0 Lite in Dommi",
+    "intro": "A simple workflow for turning search intent into a usable video result with Seedance 1.0 Lite.",
+    "steps": [
+      {
+        "title": "Choose Seedance 1.0 Lite",
+        "description": "Start from Dommi's generator surface and select Seedance 1.0 Lite when your goal matches its strengths: fast prompt testing, lower-friction drafts, seedance prompt grammar."
+      },
+      {
+        "title": "Write a focused prompt",
+        "description": "Keep the action simple and direct. One subject, one motion, one camera move, and one clear environment usually works best."
+      },
+      {
+        "title": "Generate, compare, refine",
+        "description": "Run the prompt, compare it with related Dommi models, then adjust one variable at a time so you can see what Seedance 1.0 Lite changes."
+      }
+    ]
+  },
+  "youtube_section": {
+    "h2": "Seedance 1.0 Lite tutorials on YouTube",
+    "intro": "Watch creator tutorials and walkthroughs that show how people prompt, compare, and evaluate Seedance 1.0 Lite in real workflows."
+  },
+  "reddit_section": {
+    "h2": "Seedance 1.0 Lite discussions on Reddit",
+    "intro": "Read community threads about Seedance 1.0 Lite results, strengths, limitations, and how it compares with other AI video models."
+  },
+  "x_section": {
+    "h2": "Seedance 1.0 Lite posts on X",
+    "intro": "Browse curated X posts for Seedance 1.0 Lite: launches, creator tests, benchmark notes, and prompt examples from the original discussions."
+  },
+  "social": {
+    "youtube_videos": [
+      {
+        "id": "M9I132DFIs0",
+        "title": "Seedance 1.0 Lite unlimited videos",
+        "uploadDate": "2025-07-17T06:25:15-07:00"
+      },
+      {
+        "id": "w1yYKPuW520",
+        "title": "I Tested Seedance 1.0 on the fastest and cheapest AI platform...",
+        "uploadDate": "2025-06-27T06:31:02-07:00"
+      },
+      {
+        "id": "Y4AbT6AopBM",
+        "title": "Seedance 1.0 Pro i2v 1080p is a new King AI | Bytedance",
+        "uploadDate": "2025-06-15T22:48:06-07:00"
+      },
+      {
+        "id": "xbJL7BH3nfo",
+        "title": "Seedance Is Making Waves With AI Video!",
+        "uploadDate": "2025-06-24T08:28:45-07:00"
+      },
+      {
+        "id": "IdkJNVYZAcI",
+        "title": "Seedance 1.0 Pro (Bytedance AI Video) on Fal ai Test (lite & kling comparison)",
+        "uploadDate": "2025-06-21T05:26:25-07:00"
+      },
+      {
+        "id": "mRDD64vyojA",
+        "title": "Veo 3 vs Seedance 1.0 – The AI Video Showdown",
+        "uploadDate": "2025-06-24T11:11:46-07:00"
+      },
+      {
+        "id": "jkPTYD5lXo8",
+        "title": "100% FREE Seedance 2.0 AI Video Generator : How to Use It WORLDWIDE",
+        "uploadDate": "2026-02-19T09:46:32-08:00"
+      },
+      {
+        "id": "i7mzmlCnF8Y",
+        "title": "Sora 2 vs Veo 3.1 vs Wan 2.5 vs Seedance 1.0 - FULL Comparison",
+        "uploadDate": "2025-11-06T07:01:25-08:00"
+      },
+      {
+        "id": "-MluR9dqt5w",
+        "title": "Kling 3.0 vs Seedance 2 vs Veo 3.1 vs Sora 2: The Ultimate AI Video Comparison",
+        "uploadDate": "2026-02-11T06:57:10-08:00"
+      },
+      {
+        "id": "TChSt_c7U7M",
+        "title": "AI Video Comparison: Seedance 1.0 vs HaiLuo 02 & Kling 2.1",
+        "uploadDate": "2025-07-26T05:30:28-07:00"
+      },
+      {
+        "id": "6VVYtFETMfw",
+        "title": "How I Make Viral AI Videos with Seedance 1.0 - Tutorial for Beginners",
+        "uploadDate": "2025-08-05T07:44:18-07:00"
+      },
+      {
+        "id": "ZghLm9MXVIY",
+        "title": "Seedance 2.0 is CRAZY for AI Filmmaking - Full Course",
+        "uploadDate": "2026-04-24T11:41:14-07:00"
+      },
+      {
+        "id": "BQXxywxTidU",
+        "title": "Seedance 2.0 vs Kling 3.0 – The Results Shocked Me",
+        "uploadDate": "2026-02-12T05:33:32-08:00"
+      },
+      {
+        "id": "P9NsWbiE4IU",
+        "title": "Better than Veo 3, FREE & Unlimited... (Not Clickbait) 🤯",
+        "uploadDate": "2025-06-30T09:52:45-07:00"
+      }
+    ],
+    "reddit_posts": [
+      {
+        "title": "Does anyone know how to get access to Seedance 1.0?",
+        "url": "https://www.reddit.com/r/StableDiffusion/comments/1lc34tq/does_anyone_know_how_to_get_access_to_seedance_10/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "yachty66",
+          "created_utc": 1750001634,
+          "ups": 8,
+          "num_comments": 27,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_6r4pfl/styles/communityIcon_kihji9n3ydmd1.png"
+        },
+        "subreddit": "StableDiffusion",
+        "excerpt": "Seedance 1.0 is the new top-performing text-to-video model from ByteDance. I am trying to run it via API, but on the official Seedance 1.0 page, where the technical report can also be found, I am not able to see any page link for the model/API access. I found out that Volcengine from ByteDance, I t"
+      },
+      {
+        "title": "List of FREE and Best Selling Discounted Courses",
+        "url": "https://www.reddit.com/r/udemyfreeebies/comments/1li0ntg/list_of_free_and_best_selling_discounted_courses/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "smartybrome",
+          "created_utc": 1750631682,
+          "ups": 7,
+          "num_comments": 3,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_2s94rv/styles/communityIcon_i3bvq66rsni61.jpg"
+        },
+        "subreddit": "udemyfreeebies",
+        "excerpt": "# Udemy Free Courses for 23 June 2025 Note : Coupons might expire anytime, so enroll as soon as possible to get the courses for FREE. * [REDEEM OFFER ](https://idownloadcoupon.com/udemy/13997/)The Software Development Process – The Complete Course\n* [REDEEM OFFER ](https://idownloadcoupon.com/udem"
+      },
+      {
+        "title": "Unlimited toggle does not work",
+        "url": "https://www.reddit.com/r/Akool_Official/comments/1quvfpc/unlimited_toggle_does_not_work/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "Small_Caterpillar_32",
+          "created_utc": 1770133638,
+          "ups": 5,
+          "num_comments": 2,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_fxw4ua/styles/communityIcon_2hgw1u3ytb2g1.jpeg"
+        },
+        "subreddit": "Akool_Official",
+        "excerpt": "Everyone I click on Unlimited toggle i get the popup to upgrade to pro max when i am pro i should be able to use Seedance 1.5 pro. when has this issue. I can use the unlimited to anything. https://preview.redd.it/d154g2jgwahg1.png?width=707&amp;format=png&amp;auto=webp&amp;s=43398074dd7058b9a4bc5e7"
+      },
+      {
+        "title": "Freepik just slightly increased the prices for video generation. Is it the case for everyone?",
+        "url": "https://www.reddit.com/r/Freepik_AI/comments/1o06l5w/freepik_just_slightly_increased_the_prices_for/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "Bet_Visual",
+          "created_utc": 1759816158,
+          "ups": 4,
+          "num_comments": 24,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_bjaeai/styles/communityIcon_rs0rc10u6neg1.jpg"
+        },
+        "subreddit": "Freepik_AI",
+        "excerpt": "https://preview.redd.it/a7jv781romtf1.png?width=1238&amp;format=png&amp;auto=webp&amp;s=5f3d97cb8d17745c0b3eccfe9264d4f20a9a4159 kling 2.1 was 300 and seedance lite was 200...."
+      },
+      {
+        "title": "Does Seedance free have a hard limit on Dreamina?",
+        "url": "https://www.reddit.com/r/Seedance_AI/comments/1sm9kno/does_seedance_free_have_a_hard_limit_on_dreamina/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "Cristazio",
+          "created_utc": 1776267340,
+          "ups": 5,
+          "num_comments": 0,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_gkdhjc/styles/communityIcon_3phsi5h3q2ig1.png"
+        },
+        "subreddit": "Seedance_AI",
+        "excerpt": "Hi all. The moment Seedance came on Dreamina I immediately went to check it out and to my surprise I could generate videos for free the first few days. Now it tells me there's an error generating, while still giving me a price of 0 credits for Seedance Lite. Why is that so? Does Dreamina have a hidd"
+      },
+      {
+        "title": "Built a “vibe-coded” browser game entirely with AI video tools 🚀",
+        "url": "https://www.reddit.com/r/vibecoding/comments/1mwm0pt/built_a_vibecoded_browser_game_entirely_with_ai/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "albertsimondev",
+          "created_utc": 1755807520,
+          "ups": 3,
+          "num_comments": 6,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_djga4z/styles/communityIcon_d3jghm1vyrhe1.PNG"
+        },
+        "subreddit": "vibecoding",
+        "excerpt": "**I’ve been experimenting with AI-generated videos to create a playable game. The result is Echoes of Aurora, a browser-based sci-fi POV adventure.** The “game” is built as a succession of video loops with interactive hotspots (buttons). Click to open a door, pick up an item, or move forward — and"
+      },
+      {
+        "title": "Why Seedance 2 disappear from from the official playground?",
+        "url": "https://www.reddit.com/r/Seedance_AI/comments/1r3q1ic/why_seedance_2_disappear_from_from_the_official/",
+        "height": 320,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/t41fji94r9jg1.jpeg",
+          "preview_url": "https://preview.redd.it/t41fji94r9jg1.jpeg?auto=webp&s=e90096b5895c636ac698ae35daabe19e9f838a61",
+          "width": 1440,
+          "height": 2560
+        },
+        "meta": {
+          "author": "Jacquess78",
+          "created_utc": 1770991547,
+          "ups": 3,
+          "num_comments": 10,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_gkdhjc/styles/communityIcon_3phsi5h3q2ig1.png"
+        },
+        "subreddit": "Seedance_AI",
+        "excerpt": "Okay I usually visit the official byte plus website to access seedance playground about 3 days ago when I open the site the seedance 2 was available for use and it's was free if you using here but when I open the playground why the the seedance 2 was missing and if wanted to regenerate the video tha"
+      },
+      {
+        "title": "Omni Human 1.5 Settings?",
+        "url": "https://www.reddit.com/r/Freepik_AI/comments/1qtrdfb/omni_human_15_settings/",
+        "height": 320,
+        "media": {
+          "type": "gallery",
+          "image_url": "https://preview.redd.it/jbmhffxv42hg1.png?width=1300&format=png&auto=webp&s=b949b5fb9807bfbab540818cfc8f29d7c9528f71",
+          "gallery_count": 2,
+          "width": 1300,
+          "height": 436
+        },
+        "meta": {
+          "author": "qshi",
+          "created_utc": 1770027687,
+          "ups": 1,
+          "num_comments": 1,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_bjaeai/styles/communityIcon_rs0rc10u6neg1.jpg"
+        },
+        "subreddit": "Freepik_AI",
+        "excerpt": "Where do i set the length for Omni Human 1.5 Outputs? My audio is 15 seconds long but it only generates 10 seconds, no matter what. pls fix!"
+      }
+    ],
+    "x_posts": [
+      {
+        "id": "1935095106681585956",
+        "text": "ByteDance Seed video gen model Seedance 1.0 mini test — bear comforting a robot. Quality comparable to Veo 3, strong prompt adherence.",
+        "author": "ByteDance Seed",
+        "handle": "ByteDanceSeed",
+        "date": "Jun 18, 2025",
+        "url": "https://twitter.com/i/status/1935095106681585956"
+      }
+    ]
+  },
+  "faq_section": {
+    "h2": "Seedance 1.0 Lite FAQ",
+    "intro": "Direct answers for people searching how Seedance 1.0 Lite works, what it is good at, and when to use it in Dommi.",
+    "items": [
+      {
+        "q": "What is Seedance 1.0 Lite?",
+        "a": "Seedance 1.0 Lite is an AI video model from ByteDance. In Dommi, this page explains where it fits, shows prompt examples, and connects it with related video models so creators can choose the right workflow."
+      },
+      {
+        "q": "What is Seedance 1.0 Lite best for?",
+        "a": "Seedance 1.0 Lite is best for first-pass video ideas, prompt validation, and creators who want a lightweight entry into the Seedance family. Its main strengths are fast prompt testing, lower-friction drafts, seedance prompt grammar."
+      },
+      {
+        "q": "How do I prompt Seedance 1.0 Lite?",
+        "a": "Keep the action simple and direct. One subject, one motion, one camera move, and one clear environment usually works best."
+      },
+      {
+        "q": "How is Seedance 1.0 Lite different from related models?",
+        "a": "Choose Lite for draft speed; use Seedance 1.0 Pro, 1.5 Pro, or 2.0 when you need stronger motion, resolution, and cinematic polish."
+      },
+      {
+        "q": "Can I use a reference image with Seedance 1.0 Lite?",
+        "a": "Yes. Use image-to-video when you already have a frame, product shot, character, or scene and want Seedance 1.0 Lite to animate it with controlled camera and subject motion."
+      },
+      {
+        "q": "Can I compare Seedance 1.0 Lite with other Dommi models?",
+        "a": "Yes. Use the related model links on this page to compare Seedance 1.0 Lite with nearby options, then reuse the same prompt so the difference between models is easier to judge."
+      }
+    ]
+  },
+  "final_cta": {
+    "logo": "/logo.png",
+    "h2": "Create with Seedance 1.0 Lite in Dommi",
+    "body": "Open Dommi and use Seedance 1.0 Lite for a fast first video draft.",
+    "btn_label": "Open Dommi Tools",
+    "btn_href": "/tools",
+    "btn_link": "/tools"
+  },
+  "brand": "Dommi",
+  "source_slug": "seedance-1-0-lite"
+}

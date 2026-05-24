@@ -1,41 +1,55 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import { legalIndex } from './legal-docs'
+
+export const metadata: Metadata = {
+  title: 'Legal Center | Dommi',
+  description: 'Dommi legal policies, including terms, privacy, refunds, AI content rules, and deletion requests.',
+  alternates: {
+    canonical: '/legal',
+  },
+}
+
 export default function LegalPage() {
-    return (
-        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '64px 32px', color: '#374151', lineHeight: '1.6' }}>
-            <h1 style={{ fontSize: '32px', fontWeight: 'bold', color: '#111827', marginBottom: '32px' }}>Privacy Policy and Terms of Service</h1>
-
-            <section style={{ marginBottom: '48px' }}>
-                <h2 style={{ fontSize: '24px', fontWeight: 'bold', color: '#111827', marginBottom: '16px' }}>Terms of Service</h2>
-                <p style={{ marginBottom: '16px' }}>
-                    Welcome to Dommi Idea Gallery. By accessing or using our website, you agree to be bound by these Terms of Service.
-                </p>
-                <h3 style={{ fontSize: '18px', fontWeight: 'bold', color: '#111827', marginBottom: '8px' }}>1. Use of the Service</h3>
-                <p style={{ marginBottom: '16px' }}>
-                    Our service allows users to browse and generate AI-created images and videos. You agree not to misuse the service or help anyone else do so.
-                </p>
-                <h3 style={{ fontSize: '18px', fontWeight: 'bold', color: '#111827', marginBottom: '8px' }}>2. Accounts and Credits</h3>
-                <p style={{ marginBottom: '16px' }}>
-                    Certain features may require an account and the use of credits. You are responsible for safeguarding your account, and you understand that credits purchased are non-refundable.
-                </p>
-            </section>
-
-            <section>
-                <h2 style={{ fontSize: '24px', fontWeight: 'bold', color: '#111827', marginBottom: '16px' }}>Privacy Policy</h2>
-                <p style={{ marginBottom: '16px' }}>
-                    Your privacy is important to us. This Privacy Policy explains how we collect, use, and share your personal information.
-                </p>
-                <h3 style={{ fontSize: '18px', fontWeight: 'bold', color: '#111827', marginBottom: '8px' }}>1. Information We Collect</h3>
-                <p style={{ marginBottom: '16px' }}>
-                    We collect information you provide directly to us, such as your email address when you create an account, as well as usage data when you generate or interact with media on our platform.
-                </p>
-                <h3 style={{ fontSize: '18px', fontWeight: 'bold', color: '#111827', marginBottom: '8px' }}>2. How We Use Information</h3>
-                <p style={{ marginBottom: '16px' }}>
-                    We use the information we collect to provide, maintain, and improve our services, including to personalize your experience and calculate credit usage.
-                </p>
-                <h3 style={{ fontSize: '18px', fontWeight: 'bold', color: '#111827', marginBottom: '8px' }}>3. Contact Us</h3>
-                <p style={{ marginBottom: '16px' }}>
-                    If you have any questions about these Terms or the Privacy Policy, please contact us at <a href="mailto:support@dommi.ai" style={{ color: '#155dfc' }}>support@dommi.ai</a>.
-                </p>
-            </section>
-        </div>
-    )
+  return (
+    <main style={{ maxWidth: '980px', margin: '0 auto', padding: '72px 32px', color: '#374151' }}>
+      <h1 style={{ fontSize: '46px', lineHeight: 1.08, color: '#111827', margin: '0 0 14px' }}>
+        Legal center
+      </h1>
+      <p style={{ fontSize: '18px', lineHeight: 1.65, color: '#64748b', maxWidth: 720, margin: '0 0 34px' }}>
+        Review Dommi policies for account use, privacy, payments, AI-generated content, and deletion requests.
+      </p>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+        {legalIndex.map((doc) => (
+          <Link
+            key={doc.href}
+            href={doc.href}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              minHeight: 180,
+              padding: 22,
+              borderRadius: 18,
+              border: '1px solid #e5e7eb',
+              background: '#fff',
+              color: 'inherit',
+              textDecoration: 'none',
+              boxShadow: '0 18px 45px rgba(15,23,42,0.05)',
+            }}
+          >
+            <div>
+              <h2 style={{ margin: 0, color: '#111827', fontSize: 21 }}>{doc.title}</h2>
+              <p style={{ margin: '10px 0 0', color: '#64748b', lineHeight: 1.55 }}>{doc.description}</p>
+            </div>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginTop: 18, color: '#155dfc', fontWeight: 700 }}>
+              Read policy
+              <ArrowRight size={16} />
+            </span>
+          </Link>
+        ))}
+      </div>
+    </main>
+  )
 }

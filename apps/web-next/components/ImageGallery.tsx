@@ -9,14 +9,20 @@ import type { MediaItem } from '../types/media'
 interface ImageGalleryProps {
   items: MediaItem[]
   onItemClick: (item: MediaItem) => void
+  onItemLoadError?: (item: MediaItem) => void
 }
 
-export function ImageGallery({ items, onItemClick }: ImageGalleryProps) {
+export function ImageGallery({ items, onItemClick, onItemLoadError }: ImageGalleryProps) {
   return (
     <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 1024: 3, 1440: 4, 1920: 6 }}>
       <Masonry gutter="20px">
         {items.map((item) => (
-          <ImageCard key={item.id} item={item} onClick={() => onItemClick(item)} />
+          <ImageCard
+            key={item.id}
+            item={item}
+            onClick={() => onItemClick(item)}
+            onLoadError={onItemLoadError}
+          />
         ))}
       </Masonry>
     </ResponsiveMasonry>

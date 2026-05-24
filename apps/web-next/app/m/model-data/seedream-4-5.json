@@ -1,0 +1,512 @@
+{
+  "slug": "seedream-4-5",
+  "category": "image",
+  "vendor": "ByteDance",
+  "meta": {
+    "title": "Seedream 4.5 AI Image Generator | Dommi",
+    "description": "Use Seedream 4.5 in Dommi for sharper ByteDance image generation, better subject recognition, stronger multi-reference edits, and cleaner visual detail. Choose Seedream 4.5 for stronger detail and reference handling than 4.0; compare Nano Banana Pro for Gemini-style control and GPT Image 2 for text-heavy layouts.",
+    "keywords": [
+      "Seedream 4.5",
+      "Seedream 4.5 AI image generator",
+      "Seedream 4.5 Dommi",
+      "Seedream image models",
+      "AI image generator"
+    ]
+  },
+  "hero": {
+    "h1": "Seedream 4.5 AI Image Generator",
+    "description": "Use Seedream 4.5 in Dommi for sharper ByteDance image generation, better subject recognition, stronger multi-reference edits, and cleaner visual detail."
+  },
+  "generator_panel": {
+    "agent_label": "Create with Seedream 4.5 in Dommi",
+    "pill_label": "AI Image",
+    "quick_motion_options": [],
+    "quick_style_options": [],
+    "tool_modes": [
+      {
+        "label": "Text to Image",
+        "value": "text"
+      },
+      {
+        "label": "Image to Image",
+        "value": "image"
+      }
+    ],
+    "fields": [
+      {
+        "name": "model",
+        "label": "Model",
+        "default": "Seedream 4.5",
+        "options": [
+          "Seedream 4.5",
+          "Seedream 4.0",
+          "Nano Banana 2",
+          "GPT Image 2"
+        ]
+      },
+      {
+        "name": "aspectRatio",
+        "label": "Aspect ratio",
+        "default": "1:1",
+        "options": [
+          "1:1",
+          "16:9",
+          "9:16",
+          "4:3",
+          "3:4",
+          "3:2",
+          "2:3"
+        ]
+      },
+      {
+        "name": "resolution",
+        "label": "Resolution",
+        "default": "2K",
+        "options": [
+          "1K",
+          "2K",
+          "4K"
+        ]
+      }
+    ],
+    "upload": {
+      "show": true,
+      "placeholder": "Click to upload a reference image",
+      "hint": "JPG, PNG, WEBP",
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "prompt_placeholders": {
+      "text": "Describe the Seedream 4.5 image: subject, style, lighting, composition, and any required text.",
+      "image": "Describe how Seedream 4.5 should transform or extend the reference image."
+    },
+    "toggles": [],
+    "generator_links": {
+      "text": "/ai-image-generation?model=seedream-4-5",
+      "image": "/ai-image-generation?model=seedream-4-5"
+    },
+    "submit_labels": {
+      "text": "Generate Image",
+      "image": "Generate Image"
+    }
+  },
+  "related_section": {
+    "h2": "Seedream 4.5 alternatives and related models",
+    "intro": "Compare Seedream 4.5 with adjacent Seedream image models and nearby Dommi models before choosing the right generator for the job.",
+    "related_models": [
+      "Seedream 4.0",
+      "Nano Banana 2",
+      "Nano Banana Pro",
+      "GPT Image 2"
+    ]
+  },
+  "highlights_section": {
+    "h2": "Why use Seedream 4.5 in Dommi",
+    "intro": "Focus on the search intent that matters: what Seedream 4.5 can create, when to choose it, and how to prompt it effectively.",
+    "items": [
+      {
+        "title": "Sharper subject recognition",
+        "text": "best for creators comparing Seedream with Nano Banana Pro, GPT Image 2, and other frontier image models."
+      },
+      {
+        "title": "Multi-reference editing",
+        "text": "Choose Seedream 4.5 for stronger detail and reference handling than 4.0; compare Nano Banana Pro for Gemini-style control and GPT Image 2 for text-heavy layouts."
+      },
+      {
+        "title": "Cleaner photoreal detail",
+        "text": "Give clear reference rules, subject identity, scene details, style, and lighting. Seedream responds best when the edit target is explicit."
+      }
+    ]
+  },
+  "examples_section": {
+    "h2": "Seedream 4.5 prompt examples",
+    "intro": "Use these prompts to test complex subject direction, reference consistency, and film-grade image style in Seedream 4.5.",
+    "effect_badge": "S45",
+    "items": [
+      {
+        "title": "Multi-clause photorealistic scene",
+        "prompt": "A young chef plating an arrangement of seared scallops with edible flowers on a navy ceramic plate, warm overhead pendant light, a glass of white wine and brass cutlery in soft focus on the right, kitchen-pass background blurred, 50mm lens at f/2.0, editorial food photography aesthetic.",
+        "result": "Output: a detailed food editorial still with sharp focus on the plate, accurate scallop sear marks, and a clean color story between the navy plate and warm light — usable in restaurant marketing or recipe editorial.",
+        "result_image": "https://i.redd.it/c3rz9v10juig1.png",
+        "result_alt": "Comparison in hallucinations by the top image editing models in Arena when asked to colorize a picture (cropped zoom in — singularity"
+      },
+      {
+        "title": "Hybrid photoreal + watercolor portrait",
+        "prompt": "A portrait of a violinist mid-performance, photographic skin and instrument detail, but the surrounding stage and audience rendered as soft watercolor washes that bleed into the background, warm spotlight on the violinist, 3:4 portrait framing.",
+        "result": "Output: a clean hybrid where the figure remains photographic and crisply detailed while the surroundings dissolve into watercolor — usable as concert poster art or editorial illustration.",
+        "result_image": "https://i.redd.it/laqn9g88yosg1.jpeg",
+        "result_alt": "Doraemon's Time and Weather on an ePaper — eink"
+      },
+      {
+        "title": "Architectural concept render",
+        "prompt": "A minimalist concrete house on a cliff overlooking the Pacific Ocean at golden hour, infinity pool in the foreground, glass walls reflecting sky, warm interior lighting visible through windows, drone perspective, architectural photography, fine concrete and water surface detail.",
+        "result": "Output: a high-detail architectural still with accurate concrete texture, water reflection, glass transparency, and golden-hour color grade — suitable for architecture portfolio or real estate concept presentation.",
+        "result_image": "https://preview.redd.it/y1zcsttqqp7g1.png?width=1024&format=png&auto=webp&s=0dade9efa0d344f9eedd66e645702c32a56acc1a",
+        "result_alt": "GPT 1.5 Image vs Nano Banana Pro vs Seedream 4.5 vs Flux 2 Max vs Grok 2 Image — singularity"
+      }
+    ]
+  },
+  "how_to_section": {
+    "h2": "How to use Seedream 4.5 in Dommi",
+    "intro": "A simple workflow for turning search intent into a usable image result with Seedream 4.5.",
+    "steps": [
+      {
+        "title": "Choose Seedream 4.5",
+        "description": "Start from Dommi's generator surface and select Seedream 4.5 when your goal matches its strengths: sharper subject recognition, multi-reference editing, cleaner photoreal detail."
+      },
+      {
+        "title": "Write a focused prompt",
+        "description": "Give clear reference rules, subject identity, scene details, style, and lighting. Seedream responds best when the edit target is explicit."
+      },
+      {
+        "title": "Generate, compare, refine",
+        "description": "Run the prompt, compare it with related Dommi models, then adjust one variable at a time so you can see what Seedream 4.5 changes."
+      }
+    ]
+  },
+  "youtube_section": {
+    "h2": "Seedream 4.5 tutorials on YouTube",
+    "intro": "Watch creator tutorials and walkthroughs that show how people prompt, compare, and evaluate Seedream 4.5 in real workflows."
+  },
+  "reddit_section": {
+    "h2": "Seedream 4.5 discussions on Reddit",
+    "intro": "Read community threads about Seedream 4.5 results, strengths, limitations, and how it compares with other AI image models."
+  },
+  "x_section": {
+    "h2": "Seedream 4.5 posts on X",
+    "intro": "Browse curated X posts for Seedream 4.5: launches, creator tests, benchmark notes, and prompt examples from the original discussions."
+  },
+  "social": {
+    "youtube_videos": [
+      {
+        "id": "9RkdvOqL-OQ",
+        "title": "Seedream 4.5 Review: The Best AI Image Generator for Consistent Batch Creation",
+        "description": "Learn how Seedream 4.5 generates up to 15 consistent AI images in one batch using multi-reference inputs and maintains perfect style consistency across entire marketing campaigns—ranked #1 in the text-to-image AI Arena. 🔥Play with Seedream…",
+        "uploadDate": "2026-01-21T20:36:29-08:00"
+      },
+      {
+        "id": "SX5JIiWOOH8",
+        "title": "How to Access Seedream 4.5 4K Image Generator for Free",
+        "description": "In this video, I show you how to access SeaDream 4.5 4K Image Generator and test its image quality using real prompts. SeeDream 4.5 is capable of generating high-resolution 4K images with realistic detail, cinematic lighting, and…",
+        "uploadDate": "2025-12-17T10:36:26-08:00"
+      },
+      {
+        "id": "Bg-x73xsLzY",
+        "title": "How to Generate INCREDIBLE Images with Seedream 4.5 Completely FREE",
+        "description": "👉 In this video, I will show you how to access and use Seedream 4.5 completely free, including advanced features like image editing with reference photos and precise control over your AI-generated visuals. This tool helps designers,…",
+        "uploadDate": "2025-12-08T03:37:58-08:00"
+      },
+      {
+        "id": "Eh8msllYVqw",
+        "title": "Create Ultra Realistic AI Images of Yourself - Seedream 4.5 Prompt Guide",
+        "description": "Seedream 4.5 can generate consistent and realistic images of your AI Influencers better than Nano Banana Pro. But not knowing right prompt might give you unrealistic results. This video teaches you Master your Seedream prompting within few…",
+        "uploadDate": "2026-02-07T02:32:42-08:00"
+      },
+      {
+        "id": "NPrpg-HxSns",
+        "title": "Seedream 4.5 is Here — Incredible Cinematic AI Images (vs Nano Banana Pro)",
+        "description": "The new Seedream 4.5 model is here, setting a high standard for cinematic 4K AI image generation. Try Seedream 4.5 →…",
+        "uploadDate": "2025-12-04T09:48:46-08:00"
+      },
+      {
+        "id": "cKpxjOjgguw",
+        "title": "Seedream 4.5 Explained - Real Control, Consistency & Precision (Dreamina Tutorial)",
+        "description": "Try Dreamina Here : https://bit.ly/hancybox Seedream 4.5 inside Dreamina is a major leap forward in visual generation — not just in style, but in precision, structure, and control. In this tutorial, I break down the latest Seedream 4.5…",
+        "uploadDate": "2025-12-23T23:30:31-08:00"
+      },
+      {
+        "id": "3X1xmtfrJ_A",
+        "title": "Seedream 4.5 4K Images for FREE",
+        "description": "Seedream 4.5 FREE. Stop paying monthly for AI art tools — Seedream 4.5 is now accessible without a subscription, and most people don’t even know it. In this video, I’m showing a fully working method to use Seedream 4.5 for free using Guest…"
+      },
+      {
+        "id": "I5wn8WfaT_U",
+        "title": "Seedream 4.5 is INSANE | Better Than Nano Banana Pro",
+        "description": "Seedream 4.5 is INSANE | Better Than Nano Banana Pro. Seedream 4.5 is the newest and most powerful AI image generation model designed for creators, designers, marketers, and content producers. In this video, we break down what Seedream 4.5…",
+        "uploadDate": "2025-12-07T12:09:02-08:00"
+      },
+      {
+        "id": "AHSG7_mrup4",
+        "title": "NEW Seedream 4.5 Update Is INSANE!",
+        "description": "Want to make money and save time with AI? Join here → https://juliangoldieai.com/1jvjBq Seedream 4.5 just dropped and this update is absolutely insane. ByteDance has upgraded everything. Perfect text rendering, realistic human faces, and…",
+        "uploadDate": "2025-12-04T13:00:37-08:00"
+      },
+      {
+        "id": "WACkxSbEHZ4",
+        "title": "Seedream 4.5 4K Images for FREE - Unlimited Image Create Method",
+        "description": "Seedream 4.5 4K Images for FREE - Unlimited Image Create Method Seedream 4.5 FREE. Seedream 4.5 is now accessible without a subscription, and most people don’t even know it. In this video, I’m showing a fully working method to use Seedream…",
+        "uploadDate": "2025-12-10T08:47:54-08:00"
+      },
+      {
+        "id": "8M635IF6Aik",
+        "title": "NEW Seedream 4.5 Photoshop Plugin Review (Is it good?)",
+        "description": "Seedream 4.5 Photoshop Plugin: https://university.pouyaeti.com/eti-image-photoshop-plugin EtiCut Video Editor: Will be available soon Seedream 4.5 Website: https://seed.bytedance.com/en/seedream4_5 Replicate.com: https://replicate.com/ ➡️…",
+        "uploadDate": "2025-12-03T11:10:26-08:00"
+      },
+      {
+        "id": "Bi7-JfRmaf4",
+        "title": "5 Best Websites to Use Seedream 4.5 for FREE",
+        "description": "5 Best Websites to Use Seedream 4.5 for Free.. In this video, I’m sharing 5 best websites to use Seedream 4.5 for free. All these platforms officially offer free access or free credits, so you can test Seedream 4.5 and see the results…",
+        "uploadDate": "2025-12-21T08:00:25-08:00"
+      }
+    ],
+    "reddit_posts": [
+      {
+        "title": "Time's Arrow",
+        "url": "https://www.reddit.com/r/dndai/comments/1pknva4/times_arrow/",
+        "height": 280,
+        "media": {
+          "type": "gallery",
+          "image_url": "https://preview.redd.it/inx763g4uq6g1.jpg?width=1728&format=pjpg&auto=webp&s=cd06f068333ea2b05eee5b3bb40cd075a953cc3f",
+          "gallery_count": 10,
+          "width": 1728,
+          "height": 2304
+        },
+        "meta": {
+          "author": "Sinistraluk",
+          "created_utc": 1765532355,
+          "ups": 301,
+          "num_comments": 4,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_6ojhqk/styles/communityIcon_eah5h9m0ksa91.png"
+        },
+        "subreddit": "dndai",
+        "excerpt": "Inspired by a post by u/mango55, here are some images showing characters at the start of their 'careers' and at their peak; older (definitely), wiser (possibly) and changed by their life and experiences (some more than others...).\nAlso wanted to try out the same prompt on different AIs. So for each"
+      },
+      {
+        "title": "Seedream 4.5 vs Nano Banana Pro!",
+        "url": "https://www.reddit.com/r/Bard/comments/1pd7dw0/seedream_45_vs_nano_banana_pro/",
+        "height": 280,
+        "media": {
+          "type": "gallery",
+          "image_url": "https://preview.redd.it/17qu77m7d05g1.jpg?width=2048&format=pjpg&auto=webp&s=5d308aaae4f7036a99bc70555c27ade406083347",
+          "gallery_count": 2,
+          "width": 2048,
+          "height": 2048
+        },
+        "meta": {
+          "author": "Rare_Bunch4348",
+          "created_utc": 1764776054,
+          "ups": 233,
+          "num_comments": 57,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_2qsqa/styles/communityIcon_b0vsdh7psegc1.jpg"
+        },
+        "subreddit": "Bard",
+        "excerpt": "Comment what you think!"
+      },
+      {
+        "title": "Seedream 5.0 is here - comparison and technical breakdown + copyright allegations?",
+        "url": "https://www.reddit.com/r/OpenAI/comments/1rd1ubx/seedream_50_is_here_comparison_and_technical/",
+        "height": 280,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/30ihtoyjoclg1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/NmpvZDJ6eWpvY2xnMfehReyERujlGr9Cp3yI1gYP4KA5B9h3R-Ucj18UR4Z2.png?format=pjpg&auto=webp&s=b03505d33e7fb0ac6be9bf20013d03a4370cd272",
+          "width": 1920,
+          "height": 1080,
+          "duration": 20,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Flyingbird777",
+          "created_utc": 1771898767,
+          "ups": 150,
+          "num_comments": 45,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_3b9u5/styles/communityIcon_sls3rtre3qxg1.png"
+        },
+        "subreddit": "OpenAI",
+        "excerpt": "Seedream 4.5 was good, but Seedream 5.0 seems like beating Nano Banana Pro. It’s been a week since it rolled out on Dremina with users posting lots of generated images (and a shit ton of viral Seedance 2 videos). People having access now. CapCut has it already, freepik lying on having accesses &"
+      },
+      {
+        "title": "“When Koinobori Speaks” – My second Doraemon‑inspired e‑ink weather dashboard",
+        "url": "https://www.reddit.com/r/eink/comments/1sffc3y/when_koinobori_speaks_my_second_doraemoninspired/",
+        "height": 280,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/bc7kr32bfvtg1.jpeg",
+          "preview_url": "https://preview.redd.it/bc7kr32bfvtg1.jpeg?auto=webp&s=f7ca86a8e59943656ceaf352e8b4c7cfa6f4aac1",
+          "width": 3024,
+          "height": 4032
+        },
+        "meta": {
+          "author": "meililiy",
+          "created_utc": 1775612442,
+          "ups": 152,
+          "num_comments": 7,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_2t9mq/styles/communityIcon_9svjkn66p9ga1.png"
+        },
+        "subreddit": "eink",
+        "excerpt": "I’ve always loved *Doraemon* — not just for the gadgets, but for how it quietly reminds us that caring for the future starts with understanding the present. So I made this: [**“When Koinobori Speaks”**](https://sensecraft.seeed.cc/hmi/template/151) **— a 10.3'' monochrome e‑ink weather dashboard**"
+      },
+      {
+        "title": "I used AI to turn my 'Elf on the Shelf' burnout into a cinematic Hip-Hop Music video. Recreated 20+ movie scenes at Elf Scale.",
+        "url": "https://www.reddit.com/r/aivideos/comments/1pqx3vo/i_used_ai_to_turn_my_elf_on_the_shelf_burnout/",
+        "height": 280,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/niupp9v0c88g1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/cGYxMHBrdjBjODhnMRKG6RLr-DK7yYtZGDXyx2Fh0vXt_o9iACyOMgIjYUiU.png?format=pjpg&auto=webp&s=f63942d3f8c52539bff51d5cbf716e4b8e8d8769",
+          "width": 1080,
+          "height": 1920,
+          "duration": 59,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "gabriel277",
+          "created_utc": 1766180255,
+          "ups": 136,
+          "num_comments": 39,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_3m092/styles/communityIcon_2t78j3lgzkse1.png"
+        },
+        "subreddit": "aivideos",
+        "excerpt": "I used Nano Banana Pro and Seedream 4.5 for start frames, and mainly Veo 3.1 for animating. Kling 2.5 for Jurassic Park scene and Kling 01 for the final dance sequence using a Lil Yachty clip to model the dance. Wrote a similar song, used Chat GPT to put it into a 140bpm format and shave words a"
+      },
+      {
+        "title": "Google's Nano Banana 2 (Gemini 3.1 Flash Image Preview) takes #1 in Text to Image in the Artificial Analysis Image Arena at half the price o",
+        "url": "https://www.reddit.com/r/singularity/comments/1rfes3u/googles_nano_banana_2_gemini_31_flash_image/",
+        "height": 280,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/26e0ifqg8vlg1.jpeg",
+          "preview_url": "https://preview.redd.it/26e0ifqg8vlg1.jpeg?auto=webp&s=d9c4f6771f4f36a102cedc21a84a6f594ff7dfa5",
+          "width": 1237,
+          "height": 772
+        },
+        "meta": {
+          "author": "likeastar20",
+          "created_utc": 1772123320,
+          "ups": 108,
+          "num_comments": 25,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_2qh8m/styles/communityIcon_hmujz61wdga81.jpg"
+        },
+        "subreddit": "singularity",
+        "excerpt": "https://x.com/artificialanlys/status/2027052241019175148?s=46"
+      },
+      {
+        "title": "Qwen released Qwen-Image-2512 on Hugging face. Qwen-Image-2512 is currently the strongest open-source model.",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1q093ka/qwen_released_qwenimage2512_on_hugging_face/",
+        "height": 280,
+        "media": {
+          "type": "gallery",
+          "image_url": "https://preview.redd.it/k0zsm7rveiag1.jpg?width=1200&format=pjpg&auto=webp&s=9c2d8e56fc7fb3afa7d71c5ab0ee0be255e82a51",
+          "gallery_count": 2,
+          "width": 1200,
+          "height": 682
+        },
+        "meta": {
+          "author": "Difficult-Cap-7527",
+          "created_utc": 1767173818,
+          "ups": 109,
+          "num_comments": 8,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_81eyvm/styles/communityIcon_cumnsvx9kzma1.png"
+        },
+        "subreddit": "LocalLLaMA",
+        "excerpt": "Hugging face: [https://huggingface.co/Qwen/Qwen-Image-2512](https://huggingface.co/Qwen/Qwen-Image-2512) What’s new:\n• More realistic humans — dramatically reduced “AI look,” richer facial details\n• Finer natural textures — sharper landscapes, water, fur, and materials\n• Stronger text rendering"
+      }
+    ],
+    "x_posts": [
+      {
+        "id": "2000793464322318841",
+        "text": "Artificial Analysis: Seedream 4.5 is the new #2 Image Editing model, trailing only Nano Banana Pro",
+        "author": "Artificial Analysis",
+        "handle": "ArtificialAnlys",
+        "date": "Dec 16, 2025",
+        "url": "https://twitter.com/i/status/2000793464322318841"
+      },
+      {
+        "id": "1996110551160947060",
+        "text": "Emily: Seedream 4.5 vs Nano Banana Pro — dynamic motion portrait comparison",
+        "author": "Emily",
+        "handle": "Emily",
+        "date": "Dec 3, 2025",
+        "url": "https://twitter.com/i/status/1996110551160947060"
+      },
+      {
+        "id": "1996170293019025895",
+        "text": "fal: Seedream 4.5 is here on fal at day 0 — improved typography, film-grade effects",
+        "author": "fal",
+        "handle": "fal_ai_data",
+        "date": "Dec 3, 2025",
+        "url": "https://twitter.com/i/status/1996170293019025895"
+      },
+      {
+        "id": "1998035816656814134",
+        "text": "Sebastien Jefferies: Seedream 4.5 keeps exact character consistency for outfit reference test",
+        "author": "Sebastien Jefferies",
+        "handle": "SebastienJefferies",
+        "date": "Dec 8, 2025",
+        "url": "https://twitter.com/i/status/1998035816656814134"
+      },
+      {
+        "id": "1996180727289860428",
+        "text": "WaveSpeedAI: Seedream 4.5 — sharper subject recognition, multi-image edits",
+        "author": "WaveSpeedAI",
+        "handle": "WaveSpeedAI",
+        "date": "Dec 3, 2025",
+        "url": "https://twitter.com/i/status/1996180727289860428"
+      },
+      {
+        "id": "1996239048017596745",
+        "text": "Replicate: Seedream 4.5 from ByteDance — accepts up to 14 reference images",
+        "author": "Replicate",
+        "handle": "replicate",
+        "date": "Dec 3, 2025",
+        "url": "https://twitter.com/i/status/1996239048017596745"
+      },
+      {
+        "id": "1996233621955633154",
+        "text": "ぽんず: Seedream 4.5 official guide summary (Japanese)",
+        "author": "ぽんず",
+        "handle": "creator",
+        "date": "Dec 3, 2025",
+        "url": "https://twitter.com/i/status/1996233621955633154"
+      },
+      {
+        "id": "1996937549110300879",
+        "text": "Freepik: Seedream 4.5 out — clear improvement, unlimited for Premium+",
+        "author": "Freepik",
+        "handle": "freepik",
+        "date": "Dec 5, 2025",
+        "url": "https://twitter.com/i/status/1996937549110300879"
+      }
+    ]
+  },
+  "faq_section": {
+    "h2": "Seedream 4.5 FAQ",
+    "intro": "Direct answers for people searching how Seedream 4.5 works, what it is good at, and when to use it in Dommi.",
+    "items": [
+      {
+        "q": "What is Seedream 4.5?",
+        "a": "Seedream 4.5 is an AI image model from ByteDance. In Dommi, this page explains where it fits, shows prompt examples, and connects it with related image models so creators can choose the right workflow."
+      },
+      {
+        "q": "What is Seedream 4.5 best for?",
+        "a": "Seedream 4.5 is best for creators comparing Seedream with Nano Banana Pro, GPT Image 2, and other frontier image models. Its main strengths are sharper subject recognition, multi-reference editing, cleaner photoreal detail."
+      },
+      {
+        "q": "How do I prompt Seedream 4.5?",
+        "a": "Give clear reference rules, subject identity, scene details, style, and lighting. Seedream responds best when the edit target is explicit."
+      },
+      {
+        "q": "How is Seedream 4.5 different from related models?",
+        "a": "Choose Seedream 4.5 for stronger detail and reference handling than 4.0; compare Nano Banana Pro for Gemini-style control and GPT Image 2 for text-heavy layouts."
+      },
+      {
+        "q": "Can I use a reference image with Seedream 4.5?",
+        "a": "Yes. Use a reference image when you want Seedream 4.5 to preserve identity, layout, product details, or visual style while generating a new variation."
+      },
+      {
+        "q": "Can I compare Seedream 4.5 with other Dommi models?",
+        "a": "Yes. Use the related model links on this page to compare Seedream 4.5 with nearby options, then reuse the same prompt so the difference between models is easier to judge."
+      }
+    ]
+  },
+  "final_cta": {
+    "logo": "/logo.png",
+    "h2": "Create with Seedream 4.5 in Dommi",
+    "body": "Open Dommi and test Seedream 4.5 on a high-detail image prompt.",
+    "btn_label": "Open Dommi Tools",
+    "btn_href": "/tools",
+    "btn_link": "/tools"
+  },
+  "brand": "Dommi",
+  "source_slug": "seedream-4-5"
+}

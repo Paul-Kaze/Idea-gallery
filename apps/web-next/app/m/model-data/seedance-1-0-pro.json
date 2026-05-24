@@ -1,0 +1,559 @@
+{
+  "slug": "seedance-1-0-pro",
+  "category": "video",
+  "vendor": "ByteDance",
+  "meta": {
+    "title": "Seedance 1.0 Pro AI Video Generator | Dommi",
+    "description": "Use Seedance 1.0 Pro in Dommi to create stable text-to-video and image-to-video clips with reliable motion, camera direction, and scene continuity. Use Seedance 1.0 Pro as the baseline; compare 1.5 Pro for refinement, 2.0 for newer cinematic control, and Pro Fast for draft speed.",
+    "keywords": [
+      "Seedance 1.0 Pro",
+      "Seedance 1.0 Pro AI video generator",
+      "Seedance 1.0 Pro Dommi",
+      "Seedance video models",
+      "AI video generator"
+    ]
+  },
+  "hero": {
+    "h1": "Seedance 1.0 Pro AI Video Generator",
+    "description": "Use Seedance 1.0 Pro in Dommi to create stable text-to-video and image-to-video clips with reliable motion, camera direction, and scene continuity."
+  },
+  "generator_panel": {
+    "agent_label": "Create with Seedance 1.0 Pro in Dommi",
+    "pill_label": "AI Video",
+    "quick_motion": "Auto",
+    "quick_style": "Style",
+    "quick_motion_options": [
+      "Auto",
+      "Camera Motion",
+      "Character Motion",
+      "Product Motion"
+    ],
+    "quick_style_options": [
+      "Style",
+      "Cinematic",
+      "Realistic",
+      "Anime",
+      "Commercial"
+    ],
+    "tool_modes": [
+      {
+        "label": "Image to Video",
+        "value": "image"
+      },
+      {
+        "label": "Text to Video",
+        "value": "text"
+      }
+    ],
+    "fields": [
+      {
+        "name": "model",
+        "label": "Model",
+        "default": "Seedance 1.0 Pro",
+        "options": [
+          "Seedance 2.0",
+          "Seedance 2.0 Fast",
+          "Seedance 1.5 Pro",
+          "Seedance 1.0 Pro",
+          "Seedance 1.0 Pro Fast",
+          "Seedance 1.0 Lite"
+        ]
+      },
+      {
+        "name": "aspectRatio",
+        "label": "Aspect ratio",
+        "default": "16:9",
+        "options": [
+          "16:9",
+          "9:16",
+          "1:1",
+          "4:3",
+          "3:4"
+        ]
+      },
+      {
+        "name": "duration",
+        "label": "Duration",
+        "default": "5s",
+        "options": [
+          "5s",
+          "10s",
+          "15s"
+        ]
+      },
+      {
+        "name": "resolution",
+        "label": "Resolution",
+        "default": "1080p",
+        "options": [
+          "720p",
+          "1080p"
+        ]
+      }
+    ],
+    "upload": {
+      "show": true,
+      "placeholder": "Click to upload an image",
+      "hint": "JPG, PNG, WEBP",
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "prompt_placeholders": {
+      "text": "Describe the Seedance 1.0 Pro video: subject, action, camera movement, scene, and pacing.",
+      "image": "Describe how Seedance 1.0 Pro should animate the reference image, including motion and camera direction."
+    },
+    "toggles": [
+      {
+        "name": "cameraFixed",
+        "label": "Camera fixed",
+        "default": false
+      }
+    ],
+    "generator_links": {
+      "image": "/image-to-video?model=seedance-1-0-pro",
+      "text": "/text-to-video?model=seedance-1-0-pro"
+    },
+    "submit_labels": {
+      "image": "Generate Video",
+      "text": "Generate Video"
+    }
+  },
+  "related_section": {
+    "h2": "Seedance 1.0 Pro alternatives and related models",
+    "intro": "Compare Seedance 1.0 Pro with adjacent Seedance video models and nearby Dommi models before choosing the right generator for the job.",
+    "related_models": [
+      "Seedance 1.5 Pro",
+      "Seedance 1.0 Pro Fast",
+      "Seedance 1.0 Lite",
+      "Seedance 2.0"
+    ]
+  },
+  "highlights_section": {
+    "h2": "Why use Seedance 1.0 Pro in Dommi",
+    "intro": "Focus on the search intent that matters: what Seedance 1.0 Pro can create, when to choose it, and how to prompt it effectively.",
+    "items": [
+      {
+        "title": "Original Pro baseline",
+        "text": "best for creators comparing the original Seedance Pro model against newer Seedance versions and other AI video generators."
+      },
+      {
+        "title": "Stable subject motion",
+        "text": "Use Seedance 1.0 Pro as the baseline; compare 1.5 Pro for refinement, 2.0 for newer cinematic control, and Pro Fast for draft speed."
+      },
+      {
+        "title": "Reliable camera prompts",
+        "text": "Be explicit about the subject, movement, camera angle, shot duration, and the visual continuity you want preserved."
+      }
+    ]
+  },
+  "examples_section": {
+    "h2": "Seedance 1.0 Pro prompt examples",
+    "intro": "Use these examples as a baseline for multi-shot motion, cinematic camera cues, and image-to-video behavior across the Seedance family.",
+    "effect_badge": "S1P",
+    "items": [
+      {
+        "title": "Classic product reveal",
+        "prompt": "A wristwatch face slowly rotating on a velvet display, soft golden lighting from upper-left, mirror reflection visible on the polished case, 1080p luxury product photography aesthetic.",
+        "result": "Output: a 5-second product reveal with stable rotation and visible material detail.",
+        "result_video": "https://v.redd.it/qe09t85jmpwf1/DASH_480.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/NGh4eW84NWptcHdmMa6TiJ90EryhwlPbAlIzcl4MD8lNXFluWa7sVtRUdmJq.png?format=pjpg&auto=webp&s=21284e44c71dc3bfd78cab0394b0d153a21ce3c0",
+        "result_alt": "Seedance pro super low angle tracking shot — aivideos"
+      },
+      {
+        "title": "Establishing shot for narrative",
+        "prompt": "Wide aerial pan over a coastal village at sunset, fishing boats moored at the harbor, warm sky reflecting on the water, smooth camera drift, 1080p cinema lens framing.",
+        "result": "Output: a 10-second establishing shot suitable as a documentary opening or travel content.",
+        "result_video": "https://v.redd.it/xjxb7iv11nof1/DASH_720.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/eW1zcTBydjExbm9mMa3TZapL0Jf7ZrK7blA-9KZAelIE1dUCYxCxIgzwkQyx.png?format=pjpg&auto=webp&s=2fbd58cafd7ad2bfeac5e8283caba706426e88e6",
+        "result_alt": "Back to the 80s — aivideo"
+      },
+      {
+        "title": "Character motion test",
+        "prompt": "A figure in red coat walking across a snowy plaza at dusk, falling snowflakes, soft street-lamp lighting, medium-wide camera following at walking pace, 1080p.",
+        "result": "Output: a continuous tracking shot with consistent walking cadence and natural snowfall motion.",
+        "result_video": "https://v.redd.it/487wha4o0nof1/DASH_720.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/cmtkMXliNG8wbm9mMa3TZapL0Jf7ZrK7blA-9KZAelIE1dUCYxCxIgzwkQyx.png?format=pjpg&auto=webp&s=9dfeaa5f0945841217dc4cfe34a86b7e424f910d",
+        "result_alt": "Back to the 80s — aivideos"
+      }
+    ]
+  },
+  "how_to_section": {
+    "h2": "How to use Seedance 1.0 Pro in Dommi",
+    "intro": "A simple workflow for turning search intent into a usable video result with Seedance 1.0 Pro.",
+    "steps": [
+      {
+        "title": "Choose Seedance 1.0 Pro",
+        "description": "Start from Dommi's generator surface and select Seedance 1.0 Pro when your goal matches its strengths: original pro baseline, stable subject motion, reliable camera prompts."
+      },
+      {
+        "title": "Write a focused prompt",
+        "description": "Be explicit about the subject, movement, camera angle, shot duration, and the visual continuity you want preserved."
+      },
+      {
+        "title": "Generate, compare, refine",
+        "description": "Run the prompt, compare it with related Dommi models, then adjust one variable at a time so you can see what Seedance 1.0 Pro changes."
+      }
+    ]
+  },
+  "youtube_section": {
+    "h2": "Seedance 1.0 Pro tutorials on YouTube",
+    "intro": "Watch creator tutorials and walkthroughs that show how people prompt, compare, and evaluate Seedance 1.0 Pro in real workflows."
+  },
+  "reddit_section": {
+    "h2": "Seedance 1.0 Pro discussions on Reddit",
+    "intro": "Read community threads about Seedance 1.0 Pro results, strengths, limitations, and how it compares with other AI video models."
+  },
+  "x_section": {
+    "h2": "Seedance 1.0 Pro posts on X",
+    "intro": "Browse curated X posts for Seedance 1.0 Pro: launches, creator tests, benchmark notes, and prompt examples from the original discussions."
+  },
+  "social": {
+    "youtube_videos": [
+      {
+        "id": "6VVYtFETMfw",
+        "title": "How I Make Viral AI Videos with Seedance 1.0 - Tutorial for Beginners",
+        "uploadDate": "2025-08-05T07:44:18-07:00"
+      },
+      {
+        "id": "w1yYKPuW520",
+        "title": "I Tested Seedance 1.0 on the fastest and cheapest AI platform...",
+        "uploadDate": "2025-06-27T06:31:02-07:00"
+      },
+      {
+        "id": "N42QhRFwvG8",
+        "title": "Seedance 2.0 AI Video Generator – Step-by-Step Tutorial",
+        "uploadDate": "2026-03-09T05:05:50-07:00"
+      },
+      {
+        "id": "ZghLm9MXVIY",
+        "title": "Seedance 2.0 is CRAZY for AI Filmmaking - Full Course",
+        "uploadDate": "2026-04-24T11:41:14-07:00"
+      },
+      {
+        "id": "Y4AbT6AopBM",
+        "title": "Seedance 1.0 Pro i2v 1080p is a new King AI | Bytedance",
+        "uploadDate": "2025-06-15T22:48:06-07:00"
+      },
+      {
+        "id": "RBnq_7GC1As",
+        "title": "Seedance 2.0 is INSANE - Full Guide (New Best AI Video Generator)",
+        "uploadDate": "2026-04-14T06:00:59-07:00"
+      },
+      {
+        "id": "R1zl92NhCfE",
+        "title": "Seedance 2.0 How To Use and Become a Pro AI Film Maker With This AI Video Generator",
+        "uploadDate": "2026-02-16T08:25:04-08:00"
+      },
+      {
+        "id": "zuiUfA0D1A0",
+        "title": "FREE Seedance 1.0 that BEATS Google VEO 3 | AI Video Generator Tutorial",
+        "uploadDate": "2025-07-12T05:00:06-07:00"
+      },
+      {
+        "id": "jkPTYD5lXo8",
+        "title": "100% FREE Seedance 2.0 AI Video Generator : How to Use It WORLDWIDE",
+        "uploadDate": "2026-02-19T09:46:32-08:00"
+      },
+      {
+        "id": "lkL8mlpVScY",
+        "title": "Stop wasting Credits! Master Seedance 2.0 in 25 min - Full Prompting Course",
+        "uploadDate": "2026-05-02T11:00:39-07:00"
+      },
+      {
+        "id": "KTOdcWeyvyA",
+        "title": "Seedance 1.0 PRO: The New AI Video Generator DESTROYS VEO 3 & Hailuo 02",
+        "uploadDate": "2025-07-13T12:08:39-07:00"
+      },
+      {
+        "id": "FHBQVkUYh9g",
+        "title": "Better than VEO 3 & Kling AI | Create AI Videos With Seedance 1.0 For FREE",
+        "uploadDate": "2025-07-04T05:30:17-07:00"
+      },
+      {
+        "id": "xbJL7BH3nfo",
+        "title": "Seedance Is Making Waves With AI Video!",
+        "uploadDate": "2025-06-24T08:28:45-07:00"
+      }
+    ],
+    "reddit_posts": [
+      {
+        "title": "Kling 2.5 vs Seedance Pro",
+        "url": "https://www.reddit.com/r/KlingAI_Videos/comments/1ojwx25/kling_25_vs_seedance_pro/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/0fw296ifg8yf1/DASH_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/enB6bm41aWZnOHlmMREPqPA0vtNS00Iomnzw16QE0aCo3V0_yUy1upKOEg-O.png?format=pjpg&auto=webp&s=abdaad4c53aaddc5f6a34ed495564436feed89e3",
+          "width": 720,
+          "height": 1080,
+          "duration": 10,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "p0lar0id",
+          "created_utc": 1761823092,
+          "ups": 30,
+          "num_comments": 5,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_c1znyh/styles/communityIcon_vbve4pvwnoed1.jpg"
+        },
+        "subreddit": "KlingAI_Videos"
+      },
+      {
+        "title": "AI Animation Comparison WAN vs Seedance",
+        "url": "https://www.reddit.com/r/aivideo/comments/1mvkj86/ai_animation_comparison_wan_vs_seedance/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/7lbs0aohg7kf1/DASH_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/Nm8xbjhhb2hnN2tmMdpxbibIFC7P-YQRKoXacu2PWecdUTvbSbHqyjEvFv_T.png?format=pjpg&auto=webp&s=1aa4f82e7e8ee98945eb0f1bc44b3d842f9423d4",
+          "width": 1920,
+          "height": 1080,
+          "duration": 109,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Storybook_Tobi",
+          "created_utc": 1755709199,
+          "ups": 24,
+          "num_comments": 2,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_fwb59/styles/communityIcon_zhuecbirl3pc1.png"
+        },
+        "subreddit": "aivideo",
+        "excerpt": "I just compared Wan 2.2 with Seedance Lite/Pro Img2vid, testing them across different animation styles. 1️⃣ Wan 2.2 is holding up well — but I noticed: – Characters often stop moving fluidly mid-shot – Style drifts towards anime, even if the source look is different 2️⃣ Seedance Lite became my low"
+      },
+      {
+        "title": "Two For Two",
+        "url": "https://www.reddit.com/r/aivideo/comments/1mvj6cw/two_for_two/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/9ix0vzpr47kf1/DASH_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/ajNhb2J6cHI0N2tmMeZpEUnM6rIH3F_BqArdZOJ-RiZ_mJAjs0UZ6bY5n9HS.png?format=pjpg&auto=webp&s=9c1faa475493b378a2f1ce34af187e9bd91349f9",
+          "width": 1920,
+          "height": 1080,
+          "duration": 202,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Loopnmix",
+          "created_utc": 1755706281,
+          "ups": 25,
+          "num_comments": 11,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_fwb59/styles/communityIcon_zhuecbirl3pc1.png"
+        },
+        "subreddit": "aivideo",
+        "excerpt": "Could only flair one tool, but listed below the tools that were used: Image Generation: Midjourney for initial frames, then Runway Character Ref for 70% of the film Ideogram character ref for a few shots Leonardo Ai (for upscale) Adobe (Photoshop) Video Generation: Kling AI Go"
+      },
+      {
+        "title": "Test different model in action fight scene",
+        "url": "https://www.reddit.com/r/aivideos/comments/1qnb1ya/test_different_model_in_action_fight_scene/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/vemb1r4lrnfg1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/Y2s5czJsNWxybmZnMdGtoIsaINlUc1jyT2zVIIJDV3V5JTQfTpn0E3mAksr0.png?format=pjpg&auto=webp&s=93fcaea4aef0515f19a4dec866edcc289918f7ce",
+          "width": 1920,
+          "height": 1080,
+          "duration": 39,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Training_Wing_4699",
+          "created_utc": 1769418124,
+          "ups": 13,
+          "num_comments": 2,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_3m092/styles/communityIcon_2t78j3lgzkse1.png"
+        },
+        "subreddit": "aivideos",
+        "excerpt": "created a mini scene by testing different video generation models in action. I2V was used everywhere nanobanaPRO\\\\ kling 2.6 \\\\ Seedance pro 1.5 \\\\ Minimax fast \\\\ wan 2.5 fast post: davinchi resolve"
+      },
+      {
+        "title": "Made this video in an afternoon using GPT 4o Image Gen and Seedance Pro. Everything you see and hear is completely AI generated.",
+        "url": "https://www.reddit.com/r/OpenAI/comments/1m0lzng/made_this_video_in_an_afternoon_using_gpt_4o/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/50uocx7mb2df1/DASH_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/cnRncDV6N21iMmRmMXwrBbWebPz3bEcSmuQ5vKi0_hQ3_XvI8PbqMXHDZjSp.png?format=pjpg&auto=webp&s=c45337182b9ee784195a7ed473a16d92066a7cbc",
+          "width": 1906,
+          "height": 1080,
+          "duration": 30,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "heisdancingdancing",
+          "created_utc": 1752595988,
+          "ups": 11,
+          "num_comments": 10,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_3b9u5/styles/communityIcon_sls3rtre3qxg1.png"
+        },
+        "subreddit": "OpenAI"
+      },
+      {
+        "title": "Yedanggra Hall - Mythpunk Music Short --Runway Act Two, Seedance Pro",
+        "url": "https://www.reddit.com/r/aivideos/comments/1n4cv2f/yedanggra_hall_mythpunk_music_short_runway_act/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/p9pumpgf38mf1/DASH_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/bnF4bmpwZ2YzOG1mMVNtksvhfICaHWf99THJicw4dGgMUaw_oZ1pLP-tukDE.png?format=pjpg&auto=webp&s=dc2516d068a946e5706b7d8f2ca16a922b229409",
+          "width": 1080,
+          "height": 1920,
+          "duration": 70,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Tasty-Bookkeeper-385",
+          "created_utc": 1756588670,
+          "ups": 11,
+          "num_comments": 3,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_3m092/styles/communityIcon_2t78j3lgzkse1.png"
+        },
+        "subreddit": "aivideos",
+        "excerpt": "A short AI video from my Tartaria line: a crooner working a burlesque room while celebrity robots drift through the lights. No spells—just smoke, brass, and camera. I aimed for charm over spectacle. Does the story read, or should I cut faster to audience reactions? I made some use of Act Two here an"
+      },
+      {
+        "title": "The Speedsters - Made with Higgsfield Ai",
+        "url": "https://www.reddit.com/r/HiggsfieldAI/comments/1q0bq2v/the_speedsters_made_with_higgsfield_ai/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/f22b4muj7jag1/CMAF_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/bHhncGE4dmo3amFnMflJD56mNY0MNFMxXFyBcom0RM2wUr_EleE7TglMtLRm.png?format=pjpg&auto=webp&s=4dde16c6ef8e8de868a1c90613f24e47feeae9e2",
+          "width": 1280,
+          "height": 536,
+          "duration": 99,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Screamachine1987",
+          "created_utc": 1767183526,
+          "ups": 10,
+          "num_comments": 3,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_e6ipt5/styles/communityIcon_trrjzigg7yeg1.jpg"
+        },
+        "subreddit": "HiggsfieldAI",
+        "excerpt": "Made with - cinematic studio - seedance pro - Minimax halluo"
+      },
+      {
+        "title": "Neon Nocturne - Cinematic Night Synthwave Reel",
+        "url": "https://www.reddit.com/r/aivideos/comments/1qr6bqp/neon_nocturne_cinematic_night_synthwave_reel/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/1o5stuiwthgg1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/a216NXE0a3d0aGdnMbO1h6OL3ALSn5rv-Nlu4oySzbj3kYZsaiq2MSJgM2ny.png?format=pjpg&auto=webp&s=3126ccd7eeab92f9f8e1d697ea2ba2d73cccbf41",
+          "width": 1920,
+          "height": 1080,
+          "duration": 183,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "imlo2",
+          "created_utc": 1769781855,
+          "ups": 9,
+          "num_comments": 3,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_3m092/styles/communityIcon_2t78j3lgzkse1.png"
+        },
+        "subreddit": "aivideos",
+        "excerpt": "a 3-min moody nocturnal synthwave video using Seedance Pro 1.5 for the video content. Neon-drenched cities, foggy towers, neon-lit tunnels, rainy beaches/skylines..."
+      },
+      {
+        "title": "Seedance 2.0 is now available on Freepik (the wait is over)",
+        "url": "https://www.reddit.com/r/Freepik_AI/comments/1shgox8/seedance_20_is_now_available_on_freepik_the_wait/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/de9vv96wobug1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/cjN4anJyNndvYnVnMf6gnajobNkPZr3UDcCVbEGA1iChw8i1LXaUsJ80vUbk.png?format=pjpg&auto=webp&s=b22cfc9252afb8bbbb920848b716d3a36b8f3c0e",
+          "width": 1920,
+          "height": 1080,
+          "duration": 28,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "MagnificOfficial",
+          "created_utc": 1775809964,
+          "ups": 8,
+          "num_comments": 5,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_bjaeai/styles/communityIcon_rs0rc10u6neg1.jpg"
+        },
+        "subreddit": "Freepik_AI",
+        "excerpt": "Seedance 2.0 is now available on Freepik This one's been a long time coming, and it's finally here Instead of generating clips and stitching everything together, you can now build a full video in one go, using a mix of references **What it can do:** * Generate **multi-shot cinematic videos from"
+      }
+    ],
+    "x_posts": [
+      {
+        "id": "1933181989110087879",
+        "text": "ByteDance Seed unveils Seedance 1.0, an AI model for multi-shot video generation from text and images. Generates 1080p in 41.4 seconds.",
+        "author": "ByteDance Seed",
+        "handle": "ByteDanceSeed",
+        "date": "Jun 12, 2025",
+        "url": "https://twitter.com/i/status/1933181989110087879"
+      },
+      {
+        "id": "1934091422610964907",
+        "text": "ByteDance just dropped Seedance 1.0, their new video-gen model. Early benchmarks place it as SOTA on motion and coherence.",
+        "author": "ByteDance Seed",
+        "handle": "ByteDanceSeed",
+        "date": "Jun 15, 2025",
+        "url": "https://twitter.com/i/status/1934091422610964907"
+      },
+      {
+        "id": "1936097374432276735",
+        "text": "ByteDance Seedance 1.0 Pro, the #1 Video Generation model on Artificial Analysis, just launched on fal. First US company to serve this model.",
+        "author": "fal",
+        "handle": "fal_ai_data",
+        "date": "Jun 21, 2025",
+        "url": "https://twitter.com/i/status/1936097374432276735"
+      },
+      {
+        "id": "1934739283786805323",
+        "text": "It over. ByteDance just dropped Seedance 1.0, the best AI video model in the world. Nothing is real anymore. 10 insane examples.",
+        "author": "AI video creator",
+        "handle": "aivideocreator",
+        "date": "Jun 17, 2025",
+        "url": "https://twitter.com/i/status/1934739283786805323"
+      }
+    ]
+  },
+  "faq_section": {
+    "h2": "Seedance 1.0 Pro FAQ",
+    "intro": "Direct answers for people searching how Seedance 1.0 Pro works, what it is good at, and when to use it in Dommi.",
+    "items": [
+      {
+        "q": "What is Seedance 1.0 Pro?",
+        "a": "Seedance 1.0 Pro is an AI video model from ByteDance. In Dommi, this page explains where it fits, shows prompt examples, and connects it with related video models so creators can choose the right workflow."
+      },
+      {
+        "q": "What is Seedance 1.0 Pro best for?",
+        "a": "Seedance 1.0 Pro is best for creators comparing the original Seedance Pro model against newer Seedance versions and other AI video generators. Its main strengths are original pro baseline, stable subject motion, reliable camera prompts."
+      },
+      {
+        "q": "How do I prompt Seedance 1.0 Pro?",
+        "a": "Be explicit about the subject, movement, camera angle, shot duration, and the visual continuity you want preserved."
+      },
+      {
+        "q": "How is Seedance 1.0 Pro different from related models?",
+        "a": "Use Seedance 1.0 Pro as the baseline; compare 1.5 Pro for refinement, 2.0 for newer cinematic control, and Pro Fast for draft speed."
+      },
+      {
+        "q": "Can I use a reference image with Seedance 1.0 Pro?",
+        "a": "Yes. Use image-to-video when you already have a frame, product shot, character, or scene and want Seedance 1.0 Pro to animate it with controlled camera and subject motion."
+      },
+      {
+        "q": "Can I compare Seedance 1.0 Pro with other Dommi models?",
+        "a": "Yes. Use the related model links on this page to compare Seedance 1.0 Pro with nearby options, then reuse the same prompt so the difference between models is easier to judge."
+      }
+    ]
+  },
+  "final_cta": {
+    "logo": "/logo.png",
+    "h2": "Create with Seedance 1.0 Pro in Dommi",
+    "body": "Open Dommi and test the original Seedance Pro workflow.",
+    "btn_label": "Open Dommi Tools",
+    "btn_href": "/tools",
+    "btn_link": "/tools"
+  },
+  "brand": "Dommi",
+  "source_slug": "seedance-1-0-pro"
+}

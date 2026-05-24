@@ -1,0 +1,420 @@
+.page {
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(129, 179, 55, 0.18), transparent 28rem),
+    radial-gradient(circle at 90% 15%, rgba(45, 138, 138, 0.16), transparent 24rem),
+    #f5f7f2;
+  color: #17200f;
+  padding: 32px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  gap: 24px;
+  align-items: stretch;
+  max-width: 1280px;
+  margin: 0 auto 24px;
+}
+
+.heroCopy {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 44px;
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(18, 18, 18, 0.74), rgba(28, 48, 20, 0.62)),
+    url('https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=1800&q=80');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.eyebrow,
+.sectionHeader span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #5f812d;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.heroCopy .eyebrow {
+  color: #bde97c;
+  margin-bottom: 18px;
+}
+
+.heroCopy h1 {
+  max-width: 840px;
+  margin: 0 0 18px;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.heroCopy p {
+  max-width: 760px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.heroPanel,
+.metricCard,
+.largePanel,
+.panel,
+.matrixSection,
+.opportunitySection,
+.takeaway,
+.warning {
+  border: 1px solid rgba(47, 67, 31, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 24px 70px rgba(35, 45, 24, 0.09);
+}
+
+.heroPanel {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.panelLabel {
+  color: #60704f;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.strategyLoop {
+  display: grid;
+  gap: 12px;
+}
+
+.loopItem {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+  border-radius: 8px;
+  background: #eef4e8;
+  color: #24341a;
+  font-weight: 700;
+}
+
+.loopItem span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #81b337;
+  color: #fff;
+}
+
+.metricsGrid {
+  max-width: 1280px;
+  margin: 0 auto 24px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.metricCard {
+  padding: 18px;
+  min-height: 150px;
+}
+
+.metricIcon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #17200f;
+  color: #bde97c;
+  margin-bottom: 18px;
+}
+
+.metricCard span,
+.metricCard em {
+  display: block;
+  color: #6b765f;
+  font-size: 13px;
+  font-style: normal;
+}
+
+.metricCard strong {
+  display: block;
+  margin: 6px 0 4px;
+  color: #17200f;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.mainGrid {
+  max-width: 1280px;
+  margin: 0 auto 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.55fr);
+  gap: 24px;
+}
+
+.largePanel,
+.panel,
+.matrixSection,
+.opportunitySection {
+  padding: 28px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.sectionHeader h2,
+.takeaway h2,
+.warning h2 {
+  margin: 6px 0 0;
+  color: #17200f;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.keywordBars {
+  display: grid;
+  gap: 16px;
+}
+
+.keywordRow {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.8fr) minmax(120px, 1fr) 56px;
+  gap: 16px;
+  align-items: center;
+}
+
+.keywordMeta strong {
+  display: block;
+  color: #17200f;
+  font-size: 16px;
+}
+
+.keywordMeta span,
+.clusterItem span,
+.pageCard span,
+.opportunityCard p,
+.takeaway p,
+.warning p {
+  color: #6b765f;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.barTrack,
+.clusterTrack {
+  height: 12px;
+  border-radius: 999px;
+  background: #e2ead9;
+  overflow: hidden;
+}
+
+.barFill,
+.clusterFill {
+  height: 100%;
+  border-radius: inherit;
+}
+
+.barFill {
+  background: linear-gradient(90deg, #81b337, #2d8a8a);
+}
+
+.keywordRow b {
+  color: #31451f;
+  text-align: right;
+}
+
+.clusterStack {
+  display: grid;
+  gap: 24px;
+}
+
+.clusterItem strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #17200f;
+}
+
+.clusterTrack {
+  margin-top: 10px;
+  height: 14px;
+}
+
+.matrixSection,
+.opportunitySection,
+.footerGrid {
+  max-width: 1280px;
+  margin: 0 auto 24px;
+}
+
+.pageMatrix {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pageCard {
+  min-height: 150px;
+  padding: 18px;
+  border-radius: 8px;
+  background: #f6f8f3;
+  border: 1px solid #e0e8d8;
+}
+
+.pageTitle {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #31451f;
+  margin-bottom: 14px;
+}
+
+.pageCard p {
+  margin: 10px 0 0;
+  color: #17200f;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.opportunityGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.opportunityCard {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 8px;
+  background: #17200f;
+  color: #fff;
+}
+
+.scoreRing {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, #17200f 58%, transparent 59%),
+    conic-gradient(#bde97c var(--score), rgba(255, 255, 255, 0.16) 0);
+  color: #bde97c;
+  font-weight: 900;
+}
+
+.opportunityCard h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.opportunityCard p {
+  margin: 0 0 12px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chips span {
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(189, 233, 124, 0.14);
+  color: #d9f6b0;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.takeaway,
+.warning {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+}
+
+.takeaway svg,
+.warning svg,
+.sectionHeader > svg {
+  color: #6b9d2e;
+  flex: 0 0 auto;
+}
+
+.takeaway p,
+.warning p {
+  margin: 10px 0 0;
+  font-size: 15px;
+}
+
+@media (max-width: 1120px) {
+  .hero,
+  .mainGrid,
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .metricsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .page {
+    padding: 18px;
+  }
+
+  .heroCopy {
+    min-height: 420px;
+    padding: 28px;
+  }
+
+  .metricsGrid,
+  .pageMatrix,
+  .opportunityGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .keywordRow {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .keywordRow b {
+    text-align: left;
+  }
+}

@@ -1,0 +1,531 @@
+{
+  "slug": "seedance-1-5-pro",
+  "category": "video",
+  "vendor": "ByteDance",
+  "meta": {
+    "title": "Seedance 1.5 Pro AI Video Generator | Dommi",
+    "description": "Use Seedance 1.5 Pro in Dommi for polished AI video clips with stronger cinematic control, steadier motion, and better prompt adherence than the first generation. Choose 1.5 Pro for dependable output; use 2.0 for newer capabilities, 2.0 Fast for speed, and 1.0 Lite for rough draft exploration.",
+    "keywords": [
+      "Seedance 1.5 Pro",
+      "Seedance 1.5 Pro AI video generator",
+      "Seedance 1.5 Pro Dommi",
+      "Seedance video models",
+      "AI video generator"
+    ]
+  },
+  "hero": {
+    "h1": "Seedance 1.5 Pro AI Video Generator",
+    "description": "Use Seedance 1.5 Pro in Dommi for polished AI video clips with stronger cinematic control, steadier motion, and better prompt adherence than the first generation."
+  },
+  "generator_panel": {
+    "agent_label": "Create with Seedance 1.5 Pro in Dommi",
+    "pill_label": "AI Video",
+    "quick_motion": "Auto",
+    "quick_style": "Style",
+    "quick_motion_options": [
+      "Auto",
+      "Camera Motion",
+      "Character Motion",
+      "Product Motion"
+    ],
+    "quick_style_options": [
+      "Style",
+      "Cinematic",
+      "Realistic",
+      "Anime",
+      "Commercial"
+    ],
+    "tool_modes": [
+      {
+        "label": "Image to Video",
+        "value": "image"
+      },
+      {
+        "label": "Text to Video",
+        "value": "text"
+      }
+    ],
+    "fields": [
+      {
+        "name": "model",
+        "label": "Model",
+        "default": "Seedance 1.5 Pro",
+        "options": [
+          "Seedance 2.0",
+          "Seedance 2.0 Fast",
+          "Seedance 1.5 Pro",
+          "Seedance 1.0 Pro",
+          "Seedance 1.0 Pro Fast",
+          "Seedance 1.0 Lite"
+        ]
+      },
+      {
+        "name": "aspectRatio",
+        "label": "Aspect ratio",
+        "default": "16:9",
+        "options": [
+          "16:9",
+          "9:16",
+          "1:1",
+          "4:3",
+          "3:4"
+        ]
+      },
+      {
+        "name": "duration",
+        "label": "Duration",
+        "default": "5s",
+        "options": [
+          "5s",
+          "10s",
+          "15s"
+        ]
+      },
+      {
+        "name": "resolution",
+        "label": "Resolution",
+        "default": "1080p",
+        "options": [
+          "720p",
+          "1080p"
+        ]
+      }
+    ],
+    "upload": {
+      "show": true,
+      "placeholder": "Click to upload an image",
+      "hint": "JPG, PNG, WEBP",
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "prompt_placeholders": {
+      "text": "Describe the Seedance 1.5 Pro video: subject, action, camera movement, scene, and pacing.",
+      "image": "Describe how Seedance 1.5 Pro should animate the reference image, including motion and camera direction."
+    },
+    "toggles": [
+      {
+        "name": "cameraFixed",
+        "label": "Camera fixed",
+        "default": false
+      }
+    ],
+    "generator_links": {
+      "image": "/image-to-video?model=seedance-1-5-pro",
+      "text": "/text-to-video?model=seedance-1-5-pro"
+    },
+    "submit_labels": {
+      "image": "Generate Video",
+      "text": "Generate Video"
+    }
+  },
+  "related_section": {
+    "h2": "Seedance 1.5 Pro alternatives and related models",
+    "intro": "Compare Seedance 1.5 Pro with adjacent Seedance video models and nearby Dommi models before choosing the right generator for the job.",
+    "related_models": [
+      "Seedance 2.0",
+      "Seedance 2.0 Fast",
+      "Seedance 1.0 Pro",
+      "Seedance 1.0 Lite"
+    ]
+  },
+  "highlights_section": {
+    "h2": "Why use Seedance 1.5 Pro in Dommi",
+    "intro": "Focus on the search intent that matters: what Seedance 1.5 Pro can create, when to choose it, and how to prompt it effectively.",
+    "items": [
+      {
+        "title": "Proven cinematic control",
+        "text": "best for creators who want a proven Seedance model before moving to 2.0 or speed-tuned variants."
+      },
+      {
+        "title": "Steadier motion",
+        "text": "Choose 1.5 Pro for dependable output; use 2.0 for newer capabilities, 2.0 Fast for speed, and 1.0 Lite for rough draft exploration."
+      },
+      {
+        "title": "Reliable image-to-video",
+        "text": "Anchor the scene with a clear subject and environment, then add camera movement and pacing cues without overloading the prompt."
+      }
+    ]
+  },
+  "examples_section": {
+    "h2": "Seedance 1.5 Pro prompt examples",
+    "intro": "Use these prompts to test composition, motion, and camera language on a mature Seedance model.",
+    "effect_badge": "S15",
+    "items": [
+      {
+        "title": "1080p product hero",
+        "prompt": "A polished glass perfume bottle on a velvet stand, slow 360° dolly orbit, dramatic rim lighting, condensation droplets catching light, luxury commercial aesthetic, 1080p output.",
+        "result": "Output: a high-resolution product rotation with clean reflections and visible droplet detail — suitable as a brand hero clip.",
+        "result_video": "https://v.redd.it/s5emg6bosxeg1/CMAF_1080.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/ZWthcGpxYm9zeGVnMXxnf3Rj2o4q8q9xo9ZX-QYpKNFT8maun0I3-PQeQ_aF.png?format=pjpg&auto=webp&s=84c13dc7a82c44285e649658f5c1ff4eea02cb59",
+        "result_alt": "\"Where’s Waldo? Heist Trailer\": 60 hours of work using Seedance 1.5 Pro, 4K Skin Enhance tools, etc — aivideo"
+      },
+      {
+        "title": "Cinematic tracking shot",
+        "prompt": "Camera tracks a figure walking through autumn forest, golden leaves falling, soft volumetric god rays through trees, shallow depth of field, 50mm cinema lens, 1080p.",
+        "result": "Output: a continuous tracking shot with stable framing, accurate autumn color palette, and atmospheric depth — usable as short-film opening.",
+        "result_video": "https://v.redd.it/4auocxe30mbg1/CMAF_720.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/NG9uNnZ3ZTMwbWJnMZDC7XGLVYmM1-ATh4_x-3eg8unkZoQPdr48uXpHm_s2.png?format=pjpg&auto=webp&s=c403d4379a1e734c52f62c657eec190de4323a0e",
+        "result_alt": "How I tackled character consistency and textures in this Jurassic Park x 90s Dinosaurs crossover — aiecosystem"
+      },
+      {
+        "title": "Multi-clip mood reel building block",
+        "prompt": "Three short scenes preserving the same color grade and mood: rain on a window, hand pouring tea, candle flickering in a quiet room.",
+        "result": "Output: three 5-second clips with consistent warm-cool color grading — designed to stitch into a 15-second branded mood reel.",
+        "result_video": "https://v.redd.it/xowlqwdipz8g1/CMAF_720.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/OGg5NzZpZmlwejhnMXoNBk7Z2yIFZ7Ejh3Sd6n-6-3FCCF2620soOqLbMyFd.png?format=pjpg&auto=webp&s=8aac0f3493cca2a640a08aa0cc8bc282e308535b",
+        "result_alt": "Seedance-1.5 Pro Released (Lip Sync Test) - Will Smith Eating Spaghetti — ChatGPT"
+      }
+    ]
+  },
+  "how_to_section": {
+    "h2": "How to use Seedance 1.5 Pro in Dommi",
+    "intro": "A simple workflow for turning search intent into a usable video result with Seedance 1.5 Pro.",
+    "steps": [
+      {
+        "title": "Choose Seedance 1.5 Pro",
+        "description": "Start from Dommi's generator surface and select Seedance 1.5 Pro when your goal matches its strengths: proven cinematic control, steadier motion, reliable image-to-video."
+      },
+      {
+        "title": "Write a focused prompt",
+        "description": "Anchor the scene with a clear subject and environment, then add camera movement and pacing cues without overloading the prompt."
+      },
+      {
+        "title": "Generate, compare, refine",
+        "description": "Run the prompt, compare it with related Dommi models, then adjust one variable at a time so you can see what Seedance 1.5 Pro changes."
+      }
+    ]
+  },
+  "youtube_section": {
+    "h2": "Seedance 1.5 Pro tutorials on YouTube",
+    "intro": "Watch creator tutorials and walkthroughs that show how people prompt, compare, and evaluate Seedance 1.5 Pro in real workflows."
+  },
+  "reddit_section": {
+    "h2": "Seedance 1.5 Pro discussions on Reddit",
+    "intro": "Read community threads about Seedance 1.5 Pro results, strengths, limitations, and how it compares with other AI video models."
+  },
+  "x_section": {
+    "h2": "Seedance 1.5 Pro posts on X",
+    "intro": "Browse curated X posts for Seedance 1.5 Pro: launches, creator tests, benchmark notes, and prompt examples from the original discussions."
+  },
+  "social": {
+    "youtube_videos": [
+      {
+        "id": "b6mfdIGVmKk",
+        "title": "Seedance 1.5 Pro: Fluid Motion, Emotion & Audio – Full Breakdown",
+        "uploadDate": "2025-12-24T08:01:05-08:00"
+      },
+      {
+        "id": "BtQ8jaDmw_w",
+        "title": "Is Seedance 1.5 Pro Any Good?",
+        "uploadDate": "2026-01-13T12:26:43-08:00"
+      },
+      {
+        "id": "TgUFGeaSVPk",
+        "title": "Seedance 1.5 Pro Does Something NO Other AI Can Do...",
+        "uploadDate": "2026-01-06T22:07:21-08:00"
+      },
+      {
+        "id": "N42QhRFwvG8",
+        "title": "Seedance 2.0 AI Video Generator – Step-by-Step Tutorial",
+        "uploadDate": "2026-03-09T05:05:50-07:00"
+      },
+      {
+        "id": "3GR-nnmLfFM",
+        "title": "I found a new winner (Seedance 1.5 Pro is good!)",
+        "uploadDate": "2025-12-24T08:57:34-08:00"
+      },
+      {
+        "id": "RBnq_7GC1As",
+        "title": "Seedance 2.0 is INSANE - Full Guide (New Best AI Video Generator)",
+        "uploadDate": "2026-04-14T06:00:59-07:00"
+      },
+      {
+        "id": "C9n4gBc5mcM",
+        "title": "Seedance 1.5 Pro AI Video Generator + (freestyle)",
+        "uploadDate": "2025-12-26T16:36:05-08:00"
+      },
+      {
+        "id": "yaB3LJElhZA",
+        "title": "New Model Tutorial: Seedance 1.5 Pro | FLORA AI",
+        "uploadDate": "2025-12-29T14:10:13-08:00"
+      },
+      {
+        "id": "er2I-Tgx-6U",
+        "title": "Use Seedance 1.5 Pro For Free & Unlimited",
+        "uploadDate": "2026-01-22T02:30:34-08:00"
+      },
+      {
+        "id": "Pvx4XsqbZHU",
+        "title": "Seedance 2.0 Is Here — Everything You NEED to Know",
+        "uploadDate": "2026-04-02T12:06:03-07:00"
+      },
+      {
+        "id": "5ib06crTeXk",
+        "title": "How To Access Seedance 2.0, an AI Video Model That Destroys Veo 4!",
+        "uploadDate": "2026-02-11T18:26:17-08:00"
+      },
+      {
+        "id": "QkDnlqVZiWY",
+        "title": "AI Video From Audio is BONKERS!",
+        "uploadDate": "2025-12-16T15:36:01-08:00"
+      }
+    ],
+    "reddit_posts": [
+      {
+        "title": "That exact moment you realize you've entered the wrong dungeon. 💀⚡",
+        "url": "https://www.reddit.com/r/dndai/comments/1qk6gpm/that_exact_moment_you_realize_youve_entered_the/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/056e6vxuryeg1/CMAF_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/cDFhaW90eXVyeWVnMTPmJuFW3xr-TX9XOlk8RZOJ3mxfiS_Uj6cJJ9kI5WmK.png?format=pjpg&auto=webp&s=98c978cce672cb28acdfaca57d352fa468a41106",
+          "width": 720,
+          "height": 1280,
+          "duration": 18,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "OnefraGT",
+          "created_utc": 1769115249,
+          "ups": 89,
+          "num_comments": 7,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_6ojhqk/styles/communityIcon_eah5h9m0ksa91.png"
+        },
+        "subreddit": "dndai",
+        "excerpt": "Created within u/ImagineArt_X Using Start/End frames, which always provides good visual cohesion. The model is Seedance 1.5 Pro, which delivers good quality and native audio."
+      },
+      {
+        "title": "Kling 2.6 vs ByteDance Seedance 1.5 Pro - Share your thoughts?",
+        "url": "https://www.reddit.com/r/KlingAI_Videos/comments/1pu791i/kling_26_vs_bytedance_seedance_15_pro_share_your/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/lt4z24zr619g1/CMAF_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/bzE3YnMwMXM2MTlnMZDyx8ZPQtqdOXwY93bFH26-koTiDX281cLOOu0zFK7-.png?format=pjpg&auto=webp&s=0678ecd5def52c2e1f89dcd9bd6454c8092ad5bc",
+          "width": 720,
+          "height": 720,
+          "duration": 42,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "AntelopeProper649",
+          "created_utc": 1766529465,
+          "ups": 63,
+          "num_comments": 19,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_c1znyh/styles/communityIcon_vbve4pvwnoed1.jpg"
+        },
+        "subreddit": "KlingAI_Videos",
+        "excerpt": "Bytedance released Seedance-1.5 Pro for Public APIs, created them using Higgsfield [tool](https://higgsfield.ai/create/video). This update focuses primarily on lip synchronization and facial micro-expressions. Share your thoughts.[](https://www.reddit.com/submit/?source_id=t3_1pu4q8a)"
+      },
+      {
+        "title": "You can really go crazy with Banana Pro and Seedance 1.5. Let me know if y’all have any suggestions!",
+        "url": "https://www.reddit.com/r/HiggsfieldAI/comments/1q68dcq/you_can_really_go_crazy_with_banana_pro_and/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/eaxk1twuivbg1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/OHI2ZDcwenVpdmJnMUYarcOfRBkDBv0m1IVzQRwjsYHFGykVs7gzpN_s8TbQ.png?format=pjpg&auto=webp&s=6a4227085e38fd8075b6edad3a3ea2f5812284af",
+          "width": 1920,
+          "height": 1080,
+          "duration": 64,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Wealth_Wise007",
+          "created_utc": 1767768489,
+          "ups": 51,
+          "num_comments": 8,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_e6ipt5/styles/communityIcon_trrjzigg7yeg1.jpg"
+        },
+        "subreddit": "HiggsfieldAI"
+      },
+      {
+        "title": "Mahabharat teaser experiment, took me 1 hour",
+        "url": "https://www.reddit.com/r/IndianArtAI/comments/1pui92d/mahabharat_teaser_experiment_took_me_1_hour/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/d242e5z3149g1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/cWVicTRyejMxNDlnMRaECGZsK4nOaQG5iACwcQWHsm412As2MtjZSsfmoLFL.png?format=pjpg&auto=webp&s=a7de7e7f282c5a43c5a3f843ab87b7c798554f6e",
+          "width": 1920,
+          "height": 1080,
+          "duration": 30,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "IshigamiSenku04",
+          "created_utc": 1766563967,
+          "ups": 42,
+          "num_comments": 10,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_8qevuo/styles/communityIcon_u8ndnxxl7ukc1.png"
+        },
+        "subreddit": "IndianArtAI",
+        "excerpt": "videos generated using seedance 1.5 pro on higgsfield AI platform"
+      },
+      {
+        "title": "New ByteDance Seedance 1.5 Pro vs Kling 2.6 - What do you think?",
+        "url": "https://www.reddit.com/r/GoogleGeminiAI/comments/1puczte/new_bytedance_seedance_15_pro_vs_kling_26_what_do/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/t2keykusj29g1/CMAF_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/MjU1a2lvdXNqMjlnMR1uHpTeNaghVTmSHcVhcfdKwSCwa1-1j2QjvA3CHbdH.png?format=pjpg&auto=webp&s=31d972ebb9200712473afe7cdbd5df5122feeb4e",
+          "width": 720,
+          "height": 720,
+          "duration": 42,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Educational-Pound269",
+          "created_utc": 1766545949,
+          "ups": 41,
+          "num_comments": 7,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_990kz1/styles/communityIcon_5poazkalokmb1.jpg"
+        },
+        "subreddit": "GoogleGeminiAI",
+        "excerpt": "Bytedance released Seedance-1.5 Pro for Public APIs, created the comparision using Higgsfield [tool](https://higgsfield.ai/create/video). This update focuses primarily on lip synchronization and facial micro-expressions. What do you think? [](https://www.reddit.com/submit/?source_id=t3_1pubzo9)"
+      },
+      {
+        "title": "Kling 2.6 v/s Seedance 1.5 Pro Who did better at prompts",
+        "url": "https://www.reddit.com/r/ChatGPT/comments/1pu7rcp/kling_26_vs_seedance_15_pro_who_did_better_at/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/iw8u3n43b19g1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/bTR1emNhdTJiMTlnMfc8YLnRhfizIvB10qFNwTNFeclowlfyCx1W3vXefOWu.png?format=pjpg&auto=webp&s=c8023302ca6adac26f80a708f8b4db60717cf231",
+          "width": 1080,
+          "height": 1920,
+          "duration": 44,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "memerwala_londa",
+          "created_utc": 1766530824,
+          "ups": 40,
+          "num_comments": 26,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_7hqomg/styles/communityIcon_bzj6d1z1oizc1.png"
+        },
+        "subreddit": "ChatGPT",
+        "excerpt": "There too much doing on who did better now u guys be the judge Both tools used same prompts but have differences results, tested using same prompts on Higgsfield"
+      },
+      {
+        "title": "What did this kid just say? (HF Seedance 1.5 Test)",
+        "url": "https://www.reddit.com/r/generativeAI/comments/1puh9p5/what_did_this_kid_just_say_hf_seedance_15_test/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/laamixnnq39g1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/anM0bWE3cW5xMzlnMcro-WprI9aOpgFHfxsnp4H6-82oH_45I1wr5-exDzMf.png?format=pjpg&auto=webp&s=53a12be8170d75158d6ad8f36653b653398670f7",
+          "width": 1080,
+          "height": 1440,
+          "duration": 11,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "The-BusyBee",
+          "created_utc": 1766560271,
+          "ups": 32,
+          "num_comments": 3,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_4y4ddf/styles/communityIcon_qdp1f5tghtbe1.jpg"
+        },
+        "subreddit": "generativeAI",
+        "excerpt": "Now I can’t unhear it, and my brain keeps asking if this is a tease or just me manifesting hard lol."
+      },
+      {
+        "title": "Its gotten chilly out...",
+        "url": "https://www.reddit.com/r/HiggsfieldAI/comments/1q9g1a5/its_gotten_chilly_out/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/l86oqbak9lcg1/CMAF_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/OGR6dDl0YWs5bGNnMeYo4qMLmROpvaxgNL7SvIPZCQvMizpRBBrqr1bFlWFY.png?format=pjpg&auto=webp&s=bb968dcb12a1a96678c1cfc0d84adf4aa1b39e80",
+          "width": 720,
+          "height": 1280,
+          "duration": 12,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Jokerwild03",
+          "created_utc": 1768080016,
+          "ups": 31,
+          "num_comments": 2,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_e6ipt5/styles/communityIcon_trrjzigg7yeg1.jpg"
+        },
+        "subreddit": "HiggsfieldAI",
+        "excerpt": "Love using Seedance 1.5 Pro"
+      },
+      {
+        "title": "New ByteDance Seedance 1.5 Pro vs Kling 2.6 - What do you think?",
+        "url": "https://www.reddit.com/r/accelerate/comments/1pudvqg/new_bytedance_seedance_15_pro_vs_kling_26_what_do/",
+        "height": 320,
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/eoaf2uubp29g1/CMAF_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/NjliaGlyd2JwMjlnMR1uHpTeNaghVTmSHcVhcfdKwSCwa1-1j2QjvA3CHbdH.png?format=pjpg&auto=webp&s=5918d090aefd2c5355bbb1e6fadac2a6772dcfc3",
+          "width": 720,
+          "height": 720,
+          "duration": 42,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Educational-Pound269",
+          "created_utc": 1766548744,
+          "ups": 25,
+          "num_comments": 12,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_2x21z/styles/communityIcon_bjdg45qf1thg1.png"
+        },
+        "subreddit": "accelerate",
+        "excerpt": "Bytedance released Seedance-1.5 Pro for Public APIs, created the comparision using Higgsfield. This update focuses primarily on lip synchronization and facial micro-expressions. What do you think? [](https://www.reddit.com/submit/?source_id=t3_1pudefm)"
+      }
+    ],
+    "x_posts": [
+      {
+        "id": "2003949536520425683",
+        "text": "ByteDance Seedance 1.5 Pro is great for solving style and character drift. Locking first and last frame gives hard constraints, predictable edit lists.",
+        "author": "Seedance creator",
+        "handle": "SeedanceCreator",
+        "date": "Dec 25, 2025",
+        "url": "https://twitter.com/i/status/2003949536520425683"
+      }
+    ]
+  },
+  "faq_section": {
+    "h2": "Seedance 1.5 Pro FAQ",
+    "intro": "Direct answers for people searching how Seedance 1.5 Pro works, what it is good at, and when to use it in Dommi.",
+    "items": [
+      {
+        "q": "What is Seedance 1.5 Pro?",
+        "a": "Seedance 1.5 Pro is an AI video model from ByteDance. In Dommi, this page explains where it fits, shows prompt examples, and connects it with related video models so creators can choose the right workflow."
+      },
+      {
+        "q": "What is Seedance 1.5 Pro best for?",
+        "a": "Seedance 1.5 Pro is best for creators who want a proven Seedance model before moving to 2.0 or speed-tuned variants. Its main strengths are proven cinematic control, steadier motion, reliable image-to-video."
+      },
+      {
+        "q": "How do I prompt Seedance 1.5 Pro?",
+        "a": "Anchor the scene with a clear subject and environment, then add camera movement and pacing cues without overloading the prompt."
+      },
+      {
+        "q": "How is Seedance 1.5 Pro different from related models?",
+        "a": "Choose 1.5 Pro for dependable output; use 2.0 for newer capabilities, 2.0 Fast for speed, and 1.0 Lite for rough draft exploration."
+      },
+      {
+        "q": "Can I use a reference image with Seedance 1.5 Pro?",
+        "a": "Yes. Use image-to-video when you already have a frame, product shot, character, or scene and want Seedance 1.5 Pro to animate it with controlled camera and subject motion."
+      },
+      {
+        "q": "Can I compare Seedance 1.5 Pro with other Dommi models?",
+        "a": "Yes. Use the related model links on this page to compare Seedance 1.5 Pro with nearby options, then reuse the same prompt so the difference between models is easier to judge."
+      }
+    ]
+  },
+  "final_cta": {
+    "logo": "/logo.png",
+    "h2": "Create with Seedance 1.5 Pro in Dommi",
+    "body": "Open Dommi and generate a Seedance 1.5 Pro test clip.",
+    "btn_label": "Open Dommi Tools",
+    "btn_href": "/tools",
+    "btn_link": "/tools"
+  },
+  "brand": "Dommi",
+  "source_slug": "seedance-1-5-pro"
+}

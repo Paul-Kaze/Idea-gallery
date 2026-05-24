@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getToken } from 'next-auth/jwt'
 import { supabaseAdmin } from '../../../../../lib/supabase'
+import { captureServerError } from '../../../../../lib/monitoring'
 
 export const dynamic = 'force-dynamic'
 
@@ -28,6 +29,7 @@ export async function GET(req: NextRequest) {
 
         if (error) {
             console.error('[baby-generate-history] DB fetch error:', error)
+            await captureServerError('api.baby_history_db_error', error)
             return NextResponse.json(
                 { error: 'Failed to fetch history', history: [] },
                 { status: 500 }
@@ -47,6 +49,7 @@ export async function GET(req: NextRequest) {
     } catch (err: unknown) {
         const message = err instanceof Error ? err.message : 'Unknown error'
         console.error('[baby-generate-history] Unexpected error:', message)
+        await captureServerError('api.baby_history_unexpected_error', err)
         return NextResponse.json(
             { error: `Internal server error: ${message}`, history: [] },
             { status: 500 }

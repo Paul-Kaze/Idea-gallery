@@ -1,0 +1,436 @@
+{
+  "slug": "happy-horse-1-0",
+  "category": "video",
+  "vendor": "Alibaba",
+  "meta": {
+    "title": "Happy Horse 1.0 AI Video Generator | Dommi",
+    "description": "Use Happy Horse 1.0 in Dommi to create AI video with strong motion, native audio awareness, and practical image-to-video or text-to-video workflows. Choose Happy Horse 1.0 when you want an open-video baseline with ambitious motion; compare it with Seedance 2.0 for cinematic control and LTX for open-source workflows.",
+    "keywords": [
+      "Happy Horse 1.0",
+      "Happy Horse 1.0 AI video generator",
+      "Happy Horse 1.0 Dommi",
+      "Happy Horse video models",
+      "AI video generator"
+    ]
+  },
+  "hero": {
+    "h1": "Happy Horse 1.0 AI Video Generator",
+    "description": "Use Happy Horse 1.0 in Dommi to create AI video with strong motion, native audio awareness, and practical image-to-video or text-to-video workflows."
+  },
+  "generator_panel": {
+    "agent_label": "Create with Happy Horse 1.0 in Dommi",
+    "pill_label": "AI Video",
+    "quick_motion": "Auto",
+    "quick_style": "Style",
+    "quick_motion_options": [
+      "Auto",
+      "Camera Motion",
+      "Character Motion",
+      "Product Motion"
+    ],
+    "quick_style_options": [
+      "Style",
+      "Cinematic",
+      "Realistic",
+      "Anime",
+      "Commercial"
+    ],
+    "tool_modes": [
+      {
+        "label": "Image to Video",
+        "value": "image"
+      },
+      {
+        "label": "Text to Video",
+        "value": "text"
+      }
+    ],
+    "fields": [
+      {
+        "name": "model",
+        "label": "Model",
+        "default": "Happy Horse 1.0",
+        "options": [
+          "Seedance 2.0",
+          "Seedance 2.0 Fast",
+          "Seedance 1.5 Pro",
+          "Seedance 1.0 Pro",
+          "Seedance 1.0 Pro Fast",
+          "Seedance 1.0 Lite",
+          "Ltx 2.3",
+          "Happy Horse 1.0"
+        ]
+      },
+      {
+        "name": "aspectRatio",
+        "label": "Aspect ratio",
+        "default": "16:9",
+        "options": [
+          "16:9",
+          "9:16",
+          "1:1",
+          "4:3",
+          "3:4"
+        ]
+      },
+      {
+        "name": "duration",
+        "label": "Duration",
+        "default": "5s",
+        "options": [
+          "5s",
+          "10s",
+          "15s"
+        ]
+      },
+      {
+        "name": "resolution",
+        "label": "Resolution",
+        "default": "1080p",
+        "options": [
+          "720p",
+          "1080p"
+        ]
+      }
+    ],
+    "upload": {
+      "show": true,
+      "placeholder": "Click to upload an image",
+      "hint": "JPG, PNG, WEBP",
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "prompt_placeholders": {
+      "text": "Describe the Happy Horse 1.0 video: subject, action, camera movement, scene, and pacing.",
+      "image": "Describe how Happy Horse 1.0 should animate the reference image, including motion and camera direction."
+    },
+    "toggles": [
+      {
+        "name": "cameraFixed",
+        "label": "Camera fixed",
+        "default": false
+      }
+    ],
+    "generator_links": {
+      "image": "/image-to-video?model=happy-horse-1-0",
+      "text": "/text-to-video?model=happy-horse-1-0"
+    },
+    "submit_labels": {
+      "image": "Generate Video",
+      "text": "Generate Video"
+    }
+  },
+  "related_section": {
+    "h2": "Happy Horse 1.0 alternatives and related models",
+    "intro": "Compare Happy Horse 1.0 with adjacent Happy Horse video models and nearby Dommi models before choosing the right generator for the job.",
+    "related_models": [
+      "Ltx 2.3",
+      "Seedance 2.0",
+      "Seedance 1.5 Pro",
+      "Seedance 2.0 Fast"
+    ]
+  },
+  "highlights_section": {
+    "h2": "Why use Happy Horse 1.0 in Dommi",
+    "intro": "Focus on the search intent that matters: what Happy Horse 1.0 can create, when to choose it, and how to prompt it effectively.",
+    "items": [
+      {
+        "title": "Audio-video generation direction",
+        "text": "best for creators who want to test Alibaba video generation against Seedance, Sora-style tools, and other open video models."
+      },
+      {
+        "title": "Motion-heavy short clips",
+        "text": "Choose Happy Horse 1.0 when you want an open-video baseline with ambitious motion; compare it with Seedance 2.0 for cinematic control and LTX for open-source workflows."
+      },
+      {
+        "title": "Open-model comparison value",
+        "text": "Describe the subject, camera path, action timing, environment, and whether the clip should feel cinematic, commercial, or social-first."
+      }
+    ]
+  },
+  "examples_section": {
+    "h2": "Happy Horse 1.0 prompt examples",
+    "intro": "Start with these prompts to test performance shots, chase scenes, product movement, and the kind of subject motion Happy Horse is known for.",
+    "effect_badge": "HH",
+    "attribution": "Showcase clips from happyhorse.video's official Happy Horse 1.0 gallery.",
+    "items": [
+      {
+        "title": "Performance / character motion — stage close-up",
+        "prompt": "A K-pop performer with long silver hair in a glossy pink-and-silver mini-dress, mid-dance on a neon-lit stage. Camera tracks slightly upward as she lands a pose, stage lights flare in the background, slow-motion at the beat drop, vertical 9:16 frame.",
+        "result_video": "/m/happy-horse-1-0/example-1.mp4",
+        "result_video_poster": "/m/happy-horse-1-0/example-1.jpg",
+        "result_alt": "Happy Horse 1.0 K-pop stage performance clip"
+      },
+      {
+        "title": "Cinematic narrative — handheld tracking shot",
+        "prompt": "A man in a mustard-yellow t-shirt sprints away from camera down a long, brightly-lit modern hotel corridor. Handheld camera follows just behind in a single take, motion blur on the walls, warm overhead lighting, urgent breathing audio. 16:9, 6 seconds.",
+        "result_video": "/m/happy-horse-1-0/example-2.mp4",
+        "result_video_poster": "/m/happy-horse-1-0/example-2.jpg",
+        "result_alt": "Happy Horse 1.0 hotel corridor chase clip"
+      },
+      {
+        "title": "Stylized animation — anime fantasy chase",
+        "prompt": "Anime fantasy scene. A black-cloaked warrior with a long blade leaps mid-stride through an autumn forest in pursuit of a small fox-like creature darting through fallen orange leaves. Dynamic side-tracking camera, motion-blurred foreground, golden backlight through red maple canopy, cinematic 16:9.",
+        "result_video": "/m/happy-horse-1-0/example-3.mp4",
+        "result_video_poster": "/m/happy-horse-1-0/example-3.jpg",
+        "result_alt": "Happy Horse 1.0 anime warrior in autumn forest clip"
+      }
+    ]
+  },
+  "how_to_section": {
+    "h2": "How to use Happy Horse 1.0 in Dommi",
+    "intro": "A simple workflow for turning search intent into a usable video result with Happy Horse 1.0.",
+    "steps": [
+      {
+        "title": "Choose Happy Horse 1.0",
+        "description": "Start from Dommi's generator surface and select Happy Horse 1.0 when your goal matches its strengths: audio-video generation direction, motion-heavy short clips, open-model comparison value."
+      },
+      {
+        "title": "Write a focused prompt",
+        "description": "Describe the subject, camera path, action timing, environment, and whether the clip should feel cinematic, commercial, or social-first."
+      },
+      {
+        "title": "Generate, compare, refine",
+        "description": "Run the prompt, compare it with related Dommi models, then adjust one variable at a time so you can see what Happy Horse 1.0 changes."
+      }
+    ]
+  },
+  "youtube_section": {
+    "h2": "Happy Horse 1.0 tutorials on YouTube",
+    "intro": "Watch creator tutorials and walkthroughs that show how people prompt, compare, and evaluate Happy Horse 1.0 in real workflows."
+  },
+  "reddit_section": {
+    "h2": "Happy Horse 1.0 discussions on Reddit",
+    "intro": "Read community threads about Happy Horse 1.0 results, strengths, limitations, and how it compares with other AI video models."
+  },
+  "x_section": {
+    "h2": "Happy Horse 1.0 posts on X",
+    "intro": "Browse curated X posts for Happy Horse 1.0: launches, creator tests, benchmark notes, and prompt examples from the original discussions."
+  },
+  "social": {
+    "youtube_videos": [
+      {
+        "id": "3fHqqYQa-k0",
+        "title": "Happy Horse 1.0 Takes the Lead! | API Tutorial",
+        "uploadDate": "2026-04-27T04:00:52-07:00"
+      },
+      {
+        "id": "JVWTwKrus9c",
+        "title": "Happy Horse: The Seedance Killer? Plus BIG 4k AI Video News!",
+        "uploadDate": "2026-04-27T14:41:37-07:00"
+      },
+      {
+        "id": "TXz-lW_O3Ok",
+        "title": "Happy Horse 1.0 Tutorial (How To Use Happy Horse)",
+        "uploadDate": "2026-04-29T09:00:57-07:00"
+      },
+      {
+        "id": "BtAte4FTRIs",
+        "title": "Happy Horse 1.0 Is Beating Seedance 2.0? | Discover Trending AI Models on FlexClip",
+        "uploadDate": "2026-04-09T23:28:27-07:00"
+      },
+      {
+        "id": "W-epbrFWMbk",
+        "title": "Happy Horse 1.0 vs Seedance 2.0 | The Real Winner",
+        "uploadDate": "2026-05-04T10:00:41-07:00"
+      },
+      {
+        "id": "q9Hj5hH4dYQ",
+        "title": "SeaDance 2 is DEAD? 😱 Alibaba's HAPPY HORSE AI Video Generator + UNLIMITED FREE Trick!",
+        "uploadDate": "2026-05-09T20:30:40-07:00"
+      },
+      {
+        "id": "mmk9C6bkV_c",
+        "title": "HAPPY HORSE 1.0! beats Seedance 2.0 on Leaderboards & likely Open!",
+        "uploadDate": "2026-04-08T07:42:24-07:00"
+      },
+      {
+        "id": "w1wpRMcJkiA",
+        "title": "Happy Horse 1.0 VS Seedance 2.0 | Is It Better Than Seedance 2.0? How to Use Happy Horse 1.0",
+        "uploadDate": "2026-04-28T02:15:07-07:00"
+      },
+      {
+        "id": "YkUJLpz-aO4",
+        "title": "Happy Horse 1.0 // CINEMATIC MOTION TEST",
+        "uploadDate": "2026-04-29T19:15:12-07:00"
+      },
+      {
+        "id": "21Zs-TSCZkY",
+        "title": "Happy Horse 1.0 is DESTROYING Seedance 2.0… This is Crazy 🤯",
+        "uploadDate": "2026-04-10T10:19:42-07:00"
+      },
+      {
+        "id": "qp7T6VzL8Lo",
+        "title": "HappyHorse 1.0 is the NEW King of AI Video! (Alibaba’s Surprise Reveal)",
+        "uploadDate": "2026-04-12T11:47:20-07:00"
+      },
+      {
+        "id": "r_23SMJzpt8",
+        "title": "Happy Horse 1.0 — The #1-Ranked AI Video Model",
+        "uploadDate": "2026-04-27T03:57:27-07:00"
+      },
+      {
+        "id": "o2fJ4NP3y64",
+        "title": "Happy Horse 1.0 Is Crushing SeeDance 2.0 (New #1 AI Model)",
+        "uploadDate": "2026-04-11T06:27:46-07:00"
+      }
+    ],
+    "reddit_posts": [
+      {
+        "title": "Let's all be honest, nothing will ever replace Sora.",
+        "url": "https://www.reddit.com/r/SoraAi/comments/1sxmf84/lets_all_be_honest_nothing_will_ever_replace_sora/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "Dogbold",
+          "created_utc": 1777337834,
+          "ups": 98,
+          "num_comments": 81,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_at3dog/styles/communityIcon_us7qly2dpwsf1.png"
+        },
+        "subreddit": "SoraAi",
+        "excerpt": "It was just good at everything. Sound, visuals, niche things, anime, various styles, it just did everything well. I've tried Seedance 2, Happy Horse, Veo, Grok, LTX, etc, and none of them come even close. What they can do is pretty basic. Humans doing normal human stuff, maybe some cliche stuff lik"
+      },
+      {
+        "title": "Last week in Generative Image &amp; Video",
+        "url": "https://www.reddit.com/r/StableDiffusion/comments/1slz1rq/last_week_in_generative_image_video/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "Vast_Yak_4147",
+          "created_utc": 1776238150,
+          "ups": 98,
+          "num_comments": 7,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_6r4pfl/styles/communityIcon_kihji9n3ydmd1.png"
+        },
+        "subreddit": "StableDiffusion",
+        "excerpt": "I curate a weekly multimodal AI roundup, here are the open-source image &amp; video highlights from the last week: * Numina - Finally makes AI video generators count objects correctly. Ask for three cats, get three cats. Reads attention during generation, catches counting errors, corrects without r"
+      }
+    ],
+    "x_posts": [
+      {
+        "id": "2044261854399377565",
+        "text": "Thrilled to see HappyHorse-1.0 land #1 in the Video Edit Arena! 🎉 @HappyHorseATH #AlibabaAI #HappyHorse",
+        "author": "HappyHorse",
+        "handle": "HappyHorseATH",
+        "date": "Apr 15, 2026",
+        "url": "https://twitter.com/i/status/2044261854399377565"
+      },
+      {
+        "id": "2042530517799887326",
+        "text": "Congratulations to @HappyHorseATH for securing #1 and #2 across the Artificial Analysis Video Arena leaderboards! 🚀",
+        "author": "HappyHorse",
+        "handle": "HappyHorseATH",
+        "date": "Apr 10, 2026",
+        "url": "https://twitter.com/i/status/2042530517799887326"
+      },
+      {
+        "id": "2048714504570380493",
+        "text": "Discover HappyHorse advanced video capabilities in the full article.",
+        "author": "Happy Horse 1.0 creator",
+        "handle": "HappyHorse10",
+        "date": "Apr 27, 2026",
+        "url": "https://twitter.com/i/status/2048714504570380493"
+      },
+      {
+        "id": "2042468511025610775",
+        "text": "Revealing HappyHorse-1.0 as the latest video model from Alibaba! @HappyHorseATH landed in #1 or #2 across all Arena leaderboards.",
+        "author": "HappyHorse",
+        "handle": "HappyHorseATH",
+        "date": "Apr 10, 2026",
+        "url": "https://twitter.com/i/status/2042468511025610775"
+      },
+      {
+        "id": "2042587252430377382",
+        "text": "HappyHorse-1.0 is now confirmed as Alibaba latest video model. Supports T2V/I2V with native audio, ranking #1 on Video Arena.",
+        "author": "Happy Horse 1.0 creator",
+        "handle": "HappyHorse10",
+        "date": "Apr 10, 2026",
+        "url": "https://twitter.com/i/status/2042587252430377382"
+      },
+      {
+        "id": "2044410013264048482",
+        "text": "New analysis: Alibaba HappyHorse topped the AI video leaderboard. Appeared during peak customer frustration with ByteDance pricing.",
+        "author": "New analysis",
+        "handle": "Newanalysis",
+        "date": "Apr 15, 2026",
+        "url": "https://twitter.com/i/status/2044410013264048482"
+      },
+      {
+        "id": "2041814095977181435",
+        "text": "HappyHorse-1.0 comes from Alibaba Taotian Group, developed by team led by Zhang Di (former head of Kuaishou Kling).",
+        "author": "Happy Horse 1.0 creator",
+        "handle": "HappyHorse10",
+        "date": "Apr 8, 2026",
+        "url": "https://twitter.com/i/status/2041814095977181435"
+      },
+      {
+        "id": "2048867075507335569",
+        "text": "HappyHorse-1.0 from @alibaba_cloud is now on AI Gateway! 1080p generation with joint audio and native lip-sync in 7 languages.",
+        "author": "alibaba_cloud",
+        "handle": "alibaba_cloud",
+        "date": "Apr 28, 2026",
+        "url": "https://twitter.com/i/status/2048867075507335569"
+      },
+      {
+        "id": "2042454844842336461",
+        "text": "HappyHorse is still in the stable. 🐴 No official website yet. Part of Alibaba ATH AI Innovation Unit. Stay tuned. #HappyHorse",
+        "author": "Happy Horse 1.0 creator",
+        "handle": "HappyHorse10",
+        "date": "Apr 10, 2026",
+        "url": "https://twitter.com/i/status/2042454844842336461"
+      },
+      {
+        "id": "2042066356246556689",
+        "text": "HappyHorse.com ACQUIRED by Alibaba! 🔥🏇 Locking in the brand for next-gen AI video ecosystem.",
+        "author": "Happy Horse 1.0 creator",
+        "handle": "HappyHorse10",
+        "date": "Apr 9, 2026",
+        "url": "https://twitter.com/i/status/2042066356246556689"
+      }
+    ]
+  },
+  "faq_section": {
+    "h2": "Happy Horse 1.0 FAQ",
+    "intro": "Direct answers for people searching how Happy Horse 1.0 works, what it is good at, and when to use it in Dommi.",
+    "items": [
+      {
+        "q": "What is Happy Horse 1.0?",
+        "a": "Happy Horse 1.0 is an AI video model from Alibaba. In Dommi, this page explains where it fits, shows prompt examples, and connects it with related video models so creators can choose the right workflow."
+      },
+      {
+        "q": "What is Happy Horse 1.0 best for?",
+        "a": "Happy Horse 1.0 is best for creators who want to test Alibaba video generation against Seedance, Sora-style tools, and other open video models. Its main strengths are audio-video generation direction, motion-heavy short clips, open-model comparison value."
+      },
+      {
+        "q": "How do I prompt Happy Horse 1.0?",
+        "a": "Describe the subject, camera path, action timing, environment, and whether the clip should feel cinematic, commercial, or social-first."
+      },
+      {
+        "q": "How is Happy Horse 1.0 different from related models?",
+        "a": "Choose Happy Horse 1.0 when you want an open-video baseline with ambitious motion; compare it with Seedance 2.0 for cinematic control and LTX for open-source workflows."
+      },
+      {
+        "q": "Can I use a reference image with Happy Horse 1.0?",
+        "a": "Yes. Use image-to-video when you already have a frame, product shot, character, or scene and want Happy Horse 1.0 to animate it with controlled camera and subject motion."
+      },
+      {
+        "q": "Can I compare Happy Horse 1.0 with other Dommi models?",
+        "a": "Yes. Use the related model links on this page to compare Happy Horse 1.0 with nearby options, then reuse the same prompt so the difference between models is easier to judge."
+      }
+    ]
+  },
+  "final_cta": {
+    "logo": "/logo.png",
+    "h2": "Create with Happy Horse 1.0 in Dommi",
+    "body": "Open Dommi and test Happy Horse 1.0 against your strongest motion prompt.",
+    "btn_label": "Open Dommi Tools",
+    "btn_href": "/tools",
+    "btn_link": "/tools"
+  },
+  "brand": "Dommi",
+  "source_slug": "happy-horse-1-0"
+}

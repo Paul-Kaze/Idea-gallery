@@ -6,9 +6,10 @@ import type { MediaItem } from '../types/media'
 interface ImageCardProps {
   item: MediaItem
   onClick: () => void
+  onLoadError?: (item: MediaItem) => void
 }
 
-export function ImageCard({ item, onClick }: ImageCardProps) {
+export function ImageCard({ item, onClick, onLoadError }: ImageCardProps) {
   const [isLoaded, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
   const [isInView, setIsInView] = useState(false)
@@ -76,7 +77,13 @@ export function ImageCard({ item, onClick }: ImageCardProps) {
             fill
             sizes="100vw"
             onLoad={() => setIsLoaded(true)}
-            onError={() => setHasError(true)}
+            onError={() => {
+              if (onLoadError) {
+                onLoadError(item)
+                return
+              }
+              setHasError(true)
+            }}
           />
 
           {item.type === 'video' && isLoaded && (

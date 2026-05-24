@@ -18,7 +18,7 @@ export async function GET(req: NextRequest) {
 
   if (!id) return new Response('Bad Request', { status: 400 })
 
-  // If OSS is configured, stream the object; else redirect to a public asset
+  // If OSS is configured, stream the object.
   const prefix = process.env.OSS_KEY_PREFIX
   const objKey = prefix ? `${prefix}/${id}${type === 'thumb' ? '_thumb' : ''}` : null
   if (objKey) {
@@ -28,19 +28,7 @@ export async function GET(req: NextRequest) {
     if (res) return res
   }
 
-  // Mock: redirect to a public asset based on id/type
-  const urlMap: Record<string, { original: string; thumb: string }> = {
-    '1': {
-      original:
-        'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwY2l0eXNjYXBlfGVufDF8fHx8MTc2NDM5NDAzMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      thumb: 'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?w=800',
-    },
-  }
-
-  const url = urlMap[id]?.[type as 'original' | 'thumb']
-  if (!url) return new Response('Not Found', { status: 404 })
-
-  return Response.redirect(url)
+  return new Response('Not Found', { status: 404 })
 }
 
 export async function HEAD(req: NextRequest) {

@@ -1,0 +1,506 @@
+{
+  "slug": "seedream-4-0",
+  "category": "image",
+  "vendor": "ByteDance",
+  "meta": {
+    "title": "Seedream 4.0 AI Image Generator | Dommi",
+    "description": "Use Seedream 4.0 in Dommi to generate photoreal images, wide compositions, and reference-driven visuals with strong prompt adherence. Choose Seedream 4.0 for realistic image generation; compare Seedream 4.5 for newer detail handling and Nano Banana for Gemini-style editing.",
+    "keywords": [
+      "Seedream 4.0",
+      "Seedream 4.0 AI image generator",
+      "Seedream 4.0 Dommi",
+      "Seedream image models",
+      "AI image generator"
+    ]
+  },
+  "hero": {
+    "h1": "Seedream 4.0 AI Image Generator",
+    "description": "Use Seedream 4.0 in Dommi to generate photoreal images, wide compositions, and reference-driven visuals with strong prompt adherence."
+  },
+  "generator_panel": {
+    "agent_label": "Create with Seedream 4.0 in Dommi",
+    "pill_label": "AI Image",
+    "quick_motion_options": [],
+    "quick_style_options": [],
+    "tool_modes": [
+      {
+        "label": "Text to Image",
+        "value": "text"
+      },
+      {
+        "label": "Image to Image",
+        "value": "image"
+      }
+    ],
+    "fields": [
+      {
+        "name": "model",
+        "label": "Model",
+        "default": "Seedream 4.0",
+        "options": [
+          "Seedream 4.0",
+          "Seedream 4.5",
+          "Nano Banana 2",
+          "GPT Image 2"
+        ]
+      },
+      {
+        "name": "aspectRatio",
+        "label": "Aspect ratio",
+        "default": "1:1",
+        "options": [
+          "1:1",
+          "16:9",
+          "9:16",
+          "4:3",
+          "3:4",
+          "3:2",
+          "2:3"
+        ]
+      },
+      {
+        "name": "resolution",
+        "label": "Resolution",
+        "default": "2K",
+        "options": [
+          "1K",
+          "2K",
+          "4K"
+        ]
+      }
+    ],
+    "upload": {
+      "show": true,
+      "placeholder": "Click to upload a reference image",
+      "hint": "JPG, PNG, WEBP",
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "prompt_placeholders": {
+      "text": "Describe the Seedream 4.0 image: subject, style, lighting, composition, and any required text.",
+      "image": "Describe how Seedream 4.0 should transform or extend the reference image."
+    },
+    "toggles": [],
+    "generator_links": {
+      "text": "/ai-image-generation?model=seedream-4-0",
+      "image": "/ai-image-generation?model=seedream-4-0"
+    },
+    "submit_labels": {
+      "text": "Generate Image",
+      "image": "Generate Image"
+    }
+  },
+  "related_section": {
+    "h2": "Seedream 4.0 alternatives and related models",
+    "intro": "Compare Seedream 4.0 with adjacent Seedream image models and nearby Dommi models before choosing the right generator for the job.",
+    "related_models": [
+      "Seedream 4.5",
+      "Nano Banana 2",
+      "Nano Banana Pro",
+      "GPT Image 2"
+    ]
+  },
+  "highlights_section": {
+    "h2": "Why use Seedream 4.0 in Dommi",
+    "intro": "Focus on the search intent that matters: what Seedream 4.0 can create, when to choose it, and how to prompt it effectively.",
+    "items": [
+      {
+        "title": "Photoreal detail",
+        "text": "best for creators who want ByteDance image generation for product visuals, editorial scenes, and realistic image experiments."
+      },
+      {
+        "title": "Wide aspect ratios",
+        "text": "Choose Seedream 4.0 for realistic image generation; compare Seedream 4.5 for newer detail handling and Nano Banana for Gemini-style editing."
+      },
+      {
+        "title": "Reference-friendly generation",
+        "text": "Describe the subject, background, lens feel, lighting, aspect ratio, and any reference constraints in a clean ordered brief."
+      }
+    ]
+  },
+  "examples_section": {
+    "h2": "Seedream 4.0 prompt examples",
+    "intro": "Use these prompts to test photoreal scenes, product compositions, and detailed image edits in Seedream 4.0.",
+    "effect_badge": "S4",
+    "items": [
+      {
+        "title": "21:9 cinematic landscape",
+        "prompt": "Sunrise over a misty Patagonian mountain range, low golden light catching jagged peaks, a single hiker on a ridgeline for scale, ultrawide 21:9 framing, sharp foreground rocks, painterly distance haze, captured on a 24mm lens.",
+        "result": "Output: a cinematic ultrawide still ready for desktop wallpaper or YouTube thumbnail — sharp foreground detail, atmospheric depth, balanced exposure.",
+        "result_image": "https://preview.redd.it/kgm3rz8ltmof1.png?width=1088&format=png&auto=webp&s=f197332f70095d77bf09d03ea9b67a3ba82e1780",
+        "result_alt": "I tried creating an Instagram AI creator! MEET SHREYA. — AI_India"
+      },
+      {
+        "title": "Product detail on textured material",
+        "prompt": "A bronze pocket watch resting on weathered oak with linen draping, soft north-window light, dust motes in the air, macro lens at f/2.8, shallow depth of field, editorial still-life aesthetic.",
+        "result": "Output: a high-fidelity still-life with visible patina on the bronze, distinct fabric weave on the linen, and natural color grade — usable as ecommerce or editorial hero.",
+        "result_image": "https://i.redd.it/yad35yil4qjf1.png",
+        "result_alt": "Half-Demonic Warlock — dndai"
+      },
+      {
+        "title": "Editorial portrait with fabric detail",
+        "prompt": "A woman in a cream wool sweater standing in front of a brutalist concrete wall, soft window light from the left, slight head tilt, looking past the camera, 50mm lens, shallow depth of field, fashion editorial color grade.",
+        "result": "Output: a clean editorial portrait with visible wool texture, controlled shadow on the wall, natural skin rendering — suitable as a magazine spread or campaign reference.",
+        "result_image": "https://i.redd.it/c3rz9v10juig1.png",
+        "result_alt": "Comparison in hallucinations by the top image editing models in Arena when asked to colorize a picture (cropped zoom in — singularity"
+      }
+    ]
+  },
+  "how_to_section": {
+    "h2": "How to use Seedream 4.0 in Dommi",
+    "intro": "A simple workflow for turning search intent into a usable image result with Seedream 4.0.",
+    "steps": [
+      {
+        "title": "Choose Seedream 4.0",
+        "description": "Start from Dommi's generator surface and select Seedream 4.0 when your goal matches its strengths: photoreal detail, wide aspect ratios, reference-friendly generation."
+      },
+      {
+        "title": "Write a focused prompt",
+        "description": "Describe the subject, background, lens feel, lighting, aspect ratio, and any reference constraints in a clean ordered brief."
+      },
+      {
+        "title": "Generate, compare, refine",
+        "description": "Run the prompt, compare it with related Dommi models, then adjust one variable at a time so you can see what Seedream 4.0 changes."
+      }
+    ]
+  },
+  "youtube_section": {
+    "h2": "Seedream 4.0 tutorials on YouTube",
+    "intro": "Watch creator tutorials and walkthroughs that show how people prompt, compare, and evaluate Seedream 4.0 in real workflows."
+  },
+  "reddit_section": {
+    "h2": "Seedream 4.0 discussions on Reddit",
+    "intro": "Read community threads about Seedream 4.0 results, strengths, limitations, and how it compares with other AI image models."
+  },
+  "x_section": {
+    "h2": "Seedream 4.0 posts on X",
+    "intro": "Browse curated X posts for Seedream 4.0: launches, creator tests, benchmark notes, and prompt examples from the original discussions."
+  },
+  "social": {
+    "youtube_videos": [
+      {
+        "id": "Bg-x73xsLzY",
+        "title": "How to Generate INCREDIBLE Images with Seedream 4.5 Completely FREE",
+        "description": "👉 In this video, I will show you how to access and use Seedream 4.5 completely free, including advanced features like image editing with reference photos and precise control over your AI-generated visuals. This tool helps designers,…",
+        "uploadDate": "2025-12-08T03:37:58-08:00"
+      },
+      {
+        "id": "8rmxIHgURNs",
+        "title": "🌱 How to Use SeedDream 4 for Free: Easy Creator Access & 4k Image Generation",
+        "description": "Try Nano Banana Seed Dream Free Chrome extension ➡️ https://chromewebstore.google.com/detail/free-nano-bananaseeddream/jbnnimcibbkelkcfbclchfaokefniipd Unlock the power of SeedDream 4.0 by Bytedance (the parent company of TikTok)! In this…",
+        "uploadDate": "2025-09-18T00:58:20-07:00"
+      },
+      {
+        "id": "J_UfnhCCYfo",
+        "title": "How to Use Seedream 4.0 for Free | Ultimate AI Image Model",
+        "description": "Seedream 4.0 is already at the top of the text-to-image and image editing leaderboard. There are a few ways to use Seedream 4.0 for free. It is not directly available on the Seedream website, unlike nano banana, which can be accessed via…",
+        "uploadDate": "2025-09-18T07:47:06-07:00"
+      },
+      {
+        "id": "ZXKeYVp1Os0",
+        "title": "STOP Wasting Money on AI Tools: Try Seedream 4.0",
+        "description": "Register via my exclusive link and instantly receive $1 credits 👉 https://wavespeed.ai/?utm_source=malva_ai Try Seedream 4.0 today and test multi-image generation for FREE. WaveSpeedAI is the ultimate platform for next-gen AI media…",
+        "uploadDate": "2025-09-12T08:45:06-07:00"
+      },
+      {
+        "id": "C4bu8K8cyEs",
+        "title": "Seedream 4.0 + Kling AI is Crazy For AI Video Transitions",
+        "description": "Seedream 4.0 + Kling AI is Crazy For AI Video Transitions All in one AI video generator I used 👉 http://openart.ai/home/?ref=aitransitions Kling AI + Runway Act two + Seedream 4.0 + Nano Banana = crazy for making AI video transitions.…",
+        "uploadDate": "2025-10-24T07:14:22-07:00"
+      },
+      {
+        "id": "ualxf2_UeXA",
+        "title": "13 Mind-Blowing 🤯 Bytedance Seedream 4.0 Examples (Including Prompts, Guides & Walkthroughs)",
+        "description": "Bytedance Seedream 4.0 is here — and it’s changing AI image generation forever. In this video, I break down 13 of the best Seedream 4.0 examples with full prompts and guides, showing you how this next-gen AI tool goes beyond Nano Banana.…",
+        "uploadDate": "2025-09-11T07:01:28-07:00"
+      },
+      {
+        "id": "7vCRXPXp6aE",
+        "title": "The FREE AI Image Generator You NEED for Print-on-Demand (Seedream 4.0)",
+        "description": "🎓 Free Amazon Merch Webinar → https://www.merchprofitacademy.com/ (For sellers who used to sell well but now feel stuck — especially higher-tier sellers!) ⚠️ Update: The “Try Now” button now redirects to a different platform. The correct…",
+        "uploadDate": "2025-10-10T05:00:24-07:00"
+      },
+      {
+        "id": "cub9zu0MIP8",
+        "title": "Seedream 4.0 For Architecture and Design (Nano Banana Killer?)",
+        "description": "Not long ago Google released the AI model Nano Banana that went viral for its ground breaking image editor, that really did an outstanding job at maintaining image consistency and understanding its context. What we didn’t expect was that…",
+        "uploadDate": "2025-09-28T04:30:36-07:00"
+      },
+      {
+        "id": "vrK7gWtt3ak",
+        "title": "How to Use Seedream 4.0 FREE | Create 4K, Consistent AI Images",
+        "description": "The most powerful AI image generator: https://cutt.ly/Xr3EApV0 ----------------------------------------------------- Seedream 4.0 FREE Tutorial | Create 4K, Character-Consistent AI Images vs Nano Banana Seedream 4.0 is the most powerful AI…",
+        "uploadDate": "2025-09-15T22:30:38-07:00"
+      },
+      {
+        "id": "3X1xmtfrJ_A",
+        "title": "Seedream 4.5 4K Images for FREE",
+        "description": "Seedream 4.5 FREE. Stop paying monthly for AI art tools — Seedream 4.5 is now accessible without a subscription, and most people don’t even know it. In this video, I’m showing a fully working method to use Seedream 4.5 for free using Guest…"
+      },
+      {
+        "id": "HNc8zVMoUvw",
+        "title": "Seedream 4.0 FREE Tutorial 😮 | AI Help",
+        "description": "Seedream 4.0 kaise use kare | ByteDance AI Image Generator | Free Access Seedream 4.0 - ByteDance का 4K AI image generation model जो 1.8 seconds में ultra-quality images बनाता है! 🎨⚡ इस video में सीखें: ✅ LMArena & Yupp AI पर FREE…",
+        "uploadDate": "2025-10-25T11:43:36-07:00"
+      },
+      {
+        "id": "Eh8msllYVqw",
+        "title": "Create Ultra Realistic AI Images of Yourself - Seedream 4.5 Prompt Guide",
+        "description": "Seedream 4.5 can generate consistent and realistic images of your AI Influencers better than Nano Banana Pro. But not knowing right prompt might give you unrealistic results. This video teaches you Master your Seedream prompting within few…",
+        "uploadDate": "2026-02-07T02:32:42-08:00"
+      }
+    ],
+    "reddit_posts": [
+      {
+        "title": "For the first time ever, an open weights model has debuted as the SOTA image gen model",
+        "url": "https://www.reddit.com/r/StableDiffusion/comments/1nxyk0j/for_the_first_time_ever_an_open_weights_model_has/",
+        "height": 280,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/zhrykq1og4tf1.jpeg",
+          "preview_url": "https://preview.redd.it/zhrykq1og4tf1.jpeg?auto=webp&s=51719b0b80977da27a7f29f017534c4052fea2a4",
+          "width": 2000,
+          "height": 1600
+        },
+        "meta": {
+          "author": "Trevor050",
+          "created_utc": 1759595446,
+          "ups": 461,
+          "num_comments": 130,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_6r4pfl/styles/communityIcon_kihji9n3ydmd1.png"
+        },
+        "subreddit": "StableDiffusion"
+      },
+      {
+        "title": "Congratulations boys, now we can choose image model in perplexity",
+        "url": "https://www.reddit.com/r/perplexity_ai/comments/1o211sj/congratulations_boys_now_we_can_choose_image/",
+        "height": 280,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/he3towhwx1uf1.png",
+          "preview_url": "https://preview.redd.it/he3towhwx1uf1.png?auto=webp&s=b742405b25153b8b42cb8c0e60887be2bbf1279b",
+          "width": 1080,
+          "height": 1577
+        },
+        "meta": {
+          "author": "Dxb4616",
+          "created_utc": 1760000772,
+          "ups": 451,
+          "num_comments": 60,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_7qnoi9/styles/communityIcon_0zx2forco34c1.png"
+        },
+        "subreddit": "perplexity_ai",
+        "excerpt": "which one generates the best images in your opinion?"
+      },
+      {
+        "title": "Demonic Warlock - Succubus Patron",
+        "url": "https://www.reddit.com/r/dndai/comments/1movtnt/demonic_warlock_succubus_patron/",
+        "height": 280,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/2cjuqvda1qif1.png",
+          "preview_url": "https://preview.redd.it/2cjuqvda1qif1.png?auto=webp&s=3143abf290785d72a5fe17de43bd9508e77737eb",
+          "width": 768,
+          "height": 1344
+        },
+        "meta": {
+          "author": "char-gen",
+          "created_utc": 1755062522,
+          "ups": 381,
+          "num_comments": 1,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_6ojhqk/styles/communityIcon_eah5h9m0ksa91.png"
+        },
+        "subreddit": "dndai",
+        "excerpt": "**Female Demonic Warlock** **Generated on the CharGen Fantasy Generator Website.** **Prompt:** realistic 3D anime style, succubus warlock with bat wings, thigh-high leather boots, strap harness over sheer lace, glowing runes crawling across exposed skin, long black hair with crimson tips, holding"
+      },
+      {
+        "title": "GPT 1.5 Image vs Nano Banana Pro vs Seedream 4.5 vs Flux 2 Max vs Grok 2 Image",
+        "url": "https://www.reddit.com/r/singularity/comments/1poq4mg/gpt_15_image_vs_nano_banana_pro_vs_seedream_45_vs/",
+        "height": 280,
+        "media": {
+          "type": "gallery",
+          "image_url": "https://preview.redd.it/y1zcsttqqp7g1.png?width=1024&format=png&auto=webp&s=0dade9efa0d344f9eedd66e645702c32a56acc1a",
+          "gallery_count": 5,
+          "width": 1024,
+          "height": 1024
+        },
+        "meta": {
+          "author": "Rare_Bunch4348",
+          "created_utc": 1765955122,
+          "ups": 373,
+          "num_comments": 160,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_2qh8m/styles/communityIcon_hmujz61wdga81.jpg"
+        },
+        "subreddit": "singularity",
+        "excerpt": "Same Prompt​ GPT 1.5 Image Nano Banana Pro Seedream 4.5 Flux 2 Max Grok 2 Image"
+      },
+      {
+        "title": "Gemini 3 Pro Image (Nano Banana Pro) takes #1 on LMArena with a record breaking +84 point lead over SOTA",
+        "url": "https://www.reddit.com/r/singularity/comments/1p4cn07/gemini_3_pro_image_nano_banana_pro_takes_1_on/",
+        "height": 280,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/fz3zrw13hx2g1.jpeg",
+          "preview_url": "https://preview.redd.it/fz3zrw13hx2g1.jpeg?auto=webp&s=ecc20018f7eb2d1ccbdfbb8f403bf40e0392ba53",
+          "width": 1704,
+          "height": 976
+        },
+        "meta": {
+          "author": "BuildwithVignesh",
+          "created_utc": 1763869322,
+          "ups": 356,
+          "num_comments": 64,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_2qh8m/styles/communityIcon_hmujz61wdga81.jpg"
+        },
+        "subreddit": "singularity",
+        "excerpt": "The new LMArena leaderboard update just dropped and the numbers are statistically an outlier. **The Data (Official Breakdown):**\n**#1 Text to Image** (+84 pt lead) and **#1 Image Edit** (+41 pt lead) Usually, top models fight for a tiny 5-10 point lead (like the constant back and forth grinding b"
+      },
+      {
+        "title": "A new open weights image model appears in ArtificialAnalysis. Outperforming Flux.2 Pro and Z Image Turbo.",
+        "url": "https://www.reddit.com/r/StableDiffusion/comments/1t3rd6m/a_new_open_weights_image_model_appears_in/",
+        "height": 280,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/xiejimnv56zg1.jpeg",
+          "preview_url": "https://preview.redd.it/xiejimnv56zg1.jpeg?auto=webp&s=58f76192005038379a7b74d539551321a3cae4f2",
+          "width": 1823,
+          "height": 1153
+        },
+        "meta": {
+          "author": "Murky_Foundation5528",
+          "created_utc": 1777921653,
+          "ups": 336,
+          "num_comments": 139,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_6r4pfl/styles/communityIcon_kihji9n3ydmd1.png"
+        },
+        "subreddit": "StableDiffusion"
+      },
+      {
+        "title": "Rumored/maybe confirmed? SOTA model - Seed 2.0 Pro - by ByteDance",
+        "url": "https://www.reddit.com/r/singularity/comments/1r4j67j/rumoredmaybe_confirmed_sota_model_seed_20_pro_by/",
+        "height": 280,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/hdir13f8cgjg1.jpeg",
+          "preview_url": "https://preview.redd.it/hdir13f8cgjg1.jpeg?auto=webp&s=030ddd789cbe0c8d67eec20b2a22fdefe2682c34",
+          "width": 1170,
+          "height": 1824
+        },
+        "meta": {
+          "author": "acoolrandomusername",
+          "created_utc": 1771071288,
+          "ups": 305,
+          "num_comments": 130,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_2qh8m/styles/communityIcon_hmujz61wdga81.jpg"
+        },
+        "subreddit": "singularity",
+        "excerpt": "If this is true, is this a bigger moment than DeepSeek, considering ByteDance is also the creator of the SOTA SeeDance Video model, has all TikTok/domestic TikTok data, and is a huge Tech Company that should be able to compete/maybe even beat the American AI labs over the long term? Edit: Confi"
+      }
+    ],
+    "x_posts": [
+      {
+        "id": "1966167814512980210",
+        "text": "Artificial Analysis: Seedream 4.0 is the new leading image model, surpassing Gemini 2.5 Flash (Nano-Banana)",
+        "author": "Artificial Analysis",
+        "handle": "ArtificialAnlys",
+        "date": "Sep 11, 2025",
+        "url": "https://twitter.com/i/status/1966167814512980210"
+      },
+      {
+        "id": "1965550205237166577",
+        "text": "Artificial Analysis: ByteDance Seed launches Seedream 4.0 — unified Text-to-Image + Image Editing",
+        "author": "Artificial Analysis",
+        "handle": "ArtificialAnlys",
+        "date": "Sep 10, 2025",
+        "url": "https://twitter.com/i/status/1965550205237166577"
+      },
+      {
+        "id": "1966070362556260611",
+        "text": "Rohan Paul: Seedream 4.0 beats Nanobanana in image editing — 10x faster, $0.03/image",
+        "author": "Rohan Paul",
+        "handle": "rohanpaul_ai",
+        "date": "Sep 11, 2025",
+        "url": "https://twitter.com/i/status/1966070362556260611"
+      },
+      {
+        "id": "1965385780932870163",
+        "text": "Replicate: Seedream 4 available — up to 4096x4096, $0.03/image, 10 reference images",
+        "author": "Replicate",
+        "handle": "replicate",
+        "date": "Sep 9, 2025",
+        "url": "https://twitter.com/i/status/1965385780932870163"
+      },
+      {
+        "id": "1964242787789852941",
+        "text": "xyGrad: ByteDance Seedream 4.0 — 2K in 1.8s, up to 4K",
+        "author": "xyGrad",
+        "handle": "xyGrad",
+        "date": "Sep 6, 2025",
+        "url": "https://twitter.com/i/status/1964242787789852941"
+      },
+      {
+        "id": "1965055007989838193",
+        "text": "AI Native Foundation: Seedream 4.0 overview — ultra-fast 2K in 1.8 seconds",
+        "author": "AI Native Foundation",
+        "handle": "AINativeFoundation",
+        "date": "Sep 8, 2025",
+        "url": "https://twitter.com/i/status/1965055007989838193"
+      },
+      {
+        "id": "1964064463717281992",
+        "text": "fishy business: DH3 on Image Arena identified as Seedream 4.0",
+        "author": "fishy business",
+        "handle": "fishybusiness",
+        "date": "Sep 6, 2025",
+        "url": "https://twitter.com/i/status/1964064463717281992"
+      },
+      {
+        "id": "1965448789092864163",
+        "text": "Julien Ducerf: Seedream 4 generates 4K images for €0.03",
+        "author": "Julien Ducerf",
+        "handle": "julienducerf",
+        "date": "Sep 10, 2025",
+        "url": "https://twitter.com/i/status/1965448789092864163"
+      }
+    ]
+  },
+  "faq_section": {
+    "h2": "Seedream 4.0 FAQ",
+    "intro": "Direct answers for people searching how Seedream 4.0 works, what it is good at, and when to use it in Dommi.",
+    "items": [
+      {
+        "q": "What is Seedream 4.0?",
+        "a": "Seedream 4.0 is an AI image model from ByteDance. In Dommi, this page explains where it fits, shows prompt examples, and connects it with related image models so creators can choose the right workflow."
+      },
+      {
+        "q": "What is Seedream 4.0 best for?",
+        "a": "Seedream 4.0 is best for creators who want ByteDance image generation for product visuals, editorial scenes, and realistic image experiments. Its main strengths are photoreal detail, wide aspect ratios, reference-friendly generation."
+      },
+      {
+        "q": "How do I prompt Seedream 4.0?",
+        "a": "Describe the subject, background, lens feel, lighting, aspect ratio, and any reference constraints in a clean ordered brief."
+      },
+      {
+        "q": "How is Seedream 4.0 different from related models?",
+        "a": "Choose Seedream 4.0 for realistic image generation; compare Seedream 4.5 for newer detail handling and Nano Banana for Gemini-style editing."
+      },
+      {
+        "q": "Can I use a reference image with Seedream 4.0?",
+        "a": "Yes. Use a reference image when you want Seedream 4.0 to preserve identity, layout, product details, or visual style while generating a new variation."
+      },
+      {
+        "q": "Can I compare Seedream 4.0 with other Dommi models?",
+        "a": "Yes. Use the related model links on this page to compare Seedream 4.0 with nearby options, then reuse the same prompt so the difference between models is easier to judge."
+      }
+    ]
+  },
+  "final_cta": {
+    "logo": "/logo.png",
+    "h2": "Create with Seedream 4.0 in Dommi",
+    "body": "Open Dommi and test Seedream 4.0 on a realistic image prompt.",
+    "btn_label": "Open Dommi Tools",
+    "btn_href": "/tools",
+    "btn_link": "/tools"
+  },
+  "brand": "Dommi",
+  "source_slug": "seedream-4-0"
+}

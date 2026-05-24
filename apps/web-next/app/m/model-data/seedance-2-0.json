@@ -1,0 +1,647 @@
+{
+  "slug": "seedance-2-0",
+  "category": "video",
+  "vendor": "ByteDance",
+  "meta": {
+    "title": "Seedance 2.0 AI Video Generator | Dommi",
+    "description": "Use Seedance 2.0 in Dommi to create cinematic AI video from text or images with controlled camera movement, subject motion, and consistent scene direction. Choose Seedance 2.0 for polished output; use 2.0 Fast for rapid drafts and older Seedance versions when you need compatibility with previous prompt tests.",
+    "keywords": [
+      "Seedance 2.0",
+      "Seedance 2.0 AI video generator",
+      "Seedance 2.0 Dommi",
+      "Seedance video models",
+      "AI video generator"
+    ]
+  },
+  "hero": {
+    "h1": "Seedance 2.0 AI Video Generator",
+    "description": "Use Seedance 2.0 in Dommi to create cinematic AI video from text or images with controlled camera movement, subject motion, and consistent scene direction."
+  },
+  "generator_panel": {
+    "agent_label": "Create with Seedance 2.0 in Dommi",
+    "pill_label": "AI Video",
+    "quick_motion": "Auto",
+    "quick_style": "Style",
+    "quick_motion_options": [
+      "Auto",
+      "Camera Motion",
+      "Character Motion",
+      "Product Motion"
+    ],
+    "quick_style_options": [
+      "Style",
+      "Cinematic",
+      "Realistic",
+      "Anime",
+      "Commercial"
+    ],
+    "tool_modes": [
+      {
+        "label": "Image to Video",
+        "value": "image"
+      },
+      {
+        "label": "Text to Video",
+        "value": "text"
+      }
+    ],
+    "fields": [
+      {
+        "name": "model",
+        "label": "Model",
+        "default": "Seedance 2.0",
+        "options": [
+          "Seedance 2.0",
+          "Seedance 2.0 Fast",
+          "Seedance 1.5 Pro",
+          "Seedance 1.0 Pro"
+        ]
+      },
+      {
+        "name": "aspectRatio",
+        "label": "Aspect ratio",
+        "default": "16:9",
+        "options": [
+          "16:9",
+          "9:16",
+          "1:1",
+          "4:3",
+          "3:4"
+        ]
+      },
+      {
+        "name": "duration",
+        "label": "Duration",
+        "default": "5s",
+        "options": [
+          "5s",
+          "10s",
+          "15s"
+        ]
+      },
+      {
+        "name": "resolution",
+        "label": "Resolution",
+        "default": "720p",
+        "options": [
+          "720p",
+          "1080p"
+        ]
+      }
+    ],
+    "upload": {
+      "show": true,
+      "placeholder": "Click to upload an image",
+      "hint": "JPG, PNG, WEBP",
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "prompt_placeholders": {
+      "text": "Describe the Seedance 2.0 video: subject, action, camera movement, scene, and pacing.",
+      "image": "Describe how Seedance 2.0 should animate the reference image, including motion and camera direction."
+    },
+    "toggles": [
+      {
+        "name": "cameraFixed",
+        "label": "Camera fixed",
+        "default": false
+      }
+    ],
+    "generator_links": {
+      "image": "/image-to-video?model=seedance-2-0",
+      "text": "/text-to-video?model=seedance-2-0"
+    },
+    "submit_labels": {
+      "image": "Generate Video",
+      "text": "Generate Video"
+    }
+  },
+  "related_section": {
+    "h2": "Seedance 2.0 alternatives and related models",
+    "intro": "Compare Seedance 2.0 with adjacent Seedance video models and nearby Dommi models before choosing the right generator for the job.",
+    "related_models": [
+      "Seedance 2.0 Fast",
+      "Seedance 1.5 Pro",
+      "Seedance 1.0 Pro",
+      "Seedance 1.0 Pro Fast",
+      "Seedance 1.0 Lite"
+    ]
+  },
+  "examples_section": {
+    "h2": "Seedance 2.0 prompt examples",
+    "intro": "Use these prompts to test cinematic camera language, reference animation, and subject continuity in Seedance 2.0.",
+    "effect_badge": "S2",
+    "items": [
+      {
+        "title": "Text-to-video — cinematic race car",
+        "prompt": "A bright blue race car speeds along a snowy racetrack. [Low-angle shot] Captures several cars speeding along the racetrack through a harsh snowstorm. [Overhead shot] The camera gradually pulls upward, revealing the full race scene illuminated by storm lights.",
+        "result": "Multi-shot cinematic clip with controlled camera transitions, real-feel motion blur, and consistent storm-lit color grade — usable for action trailers, automotive launches, or sports brand reels.",
+        "result_video": "/m/seedance-2-0/example-1.mp4",
+        "result_video_poster": "/m/seedance-2-0/example-1.jpg",
+        "result_alt": "Seedance 2.0 cinematic race car on a snowy track at night"
+      },
+      {
+        "title": "Image-to-video — animate a still scene",
+        "prompt": "Animate this still of a skier mid-turn on an alpine slope. The skier carves down the mountain, sending up a long arc of powder. Background peaks shift slowly with parallax. Camera tracks just behind and to the side of the subject in a steady follow shot. Golden afternoon light, shallow depth of field, cinematic ski-film aesthetic.",
+        "result": "A stable image-to-video animation preserving the subject's pose, jacket, and ski direction while introducing believable snow physics and a smooth follow camera — usable for sports brand creative or athlete content reels.",
+        "result_video": "/m/seedance-2-0/example-2.mp4",
+        "result_video_poster": "/m/seedance-2-0/example-2.jpg",
+        "result_alt": "Seedance 2.0 image-to-video animation of a skier carving through snow"
+      },
+      {
+        "title": "Reference-conditioned — preserve the subject",
+        "prompt": "A little dog is running in the sunshine. The camera follows the dog as it plays in a garden.",
+        "result": "Reference-driven generation that locks the subject's identity (the small dog) across motion while the camera tracks naturally — usable for pet-brand UGC, e-commerce demos, and any clip where you need character consistency from a single source frame.",
+        "result_video": "/m/seedance-2-0/example-3.mp4",
+        "result_video_poster": "/m/seedance-2-0/example-3.jpg",
+        "result_alt": "Seedance 2.0 reference-conditioned clip of a girl and a puppy in a sunny garden"
+      }
+    ]
+  },
+  "how_to_section": {
+    "h2": "How to use Seedance 2.0 in Dommi",
+    "intro": "A simple workflow for turning search intent into a usable video result with Seedance 2.0.",
+    "steps": [
+      {
+        "title": "Choose Seedance 2.0",
+        "description": "Start from Dommi's generator surface and select Seedance 2.0 when your goal matches its strengths: cinematic camera control, text-to-video and image-to-video, reliable prompt adherence."
+      },
+      {
+        "title": "Write a focused prompt",
+        "description": "State the shot type, subject, action, camera movement, environment, lighting, and pacing. Keep the clip focused on one clear moment."
+      },
+      {
+        "title": "Generate, compare, refine",
+        "description": "Run the prompt, compare it with related Dommi models, then adjust one variable at a time so you can see what Seedance 2.0 changes."
+      }
+    ]
+  },
+  "youtube_section": {
+    "h2": "Seedance 2.0 tutorials on YouTube",
+    "intro": "Watch creator tutorials and walkthroughs that show how people prompt, compare, and evaluate Seedance 2.0 in real workflows."
+  },
+  "reddit_section": {
+    "h2": "Seedance 2.0 discussions on Reddit",
+    "intro": "Read community threads about Seedance 2.0 results, strengths, limitations, and how it compares with other AI video models."
+  },
+  "x_section": {
+    "h2": "Seedance 2.0 posts on X",
+    "intro": "Browse curated X posts for Seedance 2.0: launches, creator tests, benchmark notes, and prompt examples from the original discussions."
+  },
+  "social": {
+    "youtube_videos": [
+      {
+        "id": "N42QhRFwvG8",
+        "title": "Seedance 2.0 AI Video Generator step-by-step tutorial",
+        "description": "In this video, you'll learn how to create insane cinematic AI videos using Seedance 2.0 Pro. I’ll walk you through a step-by-step tutorial showing how to generate professional AI videos using simple prompts. Using the AI video generator…",
+        "uploadDate": "2026-03-09T05:05:50-07:00"
+      },
+      {
+        "id": "ZghLm9MXVIY",
+        "title": "Seedance 2.0 AI filmmaking full course",
+        "description": "Seedance 2.0 is CRAZY for AI Filmmaking - Full breakdown Try Higgsfield 👉 https://higgsfield.ai?fpr=dankieft&fp_sid=aifilm Seedance 2.0 is absolutely unreal when it comes to ai filmmaking! In this video I break down my full process of how…",
+        "uploadDate": "2026-04-24T11:41:14-07:00"
+      },
+      {
+        "id": "ZKDMOVAf4_A",
+        "title": "GPT Image 2.0 and Seedance 2.0 realistic AI short films",
+        "description": "Access Smart Shot on OpenArt 👉 https://roboverse-ai.com/GPT-Image In this video, I show how I use GPT Image 2.0 and Seedance 2.0 together inside OpenArt’s Smart Shot workflow to create realistic AI short films from a single sentence. I…",
+        "uploadDate": "2026-05-11T07:01:03-07:00"
+      },
+      {
+        "id": "fOdAuH_I1yg",
+        "title": "How to master AI filmmaking using Seedance 2.0",
+        "description": "Access Seedance 2.0 on Higgsfield 👉 https://higgsfield.ai?fpr=ai&fp_sid=conor7 In this video, I show the full process I use to create a cinematic AI sci-fi trailer with Seedance 2.0, from planning the story in Claude to building consistent…",
+        "uploadDate": "2026-05-10T06:30:48-07:00"
+      },
+      {
+        "id": "NiL2D1zKsEc",
+        "title": "Seedance 2.0 cinematic AI video tutorial",
+        "description": "Seedance 2.0 Tutorial — Create Cinematic AI Videos Step-by-Step Try Seedance 2.0 here: https://www.jxp.com/seedance/seedance-2-pro In this video, I walk you through Seedance 2.0, one of the most powerful AI video generators available right…",
+        "uploadDate": "2026-03-20T14:15:12-07:00"
+      },
+      {
+        "id": "Q7AShky_2Do",
+        "title": "Master Seedance 2.0 in minutes",
+        "description": "I tested Seedance 2.0 for weeks and here's 10 workflow tips! There is a lot of hype around Seedance 2.0 and it's for good reason. There is so much improvement with this model it would be impossible to cover everything but our guest creator…",
+        "uploadDate": "2026-04-15T13:48:02-07:00"
+      },
+      {
+        "id": "RBnq_7GC1As",
+        "title": "Seedance 2.0 full guide",
+        "description": "Access Seedance 2.0 Video Models on Higgsfield 👉 https://higgsfield.ai?fpr=ai&fp_sid=robo10 In this seedance 2.0 tutorial, I break down how Seedance 2.0 compares to Kling 3 and Google Veo 3.1 across five categories that most people…",
+        "uploadDate": "2026-04-14T06:00:59-07:00"
+      },
+      {
+        "id": "tfs8U3CbAOs",
+        "title": "Complete Seedance 2.0 tutorial for beginners",
+        "description": "AVAILABLE FOR ALL with special up to 70% off: https://higgsfield.ai/s/seedance-2-0-teacherstech-TKdoPy AI video generation has gotten really good really fast, and Seedance 2.0 on Higgsfield AI might be the most impressive text to video AI…",
+        "uploadDate": "2026-04-10T04:30:50-07:00"
+      },
+      {
+        "id": "ez8gfygg8ho",
+        "title": "How to use Seedance 2.0",
+        "description": "Access Seedance 2.0 on Higgsfield 👉 https://higgsfield.ai?fpr=ai&fp_sid=isa11 In this video, I break down a workflow for using Seedance 2.0 inside Higgsfield to generate cinematic video with consistent characters, locations, and motion.…",
+        "uploadDate": "2026-04-16T07:00:00-07:00"
+      },
+      {
+        "id": "M_SF9whhbf0",
+        "title": "Seedance 2.0 long AI animation videos",
+        "description": "How To Make Long AI Animation Videos Using Seedance 2.0 Make Your AI Animations✨: https://higgsfield.ai?fpr=utm&fp_sid=mira Hey friends✨, creating a long ai animation workflow used to be a challenge, but in this video I'll show you a new…",
+        "uploadDate": "2026-05-07T09:12:00-07:00"
+      },
+      {
+        "id": "kMg_8xwzbVs",
+        "title": "Seedance 2.0 cinematic AI videos step by step",
+        "description": "https://higgsfield.ai/s/seedance-2-0-aiwithlotti-bGxRnc AI CRE8R 👉🏽 https://www.skool.com/aiwithlotti/about?ref=c414905785664c60bd5b57eda4e8bb89 AI with Lotti BLOG 💻📝 https://aiwithlotti.com Seedance 2.0: How to Make Cinematic AI Videos…",
+        "uploadDate": "2026-04-18T11:00:48-07:00"
+      },
+      {
+        "id": "lkL8mlpVScY",
+        "title": "Seedance 2.0 prompting course",
+        "description": "How To Use Seedance 2.0 - The Best AI video Generator Try Seedance here 👉 https://higgsfield.ai?fpr=dankieft&fp_sid=sd2 Learn how to use seedance 2.0 in 25 minutes. This is by far one of the best AI video generators out there, but yet it's…",
+        "uploadDate": "2026-05-02T11:00:39-07:00"
+      }
+    ],
+    "reddit_posts": [
+      {
+        "title": "Seedance 2.0 creator example",
+        "url": "https://www.reddit.com/r/AiVideos_NoRules/comments/1r51m86/seedance_20/",
+        "height": 280,
+        "subreddit": "AiVideos_NoRules",
+        "excerpt": "ByteDance’s Seedance 2.0, released in February 2026, has quickly become a \"DeepSeek moment\" for AI video. Unlike previous models that were essentially \"fancy GIF generators,\" Seedance 2.0 is being hailed as a true AI Filmmaking Engine. Its…",
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/u6i8u9lp7kjg1/CMAF_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/bXZqZ2llbXA3a2pnMXXWXybmZBiugzbdn_2qbzc-LW1907jFvtUQ9hVdbhIZ.png?format=pjpg&auto=webp&s=7607cd251473584aafe7ce7789ba37c6a73767d9",
+          "width": 720,
+          "height": 1280,
+          "duration": 115,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Pasquasio76",
+          "created_utc": 1771118339,
+          "ups": 11,
+          "num_comments": 2,
+          "subreddit_icon": null
+        }
+      },
+      {
+        "title": "Seedance 2.0 tool comparison",
+        "url": "https://www.reddit.com/r/seedance2pro/comments/1s06ona/i_tested_14_ai_video_tool_in_2026_seedance_20/",
+        "height": 280,
+        "subreddit": "seedance2pro",
+        "excerpt": "Start here: [Seedance 2.0](https://seedance2pro.video/) New AI video platforms pop up every month claiming to be the best. As someone using AI video daily in a marketing team (high-volume production), I wanted to share my **real workflow +…",
+        "media": {
+          "type": "link",
+          "preview_url": "https://external-preview.redd.it/G9iSIQZpBof4S3Zr3hUNMSfiiHeJ3ji8ytZGJgKzg7c.png?auto=webp&s=ba695ce66fc02e5b61953a542627e5fc694a6637",
+          "width": 1200,
+          "height": 630,
+          "external_url": "https://www.reddit.com/r/seedance2pro/comments/1s06ona/i_tested_14_ai_video_tool_in_2026_seedance_20/"
+        },
+        "meta": {
+          "author": "DataGirlTraining",
+          "created_utc": 1774137337,
+          "ups": 7,
+          "num_comments": 12,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_gn2l07/styles/communityIcon_f3mdexdqxzjg1.jpg"
+        }
+      },
+      {
+        "title": "Seedance AI short film",
+        "url": "https://www.reddit.com/r/aifilmmaking/comments/1ta2j92/my_newest_1000_ai_short_film_made_with_seedance/",
+        "height": 280,
+        "subreddit": "aifilmmaking",
+        "excerpt": "Images were made with Nano Banana. The video was created with Seedance 2.0 in HD, then upscaled to 4K with Topaz Labs. Music was made with Suno. The lip sync was done partly with Seedance and partly with ElevenLabs. The story and lyrics…",
+        "media": {
+          "type": "link",
+          "preview_url": "https://external-preview.redd.it/aKns-kPWyX9U4YjPIVhxQRoqEvZ5wDm6X-dHfs2pNuo.jpeg?auto=webp&s=0eaff23eb73157627a83b397c456039c0ebd3773",
+          "width": 480,
+          "height": 360,
+          "external_url": "https://youtube.com/watch?v=YIS0kknazmY&si=PC8hrZy713WIBmi7"
+        },
+        "meta": {
+          "author": "Master-Care-7913",
+          "created_utc": 1778504266,
+          "ups": 8,
+          "num_comments": 92,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_7z3x5m/styles/communityIcon_m24as6nv287g1.png"
+        }
+      },
+      {
+        "title": "Seedance 2.0 workflow discussion",
+        "url": "https://www.reddit.com/r/automation/comments/1rrhz81/seedance_20_is_the_first_ai_video_model_where_i/",
+        "height": 280,
+        "subreddit": "automation",
+        "excerpt": "I do not say this lightly because I have seen many videos generated by Seedance 2.0 on Youtube. I haven’t used this tool, coz haven’t got the access. Every model before this I would watch, and some part of my brain would stay in detection…",
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "ChrisJhon01",
+          "created_utc": 1773292555,
+          "ups": 6,
+          "num_comments": 4,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_2qrbn/styles/communityIcon_acjcf9t7btac1.jpg"
+        }
+      },
+      {
+        "title": "Seedance 2.0 creator experiments",
+        "url": "https://www.reddit.com/r/seedance/comments/1r8fylw/chinese_creators_are_going_all_out_with_seedance/",
+        "height": 280,
+        "subreddit": "seedance",
+        "excerpt": "Chinese creators are going all out with Seedance 2.0, making full-length movie scenes entirely with AI. It’s not just simple clips – these projects include action sequences, cinematic camera moves and even synced sound. The AI video race…",
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/8t1tymqwmbkg1/CMAF_480.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/N28yMWpycXdtYmtnMcuEQqhG0ifUqCnR1s1OvMRiDAwbd2flHY2FLVpSrvpR.png?format=pjpg&auto=webp&s=afbdc45d5da6d403444bc5c986281821ecd9d987",
+          "width": 854,
+          "height": 362,
+          "duration": 107,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Background_Bit_2560",
+          "created_utc": 1771450203,
+          "ups": 64,
+          "num_comments": 20,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_eoir71/styles/communityIcon_484e567y6cqf1.png"
+        }
+      },
+      {
+        "title": "Seedance 2.0 model discussion",
+        "url": "https://www.reddit.com/r/Seedance_v2/comments/1sqd7bm/ai_video_flipped_again_is_seedance_20_built_for/",
+        "height": 280,
+        "subreddit": "Seedance_v2",
+        "excerpt": "I’ve been watching my feeds absolutely melt down over Seedance 2.0 this week. If you’ve spent five minutes on TikTok recently, you’ve probably seen the \"Cast\" feature spam. People are losing their minds because the AI avatar actually looks…",
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "TroyHarry6677",
+          "created_utc": 1776653890,
+          "ups": 3,
+          "num_comments": 9,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_gkvi3k/styles/communityIcon_4k8nof5mf1jg1.png"
+        }
+      },
+      {
+        "title": "AI video episode discussion",
+        "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1sqetl9/ai_is_able_to_make_entire_episodes/",
+        "height": 280,
+        "subreddit": "ArtificialInteligence",
+        "excerpt": "Normally to make an AI video you would need a picture, AI would animate it, then you add a voice over. That would be the normal workflow. Seedance 2.0 works differently. Audio and video are captured together so it learns to lip sync. And…",
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "JoseLunaArts",
+          "created_utc": 1776658589,
+          "ups": 14,
+          "num_comments": 77,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_3crzr/styles/communityIcon_uap5trxk5moe1.jpg"
+        }
+      },
+      {
+        "title": "Long-form Seedance 2.0 film",
+        "url": "https://www.reddit.com/r/generativeAI/comments/1rd5p3d/1hr_long_feature_film_with_seedance_20/",
+        "height": 280,
+        "subreddit": "generativeAI",
+        "excerpt": "We are making the world's first AI generated feature film thanks to new advancements of Seedance 2.0. Here is the first few minutes of it :) Would love to hear feedback before the premiere!",
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/rhgtdiscedlg1/CMAF_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/MGxldzFvc2NlZGxnMUGW_rX7hX8hXFoYKW6LlJuygw7yqZg1AHA9j86soKZC.png?format=pjpg&auto=webp&s=29944fda690f32f21036424548f35d608ac537b8",
+          "width": 1280,
+          "height": 720,
+          "duration": 210,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Dependent-Bunch7505",
+          "created_utc": 1771907471,
+          "ups": 10,
+          "num_comments": 133,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_4y4ddf/styles/communityIcon_qdp1f5tghtbe1.jpg"
+        }
+      },
+      {
+        "title": "Seedance 2.0 music video",
+        "url": "https://www.reddit.com/r/generativeAI/comments/1srfb2e/i_created_a_full_mv_using_ai_seedance_20/",
+        "height": 280,
+        "subreddit": "generativeAI",
+        "excerpt": "I tried generating my own music video once, but my only dance move is \"buffering.\" 🤖🕺 Look at you, though—becoming a whole music video director without even having to deal with diva actors on set! Since you tackled this with [Seedance…",
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/p7ey5c1pjhwg1/CMAF_1080.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/ZjhqbGVuMnBqaHdnMf5-G6XrMFvuePsM5M3I9o0pX-c_28ENQx4FeDgp1fzQ.png?format=pjpg&auto=webp&s=5a9f163c71cf10e1e309d7cf8dc633073fd9b9a8",
+          "width": 1920,
+          "height": 1080,
+          "duration": 172,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "Foreign-Original124",
+          "created_utc": 1776751952,
+          "ups": 134,
+          "num_comments": 49,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_4y4ddf/styles/communityIcon_qdp1f5tghtbe1.jpg"
+        }
+      },
+      {
+        "title": "Seedance ad video example",
+        "url": "https://www.reddit.com/r/AI_generated_ads/comments/1smv6o2/this_entire_video_was_created_using_aipowered/",
+        "height": 280,
+        "subreddit": "AI_generated_ads",
+        "excerpt": "Just wanted to share something I made using Seedance 2.0 an AI video generation tool. The entire video was created from scratch in just 15 minutes no traditional editing, no camera, no crew. Just a prompt and AI doing its thing. Honestly…",
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/yv40ind3shvg1/CMAF_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/MHZhamFwZjNzaHZnMc2uhL_gRGnOvwggHIas1CLNxNE36rIm7vVJeroNlYXr.png?format=pjpg&auto=webp&s=e6e37945e6f7a0df8cf5f1284d697e9cb3857826",
+          "width": 720,
+          "height": 1280,
+          "duration": 10,
+          "has_audio": false
+        },
+        "meta": {
+          "author": "ChrisJhon01",
+          "created_utc": 1776319871,
+          "ups": 0,
+          "num_comments": 5,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_gprsrb/styles/communityIcon_8ryuryfogzlg1.png"
+        }
+      },
+      {
+        "title": "Seedance 2.0 prompt testing",
+        "url": "https://www.reddit.com/r/generativeAI/comments/1rjprxh/i_have_seedance_20_access_drop_your_prompts_and/",
+        "height": 280,
+        "subreddit": "generativeAI",
+        "excerpt": "We're a video studio based in China. We have top-tier access to Seedance 2.0 and a huge amount of credits. I've noticed many people outside of China on Reddit looking to test Seedance 2.0. If you want to try it, just leave your prompts and…",
+        "media": {
+          "type": "video",
+          "video_url": "https://v.redd.it/zf654c9y1umg1/CMAF_720.mp4?source=fallback",
+          "poster": "https://external-preview.redd.it/eW0zcnF5OXkxdW1nMcaGQlpQcMKTgzNwUxyAQ-DHab_ioM6WBnENT_MUFh6I.png?format=pjpg&auto=webp&s=8fc5a47e147d4300edf900470c3f4010ca626bca",
+          "width": 1280,
+          "height": 720,
+          "duration": 29,
+          "has_audio": true
+        },
+        "meta": {
+          "author": "JustTwo1",
+          "created_utc": 1772545681,
+          "ups": 21,
+          "num_comments": 48,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_4y4ddf/styles/communityIcon_qdp1f5tghtbe1.jpg"
+        }
+      }
+    ],
+    "x_posts": [
+      {
+        "id": "2037695793554145325",
+        "text": "Topview Agent V2 and Seedance 2.0 creator workflow discussion",
+        "author": "Tom's KI Ecke",
+        "handle": "KI_HAL_2023",
+        "date": "Mar 28, 2026",
+        "url": "https://twitter.com/i/status/2037695793554145325"
+      },
+      {
+        "id": "2041763561333264865",
+        "text": "ChatCut Seedance 2.0 creator example",
+        "author": "ChatCut",
+        "handle": "chatcutapp",
+        "date": "Apr 8, 2026",
+        "url": "https://twitter.com/i/status/2041763561333264865"
+      },
+      {
+        "id": "2042396177883107519",
+        "text": "Seedance 2.0 worldwide availability and creator tests",
+        "author": "Alvaro Cintas",
+        "handle": "dr_cintas",
+        "date": "Apr 10, 2026",
+        "url": "https://twitter.com/i/status/2042396177883107519"
+      },
+      {
+        "id": "2041561378495082582",
+        "text": "First generation test with Seedance 2.0",
+        "author": "Umesh",
+        "handle": "umesh_ai",
+        "date": "Apr 8, 2026",
+        "url": "https://twitter.com/i/status/2041561378495082582"
+      },
+      {
+        "id": "2041903277835526146",
+        "text": "Seedance 2.0 creator comparison and pricing discussion",
+        "author": "JSFILMZ",
+        "handle": "JSFILMZ0412",
+        "date": "Apr 8, 2026",
+        "url": "https://twitter.com/i/status/2041903277835526146"
+      },
+      {
+        "id": "2022327369747558640",
+        "text": "AI product listing and dynamic video workflow discussion",
+        "author": "Chris Camillo",
+        "handle": "ChrisCamillo",
+        "date": "Feb 13, 2026",
+        "url": "https://twitter.com/i/status/2022327369747558640"
+      },
+      {
+        "id": "2023001993061744933",
+        "text": "Seedance 2.0 comic panel to video example",
+        "author": "Paskoboy",
+        "handle": "beranalogi",
+        "date": "Feb 15, 2026",
+        "url": "https://twitter.com/i/status/2023001993061744933"
+      },
+      {
+        "id": "2037591044372758984",
+        "text": "Dreamina Seedance 2.0 creator thread",
+        "author": "Chubby",
+        "handle": "kimmonismus",
+        "date": "Mar 28, 2026",
+        "url": "https://twitter.com/i/status/2037591044372758984"
+      },
+      {
+        "id": "2024925187095863675",
+        "text": "Seedance 2.0 complex camera move test",
+        "author": "SD AI Animation Storyteller",
+        "handle": "SDXLHQ",
+        "date": "Feb 21, 2026",
+        "url": "https://twitter.com/i/status/2024925187095863675"
+      },
+      {
+        "id": "2020295747741057507",
+        "text": "Seedance 2.0 AI filmmaking example",
+        "author": "nachos2d",
+        "handle": "NACHOS2D_",
+        "date": "Feb 8, 2026",
+        "url": "https://twitter.com/i/status/2020295747741057507"
+      },
+      {
+        "id": "2020267913316561195",
+        "text": "Seedance 2.0 product advertising prompt example",
+        "author": "Vicky",
+        "handle": "BFAVicky",
+        "date": "Feb 8, 2026",
+        "url": "https://twitter.com/i/status/2020267913316561195"
+      }
+    ]
+  },
+  "faq_section": {
+    "h2": "Seedance 2.0 FAQ",
+    "intro": "Direct answers for people searching how Seedance 2.0 works, what it is good at, and when to use it in Dommi.",
+    "items": [
+      {
+        "q": "What is Seedance 2.0?",
+        "a": "Seedance 2.0 is an AI video model from ByteDance. In Dommi, this page explains where it fits, shows prompt examples, and connects it with related video models so creators can choose the right workflow."
+      },
+      {
+        "q": "What is Seedance 2.0 best for?",
+        "a": "Seedance 2.0 is best for creators who want a strong all-around Seedance model for product shots, action scenes, character motion, and social video concepts. Its main strengths are cinematic camera control, text-to-video and image-to-video, reliable prompt adherence."
+      },
+      {
+        "q": "How do I prompt Seedance 2.0?",
+        "a": "State the shot type, subject, action, camera movement, environment, lighting, and pacing. Keep the clip focused on one clear moment."
+      },
+      {
+        "q": "How is Seedance 2.0 different from related models?",
+        "a": "Choose Seedance 2.0 for polished output; use 2.0 Fast for rapid drafts and older Seedance versions when you need compatibility with previous prompt tests."
+      },
+      {
+        "q": "Can I use a reference image with Seedance 2.0?",
+        "a": "Yes. Use image-to-video when you already have a frame, product shot, character, or scene and want Seedance 2.0 to animate it with controlled camera and subject motion."
+      },
+      {
+        "q": "Can I compare Seedance 2.0 with other Dommi models?",
+        "a": "Yes. Use the related model links on this page to compare Seedance 2.0 with nearby options, then reuse the same prompt so the difference between models is easier to judge."
+      }
+    ]
+  },
+  "final_cta": {
+    "logo": "/logo.png",
+    "h2": "Create with Seedance 2.0 in Dommi",
+    "body": "Open Dommi and create a Seedance 2.0 video from your next prompt.",
+    "btn_label": "Open Dommi Tools",
+    "btn_href": "/tools",
+    "btn_link": "/tools"
+  },
+  "brand": "Dommi",
+  "source_slug": "seedance-2-0",
+  "highlights_section": {
+    "h2": "Why use Seedance 2.0 in Dommi",
+    "intro": "Focus on the search intent that matters: what Seedance 2.0 can create, when to choose it, and how to prompt it effectively.",
+    "items": [
+      {
+        "title": "Cinematic camera control",
+        "text": "best for creators who want a strong all-around Seedance model for product shots, action scenes, character motion, and social video concepts."
+      },
+      {
+        "title": "Text-to-video and image-to-video",
+        "text": "Choose Seedance 2.0 for polished output; use 2.0 Fast for rapid drafts and older Seedance versions when you need compatibility with previous prompt tests."
+      },
+      {
+        "title": "Reliable prompt adherence",
+        "text": "State the shot type, subject, action, camera movement, environment, lighting, and pacing. Keep the clip focused on one clear moment."
+      }
+    ]
+  }
+}

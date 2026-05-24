@@ -1,0 +1,502 @@
+{
+  "slug": "seedance-1-0-pro-fast",
+  "category": "video",
+  "vendor": "ByteDance",
+  "meta": {
+    "title": "Seedance 1.0 Pro Fast AI Video Generator | Dommi",
+    "description": "Use Seedance 1.0 Pro Fast in Dommi when you want Seedance Pro behavior with a faster iteration loop for drafts, variants, and prompt A/B tests. Choose Pro Fast for iteration; choose Seedance 1.0 Pro or 1.5 Pro when you want a more deliberate final render workflow.",
+    "keywords": [
+      "Seedance 1.0 Pro Fast",
+      "Seedance 1.0 Pro Fast AI video generator",
+      "Seedance 1.0 Pro Fast Dommi",
+      "Seedance video models",
+      "AI video generator"
+    ]
+  },
+  "hero": {
+    "h1": "Seedance 1.0 Pro Fast AI Video Generator",
+    "description": "Use Seedance 1.0 Pro Fast in Dommi when you want Seedance Pro behavior with a faster iteration loop for drafts, variants, and prompt A/B tests."
+  },
+  "generator_panel": {
+    "agent_label": "Create with Seedance 1.0 Pro Fast in Dommi",
+    "pill_label": "AI Video",
+    "quick_motion": "Auto",
+    "quick_style": "Style",
+    "quick_motion_options": [
+      "Auto",
+      "Camera Motion",
+      "Character Motion",
+      "Product Motion"
+    ],
+    "quick_style_options": [
+      "Style",
+      "Cinematic",
+      "Realistic",
+      "Anime",
+      "Commercial"
+    ],
+    "tool_modes": [
+      {
+        "label": "Image to Video",
+        "value": "image"
+      },
+      {
+        "label": "Text to Video",
+        "value": "text"
+      }
+    ],
+    "fields": [
+      {
+        "name": "model",
+        "label": "Model",
+        "default": "Seedance 1.0 Pro Fast",
+        "options": [
+          "Seedance 2.0",
+          "Seedance 2.0 Fast",
+          "Seedance 1.5 Pro",
+          "Seedance 1.0 Pro",
+          "Seedance 1.0 Pro Fast",
+          "Seedance 1.0 Lite"
+        ]
+      },
+      {
+        "name": "aspectRatio",
+        "label": "Aspect ratio",
+        "default": "16:9",
+        "options": [
+          "16:9",
+          "9:16",
+          "1:1",
+          "4:3",
+          "3:4"
+        ]
+      },
+      {
+        "name": "duration",
+        "label": "Duration",
+        "default": "5s",
+        "options": [
+          "5s",
+          "10s",
+          "15s"
+        ]
+      },
+      {
+        "name": "resolution",
+        "label": "Resolution",
+        "default": "720p",
+        "options": [
+          "720p"
+        ]
+      }
+    ],
+    "upload": {
+      "show": true,
+      "placeholder": "Click to upload an image",
+      "hint": "JPG, PNG, WEBP",
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "prompt_placeholders": {
+      "text": "Describe the Seedance 1.0 Pro Fast video: subject, action, camera movement, scene, and pacing.",
+      "image": "Describe how Seedance 1.0 Pro Fast should animate the reference image, including motion and camera direction."
+    },
+    "toggles": [
+      {
+        "name": "cameraFixed",
+        "label": "Camera fixed",
+        "default": false
+      }
+    ],
+    "generator_links": {
+      "image": "/image-to-video?model=seedance-1-0-pro-fast",
+      "text": "/text-to-video?model=seedance-1-0-pro-fast"
+    },
+    "submit_labels": {
+      "image": "Generate Video",
+      "text": "Generate Video"
+    }
+  },
+  "related_section": {
+    "h2": "Seedance 1.0 Pro Fast alternatives and related models",
+    "intro": "Compare Seedance 1.0 Pro Fast with adjacent Seedance video models and nearby Dommi models before choosing the right generator for the job.",
+    "related_models": [
+      "Seedance 1.0 Pro",
+      "Seedance 2.0 Fast",
+      "Seedance 1.5 Pro",
+      "Seedance 1.0 Lite"
+    ]
+  },
+  "highlights_section": {
+    "h2": "Why use Seedance 1.0 Pro Fast in Dommi",
+    "intro": "Focus on the search intent that matters: what Seedance 1.0 Pro Fast can create, when to choose it, and how to prompt it effectively.",
+    "items": [
+      {
+        "title": "Faster Pro iteration",
+        "text": "best for creators who already like Seedance 1.0 Pro but need faster turnaround while refining prompts."
+      },
+      {
+        "title": "Stable prompt grammar",
+        "text": "Choose Pro Fast for iteration; choose Seedance 1.0 Pro or 1.5 Pro when you want a more deliberate final render workflow."
+      },
+      {
+        "title": "Variant testing",
+        "text": "Write the same way you would for Pro: subject, camera, motion, environment, and timing. Use Fast to test which wording deserves a final pass."
+      }
+    ]
+  },
+  "examples_section": {
+    "h2": "Seedance 1.0 Pro Fast prompt examples",
+    "intro": "Use these prompts to compare fast Pro output against standard Pro and newer Seedance models.",
+    "effect_badge": "S1PF",
+    "items": [
+      {
+        "title": "Speed-test camera variants",
+        "prompt": "Same scene of a sports car on a coastal road, generated with three camera variants: 1) front tracking, 2) overhead drone follow, 3) interior driver POV. Test all three rapidly.",
+        "result": "Output: three 5-second draft clips covering camera options for client review before committing compute to 1080p final.",
+        "result_video": "https://v.redd.it/v54hdmx2h3lg1/CMAF_480.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/aWMxdzVoeTJoM2xnMXUhy_HlxdOJ0HBelme4squaMEScBrvW6OJlodi3ZCkx.png?format=pjpg&auto=webp&s=a927faa9b1114aee88ed6516a0426f112afc4529",
+        "result_alt": "Commander Keen - Exploring an Alien World — nightcafe"
+      },
+      {
+        "title": "Mood-board variant testing",
+        "prompt": "A cozy reading nook by a fireplace. Test three lighting moods: warm firelight, soft morning light, rainy-afternoon overcast. Compare quickly.",
+        "result": "Output: three 5-second mood variants enabling rapid art-direction decision-making.",
+        "result_video": "https://v.redd.it/flnw5lwg8i7g1/CMAF_480.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/czJqYTUzeWc4aTdnMStDpIyJEd50OmH5fdOr9BIUQeuAhBGsh-zyvPq2jrH7.png?format=pjpg&auto=webp&s=8d3a452307deeb1e44bb8876d6730be9c9830b6e",
+        "result_alt": "Symphony of Light: A Neon Musical Journey — Fotor_AI"
+      },
+      {
+        "title": "Quick storyboard frames",
+        "prompt": "Three connected scenes for a 15-second narrative arc: 1) hand opens journal, 2) wind blows pages, 3) light streams through window onto desk.",
+        "result": "Output: three storyboard-quality drafts in the time of one Pro render.",
+        "result_video": "https://v.redd.it/jemc5x67390g1/CMAF_1080.mp4?source=fallback",
+        "result_video_poster": "https://external-preview.redd.it/cW13eXpwMjczOTBnMfBhxlNi6riqJ4NsneqCXB11xvP9LHY_C6S7uglb9RZv.png?format=pjpg&auto=webp&s=7c2494df0026369db91748b4c61b13082b82a048",
+        "result_alt": "Irish Fiddle Player Playing a Traditional Irish Ballad — aivideos"
+      }
+    ]
+  },
+  "how_to_section": {
+    "h2": "How to use Seedance 1.0 Pro Fast in Dommi",
+    "intro": "A simple workflow for turning search intent into a usable video result with Seedance 1.0 Pro Fast.",
+    "steps": [
+      {
+        "title": "Choose Seedance 1.0 Pro Fast",
+        "description": "Start from Dommi's generator surface and select Seedance 1.0 Pro Fast when your goal matches its strengths: faster pro iteration, stable prompt grammar, variant testing."
+      },
+      {
+        "title": "Write a focused prompt",
+        "description": "Write the same way you would for Pro: subject, camera, motion, environment, and timing. Use Fast to test which wording deserves a final pass."
+      },
+      {
+        "title": "Generate, compare, refine",
+        "description": "Run the prompt, compare it with related Dommi models, then adjust one variable at a time so you can see what Seedance 1.0 Pro Fast changes."
+      }
+    ]
+  },
+  "youtube_section": {
+    "h2": "Seedance 1.0 Pro Fast tutorials on YouTube",
+    "intro": "Watch creator tutorials and walkthroughs that show how people prompt, compare, and evaluate Seedance 1.0 Pro Fast in real workflows."
+  },
+  "reddit_section": {
+    "h2": "Seedance 1.0 Pro Fast discussions on Reddit",
+    "intro": "Read community threads about Seedance 1.0 Pro Fast results, strengths, limitations, and how it compares with other AI video models."
+  },
+  "x_section": {
+    "h2": "Seedance 1.0 Pro Fast posts on X",
+    "intro": "Browse curated X posts for Seedance 1.0 Pro Fast: launches, creator tests, benchmark notes, and prompt examples from the original discussions."
+  },
+  "social": {
+    "youtube_videos": [
+      {
+        "id": "l3lq9S_ctv4",
+        "title": "NEW AI Video Generator DESTROYS VEO 3 & Hailuo 02 - Seedance 1.0 PRO",
+        "uploadDate": "2025-07-08T07:12:09-07:00"
+      },
+      {
+        "id": "zxj7h70FakQ",
+        "title": "🎬 Cinematic AI Showdown: Google Veo 3 vs. Seedance 1.0 (My Honest First Try!)",
+        "uploadDate": "2025-07-09T15:32:44-07:00"
+      },
+      {
+        "id": "-vQUuGy_fG4",
+        "title": "Seedream 4.0 & Seedance 1.0 Pro Fast Review 2026 | Best 4K Multimodal AI Generator? - Unreal Results",
+        "uploadDate": "2025-11-26T09:19:19-08:00"
+      },
+      {
+        "id": "w1yYKPuW520",
+        "title": "I Tested Seedance 1.0 on the fastest and cheapest AI platform...",
+        "uploadDate": "2025-06-27T06:31:02-07:00"
+      },
+      {
+        "id": "Hg4ODRjbCk8",
+        "title": "Text-to-Video: Hailuo 2.3, Seedance 1.0, Kling 2.5",
+        "uploadDate": "2025-10-29T17:37:00-07:00"
+      },
+      {
+        "id": "Y4AbT6AopBM",
+        "title": "Seedance 1.0 Pro i2v 1080p is a new King AI | Bytedance",
+        "uploadDate": "2025-06-15T22:48:06-07:00"
+      },
+      {
+        "id": "6VVYtFETMfw",
+        "title": "How I Make Viral AI Videos with Seedance 1.0 - Tutorial for Beginners",
+        "uploadDate": "2025-08-05T07:44:18-07:00"
+      },
+      {
+        "id": "XIJf_m8_vY4",
+        "title": "Sora 2 vs Veo 3.1 vs Kling 2.5 vs Seedance 1.0: Physics Comparison",
+        "uploadDate": "2025-11-15T06:04:48-08:00"
+      },
+      {
+        "id": "KTOdcWeyvyA",
+        "title": "Seedance 1.0 PRO: The New AI Video Generator DESTROYS VEO 3 & Hailuo 02",
+        "uploadDate": "2025-07-13T12:08:39-07:00"
+      },
+      {
+        "id": "OoaXYZrdtT4",
+        "title": "Create Ultra-Realistic AI Videos with Seedance 1.0 Pro – Full Step-by-Step Tutorial",
+        "uploadDate": "2025-10-18T07:00:41-07:00"
+      },
+      {
+        "id": "TChSt_c7U7M",
+        "title": "AI Video Comparison: Seedance 1.0 vs HaiLuo 02 & Kling 2.1",
+        "uploadDate": "2025-07-26T05:30:28-07:00"
+      },
+      {
+        "id": "RBnq_7GC1As",
+        "title": "Seedance 2.0 is INSANE - Full Guide (New Best AI Video Generator)",
+        "uploadDate": "2026-04-14T06:00:59-07:00"
+      },
+      {
+        "id": "-MluR9dqt5w",
+        "title": "Kling 3.0 vs Seedance 2 vs Veo 3.1 vs Sora 2: The Ultimate AI Video Comparison",
+        "uploadDate": "2026-02-11T06:57:10-08:00"
+      }
+    ],
+    "reddit_posts": [
+      {
+        "title": "Sora outside? Let’s start with Seedance 2 for free!",
+        "url": "https://www.reddit.com/r/SoraAi/comments/1ssv37a/sora_outside_lets_start_with_seedance_2_for_free/",
+        "height": 320,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/vbobk7e7jswg1.jpeg",
+          "preview_url": "https://preview.redd.it/vbobk7e7jswg1.jpeg?auto=webp&s=a2d73625789038237c08615b1828d453e7bc969e",
+          "width": 750,
+          "height": 1121
+        },
+        "meta": {
+          "author": "spaceuniversal",
+          "created_utc": 1776884940,
+          "ups": 74,
+          "num_comments": 57,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_at3dog/styles/communityIcon_us7qly2dpwsf1.png"
+        },
+        "subreddit": "SoraAi",
+        "excerpt": "The KREA application allows you to generate up to five videos for free among the models listed in the photo including Sora due, but only if accessed via mobile app"
+      },
+      {
+        "title": "Seedance 2.0 update - what I know so far (launch window + pricing + access tiers)",
+        "url": "https://www.reddit.com/r/Seedance_AI/comments/1rl9vz1/seedance_20_update_what_i_know_so_far_launch/",
+        "height": 320,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/2am82z5m36ng1.png",
+          "preview_url": "https://preview.redd.it/2am82z5m36ng1.png?auto=webp&s=a9200aa12ec088682202cdbbabe1617e7e49ec8c",
+          "width": 2880,
+          "height": 1480
+        },
+        "meta": {
+          "author": "atlas-cloud",
+          "created_utc": 1772690936,
+          "ups": 56,
+          "num_comments": 27,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_gkdhjc/styles/communityIcon_3phsi5h3q2ig1.png"
+        },
+        "subreddit": "Seedance_AI",
+        "excerpt": "Hey, I'm from Atlas Cloud. We've been in close contact with the ByteDance team so I wanted to share what I know. # Launch: Estimated before mid-March, but no confirmed date yet. # Pricing: Bytedance just dropped the seedance 2.0 api pricing yesterday. * Video input included: ¥46/M tokens (\\~$6"
+      },
+      {
+        "title": "List of AI models released this month",
+        "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1om3bn0/list_of_ai_models_released_this_month/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "Duarteeeeee",
+          "created_utc": 1762042456,
+          "ups": 51,
+          "num_comments": 16,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_3crzr/styles/communityIcon_uap5trxk5moe1.jpg"
+        },
+        "subreddit": "ArtificialInteligence",
+        "excerpt": "Hello everyone! I've been following the latest AI model releases and wanted to share a curated list of what's been released. Here's a timeline breakdown of some of the most interesting models released between October 1 and 31, 2025: **October 1:** * **LFM2-Audio-1.5B** (LFM): Real-time audio lang"
+      },
+      {
+        "title": "List of AI models released this month",
+        "url": "https://www.reddit.com/r/accelerate/comments/1om1k9z/list_of_ai_models_released_this_month/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "Duarteeeeee",
+          "created_utc": 1762037645,
+          "ups": 44,
+          "num_comments": 5,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_2x21z/styles/communityIcon_bjdg45qf1thg1.png"
+        },
+        "subreddit": "accelerate",
+        "excerpt": "Hey everyone! I've been tracking the latest AI model releases and wanted to share a curated list of what's been dropping. Here's a chronological breakdown of some of the most interesting models released around October 1st - 31st, 2025: **October 1st:** * **LFM2-Audio-1.5B** (LFM): Real-time audi"
+      },
+      {
+        "title": "Does it mean one can train LoRAs in comfy out-of-box?",
+        "url": "https://www.reddit.com/r/comfyui/comments/1pvich8/does_it_mean_one_can_train_loras_in_comfy_outofbox/",
+        "height": 320,
+        "media": {
+          "type": "image",
+          "image_url": "https://i.redd.it/snpg0ocuyd9g1.png",
+          "preview_url": "https://preview.redd.it/snpg0ocuyd9g1.png?auto=webp&s=a365a8db77d1e38acfe5e1e24e563dce4c789b0f",
+          "width": 493,
+          "height": 535
+        },
+        "meta": {
+          "author": "Fdx_dy",
+          "created_utc": 1766684196,
+          "ups": 5,
+          "num_comments": 7,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_82r90w/styles/communityIcon_5h593ozmtjag1.png"
+        },
+        "subreddit": "comfyui",
+        "excerpt": "Found this in release logs. Does this entail one can train qwen LoRAs in comfy? What about other models? Do you guys, have workflows?"
+      },
+      {
+        "title": "Grok Imagine holds a distinct advantage in processing children's images.",
+        "url": "https://www.reddit.com/r/AI_In_ECommerce/comments/1p12q3e/grok_imagine_holds_a_distinct_advantage_in/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "Legal_Magazine_5542",
+          "created_utc": 1763543140,
+          "ups": 1,
+          "num_comments": 0,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_at3j2o/styles/communityIcon_jmg7cw0l5fjc1.jpg"
+        },
+        "subreddit": "AI_In_ECommerce",
+        "excerpt": "Recently, I’ve been working on a UGC-replication feature for sellers running independent sites that sell children’s products. The biggest challenge is that Veo 3.1’s image-to-video generation doesn’t allow any images containing children — even if their faces aren’t shown. With no way around this l"
+      },
+      {
+        "title": "My vision of T800 searching for someone on streets &lt;3",
+        "url": "https://www.reddit.com/r/nightcafe/comments/1pzztjx/my_vision_of_t800_searching_for_someone_on/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "Glishaso",
+          "created_utc": 1767144098,
+          "ups": 1,
+          "num_comments": 0,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_54v4b3/styles/communityIcon_8hf16js5bor71.png"
+        },
+        "subreddit": "nightcafe",
+        "excerpt": "Seedance 1.0 pro fast"
+      },
+      {
+        "title": "Finally animated one of my favorites - Twin Swords of Fallen Suns",
+        "url": "https://www.reddit.com/r/nightcafe/comments/1p5ug3x/finally_animated_one_of_my_favorites_twin_swords/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "ZarijoG",
+          "created_utc": 1764021308,
+          "ups": 1,
+          "num_comments": 0,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_54v4b3/styles/communityIcon_8hf16js5bor71.png"
+        },
+        "subreddit": "nightcafe",
+        "excerpt": "[images.nightcafe.studio/jobs/gjo4qp8bxi98DUL4JAXO/gjo4qp8bxi98DUL4JAXO-seedance-1-0-pro-fast-dwgej.mp4?tr=orig](https://images.nightcafe.studio/jobs/gjo4qp8bxi98DUL4JAXO/gjo4qp8bxi98DUL4JAXO-seedance-1-0-pro-fast-dwgej.mp4?tr=orig) Really happy with the outcome"
+      },
+      {
+        "title": "Steve and Adam",
+        "url": "https://www.reddit.com/r/nightcafe/comments/1qgbea1/steve_and_adam/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "AgreeableFish6400",
+          "created_utc": 1768749989,
+          "ups": 1,
+          "num_comments": 0,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_54v4b3/styles/communityIcon_8hf16js5bor71.png"
+        },
+        "subreddit": "nightcafe",
+        "excerpt": "The opening still made 🔝**20%** \\- 35/243 and 3.78 rating in Aninha’s [**Portrait**](https://creator.nightcafe.studio/game/SdRy8S4cxtFDcEIV7F8r?ru=markpoole) challenge. [**Created in NightCafe**](https://creator.nightcafe.studio/creation/Fz52Og23yivs4C9xAMRi/adam-and-steve?ru=markpoole)** **with See"
+      }
+    ],
+    "x_posts": [
+      {
+        "id": "1936097374432276735",
+        "text": "ByteDance Seedance 1.0 Pro launched on fal. First US company to serve this model. Fast inference path optimized for rapid iteration.",
+        "author": "fal",
+        "handle": "fal_ai_data",
+        "date": "Jun 21, 2025",
+        "url": "https://twitter.com/i/status/1936097374432276735"
+      },
+      {
+        "id": "1934091422610964907",
+        "text": "ByteDance Seedance 1.0 lineage — Pro tier with a speed-tuned Fast variant for high-throughput workflows.",
+        "author": "ByteDance Seed",
+        "handle": "ByteDanceSeed",
+        "date": "Jun 15, 2025",
+        "url": "https://twitter.com/i/status/1934091422610964907"
+      }
+    ]
+  },
+  "faq_section": {
+    "h2": "Seedance 1.0 Pro Fast FAQ",
+    "intro": "Direct answers for people searching how Seedance 1.0 Pro Fast works, what it is good at, and when to use it in Dommi.",
+    "items": [
+      {
+        "q": "What is Seedance 1.0 Pro Fast?",
+        "a": "Seedance 1.0 Pro Fast is an AI video model from ByteDance. In Dommi, this page explains where it fits, shows prompt examples, and connects it with related video models so creators can choose the right workflow."
+      },
+      {
+        "q": "What is Seedance 1.0 Pro Fast best for?",
+        "a": "Seedance 1.0 Pro Fast is best for creators who already like Seedance 1.0 Pro but need faster turnaround while refining prompts. Its main strengths are faster pro iteration, stable prompt grammar, variant testing."
+      },
+      {
+        "q": "How do I prompt Seedance 1.0 Pro Fast?",
+        "a": "Write the same way you would for Pro: subject, camera, motion, environment, and timing. Use Fast to test which wording deserves a final pass."
+      },
+      {
+        "q": "How is Seedance 1.0 Pro Fast different from related models?",
+        "a": "Choose Pro Fast for iteration; choose Seedance 1.0 Pro or 1.5 Pro when you want a more deliberate final render workflow."
+      },
+      {
+        "q": "Can I use a reference image with Seedance 1.0 Pro Fast?",
+        "a": "Yes. Use image-to-video when you already have a frame, product shot, character, or scene and want Seedance 1.0 Pro Fast to animate it with controlled camera and subject motion."
+      },
+      {
+        "q": "Can I compare Seedance 1.0 Pro Fast with other Dommi models?",
+        "a": "Yes. Use the related model links on this page to compare Seedance 1.0 Pro Fast with nearby options, then reuse the same prompt so the difference between models is easier to judge."
+      }
+    ]
+  },
+  "final_cta": {
+    "logo": "/logo.png",
+    "h2": "Create with Seedance 1.0 Pro Fast in Dommi",
+    "body": "Open Dommi and iterate faster with Seedance 1.0 Pro Fast.",
+    "btn_label": "Open Dommi Tools",
+    "btn_href": "/tools",
+    "btn_link": "/tools"
+  },
+  "brand": "Dommi",
+  "source_slug": "seedance-1-0-pro-fast"
+}

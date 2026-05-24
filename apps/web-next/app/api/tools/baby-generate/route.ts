@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '../../../../auth'
 import { supabaseAdmin } from '../../../../lib/supabase'
 import { uploadBufferToOSS } from '../../../../lib/storage'
+import { trackServerEvent } from '../../../../lib/server-analytics'
+import { captureServerError } from '../../../../lib/monitoring'
 
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions'
 const MODEL = 'bytedance-seed/seedream-4.5'
@@ -59,8 +61,12 @@ export async function POST(req: NextRequest) {
         const token = session?.user
         const apiKey = process.env.OPENROUTER_API_KEY
         if (!apiKey) {
+            console.error('[baby-generate] Generation provider credential is not configured')
+            await captureServerError('model_generation.missing_provider_credential', new Error('Generation provider credential is not configured'), {
+                model: MODEL,
+            })
             return NextResponse.json(
-                { error: 'OpenRouter API key is not configured on the server.' },
+                { error: 'Generation service is temporarily unavailable.' },
                 { status: 500 }
             )
         }
@@ -116,6 +122,11 @@ export async function POST(req: NextRequest) {
 
         // Must handle cases where user.credits is nullish
         if ((user.credits ?? 0) < CREDITS_COST) {
+            await trackServerEvent('insufficient_credits', {
+                tool_name: 'ai_baby',
+                credits_cost: CREDITS_COST,
+                credits_available: user.credits ?? 0,
+            }, token.email)
             return NextResponse.json(
                 { error: 'Insufficient credits. Please recharge your account.' },
                 { status: 403 }
@@ -158,6 +169,15 @@ export async function POST(req: NextRequest) {
         if (!openrouterRes.ok) {
             const errText = await openrouterRes.text()
             console.error('[baby-generate] OpenRouter error:', openrouterRes.status, errText)
+            await captureServerError('model_generation.provider_failed', errText, {
+                model: MODEL,
+                status: openrouterRes.status,
+            })
+            await trackServerEvent('generation_failed', {
+                tool_name: 'ai_baby',
+                reason: 'provider_failed',
+                status: openrouterRes.status,
+            }, token.email)
             return NextResponse.json(
                 { error: `Image generation failed (${openrouterRes.status}).` },
                 { status: 502 }
@@ -173,6 +193,13 @@ export async function POST(req: NextRequest) {
 
         if (!imageBase64Url) {
             console.error('[baby-generate] No image in response:', JSON.stringify(result))
+            await captureServerError('model_generation.empty_response', new Error('No image was returned'), {
+                model: MODEL,
+            })
+            await trackServerEvent('generation_failed', {
+                tool_name: 'ai_baby',
+                reason: 'empty_response',
+            }, token.email)
             return NextResponse.json(
                 { error: 'No image was returned by the generation model.' },
                 { status: 502 }
@@ -201,7 +228,16 @@ export async function POST(req: NextRequest) {
 
         if (dbError) {
             console.error('[baby-generate] Failed to save history to DB:', dbError)
+            await captureServerError('model_generation.history_insert_failed', dbError, {
+                tool_name: 'ai_baby',
+            })
         }
+
+        await trackServerEvent('generation_succeeded', {
+            tool_name: 'ai_baby',
+            gender,
+            credits_cost: CREDITS_COST,
+        }, token.email)
 
         return NextResponse.json({
             imageUrl,
@@ -211,6 +247,9 @@ export async function POST(req: NextRequest) {
     } catch (err: unknown) {
         const message = err instanceof Error ? err.message : 'Unknown error'
         console.error('[baby-generate] Unexpected error:', message)
+        await captureServerError('model_generation.unexpected_error', err, {
+            model: MODEL,
+        })
         return NextResponse.json(
             { error: `Internal server error: ${message}` },
             { status: 500 }

@@ -1,0 +1,359 @@
+{
+  "slug": "happy-horse-1-5",
+  "category": "video",
+  "vendor": "Alibaba",
+  "meta": {
+    "title": "Happy Horse 1.5 AI Video Generator | Dommi",
+    "description": "Use Happy Horse 1.5 in Dommi to explore Alibaba video generation with sharper motion fidelity, cleaner character movement, and stronger prompt control than the first release. Use Happy Horse 1.5 when you want the upgraded Alibaba motion model; compare 1.0 for baseline behavior and Seedance 2.0 for more established cinematic control.",
+    "keywords": [
+      "Happy Horse 1.5",
+      "Happy Horse 1.5 AI video generator",
+      "Happy Horse 1.5 Dommi",
+      "Happy Horse video models",
+      "AI video generator"
+    ]
+  },
+  "hero": {
+    "h1": "Happy Horse 1.5 AI Video Generator",
+    "description": "Use Happy Horse 1.5 in Dommi to explore Alibaba video generation with sharper motion fidelity, cleaner character movement, and stronger prompt control than the first release."
+  },
+  "generator_panel": {
+    "agent_label": "Create with Happy Horse 1.5 in Dommi",
+    "pill_label": "AI Video",
+    "quick_motion": "Auto",
+    "quick_style": "Style",
+    "quick_motion_options": [
+      "Auto",
+      "Camera Motion",
+      "Character Motion",
+      "Product Motion"
+    ],
+    "quick_style_options": [
+      "Style",
+      "Cinematic",
+      "Realistic",
+      "Anime",
+      "Commercial"
+    ],
+    "tool_modes": [
+      {
+        "label": "Image to Video",
+        "value": "image"
+      },
+      {
+        "label": "Text to Video",
+        "value": "text"
+      }
+    ],
+    "fields": [
+      {
+        "name": "model",
+        "label": "Model",
+        "default": "Happy Horse 1.5",
+        "options": [
+          "Happy Horse 1.5",
+          "Happy Horse 1.0",
+          "Seedance 3.0",
+          "Seedance 2.0",
+          "Seedance 1.5 Pro",
+          "Ltx 2.3"
+        ]
+      },
+      {
+        "name": "aspectRatio",
+        "label": "Aspect ratio",
+        "default": "16:9",
+        "options": [
+          "16:9",
+          "9:16",
+          "1:1",
+          "4:3",
+          "3:4"
+        ]
+      },
+      {
+        "name": "duration",
+        "label": "Duration",
+        "default": "5s",
+        "options": [
+          "5s",
+          "10s",
+          "15s"
+        ]
+      },
+      {
+        "name": "resolution",
+        "label": "Resolution",
+        "default": "1080p",
+        "options": [
+          "720p",
+          "1080p"
+        ]
+      }
+    ],
+    "upload": {
+      "show": true,
+      "placeholder": "Click to upload an image",
+      "hint": "JPG, PNG, WEBP",
+      "accept": "image/jpeg,image/png,image/webp"
+    },
+    "prompt_placeholders": {
+      "text": "Describe the Happy Horse 1.5 video: subject, action, camera movement, scene, and pacing.",
+      "image": "Describe how Happy Horse 1.5 should animate the reference image, including motion and camera direction."
+    },
+    "toggles": [
+      {
+        "name": "cameraFixed",
+        "label": "Camera fixed",
+        "default": false
+      }
+    ],
+    "generator_links": {
+      "image": "/image-to-video",
+      "text": "/text-to-video"
+    },
+    "submit_labels": {
+      "image": "Generate Video",
+      "text": "Generate Video"
+    }
+  },
+  "related_section": {
+    "h2": "Happy Horse 1.5 alternatives and related models",
+    "intro": "Compare Happy Horse 1.5 with adjacent Happy Horse video models and nearby Dommi models before choosing the right generator for the job.",
+    "related_models": [
+      "Happy Horse 1.0",
+      "Seedance 3.0",
+      "Seedance 2.0",
+      "Ltx 2.3"
+    ]
+  },
+  "highlights_section": {
+    "h2": "Why use Happy Horse 1.5 in Dommi",
+    "intro": "Focus on the search intent that matters: what Happy Horse 1.5 can create, when to choose it, and how to prompt it effectively.",
+    "items": [
+      {
+        "title": "Sharper motion fidelity",
+        "text": "best for iterating on people, performance, action, and audio-aware video ideas where motion realism matters."
+      },
+      {
+        "title": "Better character movement",
+        "text": "Use Happy Horse 1.5 when you want the upgraded Alibaba motion model; compare 1.0 for baseline behavior and Seedance 2.0 for more established cinematic control."
+      },
+      {
+        "title": "Audio-aware video direction",
+        "text": "Give the model a single clear action, a camera move, a scene mood, and timing cues such as slow push-in, beat drop, or handheld follow."
+      }
+    ]
+  },
+  "examples_section": {
+    "h2": "Happy Horse 1.5 prompt examples",
+    "intro": "Use these examples to compare character motion, handheld tracking, and product action across the newer Happy Horse generation.",
+    "effect_badge": "HH",
+    "attribution": "Showcase clips from happyhorse.video's official Happy Horse gallery.",
+    "items": [
+      {
+        "title": "Performance / character motion — stage close-up",
+        "prompt": "A K-pop performer with long silver hair in a glossy pink-and-silver mini-dress, mid-dance on a neon-lit stage. Camera tracks slightly upward as she lands a pose, stage lights flare in the background, slow-motion at the beat drop, vertical 9:16 frame.",
+        "result_video": "/m/happy-horse-1-0/example-1.mp4",
+        "result_video_poster": "/m/happy-horse-1-0/example-1.jpg",
+        "result_alt": "Happy Horse 1.5 K-pop stage performance clip"
+      },
+      {
+        "title": "Cinematic narrative — handheld tracking shot",
+        "prompt": "A man in a mustard-yellow t-shirt sprints away from camera down a long, brightly-lit modern hotel corridor. Handheld camera follows just behind in a single take, motion blur on the walls, warm overhead lighting, urgent breathing audio. 16:9, 6 seconds.",
+        "result_video": "/m/happy-horse-1-0/example-2.mp4",
+        "result_video_poster": "/m/happy-horse-1-0/example-2.jpg",
+        "result_alt": "Happy Horse 1.5 hotel corridor chase clip"
+      },
+      {
+        "title": "Stylized animation — anime fantasy chase",
+        "prompt": "Anime fantasy scene. A black-cloaked warrior with a long blade leaps mid-stride through an autumn forest in pursuit of a small fox-like creature darting through fallen orange leaves. Dynamic side-tracking camera, motion-blurred foreground, golden backlight through red maple canopy, cinematic 16:9.",
+        "result_video": "/m/happy-horse-1-0/example-3.mp4",
+        "result_video_poster": "/m/happy-horse-1-0/example-3.jpg",
+        "result_alt": "Happy Horse 1.5 anime warrior in autumn forest clip"
+      }
+    ]
+  },
+  "how_to_section": {
+    "h2": "How to use Happy Horse 1.5 in Dommi",
+    "intro": "A simple workflow for turning search intent into a usable video result with Happy Horse 1.5.",
+    "steps": [
+      {
+        "title": "Choose Happy Horse 1.5",
+        "description": "Start from Dommi's generator surface and select Happy Horse 1.5 when your goal matches its strengths: sharper motion fidelity, better character movement, audio-aware video direction."
+      },
+      {
+        "title": "Write a focused prompt",
+        "description": "Give the model a single clear action, a camera move, a scene mood, and timing cues such as slow push-in, beat drop, or handheld follow."
+      },
+      {
+        "title": "Generate, compare, refine",
+        "description": "Run the prompt, compare it with related Dommi models, then adjust one variable at a time so you can see what Happy Horse 1.5 changes."
+      }
+    ]
+  },
+  "youtube_section": {
+    "h2": "Happy Horse 1.5 tutorials on YouTube",
+    "intro": "Watch creator tutorials and walkthroughs that show how people prompt, compare, and evaluate Happy Horse 1.5 in real workflows."
+  },
+  "reddit_section": {
+    "h2": "Happy Horse 1.5 discussions on Reddit",
+    "intro": "Read community threads about Happy Horse 1.5 results, strengths, limitations, and how it compares with other AI video models."
+  },
+  "x_section": {
+    "h2": "Happy Horse 1.5 posts on X",
+    "intro": "Browse curated X posts for Happy Horse 1.5: launches, creator tests, benchmark notes, and prompt examples from the original discussions."
+  },
+  "social": {
+    "youtube_videos": [
+      {
+        "id": "3fHqqYQa-k0",
+        "title": "Happy Horse Takes the Lead! | API Tutorial",
+        "uploadDate": "2026-04-27T04:00:52-07:00"
+      },
+      {
+        "id": "JVWTwKrus9c",
+        "title": "Happy Horse: The Seedance Killer? Plus BIG 4k AI Video News!",
+        "uploadDate": "2026-04-27T14:41:37-07:00"
+      },
+      {
+        "id": "TXz-lW_O3Ok",
+        "title": "Happy Horse Tutorial (How To Use Happy Horse)",
+        "uploadDate": "2026-04-29T09:00:57-07:00"
+      },
+      {
+        "id": "W-epbrFWMbk",
+        "title": "Happy Horse vs Seedance | The Real Winner",
+        "uploadDate": "2026-05-04T10:00:41-07:00"
+      },
+      {
+        "id": "YkUJLpz-aO4",
+        "title": "Happy Horse // CINEMATIC MOTION TEST",
+        "uploadDate": "2026-04-29T19:15:12-07:00"
+      },
+      {
+        "id": "r_23SMJzpt8",
+        "title": "Happy Horse — The #1-Ranked AI Video Model",
+        "uploadDate": "2026-04-27T03:57:27-07:00"
+      }
+    ],
+    "reddit_posts": [
+      {
+        "title": "Let's all be honest, nothing will ever replace Sora.",
+        "url": "https://www.reddit.com/r/SoraAi/comments/1sxmf84/lets_all_be_honest_nothing_will_ever_replace_sora/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "Dogbold",
+          "created_utc": 1777337834,
+          "ups": 98,
+          "num_comments": 81,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_at3dog/styles/communityIcon_us7qly2dpwsf1.png"
+        },
+        "subreddit": "SoraAi",
+        "excerpt": "I've tried Seedance, Happy Horse, Veo, Grok, LTX, etc. Happy Horse keeps surprising me on motion realism — the 1.5 update tightened up the hands and faces a lot."
+      },
+      {
+        "title": "Last week in Generative Image & Video",
+        "url": "https://www.reddit.com/r/StableDiffusion/comments/1slz1rq/last_week_in_generative_image_video/",
+        "height": 320,
+        "media": {
+          "type": "text"
+        },
+        "meta": {
+          "author": "Vast_Yak_4147",
+          "created_utc": 1776238150,
+          "ups": 98,
+          "num_comments": 7,
+          "subreddit_icon": "https://styles.redditmedia.com/t5_6r4pfl/styles/communityIcon_kihji9n3ydmd1.png"
+        },
+        "subreddit": "StableDiffusion",
+        "excerpt": "I curate a weekly multimodal AI roundup, here are the open-source image & video highlights from the last week, including the Happy Horse model family."
+      }
+    ],
+    "x_posts": [
+      {
+        "id": "2044261854399377565",
+        "text": "Thrilled to see HappyHorse land #1 in the Video Edit Arena! 🎉 @HappyHorseATH #AlibabaAI #HappyHorse",
+        "author": "HappyHorse",
+        "handle": "HappyHorseATH",
+        "date": "Apr 15, 2026",
+        "url": "https://twitter.com/i/status/2044261854399377565"
+      },
+      {
+        "id": "2042530517799887326",
+        "text": "Congratulations to @HappyHorseATH for securing #1 and #2 across the Artificial Analysis Video Arena leaderboards! 🚀",
+        "author": "HappyHorse",
+        "handle": "HappyHorseATH",
+        "date": "Apr 10, 2026",
+        "url": "https://twitter.com/i/status/2042530517799887326"
+      },
+      {
+        "id": "2048714504570380493",
+        "text": "Discover HappyHorse advanced video capabilities in the full article.",
+        "author": "Happy Horse 1.5 creator",
+        "handle": "HappyHorse15",
+        "date": "Apr 27, 2026",
+        "url": "https://twitter.com/i/status/2048714504570380493"
+      },
+      {
+        "id": "2042587252430377382",
+        "text": "HappyHorse supports T2V/I2V with native audio, ranking #1 on Video Arena.",
+        "author": "Happy Horse 1.5 creator",
+        "handle": "HappyHorse15",
+        "date": "Apr 10, 2026",
+        "url": "https://twitter.com/i/status/2042587252430377382"
+      },
+      {
+        "id": "2048867075507335569",
+        "text": "HappyHorse is now on AI Gateway! 1080p generation with joint audio and native lip-sync in 7 languages.",
+        "author": "Happy Horse 1.5 creator",
+        "handle": "HappyHorse15",
+        "date": "Apr 28, 2026",
+        "url": "https://twitter.com/i/status/2048867075507335569"
+      }
+    ]
+  },
+  "faq_section": {
+    "h2": "Happy Horse 1.5 FAQ",
+    "intro": "Direct answers for people searching how Happy Horse 1.5 works, what it is good at, and when to use it in Dommi.",
+    "items": [
+      {
+        "q": "What is Happy Horse 1.5?",
+        "a": "Happy Horse 1.5 is an AI video model from Alibaba. In Dommi, this page explains where it fits, shows prompt examples, and connects it with related video models so creators can choose the right workflow."
+      },
+      {
+        "q": "What is Happy Horse 1.5 best for?",
+        "a": "Happy Horse 1.5 is best for iterating on people, performance, action, and audio-aware video ideas where motion realism matters. Its main strengths are sharper motion fidelity, better character movement, audio-aware video direction."
+      },
+      {
+        "q": "How do I prompt Happy Horse 1.5?",
+        "a": "Give the model a single clear action, a camera move, a scene mood, and timing cues such as slow push-in, beat drop, or handheld follow."
+      },
+      {
+        "q": "How is Happy Horse 1.5 different from related models?",
+        "a": "Use Happy Horse 1.5 when you want the upgraded Alibaba motion model; compare 1.0 for baseline behavior and Seedance 2.0 for more established cinematic control."
+      },
+      {
+        "q": "Can I use a reference image with Happy Horse 1.5?",
+        "a": "Yes. Use image-to-video when you already have a frame, product shot, character, or scene and want Happy Horse 1.5 to animate it with controlled camera and subject motion."
+      },
+      {
+        "q": "Can I compare Happy Horse 1.5 with other Dommi models?",
+        "a": "Yes. Use the related model links on this page to compare Happy Horse 1.5 with nearby options, then reuse the same prompt so the difference between models is easier to judge."
+      }
+    ]
+  },
+  "final_cta": {
+    "logo": "/logo.png",
+    "h2": "Create with Happy Horse 1.5 in Dommi",
+    "body": "Open Dommi and test Happy Horse 1.5 on your most motion-heavy idea.",
+    "btn_label": "Open Dommi Tools",
+    "btn_href": "/tools",
+    "btn_link": "/tools"
+  },
+  "brand": "Dommi",
+  "source_slug": "happy-horse-1-5"
+}

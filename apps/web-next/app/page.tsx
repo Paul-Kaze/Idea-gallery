@@ -3,51 +3,13 @@
 import { useEffect, useState } from 'react'
 import type { MediaItem } from '../types/media'
 import dynamic from 'next/dynamic'
-const ImageGallery = dynamic(() => import('../components/ImageGallery').then(m => m.ImageGallery), { ssr: false })
 import { ImageDetailModal } from '../components/ImageDetailModal'
 
-const mockItems: MediaItem[] = [
-  {
-    id: '1',
-    type: 'image',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?w=800',
-    fullUrl:
-      'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwY2l0eXNjYXBlfGVufDF8fHx8MTc2NDM5NDAzMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    model: 'Gemini 3 Pro',
-    prompt:
-      'A futuristic cityscape at night with towering skyscrapers, neon lights reflecting on wet streets, flying cars in the sky, cyberpunk aesthetic, highly detailed, 8k resolution',
-    width: 1200,
-    height: 1600,
-  },
-  {
-    id: '2',
-    type: 'image',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1705254613735-1abb457f8a60?w=800',
-    fullUrl:
-      'https://images.unsplash.com/photo-1705254613735-1abb457f8a60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGFydCUyMGNvbG9yZnVsfGVufDF8fHx8MTc2NDMzOTM5NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    model: 'DALL-E 4',
-    prompt:
-      'Abstract colorful swirls and patterns, vibrant gradients of pink, blue, orange and purple, fluid dynamics, digital art, mesmerizing composition',
-    width: 1200,
-    height: 800,
-  },
-  {
-    id: 'v1',
-    type: 'video',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1535016120720-40c6874c3b13?w=800',
-    fullUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-    model: 'Sora v1',
-    prompt:
-      'Cinematic drone shot of a volcanic landscape with active lava flows, smoke rising, dramatic lighting, 4k video',
-    width: 1920,
-    height: 1080,
-    duration: '0:15',
-  },
-]
+const ImageGallery = dynamic(() => import('../components/ImageGallery').then(m => m.ImageGallery), { ssr: false })
 
 export default function Page() {
   const [selectedItem, setSelectedItem] = useState<MediaItem | null>(null)
-  const [items, setItems] = useState<MediaItem[]>(mockItems)
+  const [items, setItems] = useState<MediaItem[]>([])
 
   useEffect(() => {
     const fetchList = async () => {
@@ -65,9 +27,9 @@ export default function Page() {
           width: it.width,
           height: it.height,
         }))
-        if (mapped.length) setItems(mapped)
+        setItems(mapped)
       } catch {
-        // keep mockItems
+        setItems([])
       }
     }
     fetchList()
@@ -75,6 +37,10 @@ export default function Page() {
 
   const handleItemClick = (item: MediaItem) => setSelectedItem(item)
   const handleCloseModal = () => setSelectedItem(null)
+  const handleItemLoadError = (item: MediaItem) => {
+    setItems((current) => current.filter((currentItem) => currentItem.id !== item.id))
+    setSelectedItem((current) => (current?.id === item.id ? null : current))
+  }
 
   return (
     <div
@@ -85,7 +51,6 @@ export default function Page() {
       }}
     >
       <div style={{ maxWidth: '1920px', margin: '0 auto' }}>
-        {/* Discover Heading */}
         <h1
           style={{
             fontSize: '24px',
@@ -100,8 +65,26 @@ export default function Page() {
           Discover
         </h1>
 
-        {/* Gallery */}
-        <ImageGallery items={items} onItemClick={handleItemClick} />
+        {items.length ? (
+          <ImageGallery
+            items={items}
+            onItemClick={handleItemClick}
+            onItemLoadError={handleItemLoadError}
+          />
+        ) : (
+          <div
+            style={{
+              padding: '48px 32px',
+              border: '1px solid #e5e7eb',
+              borderRadius: 18,
+              background: '#ffffff',
+              color: '#64748b',
+              textAlign: 'center',
+            }}
+          >
+            No public gallery assets yet. Create from the tools page or connect production data.
+          </div>
+        )}
       </div>
 
       {selectedItem && <ImageDetailModal item={selectedItem} onClose={handleCloseModal} />}

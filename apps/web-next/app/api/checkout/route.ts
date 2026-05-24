@@ -1,5 +1,7 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import { auth } from '../../../auth'
+import { trackServerEvent } from '../../../lib/server-analytics'
+import { captureServerError } from '../../../lib/monitoring'
 
 // Credit packages config - productId must be set from Creem dashboard
 const CREDIT_PACKAGES: Record<string, { credits: number; productId: string }> = {
@@ -25,7 +27,18 @@ export async function POST(request: NextRequest) {
         const successUrl = `${appUrl}/payment/success`
 
         // Call Creem API to create a checkout session
-        const apiKey = process.env.CREEM_API_KEY!
+        const apiKey = process.env.CREEM_API_KEY
+        if (!apiKey) {
+            await captureServerError('checkout.missing_creem_api_key', new Error('Creem API key is not configured'), { packageKey })
+            return NextResponse.json({ error: 'Payment service is temporarily unavailable' }, { status: 500 })
+        }
+
+        await trackServerEvent('checkout_started', {
+            package_key: packageKey,
+            credits: pkg.credits,
+            product_id: pkg.productId,
+        }, session.user.email)
+
         const isTestMode = apiKey.startsWith('creem_test_')
         const apiUrl = isTestMode ? 'https://test-api.creem.io/v1/checkouts' : 'https://api.creem.io/v1/checkouts'
 
@@ -50,6 +63,14 @@ export async function POST(request: NextRequest) {
         if (!response.ok) {
             const err = await response.text()
             console.error('[Creem Checkout] API error:', err)
+            await captureServerError('checkout.creem_api_failed', err, {
+                packageKey,
+                status: response.status,
+            })
+            await trackServerEvent('checkout_failed', {
+                package_key: packageKey,
+                status: response.status,
+            }, session.user.email)
             return NextResponse.json({ error: 'Failed to create checkout' }, { status: 500 })
         }
 
@@ -59,6 +80,7 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ checkoutUrl })
     } catch (error) {
         console.error('[Creem Checkout] Unexpected error:', error)
+        await captureServerError('checkout.unexpected_error', error)
         return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
     }
 }

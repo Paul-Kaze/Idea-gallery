@@ -1,0 +1,356 @@
+.page {
+  min-height: calc(100vh - 64px);
+  background: #f7f8fb;
+  color: #172033;
+  font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.workspace {
+  position: relative;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 248, 251, 0.98)),
+    #f7f8fb;
+}
+
+.historyFilters {
+  position: absolute;
+  right: 48px;
+  top: 24px;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterWrap {
+  position: relative;
+}
+
+.filterButton,
+.favoriteButton,
+.filterMenu button {
+  border: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.filterButton,
+.favoriteButton {
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  border-radius: 9px;
+  background: #fff;
+  color: #475569;
+  font-size: 14px;
+  box-shadow: inset 0 0 0 1px #e5e7eb;
+}
+
+.favoriteButtonActive {
+  color: #101828;
+  background: #f1f5f9;
+}
+
+.filterMenu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  width: 124px;
+  padding: 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.12);
+}
+
+.filterMenu button {
+  width: 100%;
+  height: 32px;
+  border-radius: 7px;
+  background: transparent;
+  color: #64748b;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.filterMenu button:hover,
+.filterOptionActive {
+  background: #f1f5f9;
+  color: #101828;
+}
+
+.emptyState {
+  flex: 1;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 92px 24px 238px;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.emptyIcon {
+  position: relative;
+  width: 78px;
+  height: 68px;
+  color: #cbd5e1;
+}
+
+.emptyIcon svg:first-child {
+  width: 64px;
+  height: 52px;
+  transform: rotate(-12deg);
+}
+
+.emptyIcon svg:last-child {
+  position: absolute;
+  right: 4px;
+  top: 0;
+}
+
+.emptyState p {
+  margin: 0;
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.emptyState span {
+  color: #a7b1c2;
+  font-size: 13px;
+}
+
+.composerZone {
+  position: absolute;
+  left: 50%;
+  bottom: 34px;
+  z-index: 20;
+  width: min(980px, calc(100% - 96px));
+  transform: translateX(-50%);
+}
+
+.promptDock {
+  position: relative;
+}
+
+.promptDock :global([class*="chatbox"][class*="InnerMenuOpen"]) {
+  z-index: 60;
+}
+
+.promptDock :global([class*="chatbox"][class*="Popover"]) {
+  top: auto;
+  bottom: 52px;
+  z-index: 120;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverCreationType"]) {
+  bottom: 46px;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"]) {
+  right: 88px;
+  bottom: 18px;
+  width: min(380px, calc(100vw - 96px));
+  max-height: min(420px, calc(100vh - 122px));
+  overflow-y: auto;
+  padding: 14px;
+  border: 1px solid #e8e8e8;
+  border-radius: 18px;
+  background: #fff;
+  color: #27272a;
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.14);
+  scrollbar-width: none;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"])::-webkit-scrollbar {
+  display: none;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"])::before {
+  content: "Video settings";
+  display: block;
+  margin-bottom: 12px;
+  color: #2d2d2f;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamPanel"]) {
+  gap: 14px;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(1)) {
+  order: 2;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(2)) {
+  order: 3;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(3)) {
+  order: 1;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"] h4) {
+  color: #2d2d2f;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(1) h4),
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(2) h4) {
+  font-size: 0;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(1) h4)::after {
+  content: "Duration";
+  font-size: 15px;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(2) h4)::after {
+  content: "Quality";
+  font-size: 15px;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(3) [class*="chatboxParamGrid"]) {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(3) [class*="chatboxParamButton"]) {
+  height: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  background: #fff;
+  color: #111;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(3) [class*="chatboxParamButton"])::before {
+  content: "";
+  width: 18px;
+  height: 10px;
+  border: 2px solid #2d2d2f;
+  border-radius: 4px;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(3) [class*="chatboxParamButton"]:nth-child(2))::before {
+  width: 10px;
+  height: 18px;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(3) [class*="chatboxParamButton"]:nth-child(3))::before {
+  width: 16px;
+  height: 12px;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(3) [class*="chatboxParamButton"]:nth-child(4))::before {
+  width: 12px;
+  height: 16px;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(3) [class*="chatboxParamButton"]:nth-child(5))::before {
+  width: 16px;
+  height: 16px;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(3) [class*="chatboxParamButtonSelected"]) {
+  border-color: #2d2d2f;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxRangeHead"] span) {
+  min-width: 0;
+  background: transparent;
+  color: #777;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxRangeControl"]) {
+  gap: 4px;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxRangeControl"] input[type="range"]) {
+  height: 18px;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxRangeControl"] input[type="range"]::-webkit-slider-runnable-track) {
+  height: 3px;
+  background:
+    linear-gradient(
+      90deg,
+      #2d2d2f 0%,
+      #2d2d2f var(--range-progress),
+      #e7e7e7 var(--range-progress),
+      #e7e7e7 100%
+    );
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxRangeControl"] input[type="range"]::-webkit-slider-thumb) {
+  width: 14px;
+  height: 14px;
+  margin-top: -5.5px;
+  border: 4px solid #2d2d2f;
+  background: #fff;
+  box-shadow: none;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxRangeLimits"]) {
+  color: transparent;
+  font-size: 0;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(2) [class*="chatboxParamGrid"]) {
+  display: flex;
+  gap: 8px;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(2) [class*="chatboxParamButton"]) {
+  min-width: 72px;
+  height: 38px;
+  border: 1px solid #e7e7e7;
+  border-radius: 999px;
+  background: #fff;
+  color: #2d2d2f;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+.promptDock :global([class*="chatbox"][class*="PopoverVideoParams"] [class*="chatboxParamGroup"]:nth-child(2) [class*="chatboxParamButtonSelected"]) {
+  border-color: #2d2d2f;
+}
+
+.creationModal {
+  display: none;
+}
+
+@media (max-width: 820px) {
+  .historyFilters {
+    right: 18px;
+    top: 18px;
+  }
+
+  .composerZone {
+    width: calc(100% - 28px);
+    bottom: 20px;
+  }
+}
