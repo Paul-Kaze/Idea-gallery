@@ -8,6 +8,7 @@ export type ListItem = {
   type: 'image' | 'video'
   thumbnail_url: string
   model: string
+  prompt?: string | null
   width: number
   height: number
 }
@@ -19,8 +20,6 @@ export type DetailItem = {
   full_url: string
   model: string
   prompt: string
-  width: number
-  height: number
   duration?: string | null
   reference_image?: string[] | null
 }
@@ -35,7 +34,7 @@ export async function listImages(page = 1, size = 20): Promise<{ items: ListItem
   const end = start + size - 1
   const { data, error, count } = await __supabaseAdmin
     .from('images')//从images表中查询
-    .select('id,type,thumbnail_url,model,width,height', { count: 'exact' })
+    .select('id,type,thumbnail_url,model,prompt,width,height', { count: 'exact' })
     .order('uploaded_at', { ascending: false })
     .range(start, end)
   if (error) throw error
@@ -49,7 +48,7 @@ export async function getImageDetail(id: string): Promise<DetailItem | null> {
   const { data, error } = await __supabaseAdmin
     .from('images')
     .select(`
-      id, type, full_url, model, prompt, width, height, duration,
+      id, type, full_url, model, prompt, duration,
       reference_images (
         url
       )

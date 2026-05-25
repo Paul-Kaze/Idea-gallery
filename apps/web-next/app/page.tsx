@@ -6,10 +6,94 @@ import dynamic from 'next/dynamic'
 import { ImageDetailModal } from '../components/ImageDetailModal'
 
 const ImageGallery = dynamic(() => import('../components/ImageGallery').then(m => m.ImageGallery), { ssr: false })
+const COUPLE_SHOWCASE_BASE_URL = 'https://gallery-paul.oss-ap-southeast-1.aliyuncs.com/local-test-assets/couple-private-album/generated'
+
+const FEATURED_COUPLE_ITEMS: MediaItem[] = [
+  {
+    id: 'featured-couple-01',
+    type: 'image',
+    thumbnailUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_01_12_french_woman_youthful_beautiful.webp`,
+    fullUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_01_12_french_woman_youthful_beautiful.webp`,
+    model: 'gpt-image-2',
+    prompt: 'Private album style romantic couple collage with a French female portrait reference.',
+    width: 1080,
+    height: 1080,
+  },
+  {
+    id: 'featured-couple-02',
+    type: 'image',
+    thumbnailUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_02_16_middle_eastern_woman_beautiful_olive.webp`,
+    fullUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_02_16_middle_eastern_woman_beautiful_olive.webp`,
+    model: 'gpt-image-2',
+    prompt: 'Private album style romantic couple collage with a Middle Eastern female portrait reference.',
+    width: 1080,
+    height: 1080,
+  },
+  {
+    id: 'featured-couple-03',
+    type: 'image',
+    thumbnailUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_03_18_japanese_woman_fresh_pretty.webp`,
+    fullUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_03_18_japanese_woman_fresh_pretty.webp`,
+    model: 'gpt-image-2',
+    prompt: 'Private album style romantic couple collage with a Japanese female portrait reference.',
+    width: 1080,
+    height: 1080,
+  },
+  {
+    id: 'featured-couple-04',
+    type: 'image',
+    thumbnailUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_04_20_british_woman_young_beautiful_elegant.webp`,
+    fullUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_04_20_british_woman_young_beautiful_elegant.webp`,
+    model: 'gpt-image-2',
+    prompt: 'Private album style romantic couple collage with a British female portrait reference.',
+    width: 1080,
+    height: 1080,
+  },
+  {
+    id: 'featured-couple-05',
+    type: 'image',
+    thumbnailUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_05_22_spanish_woman_young_beautiful_glow.webp`,
+    fullUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_05_22_spanish_woman_young_beautiful_glow.webp`,
+    model: 'gpt-image-2',
+    prompt: 'Private album style romantic couple collage with a Spanish female portrait reference.',
+    width: 1080,
+    height: 1080,
+  },
+  {
+    id: 'featured-couple-06',
+    type: 'image',
+    thumbnailUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_06_26_american_woman_young_beautiful_fresh.webp`,
+    fullUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_06_26_american_woman_young_beautiful_fresh.webp`,
+    model: 'gpt-image-2',
+    prompt: 'Private album style romantic couple collage with an American female portrait reference.',
+    width: 1080,
+    height: 1080,
+  },
+  {
+    id: 'featured-couple-07',
+    type: 'image',
+    thumbnailUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_07_36_american_woman_campus_sunshine_pretty.webp`,
+    fullUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_07_36_american_woman_campus_sunshine_pretty.webp`,
+    model: 'gpt-image-2',
+    prompt: 'Private album style romantic couple collage with an American campus female portrait reference.',
+    width: 1080,
+    height: 1080,
+  },
+  {
+    id: 'featured-couple-08',
+    type: 'image',
+    thumbnailUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_08_42_american_woman_honors_student_beautiful.webp`,
+    fullUrl: `${COUPLE_SHOWCASE_BASE_URL}/couple_collage_08_42_american_woman_honors_student_beautiful.webp`,
+    model: 'gpt-image-2',
+    prompt: 'Private album style romantic couple collage with an American honors student portrait reference.',
+    width: 1080,
+    height: 1080,
+  },
+]
 
 export default function Page() {
   const [selectedItem, setSelectedItem] = useState<MediaItem | null>(null)
-  const [items, setItems] = useState<MediaItem[]>([])
+  const [items, setItems] = useState<MediaItem[]>(FEATURED_COUPLE_ITEMS)
 
   useEffect(() => {
     const fetchList = async () => {
@@ -27,9 +111,18 @@ export default function Page() {
           width: it.width,
           height: it.height,
         }))
-        setItems(mapped)
+        setItems((current) => {
+          const existingIds = new Set(current.map((item) => item.id))
+          const merged = [...current]
+          for (const item of mapped) {
+            if (!existingIds.has(item.id)) {
+              merged.push(item)
+            }
+          }
+          return merged
+        })
       } catch {
-        setItems([])
+        setItems(FEATURED_COUPLE_ITEMS)
       }
     }
     fetchList()

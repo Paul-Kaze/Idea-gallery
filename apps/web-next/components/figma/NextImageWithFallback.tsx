@@ -21,7 +21,11 @@ const ERROR_IMG_SRC =
 export function NextImageWithFallback(props: Props) {
   const [didError, setDidError] = useState(false)
   const { src, alt, className, style, width, height, onLoad, onError, fill, sizes } = props
-  const unoptimized = src.startsWith('/api/download')
+  // Some OSS-hosted images fail through Next's image optimizer in local/dev,
+  // so bypass optimization for those URLs and render them directly.
+  const unoptimized =
+    src.startsWith('/api/download') ||
+    src.includes('.aliyuncs.com/')
 
   if (didError) {
     return (

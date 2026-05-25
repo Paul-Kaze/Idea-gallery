@@ -8,6 +8,8 @@ const staticRoutes = [
   '/tools',
   '/tools/ai-baby-generator',
   '/tools/baby-photos',
+  '/tools/couple-photo-generator',
+  '/tools/couple-nine-grid-generator',
   '/ai-baby-generator',
   '/future-baby-generator',
   '/baby-ai-generator-free',

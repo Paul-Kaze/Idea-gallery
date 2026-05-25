@@ -17,6 +17,20 @@ const tools: Tool[] = [
         imageUrl: 'https://images.unsplash.com/photo-1544126592-807ade215a0b?w=600',
         href: '/tools/baby-photos',
     },
+    {
+        id: 'couple-photo-generator',
+        name: 'Couple Photo Generator',
+        description: 'Upload two partner photos, choose a romantic pose, and create natural daily couple photos.',
+        imageUrl: '/couple-photo-generator/showcase.png',
+        href: '/tools/couple-photo-generator',
+    },
+    {
+        id: 'couple-nine-grid-generator',
+        name: 'Couple Nine-Grid Generator',
+        description: 'Create one share-ready 3x3 couple photo story from two partner portraits.',
+        imageUrl: '/couple-photo-generator/showcase.png',
+        href: '/tools/couple-nine-grid-generator',
+    },
 ]
 
 export default function ToolsPage() {
@@ -50,7 +64,7 @@ export default function ToolsPage() {
                 <div
                     style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
                         gap: '32px',
                     }}
                 >

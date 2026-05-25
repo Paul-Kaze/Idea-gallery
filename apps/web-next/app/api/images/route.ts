@@ -1,15 +1,38 @@
 import type { NextRequest } from 'next/server'
+import type { ListItem } from '../../../lib/db'
 import { listImages } from '../../../lib/db'
 import { captureServerError } from '../../../lib/monitoring'
 
-function isDisplayableThumbnail(url: string | null | undefined) {
+export function isDisplayableThumbnail(url: string | null | undefined) {
   if (!url) return false
   try {
     const parsed = new URL(url, 'http://localhost')
-    return parsed.hostname !== 'example.com'
+    if (parsed.hostname === 'example.com') return false
+    if (/\/gallery\/img_\d+_thumb$/i.test(parsed.pathname)) return false
+    return true
   } catch {
     return false
   }
+}
+
+export function dedupeDisplayableItems(items: ListItem[]) {
+  const seen = new Set<string>()
+
+  return items.filter((item) => {
+    if (!isDisplayableThumbnail(item.thumbnail_url)) return false
+
+    const fingerprint = [
+      item.type,
+      item.model,
+      item.width,
+      item.height,
+      item.prompt?.trim() || item.thumbnail_url,
+    ].join('|')
+
+    if (seen.has(fingerprint)) return false
+    seen.add(fingerprint)
+    return true
+  })
 }
 
 export async function GET(req: NextRequest) {
@@ -19,8 +42,7 @@ export async function GET(req: NextRequest) {
     const size = Number(searchParams.get('size') ?? '20')
 
     const dbRes = await listImages(page, size)
-    const items = dbRes.items
-      .filter((it) => isDisplayableThumbnail(it.thumbnail_url))
+    const items = dedupeDisplayableItems(dbRes.items)
       .map((it) => ({
         id: it.id,
         type: it.type,

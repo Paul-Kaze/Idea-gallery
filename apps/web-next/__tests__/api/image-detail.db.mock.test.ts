@@ -18,8 +18,6 @@ __setSupabaseAdmin({
                         full_url: 'https://example.com/m1.jpg',
                         model: 'Mock',
                         prompt: 'Prompt',
-                        width: 100,
-                        height: 100,
                         duration: null,
                       },
                       error: null,
@@ -45,5 +43,7 @@ describe('GET /api/images/:id with db mocked', () => {
     const data = await res.json()
     expect(data.id).toBe('m1')
     expect(data.fullUrl).toContain('example.com')
+    expect(data.width).toBeUndefined()
+    expect(data.height).toBeUndefined()
   })
 })

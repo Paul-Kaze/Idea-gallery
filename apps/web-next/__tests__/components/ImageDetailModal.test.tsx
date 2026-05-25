@@ -17,7 +17,9 @@ const item = {
 describe('ImageDetailModal', () => {
   it('toggles prompt expand/collapse', () => {
     const onClose = vi.fn()
-    const { getByText } = render(<ImageDetailModal item={item} onClose={onClose} />)
+    const { getByText, queryByText } = render(<ImageDetailModal item={item} onClose={onClose} />)
+    expect(queryByText('Dimensions')).toBeNull()
+    expect(queryByText('800 × 600 px')).toBeNull()
     fireEvent.click(getByText('Show More'))
     fireEvent.click(getByText('Show Less'))
   })

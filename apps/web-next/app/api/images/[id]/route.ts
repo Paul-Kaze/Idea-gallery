@@ -15,8 +15,6 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ id:
       fullUrl: db.full_url,
       model: db.model,
       prompt: db.prompt,
-      width: db.width,
-      height: db.height,
       duration: db.duration ?? undefined,
       reference_image: db.reference_image ?? [],
     }), {

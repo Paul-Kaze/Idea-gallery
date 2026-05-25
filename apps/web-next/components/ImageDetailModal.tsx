@@ -37,8 +37,6 @@ export function ImageDetailModal({ item, onClose }: ImageDetailModalProps) {
           duration: data.duration ?? item.duration,
           reference_image: data.reference_image ?? item.reference_image,
           fullUrl: data.fullUrl ?? item.fullUrl,
-          width: data.width ?? item.width,
-          height: data.height ?? item.height,
           model: data.model ?? item.model,
           id: item.id,
           type: item.type,
@@ -147,13 +145,6 @@ export function ImageDetailModal({ item, onClose }: ImageDetailModalProps) {
                       )}
                     </button>
                   )}
-                </div>
-              </div>
-              <div>
-                <div className="text-xs text-gray-500 mb-2">{item.type === 'video' ? 'Resolution' : 'Dimensions'}</div>
-                <div className="text-sm text-gray-900">
-                  {(detail?.width ?? item.width) as number} × {(detail?.height ?? item.height) as number} px
-                  {(detail?.duration ?? item.duration) && <span className="ml-2 text-gray-500">({detail?.duration ?? item.duration})</span>}
                 </div>
               </div>
               {((detail?.reference_image ?? item.reference_image) ?? []).length > 0 && (

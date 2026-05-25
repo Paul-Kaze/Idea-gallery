@@ -20,6 +20,7 @@ apps/web-next/output/
 # misc
 .DS_Store
 *.pem
+.tmp/
 
 # debug
 npm-debug.log*
@@ -31,6 +32,7 @@ yarn-error.log*
 .env.development
 .env.production
 .env.test
+/local-test-assets/
 
 # vercel
 .vercel

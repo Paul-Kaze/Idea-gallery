@@ -1,0 +1,145 @@
+{
+  "timestamp": "2026-05-24T21:52:30.355711",
+  "batches": [
+    {
+      "name": "non_wedding_couple_photo_us",
+      "geo": "US",
+      "keywords": [
+        "ai couple photo generator",
+        "couple photo generator",
+        "couple photoshoot ideas",
+        "couple photo maker",
+        "couple portrait ideas"
+      ],
+      "error": "TooManyRequestsError('The request failed: Google returned a response with code 429')"
+    },
+    {
+      "name": "romantic_style_us",
+      "geo": "US",
+      "keywords": [
+        "romantic couple photoshoot",
+        "couple selfie ideas",
+        "anniversary photo ideas",
+        "valentine photo ideas",
+        "couple photo ideas"
+      ],
+      "interest_avg": {
+        "romantic couple photoshoot": 0.0,
+        "couple selfie ideas": 0.0,
+        "anniversary photo ideas": 1.37,
+        "valentine photo ideas": 0.0,
+        "couple photo ideas": 2.92
+      },
+      "interest_recent": {
+        "romantic couple photoshoot": 0,
+        "couple selfie ideas": 0,
+        "anniversary photo ideas": 12,
+        "valentine photo ideas": 0,
+        "couple photo ideas": 15
+      },
+      "tail": [
+        {
+          "date": "2026-05-18",
+          "romantic couple photoshoot": 0,
+          "couple selfie ideas": 0,
+          "anniversary photo ideas": 8,
+          "valentine photo ideas": 0,
+          "couple photo ideas": 12
+        },
+        {
+          "date": "2026-05-19",
+          "romantic couple photoshoot": 0,
+          "couple selfie ideas": 0,
+          "anniversary photo ideas": 12,
+          "valentine photo ideas": 0,
+          "couple photo ideas": 15
+        },
+        {
+          "date": "2026-05-20",
+          "romantic couple photoshoot": 0,
+          "couple selfie ideas": 0,
+          "anniversary photo ideas": 9,
+          "valentine photo ideas": 0,
+          "couple photo ideas": 9
+        },
+        {
+          "date": "2026-05-21",
+          "romantic couple photoshoot": 0,
+          "couple selfie ideas": 0,
+          "anniversary photo ideas": 9,
+          "valentine photo ideas": 0,
+          "couple photo ideas": 9
+        },
+        {
+          "date": "2026-05-22",
+          "romantic couple photoshoot": 0,
+          "couple selfie ideas": 0,
+          "anniversary photo ideas": 7,
+          "valentine photo ideas": 0,
+          "couple photo ideas": 11
+        },
+        {
+          "date": "2026-05-23",
+          "romantic couple photoshoot": 0,
+          "couple selfie ideas": 0,
+          "anniversary photo ideas": 0,
+          "valentine photo ideas": 0,
+          "couple photo ideas": 9
+        },
+        {
+          "date": "2026-05-24",
+          "romantic couple photoshoot": 0,
+          "couple selfie ideas": 0,
+          "anniversary photo ideas": 0,
+          "valentine photo ideas": 0,
+          "couple photo ideas": 0
+        }
+      ],
+      "top": {
+        "couple photo ideas": [
+          {
+            "query": "cute couple photo ideas",
+            "value": 100
+          }
+        ]
+      },
+      "rising": {}
+    },
+    {
+      "name": "ai_couple_video_us",
+      "geo": "US",
+      "keywords": [
+        "ai kiss video generator",
+        "ai hug video generator",
+        "ai couple video generator",
+        "image to video ai",
+        "ai vlog generator"
+      ],
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='trends.google.com', port=443): Read timed out. (read timeout=2)\"))"
+    },
+    {
+      "name": "couple_vlog_us",
+      "geo": "US",
+      "keywords": [
+        "couple vlog",
+        "couple vlog ideas",
+        "anniversary video maker",
+        "romantic video maker",
+        "couple video maker"
+      ],
+      "error": "ReadTimeout(ReadTimeoutError(\"HTTPSConnectionPool(host='trends.google.com', port=443): Read timed out. (read timeout=2)\"))"
+    },
+    {
+      "name": "zh_photo_video_global",
+      "geo": "",
+      "keywords": [
+        "AI情侣写真",
+        "情侣写真生成器",
+        "AI情侣合照",
+        "AI情侣视频",
+        "情侣vlog"
+      ],
+      "error": "TooManyRequestsError('The request failed: Google returned a response with code 429')"
+    }
+  ]
+}

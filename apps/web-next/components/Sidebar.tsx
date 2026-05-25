@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Home, Wrench, FolderOpen, BookOpen, Sparkles } from 'lucide-react'
+import { Home, Wrench, FolderOpen, Sparkles } from 'lucide-react'
 
 export function Sidebar() {
   const pathname = usePathname()
@@ -32,12 +32,6 @@ export function Sidebar() {
       icon: FolderOpen,
       href: '/assets',
       isActive: pathname === '/assets',
-    },
-    {
-      label: 'Guide',
-      icon: BookOpen,
-      href: '/blog',
-      isActive: pathname === '/blog',
     },
   ]
 

@@ -53,7 +53,6 @@ const pages = [
   { page: '/ai-talking-photo-generator', job: 'Adjacent intent', keywords: 'talking photo, make a picture talk' },
   { page: '/ai-baby-generator', job: 'Viral utility', keywords: 'ai baby generator, baby face generator' },
   { page: '/talking-avatar', job: 'Creator tooling', keywords: 'talking avatar creator free' },
-  { page: '/blog/*', job: 'Long-tail capture', keywords: 'best tools, alternatives, how-to, trends' },
 ]
 
 const opportunities = [
